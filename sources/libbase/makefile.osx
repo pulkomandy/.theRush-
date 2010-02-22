@@ -1,0 +1,47 @@
+DEBUG=yes
+CC=g++
+RANLIB=ranlib
+ifeq ($(DEBUG),yes)
+	CFLAGS=-W -ansi  -g -DMAC_OS -I/usr/include -I../../3rdparty/bullet-2.74/src -I../../3rdparty/tinyxml -I../../3rdparty/SDL.framework/Headers
+	LDFLAGS=-lm
+	AR = ar
+	ARFLAGS = rcs
+	LIBS = -ltp
+	LIB=libbaseD.a
+
+else
+	CFLAGS=-W -ansi  -O3 -DMAC_OS -I/usr/include -I../../3rdparty/bullet-2.74/src -I../../3rdparty/tinyxml -I../../3rdparty/SDL.framework/Headers
+	LDFLAGS= -O3 -lm
+	AR = ar
+	ARFLAGS = rcs
+	LIBS = -ltp
+	LIB=libbase.a
+endif
+
+
+SRC= $(wildcard *.cpp)
+OBJ= $(SRC:.cpp=.o)
+
+all: $(LIB)
+ifeq ($(DEBUG),yes)
+	@echo "Generating debug"
+else
+	@echo "Generating release"
+endif
+
+$(LIB): $(OBJ)
+	$(AR) r ../../libs/$(LIB) $(OBJ)
+	$(RANLIB) ../../libs/$(LIB)
+
+
+%.o: %.cpp
+	@$(CC) -o $@ -c $< $(CFLAGS)
+
+.PHONY: clean mrproper
+
+clean:
+	@rm -rf *.o
+	@rm ../../libs/$(LIB)
+
+mrproper: clean
+	@rm -rf $(EXEC)

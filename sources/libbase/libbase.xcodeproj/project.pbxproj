@@ -1,0 +1,364 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E82B9E02106F76280076EBC7 /* LibBase.h in Headers */ = {isa = PBXBuildFile; fileRef = E82B9DDE106F76280076EBC7 /* LibBase.h */; };
+		E82B9E03106F76280076EBC7 /* stdafx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E82B9DDF106F76280076EBC7 /* stdafx.cpp */; };
+		E82B9E04106F76280076EBC7 /* ZBaseClass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E82B9DE0106F76280076EBC7 /* ZBaseClass.cpp */; };
+		E82B9E05106F76280076EBC7 /* ZBaseMaths.h in Headers */ = {isa = PBXBuildFile; fileRef = E82B9DE1106F76280076EBC7 /* ZBaseMaths.h */; };
+		E82B9E06106F76280076EBC7 /* ZBaseMaths.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E82B9DE2106F76280076EBC7 /* ZBaseMaths.cpp */; };
+		E82B9E07106F76280076EBC7 /* targetver.h in Headers */ = {isa = PBXBuildFile; fileRef = E82B9DE3106F76280076EBC7 /* targetver.h */; };
+		E82B9E08106F76280076EBC7 /* ZCollisionsUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = E82B9DE4106F76280076EBC7 /* ZCollisionsUtils.h */; };
+		E82B9E09106F76280076EBC7 /* ZDatasResource.h in Headers */ = {isa = PBXBuildFile; fileRef = E82B9DE5106F76280076EBC7 /* ZDatasResource.h */; };
+		E82B9E0A106F76280076EBC7 /* ZFrustum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E82B9DE6106F76280076EBC7 /* ZFrustum.cpp */; };
+		E82B9E0B106F76280076EBC7 /* ZFrustum.h in Headers */ = {isa = PBXBuildFile; fileRef = E82B9DE7106F76280076EBC7 /* ZFrustum.h */; };
+		E82B9E0C106F76280076EBC7 /* ZBaseDefs.h in Headers */ = {isa = PBXBuildFile; fileRef = E82B9DE8106F76280076EBC7 /* ZBaseDefs.h */; };
+		E82B9E0D106F76280076EBC7 /* ZBVolume.h in Headers */ = {isa = PBXBuildFile; fileRef = E82B9DE9106F76280076EBC7 /* ZBVolume.h */; };
+		E82B9E0E106F76280076EBC7 /* stdafx.h in Headers */ = {isa = PBXBuildFile; fileRef = E82B9DEA106F76280076EBC7 /* stdafx.h */; };
+		E82B9E0F106F76280076EBC7 /* ZFile.h in Headers */ = {isa = PBXBuildFile; fileRef = E82B9DEB106F76280076EBC7 /* ZFile.h */; };
+		E82B9E10106F76280076EBC7 /* ZGameResources.h in Headers */ = {isa = PBXBuildFile; fileRef = E82B9DEC106F76280076EBC7 /* ZGameResources.h */; };
+		E82B9E11106F76280076EBC7 /* ZLogger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E82B9DED106F76280076EBC7 /* ZLogger.cpp */; };
+		E82B9E12106F76280076EBC7 /* ZLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = E82B9DEE106F76280076EBC7 /* ZLogger.h */; };
+		E82B9E13106F76280076EBC7 /* ZBaseClass.h in Headers */ = {isa = PBXBuildFile; fileRef = E82B9DEF106F76280076EBC7 /* ZBaseClass.h */; };
+		E82B9E14106F76280076EBC7 /* ZFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E82B9DF1106F76280076EBC7 /* ZFile.cpp */; };
+		E82B9E15106F76280076EBC7 /* ZGameResources.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E82B9DF2106F76280076EBC7 /* ZGameResources.cpp */; };
+		E82B9E16106F76280076EBC7 /* ZProfiler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E82B9DF3106F76280076EBC7 /* ZProfiler.cpp */; };
+		E82B9E17106F76280076EBC7 /* ZPlatformUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = E82B9DF4106F76280076EBC7 /* ZPlatformUtils.h */; };
+		E82B9E18106F76280076EBC7 /* ZSerializableClasses.h in Headers */ = {isa = PBXBuildFile; fileRef = E82B9DF5106F76280076EBC7 /* ZSerializableClasses.h */; };
+		E82B9E19106F76280076EBC7 /* ZSerializator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E82B9DF6106F76280076EBC7 /* ZSerializator.cpp */; };
+		E82B9E1A106F76280076EBC7 /* ZMathsFunc.h in Headers */ = {isa = PBXBuildFile; fileRef = E82B9DF7106F76280076EBC7 /* ZMathsFunc.h */; };
+		E82B9E1B106F76280076EBC7 /* ZSerializableClasses.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E82B9DF8106F76280076EBC7 /* ZSerializableClasses.cpp */; };
+		E82B9E1C106F76280076EBC7 /* ZSmartPtr.h in Headers */ = {isa = PBXBuildFile; fileRef = E82B9DF9106F76280076EBC7 /* ZSmartPtr.h */; };
+		E82B9E1D106F76280076EBC7 /* ZString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E82B9DFA106F76280076EBC7 /* ZString.cpp */; };
+		E82B9E1E106F76280076EBC7 /* ZString.h in Headers */ = {isa = PBXBuildFile; fileRef = E82B9DFB106F76280076EBC7 /* ZString.h */; };
+		E82B9E1F106F76280076EBC7 /* ZMathsFunc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E82B9DFC106F76280076EBC7 /* ZMathsFunc.cpp */; };
+		E82B9E20106F76280076EBC7 /* ZProfiler.h in Headers */ = {isa = PBXBuildFile; fileRef = E82B9DFD106F76280076EBC7 /* ZProfiler.h */; };
+		E82B9E21106F76280076EBC7 /* ZSerializator.h in Headers */ = {isa = PBXBuildFile; fileRef = E82B9DFE106F76280076EBC7 /* ZSerializator.h */; };
+		E82B9E22106F76280076EBC7 /* ZThread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E82B9DFF106F76280076EBC7 /* ZThread.cpp */; };
+		E82B9E23106F76280076EBC7 /* ZThread.h in Headers */ = {isa = PBXBuildFile; fileRef = E82B9E00106F76280076EBC7 /* ZThread.h */; };
+		E82B9E24106F76280076EBC7 /* ZTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = E82B9E01106F76280076EBC7 /* ZTimer.h */; };
+		E82BA273106FA0430076EBC7 /* SDL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E82BA272106FA0430076EBC7 /* SDL.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D2AAC046055464E500DB518D /* liblibbase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblibbase.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E82B9DDE106F76280076EBC7 /* LibBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibBase.h; sourceTree = "<group>"; };
+		E82B9DDF106F76280076EBC7 /* stdafx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stdafx.cpp; sourceTree = "<group>"; };
+		E82B9DE0106F76280076EBC7 /* ZBaseClass.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZBaseClass.cpp; sourceTree = "<group>"; };
+		E82B9DE1106F76280076EBC7 /* ZBaseMaths.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBaseMaths.h; sourceTree = "<group>"; };
+		E82B9DE2106F76280076EBC7 /* ZBaseMaths.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZBaseMaths.cpp; sourceTree = "<group>"; };
+		E82B9DE3106F76280076EBC7 /* targetver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = targetver.h; sourceTree = "<group>"; };
+		E82B9DE4106F76280076EBC7 /* ZCollisionsUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCollisionsUtils.h; sourceTree = "<group>"; };
+		E82B9DE5106F76280076EBC7 /* ZDatasResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDatasResource.h; sourceTree = "<group>"; };
+		E82B9DE6106F76280076EBC7 /* ZFrustum.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZFrustum.cpp; sourceTree = "<group>"; };
+		E82B9DE7106F76280076EBC7 /* ZFrustum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFrustum.h; sourceTree = "<group>"; };
+		E82B9DE8106F76280076EBC7 /* ZBaseDefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBaseDefs.h; sourceTree = "<group>"; };
+		E82B9DE9106F76280076EBC7 /* ZBVolume.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBVolume.h; sourceTree = "<group>"; };
+		E82B9DEA106F76280076EBC7 /* stdafx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stdafx.h; sourceTree = "<group>"; };
+		E82B9DEB106F76280076EBC7 /* ZFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFile.h; sourceTree = "<group>"; };
+		E82B9DEC106F76280076EBC7 /* ZGameResources.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGameResources.h; sourceTree = "<group>"; };
+		E82B9DED106F76280076EBC7 /* ZLogger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZLogger.cpp; sourceTree = "<group>"; };
+		E82B9DEE106F76280076EBC7 /* ZLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLogger.h; sourceTree = "<group>"; };
+		E82B9DEF106F76280076EBC7 /* ZBaseClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBaseClass.h; sourceTree = "<group>"; };
+		E82B9DF0106F76280076EBC7 /* ZBaseMaths.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ZBaseMaths.inl; sourceTree = "<group>"; };
+		E82B9DF1106F76280076EBC7 /* ZFile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZFile.cpp; sourceTree = "<group>"; };
+		E82B9DF2106F76280076EBC7 /* ZGameResources.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZGameResources.cpp; sourceTree = "<group>"; };
+		E82B9DF3106F76280076EBC7 /* ZProfiler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZProfiler.cpp; sourceTree = "<group>"; };
+		E82B9DF4106F76280076EBC7 /* ZPlatformUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPlatformUtils.h; sourceTree = "<group>"; };
+		E82B9DF5106F76280076EBC7 /* ZSerializableClasses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSerializableClasses.h; sourceTree = "<group>"; };
+		E82B9DF6106F76280076EBC7 /* ZSerializator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZSerializator.cpp; sourceTree = "<group>"; };
+		E82B9DF7106F76280076EBC7 /* ZMathsFunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMathsFunc.h; sourceTree = "<group>"; };
+		E82B9DF8106F76280076EBC7 /* ZSerializableClasses.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZSerializableClasses.cpp; sourceTree = "<group>"; };
+		E82B9DF9106F76280076EBC7 /* ZSmartPtr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSmartPtr.h; sourceTree = "<group>"; };
+		E82B9DFA106F76280076EBC7 /* ZString.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZString.cpp; sourceTree = "<group>"; };
+		E82B9DFB106F76280076EBC7 /* ZString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZString.h; sourceTree = "<group>"; };
+		E82B9DFC106F76280076EBC7 /* ZMathsFunc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZMathsFunc.cpp; sourceTree = "<group>"; };
+		E82B9DFD106F76280076EBC7 /* ZProfiler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZProfiler.h; sourceTree = "<group>"; };
+		E82B9DFE106F76280076EBC7 /* ZSerializator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSerializator.h; sourceTree = "<group>"; };
+		E82B9DFF106F76280076EBC7 /* ZThread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZThread.cpp; sourceTree = "<group>"; };
+		E82B9E00106F76280076EBC7 /* ZThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZThread.h; sourceTree = "<group>"; };
+		E82B9E01106F76280076EBC7 /* ZTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTimer.h; sourceTree = "<group>"; };
+		E82BA272106FA0430076EBC7 /* SDL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL.framework; path = ../../3rdparty/SDL.framework; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D289987405E68DCB004EDB86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E82BA273106FA0430076EBC7 /* SDL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* libbase */ = {
+			isa = PBXGroup;
+			children = (
+				E82BA272106FA0430076EBC7 /* SDL.framework */,
+				E82B9DDE106F76280076EBC7 /* LibBase.h */,
+				E82B9DDF106F76280076EBC7 /* stdafx.cpp */,
+				E82B9DE0106F76280076EBC7 /* ZBaseClass.cpp */,
+				E82B9DE1106F76280076EBC7 /* ZBaseMaths.h */,
+				E82B9DE2106F76280076EBC7 /* ZBaseMaths.cpp */,
+				E82B9DE3106F76280076EBC7 /* targetver.h */,
+				E82B9DE4106F76280076EBC7 /* ZCollisionsUtils.h */,
+				E82B9DE5106F76280076EBC7 /* ZDatasResource.h */,
+				E82B9DE6106F76280076EBC7 /* ZFrustum.cpp */,
+				E82B9DE7106F76280076EBC7 /* ZFrustum.h */,
+				E82B9DE8106F76280076EBC7 /* ZBaseDefs.h */,
+				E82B9DE9106F76280076EBC7 /* ZBVolume.h */,
+				E82B9DEA106F76280076EBC7 /* stdafx.h */,
+				E82B9DEB106F76280076EBC7 /* ZFile.h */,
+				E82B9DEC106F76280076EBC7 /* ZGameResources.h */,
+				E82B9DED106F76280076EBC7 /* ZLogger.cpp */,
+				E82B9DEE106F76280076EBC7 /* ZLogger.h */,
+				E82B9DEF106F76280076EBC7 /* ZBaseClass.h */,
+				E82B9DF0106F76280076EBC7 /* ZBaseMaths.inl */,
+				E82B9DF1106F76280076EBC7 /* ZFile.cpp */,
+				E82B9DF2106F76280076EBC7 /* ZGameResources.cpp */,
+				E82B9DF3106F76280076EBC7 /* ZProfiler.cpp */,
+				E82B9DF4106F76280076EBC7 /* ZPlatformUtils.h */,
+				E82B9DF5106F76280076EBC7 /* ZSerializableClasses.h */,
+				E82B9DF6106F76280076EBC7 /* ZSerializator.cpp */,
+				E82B9DF7106F76280076EBC7 /* ZMathsFunc.h */,
+				E82B9DF8106F76280076EBC7 /* ZSerializableClasses.cpp */,
+				E82B9DF9106F76280076EBC7 /* ZSmartPtr.h */,
+				E82B9DFA106F76280076EBC7 /* ZString.cpp */,
+				E82B9DFB106F76280076EBC7 /* ZString.h */,
+				E82B9DFC106F76280076EBC7 /* ZMathsFunc.cpp */,
+				E82B9DFD106F76280076EBC7 /* ZProfiler.h */,
+				E82B9DFE106F76280076EBC7 /* ZSerializator.h */,
+				E82B9DFF106F76280076EBC7 /* ZThread.cpp */,
+				E82B9E00106F76280076EBC7 /* ZThread.h */,
+				E82B9E01106F76280076EBC7 /* ZTimer.h */,
+				08FB7795FE84155DC02AAC07 /* Source */,
+				C6A0FF2B0290797F04C91782 /* Documentation */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+			);
+			name = libbase;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC046055464E500DB518D /* liblibbase.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C6A0FF2B0290797F04C91782 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Documentation;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC043055464E500DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E82B9E02106F76280076EBC7 /* LibBase.h in Headers */,
+				E82B9E05106F76280076EBC7 /* ZBaseMaths.h in Headers */,
+				E82B9E07106F76280076EBC7 /* targetver.h in Headers */,
+				E82B9E08106F76280076EBC7 /* ZCollisionsUtils.h in Headers */,
+				E82B9E09106F76280076EBC7 /* ZDatasResource.h in Headers */,
+				E82B9E0B106F76280076EBC7 /* ZFrustum.h in Headers */,
+				E82B9E0C106F76280076EBC7 /* ZBaseDefs.h in Headers */,
+				E82B9E0D106F76280076EBC7 /* ZBVolume.h in Headers */,
+				E82B9E0E106F76280076EBC7 /* stdafx.h in Headers */,
+				E82B9E0F106F76280076EBC7 /* ZFile.h in Headers */,
+				E82B9E10106F76280076EBC7 /* ZGameResources.h in Headers */,
+				E82B9E12106F76280076EBC7 /* ZLogger.h in Headers */,
+				E82B9E13106F76280076EBC7 /* ZBaseClass.h in Headers */,
+				E82B9E17106F76280076EBC7 /* ZPlatformUtils.h in Headers */,
+				E82B9E18106F76280076EBC7 /* ZSerializableClasses.h in Headers */,
+				E82B9E1A106F76280076EBC7 /* ZMathsFunc.h in Headers */,
+				E82B9E1C106F76280076EBC7 /* ZSmartPtr.h in Headers */,
+				E82B9E1E106F76280076EBC7 /* ZString.h in Headers */,
+				E82B9E20106F76280076EBC7 /* ZProfiler.h in Headers */,
+				E82B9E21106F76280076EBC7 /* ZSerializator.h in Headers */,
+				E82B9E23106F76280076EBC7 /* ZThread.h in Headers */,
+				E82B9E24106F76280076EBC7 /* ZTimer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC045055464E500DB518D /* libbase */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB91EB08733DB70010E9CD /* Build configuration list for PBXNativeTarget "libbase" */;
+			buildPhases = (
+				D2AAC043055464E500DB518D /* Headers */,
+				D2AAC044055464E500DB518D /* Sources */,
+				D289987405E68DCB004EDB86 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libbase;
+			productName = libbase;
+			productReference = D2AAC046055464E500DB518D /* liblibbase.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB91EF08733DB70010E9CD /* Build configuration list for PBXProject "libbase" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* libbase */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC045055464E500DB518D /* libbase */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC044055464E500DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E82B9E03106F76280076EBC7 /* stdafx.cpp in Sources */,
+				E82B9E04106F76280076EBC7 /* ZBaseClass.cpp in Sources */,
+				E82B9E06106F76280076EBC7 /* ZBaseMaths.cpp in Sources */,
+				E82B9E0A106F76280076EBC7 /* ZFrustum.cpp in Sources */,
+				E82B9E11106F76280076EBC7 /* ZLogger.cpp in Sources */,
+				E82B9E14106F76280076EBC7 /* ZFile.cpp in Sources */,
+				E82B9E15106F76280076EBC7 /* ZGameResources.cpp in Sources */,
+				E82B9E16106F76280076EBC7 /* ZProfiler.cpp in Sources */,
+				E82B9E19106F76280076EBC7 /* ZSerializator.cpp in Sources */,
+				E82B9E1B106F76280076EBC7 /* ZSerializableClasses.cpp in Sources */,
+				E82B9E1D106F76280076EBC7 /* ZString.cpp in Sources */,
+				E82B9E1F106F76280076EBC7 /* ZMathsFunc.cpp in Sources */,
+				E82B9E22106F76280076EBC7 /* ZThread.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB91EC08733DB70010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/../../3rdparty\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../3rdparty/bullet-2.74/src\"",
+					"\"$(SRCROOT)/../../3rdparty/tinyxml\"",
+					"\"$(SRCROOT)/../../3rdparty/zlib-1.2.3\"",
+				);
+				INSTALL_PATH = /usr/local/lib;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = libbase;
+			};
+			name = Debug;
+		};
+		1DEB91ED08733DB70010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/../../3rdparty\"",
+				);
+				GCC_MODEL_TUNING = G5;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../3rdparty/bullet-2.74/src\"",
+					"\"$(SRCROOT)/../../3rdparty/tinyxml\"",
+					"\"$(SRCROOT)/../../3rdparty/zlib-1.2.3\"",
+				);
+				INSTALL_PATH = /usr/local/lib;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = libbase;
+			};
+			name = Release;
+		};
+		1DEB91F008733DB70010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "Don't Code Sign";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = MAC_OS;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Debug;
+		};
+		1DEB91F108733DB70010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_PREPROCESSOR_DEFINITIONS = MAC_OS;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB91EB08733DB70010E9CD /* Build configuration list for PBXNativeTarget "libbase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91EC08733DB70010E9CD /* Debug */,
+				1DEB91ED08733DB70010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB91EF08733DB70010E9CD /* Build configuration list for PBXProject "libbase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91F008733DB70010E9CD /* Debug */,
+				1DEB91F108733DB70010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

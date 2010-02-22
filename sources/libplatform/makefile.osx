@@ -1,0 +1,47 @@
+DEBUG=yes
+CC=g++
+RANLIB=ranlib
+ifeq ($(DEBUG),yes)
+	CFLAGS=-W -ansi  -g -DMAC_OS -I../librender -I/usr/include/CEGUI/ -I/usr/include -I../../3rdparty/bullet-2.74/src -I../../3rdparty/zlib-1.2.3  -I../../3rdparty/CEGUI-SDK-0.6.2-vc9/include  -I../../3rdparty/SDL.framework/Headers -I../../3rdparty/CEGUI-SDK-0.6.2-vc9/
+	LDFLAGS=-lm
+	AR = ar
+	ARFLAGS = rcs
+	LIBS = -ltp
+	LIB=libplatformD.a
+
+else
+	CFLAGS=-W -ansi  -O3 -DMAC_OS -I../librender -I/usr/include/CEGUI/ -I/usr/include -I../../3rdparty/bullet-2.74/src -I../../3rdparty/zlib-1.2.3  -I../../3rdparty/CEGUI-SDK-0.6.2-vc9/include  -I../../3rdparty/SDL.framework/Headers -I../../3rdparty/CEGUI-SDK-0.6.2-vc9/
+	LDFLAGS= -O3 -lm
+	AR = ar
+	ARFLAGS = rcs
+	LIBS = -ltp
+	LIB=libplatform.a
+endif
+
+
+SRC= $(wildcard *.cpp)
+OBJ= $(SRC:.cpp=.o)
+
+all: $(LIB)
+ifeq ($(DEBUG),yes)
+	@echo "Generating debug"
+else
+	@echo "Generating release"
+endif
+
+$(LIB): $(OBJ)
+	$(AR) r ../../libs/$(LIB) $(OBJ)
+	$(RANLIB) ../../libs/$(LIB)
+
+
+%.o: %.cpp
+	@$(CC) -o $@ -c $< $(CFLAGS)
+
+.PHONY: clean mrproper
+
+clean:
+	@rm -rf *.o
+	@rm ../../libs/$(LIB)
+
+mrproper: clean
+	@rm -rf $(EXEC)

@@ -1,0 +1,336 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E8FCAE72106FF25300676E9D /* ZOccluderBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8FCAE52106FF25300676E9D /* ZOccluderBox.cpp */; };
+		E8FCAE73106FF25300676E9D /* ZAtmosphere.h in Headers */ = {isa = PBXBuildFile; fileRef = E8FCAE53106FF25300676E9D /* ZAtmosphere.h */; };
+		E8FCAE74106FF25300676E9D /* ZPhysicWorldBullet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8FCAE54106FF25300676E9D /* ZPhysicWorldBullet.cpp */; };
+		E8FCAE75106FF25300676E9D /* ZAtmosphere.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8FCAE55106FF25300676E9D /* ZAtmosphere.cpp */; };
+		E8FCAE76106FF25300676E9D /* ZZenExporter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8FCAE56106FF25300676E9D /* ZZenExporter.cpp */; };
+		E8FCAE77106FF25300676E9D /* stdafx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8FCAE57106FF25300676E9D /* stdafx.cpp */; };
+		E8FCAE78106FF25300676E9D /* libworld.h in Headers */ = {isa = PBXBuildFile; fileRef = E8FCAE58106FF25300676E9D /* libworld.h */; };
+		E8FCAE79106FF25300676E9D /* ZScene.h in Headers */ = {isa = PBXBuildFile; fileRef = E8FCAE59106FF25300676E9D /* ZScene.h */; };
+		E8FCAE7A106FF25300676E9D /* ZImporterCollada.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8FCAE5A106FF25300676E9D /* ZImporterCollada.cpp */; };
+		E8FCAE7B106FF25300676E9D /* ZSpatialEntity.h in Headers */ = {isa = PBXBuildFile; fileRef = E8FCAE5B106FF25300676E9D /* ZSpatialEntity.h */; };
+		E8FCAE7C106FF25300676E9D /* ZAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = E8FCAE5C106FF25300676E9D /* ZAnimation.h */; };
+		E8FCAE7D106FF25300676E9D /* ZCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = E8FCAE5D106FF25300676E9D /* ZCamera.h */; };
+		E8FCAE7E106FF25300676E9D /* ZKeyFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = E8FCAE5E106FF25300676E9D /* ZKeyFrame.h */; };
+		E8FCAE7F106FF25300676E9D /* ZAnimationTrack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8FCAE5F106FF25300676E9D /* ZAnimationTrack.cpp */; };
+		E8FCAE80106FF25300676E9D /* ZAnimationTrack.h in Headers */ = {isa = PBXBuildFile; fileRef = E8FCAE60106FF25300676E9D /* ZAnimationTrack.h */; };
+		E8FCAE81106FF25300676E9D /* ZMesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8FCAE61106FF25300676E9D /* ZMesh.cpp */; };
+		E8FCAE82106FF25300676E9D /* targetver.h in Headers */ = {isa = PBXBuildFile; fileRef = E8FCAE62106FF25300676E9D /* targetver.h */; };
+		E8FCAE83106FF25300676E9D /* ZMeshInstance.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8FCAE63106FF25300676E9D /* ZMeshInstance.cpp */; };
+		E8FCAE84106FF25300676E9D /* ZScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8FCAE64106FF25300676E9D /* ZScene.cpp */; };
+		E8FCAE85106FF25300676E9D /* ZTransform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8FCAE65106FF25300676E9D /* ZTransform.cpp */; };
+		E8FCAE86106FF25300676E9D /* ZMeshBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = E8FCAE66106FF25300676E9D /* ZMeshBuilder.h */; };
+		E8FCAE87106FF25300676E9D /* ZCamera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8FCAE67106FF25300676E9D /* ZCamera.cpp */; };
+		E8FCAE88106FF25300676E9D /* ZSpatialEntity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8FCAE68106FF25300676E9D /* ZSpatialEntity.cpp */; };
+		E8FCAE89106FF25300676E9D /* ZMesh.h in Headers */ = {isa = PBXBuildFile; fileRef = E8FCAE69106FF25300676E9D /* ZMesh.h */; };
+		E8FCAE8A106FF25300676E9D /* ZMeshInstance.h in Headers */ = {isa = PBXBuildFile; fileRef = E8FCAE6A106FF25300676E9D /* ZMeshInstance.h */; };
+		E8FCAE8B106FF25300676E9D /* ZMeshBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8FCAE6B106FF25300676E9D /* ZMeshBuilder.cpp */; };
+		E8FCAE8C106FF25300676E9D /* ZTransform.h in Headers */ = {isa = PBXBuildFile; fileRef = E8FCAE6C106FF25300676E9D /* ZTransform.h */; };
+		E8FCAE8D106FF25300676E9D /* stdafx.h in Headers */ = {isa = PBXBuildFile; fileRef = E8FCAE6D106FF25300676E9D /* stdafx.h */; };
+		E8FCAE8E106FF25300676E9D /* ZPhysicWorldBullet.h in Headers */ = {isa = PBXBuildFile; fileRef = E8FCAE6E106FF25300676E9D /* ZPhysicWorldBullet.h */; };
+		E8FCAE8F106FF25300676E9D /* ZOccluderBox.h in Headers */ = {isa = PBXBuildFile; fileRef = E8FCAE6F106FF25300676E9D /* ZOccluderBox.h */; };
+		E8FCAE90106FF25300676E9D /* ZImportExport.h in Headers */ = {isa = PBXBuildFile; fileRef = E8FCAE70106FF25300676E9D /* ZImportExport.h */; };
+		E8FCAE91106FF25300676E9D /* ZAnimation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8FCAE71106FF25300676E9D /* ZAnimation.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D2AAC046055464E500DB518D /* liblibworld.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblibworld.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8FCAE52106FF25300676E9D /* ZOccluderBox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZOccluderBox.cpp; sourceTree = "<group>"; };
+		E8FCAE53106FF25300676E9D /* ZAtmosphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZAtmosphere.h; sourceTree = "<group>"; };
+		E8FCAE54106FF25300676E9D /* ZPhysicWorldBullet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZPhysicWorldBullet.cpp; sourceTree = "<group>"; };
+		E8FCAE55106FF25300676E9D /* ZAtmosphere.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZAtmosphere.cpp; sourceTree = "<group>"; };
+		E8FCAE56106FF25300676E9D /* ZZenExporter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZZenExporter.cpp; sourceTree = "<group>"; };
+		E8FCAE57106FF25300676E9D /* stdafx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stdafx.cpp; sourceTree = "<group>"; };
+		E8FCAE58106FF25300676E9D /* libworld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libworld.h; sourceTree = "<group>"; };
+		E8FCAE59106FF25300676E9D /* ZScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZScene.h; sourceTree = "<group>"; };
+		E8FCAE5A106FF25300676E9D /* ZImporterCollada.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZImporterCollada.cpp; sourceTree = "<group>"; };
+		E8FCAE5B106FF25300676E9D /* ZSpatialEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSpatialEntity.h; sourceTree = "<group>"; };
+		E8FCAE5C106FF25300676E9D /* ZAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZAnimation.h; sourceTree = "<group>"; };
+		E8FCAE5D106FF25300676E9D /* ZCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCamera.h; sourceTree = "<group>"; };
+		E8FCAE5E106FF25300676E9D /* ZKeyFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKeyFrame.h; sourceTree = "<group>"; };
+		E8FCAE5F106FF25300676E9D /* ZAnimationTrack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZAnimationTrack.cpp; sourceTree = "<group>"; };
+		E8FCAE60106FF25300676E9D /* ZAnimationTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZAnimationTrack.h; sourceTree = "<group>"; };
+		E8FCAE61106FF25300676E9D /* ZMesh.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZMesh.cpp; sourceTree = "<group>"; };
+		E8FCAE62106FF25300676E9D /* targetver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = targetver.h; sourceTree = "<group>"; };
+		E8FCAE63106FF25300676E9D /* ZMeshInstance.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZMeshInstance.cpp; sourceTree = "<group>"; };
+		E8FCAE64106FF25300676E9D /* ZScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZScene.cpp; sourceTree = "<group>"; };
+		E8FCAE65106FF25300676E9D /* ZTransform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZTransform.cpp; sourceTree = "<group>"; };
+		E8FCAE66106FF25300676E9D /* ZMeshBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMeshBuilder.h; sourceTree = "<group>"; };
+		E8FCAE67106FF25300676E9D /* ZCamera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZCamera.cpp; sourceTree = "<group>"; };
+		E8FCAE68106FF25300676E9D /* ZSpatialEntity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZSpatialEntity.cpp; sourceTree = "<group>"; };
+		E8FCAE69106FF25300676E9D /* ZMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMesh.h; sourceTree = "<group>"; };
+		E8FCAE6A106FF25300676E9D /* ZMeshInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMeshInstance.h; sourceTree = "<group>"; };
+		E8FCAE6B106FF25300676E9D /* ZMeshBuilder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZMeshBuilder.cpp; sourceTree = "<group>"; };
+		E8FCAE6C106FF25300676E9D /* ZTransform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTransform.h; sourceTree = "<group>"; };
+		E8FCAE6D106FF25300676E9D /* stdafx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stdafx.h; sourceTree = "<group>"; };
+		E8FCAE6E106FF25300676E9D /* ZPhysicWorldBullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPhysicWorldBullet.h; sourceTree = "<group>"; };
+		E8FCAE6F106FF25300676E9D /* ZOccluderBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZOccluderBox.h; sourceTree = "<group>"; };
+		E8FCAE70106FF25300676E9D /* ZImportExport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZImportExport.h; sourceTree = "<group>"; };
+		E8FCAE71106FF25300676E9D /* ZAnimation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZAnimation.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D289987405E68DCB004EDB86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* libworld */ = {
+			isa = PBXGroup;
+			children = (
+				E8FCAE52106FF25300676E9D /* ZOccluderBox.cpp */,
+				E8FCAE53106FF25300676E9D /* ZAtmosphere.h */,
+				E8FCAE54106FF25300676E9D /* ZPhysicWorldBullet.cpp */,
+				E8FCAE55106FF25300676E9D /* ZAtmosphere.cpp */,
+				E8FCAE56106FF25300676E9D /* ZZenExporter.cpp */,
+				E8FCAE57106FF25300676E9D /* stdafx.cpp */,
+				E8FCAE58106FF25300676E9D /* libworld.h */,
+				E8FCAE59106FF25300676E9D /* ZScene.h */,
+				E8FCAE5A106FF25300676E9D /* ZImporterCollada.cpp */,
+				E8FCAE5B106FF25300676E9D /* ZSpatialEntity.h */,
+				E8FCAE5C106FF25300676E9D /* ZAnimation.h */,
+				E8FCAE5D106FF25300676E9D /* ZCamera.h */,
+				E8FCAE5E106FF25300676E9D /* ZKeyFrame.h */,
+				E8FCAE5F106FF25300676E9D /* ZAnimationTrack.cpp */,
+				E8FCAE60106FF25300676E9D /* ZAnimationTrack.h */,
+				E8FCAE61106FF25300676E9D /* ZMesh.cpp */,
+				E8FCAE62106FF25300676E9D /* targetver.h */,
+				E8FCAE63106FF25300676E9D /* ZMeshInstance.cpp */,
+				E8FCAE64106FF25300676E9D /* ZScene.cpp */,
+				E8FCAE65106FF25300676E9D /* ZTransform.cpp */,
+				E8FCAE66106FF25300676E9D /* ZMeshBuilder.h */,
+				E8FCAE67106FF25300676E9D /* ZCamera.cpp */,
+				E8FCAE68106FF25300676E9D /* ZSpatialEntity.cpp */,
+				E8FCAE69106FF25300676E9D /* ZMesh.h */,
+				E8FCAE6A106FF25300676E9D /* ZMeshInstance.h */,
+				E8FCAE6B106FF25300676E9D /* ZMeshBuilder.cpp */,
+				E8FCAE6C106FF25300676E9D /* ZTransform.h */,
+				E8FCAE6D106FF25300676E9D /* stdafx.h */,
+				E8FCAE6E106FF25300676E9D /* ZPhysicWorldBullet.h */,
+				E8FCAE6F106FF25300676E9D /* ZOccluderBox.h */,
+				E8FCAE70106FF25300676E9D /* ZImportExport.h */,
+				E8FCAE71106FF25300676E9D /* ZAnimation.cpp */,
+				08FB7795FE84155DC02AAC07 /* Source */,
+				C6A0FF2B0290797F04C91782 /* Documentation */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+			);
+			name = libworld;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC046055464E500DB518D /* liblibworld.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C6A0FF2B0290797F04C91782 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Documentation;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC043055464E500DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8FCAE73106FF25300676E9D /* ZAtmosphere.h in Headers */,
+				E8FCAE78106FF25300676E9D /* libworld.h in Headers */,
+				E8FCAE79106FF25300676E9D /* ZScene.h in Headers */,
+				E8FCAE7B106FF25300676E9D /* ZSpatialEntity.h in Headers */,
+				E8FCAE7C106FF25300676E9D /* ZAnimation.h in Headers */,
+				E8FCAE7D106FF25300676E9D /* ZCamera.h in Headers */,
+				E8FCAE7E106FF25300676E9D /* ZKeyFrame.h in Headers */,
+				E8FCAE80106FF25300676E9D /* ZAnimationTrack.h in Headers */,
+				E8FCAE82106FF25300676E9D /* targetver.h in Headers */,
+				E8FCAE86106FF25300676E9D /* ZMeshBuilder.h in Headers */,
+				E8FCAE89106FF25300676E9D /* ZMesh.h in Headers */,
+				E8FCAE8A106FF25300676E9D /* ZMeshInstance.h in Headers */,
+				E8FCAE8C106FF25300676E9D /* ZTransform.h in Headers */,
+				E8FCAE8D106FF25300676E9D /* stdafx.h in Headers */,
+				E8FCAE8E106FF25300676E9D /* ZPhysicWorldBullet.h in Headers */,
+				E8FCAE8F106FF25300676E9D /* ZOccluderBox.h in Headers */,
+				E8FCAE90106FF25300676E9D /* ZImportExport.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC045055464E500DB518D /* libworld */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB91EB08733DB70010E9CD /* Build configuration list for PBXNativeTarget "libworld" */;
+			buildPhases = (
+				D2AAC043055464E500DB518D /* Headers */,
+				D2AAC044055464E500DB518D /* Sources */,
+				D289987405E68DCB004EDB86 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libworld;
+			productName = libworld;
+			productReference = D2AAC046055464E500DB518D /* liblibworld.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB91EF08733DB70010E9CD /* Build configuration list for PBXProject "libworld" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* libworld */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC045055464E500DB518D /* libworld */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC044055464E500DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8FCAE72106FF25300676E9D /* ZOccluderBox.cpp in Sources */,
+				E8FCAE74106FF25300676E9D /* ZPhysicWorldBullet.cpp in Sources */,
+				E8FCAE75106FF25300676E9D /* ZAtmosphere.cpp in Sources */,
+				E8FCAE76106FF25300676E9D /* ZZenExporter.cpp in Sources */,
+				E8FCAE77106FF25300676E9D /* stdafx.cpp in Sources */,
+				E8FCAE7A106FF25300676E9D /* ZImporterCollada.cpp in Sources */,
+				E8FCAE7F106FF25300676E9D /* ZAnimationTrack.cpp in Sources */,
+				E8FCAE81106FF25300676E9D /* ZMesh.cpp in Sources */,
+				E8FCAE83106FF25300676E9D /* ZMeshInstance.cpp in Sources */,
+				E8FCAE84106FF25300676E9D /* ZScene.cpp in Sources */,
+				E8FCAE85106FF25300676E9D /* ZTransform.cpp in Sources */,
+				E8FCAE87106FF25300676E9D /* ZCamera.cpp in Sources */,
+				E8FCAE88106FF25300676E9D /* ZSpatialEntity.cpp in Sources */,
+				E8FCAE8B106FF25300676E9D /* ZMeshBuilder.cpp in Sources */,
+				E8FCAE91106FF25300676E9D /* ZAnimation.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB91EC08733DB70010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = libworld;
+			};
+			name = Debug;
+		};
+		1DEB91ED08733DB70010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = libworld;
+			};
+			name = Release;
+		};
+		1DEB91F008733DB70010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = MAC_OS;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../3rdparty/zlib-1.2.3\"",
+					"\"$(SRCROOT)/../../3rdparty/CEGUI-SDK-0.6.2-vc9\"",
+					"\"$(SRCROOT)/../../3rdparty/tinyxml\"",
+					"\"$(SRCROOT)/../../3rdparty/bullet-2.74/src\"",
+					"\"$(SRCROOT)/../../3rdparty\"",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Debug;
+		};
+		1DEB91F108733DB70010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_PREPROCESSOR_DEFINITIONS = MAC_OS;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../3rdparty/zlib-1.2.3\"",
+					"\"$(SRCROOT)/../../3rdparty/CEGUI-SDK-0.6.2-vc9\"",
+					"\"$(SRCROOT)/../../3rdparty/tinyxml\"",
+					"\"$(SRCROOT)/../../3rdparty/bullet-2.74/src\"",
+					"\"$(SRCROOT)/../../3rdparty\"",
+				);
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB91EB08733DB70010E9CD /* Build configuration list for PBXNativeTarget "libworld" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91EC08733DB70010E9CD /* Debug */,
+				1DEB91ED08733DB70010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB91EF08733DB70010E9CD /* Build configuration list for PBXProject "libworld" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91F008733DB70010E9CD /* Debug */,
+				1DEB91F108733DB70010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

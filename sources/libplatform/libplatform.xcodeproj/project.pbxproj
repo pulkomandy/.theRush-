@@ -1,0 +1,326 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E82BA2F7106FA4A90076EBC7 /* ZenFWNode.h in Headers */ = {isa = PBXBuildFile; fileRef = E82BA2DC106FA4A90076EBC7 /* ZenFWNode.h */; };
+		E82BA2F8106FA4A90076EBC7 /* ZenFWManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E82BA2DD106FA4A90076EBC7 /* ZenFWManager.cpp */; };
+		E82BA2F9106FA4A90076EBC7 /* targetver.h in Headers */ = {isa = PBXBuildFile; fileRef = E82BA2DE106FA4A90076EBC7 /* targetver.h */; };
+		E82BA2FB106FA4A90076EBC7 /* stdafx.h in Headers */ = {isa = PBXBuildFile; fileRef = E82BA2E0106FA4A90076EBC7 /* stdafx.h */; };
+		E82BA2FC106FA4A90076EBC7 /* ZenFWLoaderNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E82BA2E1106FA4A90076EBC7 /* ZenFWLoaderNode.cpp */; };
+		E82BA2FD106FA4A90076EBC7 /* ZenFWLoaderNode.h in Headers */ = {isa = PBXBuildFile; fileRef = E82BA2E2106FA4A90076EBC7 /* ZenFWLoaderNode.h */; };
+		E82BA2FE106FA4A90076EBC7 /* ZenFWViewer.h in Headers */ = {isa = PBXBuildFile; fileRef = E82BA2E3106FA4A90076EBC7 /* ZenFWViewer.h */; };
+		E82BA2FF106FA4A90076EBC7 /* ZenFWVRAMService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E82BA2E4106FA4A90076EBC7 /* ZenFWVRAMService.cpp */; };
+		E82BA300106FA4A90076EBC7 /* IInput.h in Headers */ = {isa = PBXBuildFile; fileRef = E82BA2E5106FA4A90076EBC7 /* IInput.h */; };
+		E82BA301106FA4A90076EBC7 /* stdafx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E82BA2E6106FA4A90076EBC7 /* stdafx.cpp */; };
+		E82BA302106FA4A90076EBC7 /* ZenFWViewer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E82BA2E7106FA4A90076EBC7 /* ZenFWViewer.cpp */; };
+		E82BA303106FA4A90076EBC7 /* ZenFWDecoderNode.h in Headers */ = {isa = PBXBuildFile; fileRef = E82BA2E8106FA4A90076EBC7 /* ZenFWDecoderNode.h */; };
+		E82BA304106FA4A90076EBC7 /* libplatform.h in Headers */ = {isa = PBXBuildFile; fileRef = E82BA2E9106FA4A90076EBC7 /* libplatform.h */; };
+		E82BA305106FA4A90076EBC7 /* ZenFWLane.h in Headers */ = {isa = PBXBuildFile; fileRef = E82BA2EA106FA4A90076EBC7 /* ZenFWLane.h */; };
+		E82BA306106FA4A90076EBC7 /* ZenFWManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E82BA2EB106FA4A90076EBC7 /* ZenFWManager.h */; };
+		E82BA307106FA4A90076EBC7 /* ZenFWRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E82BA2EC106FA4A90076EBC7 /* ZenFWRenderer.cpp */; };
+		E82BA308106FA4A90076EBC7 /* ZenFWLane.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E82BA2ED106FA4A90076EBC7 /* ZenFWLane.cpp */; };
+		E82BA309106FA4A90076EBC7 /* ZenFWDecoderNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E82BA2EE106FA4A90076EBC7 /* ZenFWDecoderNode.cpp */; };
+		E82BA30A106FA4A90076EBC7 /* ZenFWRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = E82BA2EF106FA4A90076EBC7 /* ZenFWRenderer.h */; };
+		E82BA30B106FA4A90076EBC7 /* ZenFWGame.h in Headers */ = {isa = PBXBuildFile; fileRef = E82BA2F0106FA4A90076EBC7 /* ZenFWGame.h */; };
+		E82BA30C106FA4A90076EBC7 /* ZenFWGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E82BA2F1106FA4A90076EBC7 /* ZenFWGame.cpp */; };
+		E82BA30D106FA4A90076EBC7 /* ZenFWSDLWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = E82BA2F2106FA4A90076EBC7 /* ZenFWSDLWindow.h */; };
+		E82BA30E106FA4A90076EBC7 /* ZInputSDL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E82BA2F3106FA4A90076EBC7 /* ZInputSDL.cpp */; };
+		E82BA30F106FA4A90076EBC7 /* ZenFWStdNodes.h in Headers */ = {isa = PBXBuildFile; fileRef = E82BA2F4106FA4A90076EBC7 /* ZenFWStdNodes.h */; };
+		E82BA310106FA4A90076EBC7 /* ZenFWVRAMService.h in Headers */ = {isa = PBXBuildFile; fileRef = E82BA2F5106FA4A90076EBC7 /* ZenFWVRAMService.h */; };
+		E82BA311106FA4A90076EBC7 /* ZCEGui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E82BA2F6106FA4A90076EBC7 /* ZCEGui.cpp */; };
+		E82BA313106FA4B80076EBC7 /* SDL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E82BA312106FA4B80076EBC7 /* SDL.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D2AAC046055464E500DB518D /* liblibplatform.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblibplatform.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E82BA2DC106FA4A90076EBC7 /* ZenFWNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZenFWNode.h; sourceTree = SOURCE_ROOT; };
+		E82BA2DD106FA4A90076EBC7 /* ZenFWManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZenFWManager.cpp; sourceTree = SOURCE_ROOT; };
+		E82BA2DE106FA4A90076EBC7 /* targetver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = targetver.h; sourceTree = SOURCE_ROOT; };
+		E82BA2E0106FA4A90076EBC7 /* stdafx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stdafx.h; sourceTree = SOURCE_ROOT; };
+		E82BA2E1106FA4A90076EBC7 /* ZenFWLoaderNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZenFWLoaderNode.cpp; sourceTree = SOURCE_ROOT; };
+		E82BA2E2106FA4A90076EBC7 /* ZenFWLoaderNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZenFWLoaderNode.h; sourceTree = SOURCE_ROOT; };
+		E82BA2E3106FA4A90076EBC7 /* ZenFWViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZenFWViewer.h; sourceTree = SOURCE_ROOT; };
+		E82BA2E4106FA4A90076EBC7 /* ZenFWVRAMService.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZenFWVRAMService.cpp; sourceTree = SOURCE_ROOT; };
+		E82BA2E5106FA4A90076EBC7 /* IInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IInput.h; sourceTree = SOURCE_ROOT; };
+		E82BA2E6106FA4A90076EBC7 /* stdafx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stdafx.cpp; sourceTree = SOURCE_ROOT; };
+		E82BA2E7106FA4A90076EBC7 /* ZenFWViewer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZenFWViewer.cpp; sourceTree = SOURCE_ROOT; };
+		E82BA2E8106FA4A90076EBC7 /* ZenFWDecoderNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZenFWDecoderNode.h; sourceTree = SOURCE_ROOT; };
+		E82BA2E9106FA4A90076EBC7 /* libplatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libplatform.h; sourceTree = SOURCE_ROOT; };
+		E82BA2EA106FA4A90076EBC7 /* ZenFWLane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZenFWLane.h; sourceTree = SOURCE_ROOT; };
+		E82BA2EB106FA4A90076EBC7 /* ZenFWManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZenFWManager.h; sourceTree = SOURCE_ROOT; };
+		E82BA2EC106FA4A90076EBC7 /* ZenFWRenderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZenFWRenderer.cpp; sourceTree = SOURCE_ROOT; };
+		E82BA2ED106FA4A90076EBC7 /* ZenFWLane.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZenFWLane.cpp; sourceTree = SOURCE_ROOT; };
+		E82BA2EE106FA4A90076EBC7 /* ZenFWDecoderNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZenFWDecoderNode.cpp; sourceTree = SOURCE_ROOT; };
+		E82BA2EF106FA4A90076EBC7 /* ZenFWRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZenFWRenderer.h; sourceTree = SOURCE_ROOT; };
+		E82BA2F0106FA4A90076EBC7 /* ZenFWGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZenFWGame.h; sourceTree = SOURCE_ROOT; };
+		E82BA2F1106FA4A90076EBC7 /* ZenFWGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZenFWGame.cpp; sourceTree = SOURCE_ROOT; };
+		E82BA2F2106FA4A90076EBC7 /* ZenFWSDLWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZenFWSDLWindow.h; sourceTree = SOURCE_ROOT; };
+		E82BA2F3106FA4A90076EBC7 /* ZInputSDL.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZInputSDL.cpp; sourceTree = SOURCE_ROOT; };
+		E82BA2F4106FA4A90076EBC7 /* ZenFWStdNodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZenFWStdNodes.h; sourceTree = SOURCE_ROOT; };
+		E82BA2F5106FA4A90076EBC7 /* ZenFWVRAMService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZenFWVRAMService.h; sourceTree = SOURCE_ROOT; };
+		E82BA2F6106FA4A90076EBC7 /* ZCEGui.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZCEGui.cpp; sourceTree = SOURCE_ROOT; };
+		E82BA312106FA4B80076EBC7 /* SDL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL.framework; path = ../../3rdparty/SDL.framework; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D289987405E68DCB004EDB86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E82BA313106FA4B80076EBC7 /* SDL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* libplatform */ = {
+			isa = PBXGroup;
+			children = (
+				E82BA312106FA4B80076EBC7 /* SDL.framework */,
+				E82BA2DC106FA4A90076EBC7 /* ZenFWNode.h */,
+				E82BA2DD106FA4A90076EBC7 /* ZenFWManager.cpp */,
+				E82BA2DE106FA4A90076EBC7 /* targetver.h */,
+				E82BA2E0106FA4A90076EBC7 /* stdafx.h */,
+				E82BA2E1106FA4A90076EBC7 /* ZenFWLoaderNode.cpp */,
+				E82BA2E2106FA4A90076EBC7 /* ZenFWLoaderNode.h */,
+				E82BA2E3106FA4A90076EBC7 /* ZenFWViewer.h */,
+				E82BA2E4106FA4A90076EBC7 /* ZenFWVRAMService.cpp */,
+				E82BA2E5106FA4A90076EBC7 /* IInput.h */,
+				E82BA2E6106FA4A90076EBC7 /* stdafx.cpp */,
+				E82BA2E7106FA4A90076EBC7 /* ZenFWViewer.cpp */,
+				E82BA2E8106FA4A90076EBC7 /* ZenFWDecoderNode.h */,
+				E82BA2E9106FA4A90076EBC7 /* libplatform.h */,
+				E82BA2EA106FA4A90076EBC7 /* ZenFWLane.h */,
+				E82BA2EB106FA4A90076EBC7 /* ZenFWManager.h */,
+				E82BA2EC106FA4A90076EBC7 /* ZenFWRenderer.cpp */,
+				E82BA2ED106FA4A90076EBC7 /* ZenFWLane.cpp */,
+				E82BA2EE106FA4A90076EBC7 /* ZenFWDecoderNode.cpp */,
+				E82BA2EF106FA4A90076EBC7 /* ZenFWRenderer.h */,
+				E82BA2F0106FA4A90076EBC7 /* ZenFWGame.h */,
+				E82BA2F1106FA4A90076EBC7 /* ZenFWGame.cpp */,
+				E82BA2F2106FA4A90076EBC7 /* ZenFWSDLWindow.h */,
+				E82BA2F3106FA4A90076EBC7 /* ZInputSDL.cpp */,
+				E82BA2F4106FA4A90076EBC7 /* ZenFWStdNodes.h */,
+				E82BA2F5106FA4A90076EBC7 /* ZenFWVRAMService.h */,
+				E82BA2F6106FA4A90076EBC7 /* ZCEGui.cpp */,
+				08FB7795FE84155DC02AAC07 /* Source */,
+				C6A0FF2B0290797F04C91782 /* Documentation */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+			);
+			name = libplatform;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC046055464E500DB518D /* liblibplatform.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C6A0FF2B0290797F04C91782 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Documentation;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC043055464E500DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E82BA2F7106FA4A90076EBC7 /* ZenFWNode.h in Headers */,
+				E82BA2F9106FA4A90076EBC7 /* targetver.h in Headers */,
+				E82BA2FB106FA4A90076EBC7 /* stdafx.h in Headers */,
+				E82BA2FD106FA4A90076EBC7 /* ZenFWLoaderNode.h in Headers */,
+				E82BA2FE106FA4A90076EBC7 /* ZenFWViewer.h in Headers */,
+				E82BA300106FA4A90076EBC7 /* IInput.h in Headers */,
+				E82BA303106FA4A90076EBC7 /* ZenFWDecoderNode.h in Headers */,
+				E82BA304106FA4A90076EBC7 /* libplatform.h in Headers */,
+				E82BA305106FA4A90076EBC7 /* ZenFWLane.h in Headers */,
+				E82BA306106FA4A90076EBC7 /* ZenFWManager.h in Headers */,
+				E82BA30A106FA4A90076EBC7 /* ZenFWRenderer.h in Headers */,
+				E82BA30B106FA4A90076EBC7 /* ZenFWGame.h in Headers */,
+				E82BA30D106FA4A90076EBC7 /* ZenFWSDLWindow.h in Headers */,
+				E82BA30F106FA4A90076EBC7 /* ZenFWStdNodes.h in Headers */,
+				E82BA310106FA4A90076EBC7 /* ZenFWVRAMService.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC045055464E500DB518D /* libplatform */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB91EB08733DB70010E9CD /* Build configuration list for PBXNativeTarget "libplatform" */;
+			buildPhases = (
+				D2AAC043055464E500DB518D /* Headers */,
+				D2AAC044055464E500DB518D /* Sources */,
+				D289987405E68DCB004EDB86 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libplatform;
+			productName = libplatform;
+			productReference = D2AAC046055464E500DB518D /* liblibplatform.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB91EF08733DB70010E9CD /* Build configuration list for PBXProject "libplatform" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* libplatform */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC045055464E500DB518D /* libplatform */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC044055464E500DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E82BA2F8106FA4A90076EBC7 /* ZenFWManager.cpp in Sources */,
+				E82BA2FC106FA4A90076EBC7 /* ZenFWLoaderNode.cpp in Sources */,
+				E82BA2FF106FA4A90076EBC7 /* ZenFWVRAMService.cpp in Sources */,
+				E82BA301106FA4A90076EBC7 /* stdafx.cpp in Sources */,
+				E82BA302106FA4A90076EBC7 /* ZenFWViewer.cpp in Sources */,
+				E82BA307106FA4A90076EBC7 /* ZenFWRenderer.cpp in Sources */,
+				E82BA308106FA4A90076EBC7 /* ZenFWLane.cpp in Sources */,
+				E82BA309106FA4A90076EBC7 /* ZenFWDecoderNode.cpp in Sources */,
+				E82BA30C106FA4A90076EBC7 /* ZenFWGame.cpp in Sources */,
+				E82BA30E106FA4A90076EBC7 /* ZInputSDL.cpp in Sources */,
+				E82BA311106FA4A90076EBC7 /* ZCEGui.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB91EC08733DB70010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../3rdparty\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = libplatform;
+			};
+			name = Debug;
+		};
+		1DEB91ED08733DB70010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../3rdparty\"",
+				);
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = libplatform;
+			};
+			name = Release;
+		};
+		1DEB91F008733DB70010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = MAC_OS;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../3rdparty/zlib-1.2.3\"",
+					"\"$(SRCROOT)/../../3rdparty/tinyxml\"",
+					"\"$(SRCROOT)/../../3rdparty/bullet-2.74/src\"",
+					"\"$(SRCROOT)/../../3rdparty/CEGUI-SDK-0.6.2-vc9\"",
+					"\"$(SRCROOT)/../librender\"",
+					"\"$(SRCROOT)/../../3rdparty/CEGUI-SDK-0.6.2-vc9/include\"",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Debug;
+		};
+		1DEB91F108733DB70010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_PREPROCESSOR_DEFINITIONS = MAC_OS;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../3rdparty/zlib-1.2.3\"",
+					"\"$(SRCROOT)/../../3rdparty/tinyxml\"",
+					"\"$(SRCROOT)/../../3rdparty/bullet-2.74/src\"",
+					"\"$(SRCROOT)/../../3rdparty/CEGUI-SDK-0.6.2-vc9\"",
+					"\"$(SRCROOT)/../librender\"",
+					"\"$(SRCROOT)/../../3rdparty/CEGUI-SDK-0.6.2-vc9/include\"",
+				);
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB91EB08733DB70010E9CD /* Build configuration list for PBXNativeTarget "libplatform" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91EC08733DB70010E9CD /* Debug */,
+				1DEB91ED08733DB70010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB91EF08733DB70010E9CD /* Build configuration list for PBXProject "libplatform" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91F008733DB70010E9CD /* Debug */,
+				1DEB91F108733DB70010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

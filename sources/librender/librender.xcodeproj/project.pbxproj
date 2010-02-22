@@ -1,0 +1,374 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E8FCAD3A106FCD5B00676E9D /* librender.h in Headers */ = {isa = PBXBuildFile; fileRef = E8FCAD18106FCD5B00676E9D /* librender.h */; };
+		E8FCAD3B106FCD5B00676E9D /* targetver.h in Headers */ = {isa = PBXBuildFile; fileRef = E8FCAD19106FCD5B00676E9D /* targetver.h */; };
+		E8FCAD3C106FCD5B00676E9D /* stdafx.h in Headers */ = {isa = PBXBuildFile; fileRef = E8FCAD1A106FCD5B00676E9D /* stdafx.h */; };
+		E8FCAD3D106FCD5B00676E9D /* stdafx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8FCAD1B106FCD5B00676E9D /* stdafx.cpp */; };
+		E8FCAD3E106FCD5B00676E9D /* CEGuiRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8FCAD1C106FCD5B00676E9D /* CEGuiRenderer.cpp */; };
+		E8FCAD3F106FCD5B00676E9D /* ddsOGL.h in Headers */ = {isa = PBXBuildFile; fileRef = E8FCAD1D106FCD5B00676E9D /* ddsOGL.h */; };
+		E8FCAD40106FCD5B00676E9D /* ddsOGL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8FCAD1E106FCD5B00676E9D /* ddsOGL.cpp */; };
+		E8FCAD41106FCD5B00676E9D /* ZDisplayDeviceOGL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8FCAD1F106FCD5B00676E9D /* ZDisplayDeviceOGL.cpp */; };
+		E8FCAD42106FCD5B00676E9D /* ZDisplayDeviceNULL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8FCAD20106FCD5B00676E9D /* ZDisplayDeviceNULL.cpp */; };
+		E8FCAD43106FCD5B00676E9D /* IStreamArrays.h in Headers */ = {isa = PBXBuildFile; fileRef = E8FCAD21106FCD5B00676E9D /* IStreamArrays.h */; };
+		E8FCAD44106FCD5B00676E9D /* IDisplayDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = E8FCAD22106FCD5B00676E9D /* IDisplayDevice.h */; };
+		E8FCAD45106FCD5B00676E9D /* ZVertexArrayOGL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8FCAD23106FCD5B00676E9D /* ZVertexArrayOGL.cpp */; };
+		E8FCAD46106FCD5B00676E9D /* GLee.h in Headers */ = {isa = PBXBuildFile; fileRef = E8FCAD24106FCD5B00676E9D /* GLee.h */; };
+		E8FCAD47106FCD5B00676E9D /* GLee.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8FCAD25106FCD5B00676E9D /* GLee.cpp */; };
+		E8FCAD48106FCD5B00676E9D /* FFxData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8FCAD26106FCD5B00676E9D /* FFxData.cpp */; };
+		E8FCAD49106FCD5B00676E9D /* FFx.h in Headers */ = {isa = PBXBuildFile; fileRef = E8FCAD27106FCD5B00676E9D /* FFx.h */; };
+		E8FCAD4A106FCD5B00676E9D /* ZIndexArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8FCAD28106FCD5B00676E9D /* ZIndexArray.cpp */; };
+		E8FCAD4B106FCD5B00676E9D /* ZFx.h in Headers */ = {isa = PBXBuildFile; fileRef = E8FCAD29106FCD5B00676E9D /* ZFx.h */; };
+		E8FCAD4C106FCD5B00676E9D /* ZFx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8FCAD2A106FCD5B00676E9D /* ZFx.cpp */; };
+		E8FCAD4D106FCD5B00676E9D /* ZRenderQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8FCAD2B106FCD5B00676E9D /* ZRenderQueue.cpp */; };
+		E8FCAD4E106FCD5B00676E9D /* ZMaterial.h in Headers */ = {isa = PBXBuildFile; fileRef = E8FCAD2C106FCD5B00676E9D /* ZMaterial.h */; };
+		E8FCAD4F106FCD5B00676E9D /* ZMaterial.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8FCAD2D106FCD5B00676E9D /* ZMaterial.cpp */; };
+		E8FCAD50106FCD5B00676E9D /* ZIndexArrayOGL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8FCAD2E106FCD5B00676E9D /* ZIndexArrayOGL.cpp */; };
+		E8FCAD51106FCD5B00676E9D /* FFxPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8FCAD2F106FCD5B00676E9D /* FFxPass.cpp */; };
+		E8FCAD52106FCD5B00676E9D /* FFxTechnique.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8FCAD30106FCD5B00676E9D /* FFxTechnique.cpp */; };
+		E8FCAD53106FCD5B00676E9D /* FFxProgram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8FCAD31106FCD5B00676E9D /* FFxProgram.cpp */; };
+		E8FCAD54106FCD5B00676E9D /* ZVertexArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8FCAD32106FCD5B00676E9D /* ZVertexArray.cpp */; };
+		E8FCAD55106FCD5B00676E9D /* ZTexture.h in Headers */ = {isa = PBXBuildFile; fileRef = E8FCAD33106FCD5B00676E9D /* ZTexture.h */; };
+		E8FCAD56106FCD5B00676E9D /* ZTexture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8FCAD34106FCD5B00676E9D /* ZTexture.cpp */; };
+		E8FCAD57106FCD5B00676E9D /* ZRenderQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = E8FCAD35106FCD5B00676E9D /* ZRenderQueue.h */; };
+		E8FCAD58106FCD5B00676E9D /* FFxImport.h in Headers */ = {isa = PBXBuildFile; fileRef = E8FCAD36106FCD5B00676E9D /* FFxImport.h */; };
+		E8FCAD59106FCD5B00676E9D /* FFxImport.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8FCAD37106FCD5B00676E9D /* FFxImport.cpp */; };
+		E8FCAD5A106FCD5B00676E9D /* FFxParamable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8FCAD38106FCD5B00676E9D /* FFxParamable.cpp */; };
+		E8FCAD5B106FCD5B00676E9D /* FFxParam.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8FCAD39106FCD5B00676E9D /* FFxParam.cpp */; };
+		E8FCAD64106FCDEC00676E9D /* CEGUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8FCAD63106FCDEC00676E9D /* CEGUI.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D2AAC046055464E500DB518D /* liblibrender.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblibrender.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8FCAD18106FCD5B00676E9D /* librender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = librender.h; sourceTree = "<group>"; };
+		E8FCAD19106FCD5B00676E9D /* targetver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = targetver.h; sourceTree = "<group>"; };
+		E8FCAD1A106FCD5B00676E9D /* stdafx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stdafx.h; sourceTree = "<group>"; };
+		E8FCAD1B106FCD5B00676E9D /* stdafx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stdafx.cpp; sourceTree = "<group>"; };
+		E8FCAD1C106FCD5B00676E9D /* CEGuiRenderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CEGuiRenderer.cpp; sourceTree = "<group>"; };
+		E8FCAD1D106FCD5B00676E9D /* ddsOGL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ddsOGL.h; sourceTree = "<group>"; };
+		E8FCAD1E106FCD5B00676E9D /* ddsOGL.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ddsOGL.cpp; sourceTree = "<group>"; };
+		E8FCAD1F106FCD5B00676E9D /* ZDisplayDeviceOGL.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZDisplayDeviceOGL.cpp; sourceTree = "<group>"; };
+		E8FCAD20106FCD5B00676E9D /* ZDisplayDeviceNULL.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZDisplayDeviceNULL.cpp; sourceTree = "<group>"; };
+		E8FCAD21106FCD5B00676E9D /* IStreamArrays.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IStreamArrays.h; sourceTree = "<group>"; };
+		E8FCAD22106FCD5B00676E9D /* IDisplayDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDisplayDevice.h; sourceTree = "<group>"; };
+		E8FCAD23106FCD5B00676E9D /* ZVertexArrayOGL.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZVertexArrayOGL.cpp; sourceTree = "<group>"; };
+		E8FCAD24106FCD5B00676E9D /* GLee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLee.h; sourceTree = "<group>"; };
+		E8FCAD25106FCD5B00676E9D /* GLee.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GLee.cpp; sourceTree = "<group>"; };
+		E8FCAD26106FCD5B00676E9D /* FFxData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FFxData.cpp; sourceTree = "<group>"; };
+		E8FCAD27106FCD5B00676E9D /* FFx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFx.h; sourceTree = "<group>"; };
+		E8FCAD28106FCD5B00676E9D /* ZIndexArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZIndexArray.cpp; sourceTree = "<group>"; };
+		E8FCAD29106FCD5B00676E9D /* ZFx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFx.h; sourceTree = "<group>"; };
+		E8FCAD2A106FCD5B00676E9D /* ZFx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZFx.cpp; sourceTree = "<group>"; };
+		E8FCAD2B106FCD5B00676E9D /* ZRenderQueue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZRenderQueue.cpp; sourceTree = "<group>"; };
+		E8FCAD2C106FCD5B00676E9D /* ZMaterial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMaterial.h; sourceTree = "<group>"; };
+		E8FCAD2D106FCD5B00676E9D /* ZMaterial.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZMaterial.cpp; sourceTree = "<group>"; };
+		E8FCAD2E106FCD5B00676E9D /* ZIndexArrayOGL.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZIndexArrayOGL.cpp; sourceTree = "<group>"; };
+		E8FCAD2F106FCD5B00676E9D /* FFxPass.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FFxPass.cpp; sourceTree = "<group>"; };
+		E8FCAD30106FCD5B00676E9D /* FFxTechnique.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FFxTechnique.cpp; sourceTree = "<group>"; };
+		E8FCAD31106FCD5B00676E9D /* FFxProgram.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FFxProgram.cpp; sourceTree = "<group>"; };
+		E8FCAD32106FCD5B00676E9D /* ZVertexArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZVertexArray.cpp; sourceTree = "<group>"; };
+		E8FCAD33106FCD5B00676E9D /* ZTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTexture.h; sourceTree = "<group>"; };
+		E8FCAD34106FCD5B00676E9D /* ZTexture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZTexture.cpp; sourceTree = "<group>"; };
+		E8FCAD35106FCD5B00676E9D /* ZRenderQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRenderQueue.h; sourceTree = "<group>"; };
+		E8FCAD36106FCD5B00676E9D /* FFxImport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFxImport.h; sourceTree = "<group>"; };
+		E8FCAD37106FCD5B00676E9D /* FFxImport.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FFxImport.cpp; sourceTree = "<group>"; };
+		E8FCAD38106FCD5B00676E9D /* FFxParamable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FFxParamable.cpp; sourceTree = "<group>"; };
+		E8FCAD39106FCD5B00676E9D /* FFxParam.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FFxParam.cpp; sourceTree = "<group>"; };
+		E8FCAD63106FCDEC00676E9D /* CEGUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CEGUI.framework; path = ../../3rdparty/CEGUI.framework; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D289987405E68DCB004EDB86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8FCAD64106FCDEC00676E9D /* CEGUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* librender */ = {
+			isa = PBXGroup;
+			children = (
+				E8FCAD63106FCDEC00676E9D /* CEGUI.framework */,
+				E8FCAD18106FCD5B00676E9D /* librender.h */,
+				E8FCAD19106FCD5B00676E9D /* targetver.h */,
+				E8FCAD1A106FCD5B00676E9D /* stdafx.h */,
+				E8FCAD1B106FCD5B00676E9D /* stdafx.cpp */,
+				E8FCAD1C106FCD5B00676E9D /* CEGuiRenderer.cpp */,
+				E8FCAD1D106FCD5B00676E9D /* ddsOGL.h */,
+				E8FCAD1E106FCD5B00676E9D /* ddsOGL.cpp */,
+				E8FCAD1F106FCD5B00676E9D /* ZDisplayDeviceOGL.cpp */,
+				E8FCAD20106FCD5B00676E9D /* ZDisplayDeviceNULL.cpp */,
+				E8FCAD21106FCD5B00676E9D /* IStreamArrays.h */,
+				E8FCAD22106FCD5B00676E9D /* IDisplayDevice.h */,
+				E8FCAD23106FCD5B00676E9D /* ZVertexArrayOGL.cpp */,
+				E8FCAD24106FCD5B00676E9D /* GLee.h */,
+				E8FCAD25106FCD5B00676E9D /* GLee.cpp */,
+				E8FCAD26106FCD5B00676E9D /* FFxData.cpp */,
+				E8FCAD27106FCD5B00676E9D /* FFx.h */,
+				E8FCAD28106FCD5B00676E9D /* ZIndexArray.cpp */,
+				E8FCAD29106FCD5B00676E9D /* ZFx.h */,
+				E8FCAD2A106FCD5B00676E9D /* ZFx.cpp */,
+				E8FCAD2B106FCD5B00676E9D /* ZRenderQueue.cpp */,
+				E8FCAD2C106FCD5B00676E9D /* ZMaterial.h */,
+				E8FCAD2D106FCD5B00676E9D /* ZMaterial.cpp */,
+				E8FCAD2E106FCD5B00676E9D /* ZIndexArrayOGL.cpp */,
+				E8FCAD2F106FCD5B00676E9D /* FFxPass.cpp */,
+				E8FCAD30106FCD5B00676E9D /* FFxTechnique.cpp */,
+				E8FCAD31106FCD5B00676E9D /* FFxProgram.cpp */,
+				E8FCAD32106FCD5B00676E9D /* ZVertexArray.cpp */,
+				E8FCAD33106FCD5B00676E9D /* ZTexture.h */,
+				E8FCAD34106FCD5B00676E9D /* ZTexture.cpp */,
+				E8FCAD35106FCD5B00676E9D /* ZRenderQueue.h */,
+				E8FCAD36106FCD5B00676E9D /* FFxImport.h */,
+				E8FCAD37106FCD5B00676E9D /* FFxImport.cpp */,
+				E8FCAD38106FCD5B00676E9D /* FFxParamable.cpp */,
+				E8FCAD39106FCD5B00676E9D /* FFxParam.cpp */,
+				08FB7795FE84155DC02AAC07 /* Source */,
+				C6A0FF2B0290797F04C91782 /* Documentation */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+			);
+			name = librender;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC046055464E500DB518D /* liblibrender.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C6A0FF2B0290797F04C91782 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Documentation;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC043055464E500DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8FCAD3A106FCD5B00676E9D /* librender.h in Headers */,
+				E8FCAD3B106FCD5B00676E9D /* targetver.h in Headers */,
+				E8FCAD3C106FCD5B00676E9D /* stdafx.h in Headers */,
+				E8FCAD3F106FCD5B00676E9D /* ddsOGL.h in Headers */,
+				E8FCAD43106FCD5B00676E9D /* IStreamArrays.h in Headers */,
+				E8FCAD44106FCD5B00676E9D /* IDisplayDevice.h in Headers */,
+				E8FCAD46106FCD5B00676E9D /* GLee.h in Headers */,
+				E8FCAD49106FCD5B00676E9D /* FFx.h in Headers */,
+				E8FCAD4B106FCD5B00676E9D /* ZFx.h in Headers */,
+				E8FCAD4E106FCD5B00676E9D /* ZMaterial.h in Headers */,
+				E8FCAD55106FCD5B00676E9D /* ZTexture.h in Headers */,
+				E8FCAD57106FCD5B00676E9D /* ZRenderQueue.h in Headers */,
+				E8FCAD58106FCD5B00676E9D /* FFxImport.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC045055464E500DB518D /* librender */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB91EB08733DB70010E9CD /* Build configuration list for PBXNativeTarget "librender" */;
+			buildPhases = (
+				D2AAC043055464E500DB518D /* Headers */,
+				D2AAC044055464E500DB518D /* Sources */,
+				D289987405E68DCB004EDB86 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = librender;
+			productName = librender;
+			productReference = D2AAC046055464E500DB518D /* liblibrender.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB91EF08733DB70010E9CD /* Build configuration list for PBXProject "librender" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* librender */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC045055464E500DB518D /* librender */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC044055464E500DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8FCAD3D106FCD5B00676E9D /* stdafx.cpp in Sources */,
+				E8FCAD3E106FCD5B00676E9D /* CEGuiRenderer.cpp in Sources */,
+				E8FCAD40106FCD5B00676E9D /* ddsOGL.cpp in Sources */,
+				E8FCAD41106FCD5B00676E9D /* ZDisplayDeviceOGL.cpp in Sources */,
+				E8FCAD42106FCD5B00676E9D /* ZDisplayDeviceNULL.cpp in Sources */,
+				E8FCAD45106FCD5B00676E9D /* ZVertexArrayOGL.cpp in Sources */,
+				E8FCAD47106FCD5B00676E9D /* GLee.cpp in Sources */,
+				E8FCAD48106FCD5B00676E9D /* FFxData.cpp in Sources */,
+				E8FCAD4A106FCD5B00676E9D /* ZIndexArray.cpp in Sources */,
+				E8FCAD4C106FCD5B00676E9D /* ZFx.cpp in Sources */,
+				E8FCAD4D106FCD5B00676E9D /* ZRenderQueue.cpp in Sources */,
+				E8FCAD4F106FCD5B00676E9D /* ZMaterial.cpp in Sources */,
+				E8FCAD50106FCD5B00676E9D /* ZIndexArrayOGL.cpp in Sources */,
+				E8FCAD51106FCD5B00676E9D /* FFxPass.cpp in Sources */,
+				E8FCAD52106FCD5B00676E9D /* FFxTechnique.cpp in Sources */,
+				E8FCAD53106FCD5B00676E9D /* FFxProgram.cpp in Sources */,
+				E8FCAD54106FCD5B00676E9D /* ZVertexArray.cpp in Sources */,
+				E8FCAD56106FCD5B00676E9D /* ZTexture.cpp in Sources */,
+				E8FCAD59106FCD5B00676E9D /* FFxImport.cpp in Sources */,
+				E8FCAD5A106FCD5B00676E9D /* FFxParamable.cpp in Sources */,
+				E8FCAD5B106FCD5B00676E9D /* FFxParam.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB91EC08733DB70010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../3rdparty\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../3rdparty/bullet-2.74/src\"/**",
+					"\"$(SRCROOT)/../../3rdparty/zlib-1.2.3\"/**",
+					"\"$(SRCROOT)/../../3rdparty/tinyxml\"/**",
+					"\"$(SRCROOT)/../../3rdparty/CEGUI-SDK-0.6.2-vc9\"/**",
+					"\"$(SRCROOT)/../../3rdparty/CEGUI-SDK-0.6.2-vc9/XMLParserModules\"/**",
+					"\"$(SRCROOT)/../../3rdparty/CEGUI-SDK-0.6.2-vc9/RendererModules\"/**",
+				);
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = librender;
+			};
+			name = Debug;
+		};
+		1DEB91ED08733DB70010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../3rdparty\"",
+				);
+				GCC_MODEL_TUNING = G5;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../3rdparty/bullet-2.74/src\"/**",
+					"\"$(SRCROOT)/../../3rdparty/zlib-1.2.3\"/**",
+					"\"$(SRCROOT)/../../3rdparty/tinyxml\"/**",
+					"\"$(SRCROOT)/../../3rdparty/CEGUI-SDK-0.6.2-vc9\"/**",
+					"\"$(SRCROOT)/../../3rdparty/CEGUI-SDK-0.6.2-vc9/XMLParserModules\"/**",
+					"\"$(SRCROOT)/../../3rdparty/CEGUI-SDK-0.6.2-vc9/RendererModules\"/**",
+				);
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = librender;
+			};
+			name = Release;
+		};
+		1DEB91F008733DB70010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = MAC_OS;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../3rdparty/zlib-1.2.3\"/**",
+					"\"$(SRCROOT)/../../3rdparty/tinyxml\"/**",
+					"\"$(SRCROOT)/../../3rdparty/CEGUI-SDK-0.6.2-vc9\"/**",
+					"\"$(SRCROOT)/../../3rdparty/bullet-2.74/src\"/**",
+					"\"$(SRCROOT)/../../3rdparty/CEGUI-SDK-0.6.2-vc9/XMLParserModules\"/**",
+					"\"$(SRCROOT)/../../3rdparty/CEGUI-SDK-0.6.2-vc9/RendererModules\"/**",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Debug;
+		};
+		1DEB91F108733DB70010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_PREPROCESSOR_DEFINITIONS = MAC_OS;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../3rdparty/zlib-1.2.3\"/**",
+					"\"$(SRCROOT)/../../3rdparty/tinyxml\"/**",
+					"\"$(SRCROOT)/../../3rdparty/CEGUI-SDK-0.6.2-vc9\"/**",
+					"\"$(SRCROOT)/../../3rdparty/bullet-2.74/src\"/**",
+					"\"$(SRCROOT)/../../3rdparty/CEGUI-SDK-0.6.2-vc9/XMLParserModules\"/**",
+					"\"$(SRCROOT)/../../3rdparty/CEGUI-SDK-0.6.2-vc9/RendererModules\"/**",
+				);
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB91EB08733DB70010E9CD /* Build configuration list for PBXNativeTarget "librender" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91EC08733DB70010E9CD /* Debug */,
+				1DEB91ED08733DB70010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB91EF08733DB70010E9CD /* Build configuration list for PBXProject "librender" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91F008733DB70010E9CD /* Debug */,
+				1DEB91F108733DB70010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

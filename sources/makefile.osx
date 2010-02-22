@@ -1,0 +1,32 @@
+export DEBUG=yes
+export CC=g++
+export RANLIB=ranlib
+ifeq ($(DEBUG),yes)
+	export CFLAGS=-W -Wall -ansi -pedantic -g -DMAC_OS
+	export LDFLAGS=-lm
+	export AR = ar
+	export ARFLAGS = rcs
+	export LIBS = -ltp
+else
+	export CFLAGS=-W -Wall -ansi -pedantic -O3 -DMAC_OS
+	export LDFLAGS= -O3 -lm
+	export AR = ar
+	export ARFLAGS = rcs
+	export LIBS = -ltp
+endif
+
+all: 
+	@(cd libbase && $(MAKE) -f makefile.osx )
+	@(cd libplatform && $(MAKE) -f makefile.osx )
+	@(cd librender && $(MAKE) -f makefile.osx )
+	@(cd libworld && $(MAKE) -f makefile.osx )
+	@(cd libgame && $(MAKE) -f makefile.osx )
+	@(cd testunit && $(MAKE) -f makefile.osx )
+
+clean:
+	@(cd libbase && $(MAKE)  -f makefile.osx $@)
+	@(cd libplatform && $(MAKE)  -f makefile.osx $@)
+	@(cd librender && $(MAKE)  -f makefile.osx $@)                   
+	@(cd libworld && $(MAKE)  -f makefile.osx $@)
+	@(cd libgame && $(MAKE)  -f makefile.osx $@)
+	@(cd testunit && $(MAKE)  -f makefile.osx $@)

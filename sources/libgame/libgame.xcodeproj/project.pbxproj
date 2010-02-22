@@ -1,0 +1,304 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E8FCADDD106FDB9700676E9D /* ZShipPhysics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8FCADC8106FDB9700676E9D /* ZShipPhysics.cpp */; };
+		E8FCADDE106FDB9800676E9D /* IProtoGUI.h in Headers */ = {isa = PBXBuildFile; fileRef = E8FCADC9106FDB9700676E9D /* IProtoGUI.h */; };
+		E8FCADDF106FDB9800676E9D /* ZProtoGUI.h in Headers */ = {isa = PBXBuildFile; fileRef = E8FCADCA106FDB9700676E9D /* ZProtoGUI.h */; };
+		E8FCADE0106FDB9800676E9D /* ZRushGameContent.h in Headers */ = {isa = PBXBuildFile; fileRef = E8FCADCB106FDB9700676E9D /* ZRushGameContent.h */; };
+		E8FCADE1106FDB9800676E9D /* ZGuiProgress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8FCADCC106FDB9700676E9D /* ZGuiProgress.cpp */; };
+		E8FCADE2106FDB9800676E9D /* ZRushTrack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8FCADCD106FDB9700676E9D /* ZRushTrack.cpp */; };
+		E8FCADE3106FDB9800676E9D /* ZProtoGUI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8FCADCE106FDB9700676E9D /* ZProtoGUI.cpp */; };
+		E8FCADE4106FDB9800676E9D /* ZRushGame.h in Headers */ = {isa = PBXBuildFile; fileRef = E8FCADCF106FDB9700676E9D /* ZRushGame.h */; };
+		E8FCADE5106FDB9800676E9D /* stdafx.h in Headers */ = {isa = PBXBuildFile; fileRef = E8FCADD0106FDB9700676E9D /* stdafx.h */; };
+		E8FCADE6106FDB9800676E9D /* targetver.h in Headers */ = {isa = PBXBuildFile; fileRef = E8FCADD1106FDB9700676E9D /* targetver.h */; };
+		E8FCADE7106FDB9800676E9D /* ZShip.h in Headers */ = {isa = PBXBuildFile; fileRef = E8FCADD2106FDB9700676E9D /* ZShip.h */; };
+		E8FCADE8106FDB9800676E9D /* CameraMotion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8FCADD3106FDB9700676E9D /* CameraMotion.cpp */; };
+		E8FCADE9106FDB9800676E9D /* ZShip.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8FCADD4106FDB9700676E9D /* ZShip.cpp */; };
+		E8FCADEA106FDB9800676E9D /* CameraMotion.h in Headers */ = {isa = PBXBuildFile; fileRef = E8FCADD5106FDB9700676E9D /* CameraMotion.h */; };
+		E8FCADEB106FDB9800676E9D /* ZRushGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8FCADD6106FDB9700676E9D /* ZRushGame.cpp */; };
+		E8FCADEC106FDB9800676E9D /* ZGuiProgress.h in Headers */ = {isa = PBXBuildFile; fileRef = E8FCADD7106FDB9700676E9D /* ZGuiProgress.h */; };
+		E8FCADED106FDB9800676E9D /* ZShipPhysics.h in Headers */ = {isa = PBXBuildFile; fileRef = E8FCADD8106FDB9700676E9D /* ZShipPhysics.h */; };
+		E8FCADEE106FDB9800676E9D /* ZRushGameContent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8FCADD9106FDB9700676E9D /* ZRushGameContent.cpp */; };
+		E8FCADEF106FDB9800676E9D /* libgame.h in Headers */ = {isa = PBXBuildFile; fileRef = E8FCADDA106FDB9700676E9D /* libgame.h */; };
+		E8FCADF0106FDB9800676E9D /* ZRushTrack.h in Headers */ = {isa = PBXBuildFile; fileRef = E8FCADDB106FDB9700676E9D /* ZRushTrack.h */; };
+		E8FCADF1106FDB9800676E9D /* stdafx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8FCADDC106FDB9700676E9D /* stdafx.cpp */; };
+		E8FCAE00106FDC4400676E9D /* SDL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8FCADFF106FDC4300676E9D /* SDL.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D2AAC046055464E500DB518D /* liblibgame.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblibgame.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8FCADC8106FDB9700676E9D /* ZShipPhysics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZShipPhysics.cpp; sourceTree = "<group>"; };
+		E8FCADC9106FDB9700676E9D /* IProtoGUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IProtoGUI.h; sourceTree = "<group>"; };
+		E8FCADCA106FDB9700676E9D /* ZProtoGUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZProtoGUI.h; sourceTree = "<group>"; };
+		E8FCADCB106FDB9700676E9D /* ZRushGameContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRushGameContent.h; sourceTree = "<group>"; };
+		E8FCADCC106FDB9700676E9D /* ZGuiProgress.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZGuiProgress.cpp; sourceTree = "<group>"; };
+		E8FCADCD106FDB9700676E9D /* ZRushTrack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZRushTrack.cpp; sourceTree = "<group>"; };
+		E8FCADCE106FDB9700676E9D /* ZProtoGUI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZProtoGUI.cpp; sourceTree = "<group>"; };
+		E8FCADCF106FDB9700676E9D /* ZRushGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRushGame.h; sourceTree = "<group>"; };
+		E8FCADD0106FDB9700676E9D /* stdafx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stdafx.h; sourceTree = "<group>"; };
+		E8FCADD1106FDB9700676E9D /* targetver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = targetver.h; sourceTree = "<group>"; };
+		E8FCADD2106FDB9700676E9D /* ZShip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZShip.h; sourceTree = "<group>"; };
+		E8FCADD3106FDB9700676E9D /* CameraMotion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CameraMotion.cpp; sourceTree = "<group>"; };
+		E8FCADD4106FDB9700676E9D /* ZShip.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZShip.cpp; sourceTree = "<group>"; };
+		E8FCADD5106FDB9700676E9D /* CameraMotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraMotion.h; sourceTree = "<group>"; };
+		E8FCADD6106FDB9700676E9D /* ZRushGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZRushGame.cpp; sourceTree = "<group>"; };
+		E8FCADD7106FDB9700676E9D /* ZGuiProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGuiProgress.h; sourceTree = "<group>"; };
+		E8FCADD8106FDB9700676E9D /* ZShipPhysics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZShipPhysics.h; sourceTree = "<group>"; };
+		E8FCADD9106FDB9700676E9D /* ZRushGameContent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZRushGameContent.cpp; sourceTree = "<group>"; };
+		E8FCADDA106FDB9700676E9D /* libgame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libgame.h; sourceTree = "<group>"; };
+		E8FCADDB106FDB9700676E9D /* ZRushTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRushTrack.h; sourceTree = "<group>"; };
+		E8FCADDC106FDB9700676E9D /* stdafx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stdafx.cpp; sourceTree = "<group>"; };
+		E8FCADFF106FDC4300676E9D /* SDL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL.framework; path = ../../3rdparty/SDL.framework; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D289987405E68DCB004EDB86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8FCAE00106FDC4400676E9D /* SDL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* libgame */ = {
+			isa = PBXGroup;
+			children = (
+				E8FCADFF106FDC4300676E9D /* SDL.framework */,
+				E8FCADC8106FDB9700676E9D /* ZShipPhysics.cpp */,
+				E8FCADC9106FDB9700676E9D /* IProtoGUI.h */,
+				E8FCADCA106FDB9700676E9D /* ZProtoGUI.h */,
+				E8FCADCB106FDB9700676E9D /* ZRushGameContent.h */,
+				E8FCADCC106FDB9700676E9D /* ZGuiProgress.cpp */,
+				E8FCADCD106FDB9700676E9D /* ZRushTrack.cpp */,
+				E8FCADCE106FDB9700676E9D /* ZProtoGUI.cpp */,
+				E8FCADCF106FDB9700676E9D /* ZRushGame.h */,
+				E8FCADD0106FDB9700676E9D /* stdafx.h */,
+				E8FCADD1106FDB9700676E9D /* targetver.h */,
+				E8FCADD2106FDB9700676E9D /* ZShip.h */,
+				E8FCADD3106FDB9700676E9D /* CameraMotion.cpp */,
+				E8FCADD4106FDB9700676E9D /* ZShip.cpp */,
+				E8FCADD5106FDB9700676E9D /* CameraMotion.h */,
+				E8FCADD6106FDB9700676E9D /* ZRushGame.cpp */,
+				E8FCADD7106FDB9700676E9D /* ZGuiProgress.h */,
+				E8FCADD8106FDB9700676E9D /* ZShipPhysics.h */,
+				E8FCADD9106FDB9700676E9D /* ZRushGameContent.cpp */,
+				E8FCADDA106FDB9700676E9D /* libgame.h */,
+				E8FCADDB106FDB9700676E9D /* ZRushTrack.h */,
+				E8FCADDC106FDB9700676E9D /* stdafx.cpp */,
+				08FB7795FE84155DC02AAC07 /* Source */,
+				C6A0FF2B0290797F04C91782 /* Documentation */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+			);
+			name = libgame;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC046055464E500DB518D /* liblibgame.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C6A0FF2B0290797F04C91782 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Documentation;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC043055464E500DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8FCADDE106FDB9800676E9D /* IProtoGUI.h in Headers */,
+				E8FCADDF106FDB9800676E9D /* ZProtoGUI.h in Headers */,
+				E8FCADE0106FDB9800676E9D /* ZRushGameContent.h in Headers */,
+				E8FCADE4106FDB9800676E9D /* ZRushGame.h in Headers */,
+				E8FCADE5106FDB9800676E9D /* stdafx.h in Headers */,
+				E8FCADE6106FDB9800676E9D /* targetver.h in Headers */,
+				E8FCADE7106FDB9800676E9D /* ZShip.h in Headers */,
+				E8FCADEA106FDB9800676E9D /* CameraMotion.h in Headers */,
+				E8FCADEC106FDB9800676E9D /* ZGuiProgress.h in Headers */,
+				E8FCADED106FDB9800676E9D /* ZShipPhysics.h in Headers */,
+				E8FCADEF106FDB9800676E9D /* libgame.h in Headers */,
+				E8FCADF0106FDB9800676E9D /* ZRushTrack.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC045055464E500DB518D /* libgame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB91EB08733DB70010E9CD /* Build configuration list for PBXNativeTarget "libgame" */;
+			buildPhases = (
+				D2AAC043055464E500DB518D /* Headers */,
+				D2AAC044055464E500DB518D /* Sources */,
+				D289987405E68DCB004EDB86 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libgame;
+			productName = libgame;
+			productReference = D2AAC046055464E500DB518D /* liblibgame.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB91EF08733DB70010E9CD /* Build configuration list for PBXProject "libgame" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* libgame */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC045055464E500DB518D /* libgame */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC044055464E500DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8FCADDD106FDB9700676E9D /* ZShipPhysics.cpp in Sources */,
+				E8FCADE1106FDB9800676E9D /* ZGuiProgress.cpp in Sources */,
+				E8FCADE2106FDB9800676E9D /* ZRushTrack.cpp in Sources */,
+				E8FCADE3106FDB9800676E9D /* ZProtoGUI.cpp in Sources */,
+				E8FCADE8106FDB9800676E9D /* CameraMotion.cpp in Sources */,
+				E8FCADE9106FDB9800676E9D /* ZShip.cpp in Sources */,
+				E8FCADEB106FDB9800676E9D /* ZRushGame.cpp in Sources */,
+				E8FCADEE106FDB9800676E9D /* ZRushGameContent.cpp in Sources */,
+				E8FCADF1106FDB9800676E9D /* stdafx.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB91EC08733DB70010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../3rdparty\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = libgame;
+			};
+			name = Debug;
+		};
+		1DEB91ED08733DB70010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../3rdparty\"",
+				);
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = libgame;
+			};
+			name = Release;
+		};
+		1DEB91F008733DB70010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = MAC_OS;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../3rdparty/zlib-1.2.3\"",
+					"\"$(SRCROOT)/../../3rdparty/tinyxml\"",
+					"\"$(SRCROOT)/../../3rdparty/bullet-2.74/src\"",
+					"\"$(SRCROOT)/../../3rdparty/CEGUI-SDK-0.6.2-vc9/include\"",
+					"\"$(SRCROOT)/../../3rdparty/CEGUI-SDK-0.6.2-vc9\"",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Debug;
+		};
+		1DEB91F108733DB70010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_PREPROCESSOR_DEFINITIONS = MAC_OS;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../3rdparty/zlib-1.2.3\"",
+					"\"$(SRCROOT)/../../3rdparty/tinyxml\"",
+					"\"$(SRCROOT)/../../3rdparty/bullet-2.74/src\"",
+					"\"$(SRCROOT)/../../3rdparty/CEGUI-SDK-0.6.2-vc9/include\"",
+					"\"$(SRCROOT)/../../3rdparty/CEGUI-SDK-0.6.2-vc9\"",
+				);
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB91EB08733DB70010E9CD /* Build configuration list for PBXNativeTarget "libgame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91EC08733DB70010E9CD /* Debug */,
+				1DEB91ED08733DB70010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB91EF08733DB70010E9CD /* Build configuration list for PBXProject "libgame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91F008733DB70010E9CD /* Debug */,
+				1DEB91F108733DB70010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}
