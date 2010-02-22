@@ -1,0 +1,45 @@
+Delai: 10 0,01 30
+http://www2.research.att.com/~ttsweb/tts/demo.php crystal USEnglish
+
+Missile Available
+Homing Missile Available
+Machine gun available
+Autopilot available
+More energy available
+Protection shield available
+Destruction shield available
+Smoke available
+Gravity grip available
+Booster available
+Mines available
+
+Autopilot disengagement in two seconds
+Autopilot disengaged
+
+Warning! Incoming Missile
+Warning! Low energy
+Warning! mines
+Final lap
+
+thirty
+twenty five
+twenty
+fifteen
+ten
+nine
+eight
+seven
+six
+five
+four
+Three
+Two 
+One
+zero
+go!
+Destruction in 
+seconds
+Your ship has been eliminated. Thank you.
+
+Congratulations
+Loser

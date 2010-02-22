@@ -1,0 +1,44 @@
+<ZShip 
+mBrakeLerpSpeed="10.000000"
+Vitesse de rotation pour les aerofreins. Parametre seulement visuel. une valeur de 0 fera que les aerofreins ne bougeront pas. 1 ca va pas très vite. 1000 ca ira vite. En gros on vera pas la rotation de transition
+mAeroAngleLeftRight="-1.000000"
+Angle de rotation en radian des aerofreins gauche et droite. un angle de 2*PI (6 et des brouette) et l'aerofrein fera un tour sur lui même.
+mAeroAngleMid="-1.000000"
+Idem pour les aerofreins médian
+ />
+<ZShipPhysics 
+mLinearDamping="0.88"
+Attenuation (frottement) de la vitesse. 0 = pas d'attenuation (comme dans l'espace ou sur la glace). 1 = gros frottements
+mAngularDamping="0.999"
+Idem: frottement sur les rotations
+mMass="100.0"
+Masse du vaisseau. Plus il sera leger plus les forces auront d'importance.
+mCompensateNoseForce = "3200.0"
+Force de compensation avant/Arriere pour la gravité. Une force faible fera que le vaisseau mettra du temps pour relever/baisser le nez pour s'ajuster a la courbure du sol.
+mCompensateRightLeftForce = "3200.0"
+Idem mais de coté
+mTorqueZ = "500.0"
+Force de tangage. C'est la force qui est apliquée sur l'axe de la longueur du vaisseau pour le faire tanguer quand on tourne. Une valeur de 0 ici fera que le vaisseau tourne a plat.
+mTorqueY = "3200.0"
+Force de rotation. Plus c'est élevé, plus le vaisseau tournera vite
+mRunForceFactor = "17000.0"
+Force motrice. Plus c'est élevé, plus le vaisseau pourra aller vite.
+mGravityForce = "1200.0"
+Force de la gravité qui fera coller le vaisseau au sol. Plus c'est élevé, plus le vaisseau tombera vite vers la piste.
+mGroundForce = "1000.0"
+Force de compensation de la piste (force inverse de la gravité). Si cette valeur est à 0, le vaisseau grattera le sol. Si cette valeur est supérieur à la gravité, le vaisseau ira vers le ciel.
+mBrakeForce = "1000.0"
+Force de freinage (quand on freine avec les aerofreins droite et gauche). Force appliquée vers l'arrière
+mBrakeLeftRightForce = "200.0"
+Force de freinage latérale quand on utilise l'aerofreins droite ou gauche. Force appliquée de coté
+mBrakeLeftRightForceBackward = "750.0"
+Force de freinage vers l'arrière quand on utilise l'aerofreins droite ou gauche. En ajout de mBrakeLeftRightForce. Force appliqué vers l'arrière.
+mDrunkEffectFactor = "0.01"
+Force de l'effet de flottement. 
+/>
+<ZShipAI
+mPID.Ki="1.0"
+mPID.Kp="1.0"
+mPID.Kd="1.0"
+Valeurs pour l'IA. Sujet à modifications :)
+/>
