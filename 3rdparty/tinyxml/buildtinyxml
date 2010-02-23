@@ -1,0 +1,4 @@
+#!/bin/sh
+g++ -o *.o *.c
+g++ -O3 -o xmltest -g tinyxml.o tinyxmlparser.o xmltest.o tinyxmlerror.o tinystr.o
+ar -rv lib.a *.o # lib statique
