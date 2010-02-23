@@ -1,0 +1,3 @@
+﻿<Server Port="49888"/>
+<Game World="Statos" Track="./Prototype/Worlds/Stratos/Tracks/Stratos2.track" Bonus = "1" GameType="1" />
+<Game World="Statos" Track="./Prototype/Worlds/Stratos/Tracks/Stratos1.track" Bonus = "1" GameType="1" />

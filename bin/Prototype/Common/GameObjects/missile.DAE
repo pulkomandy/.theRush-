@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Cedric</author>
+      <authoring_tool>3dsMax 11 - Feeling ColladaMax v3.05B.</authoring_tool>
+      <comments>ColladaMax Export Options: ExportNormals=1;ExportEPolyAsTriangles=1;ExportXRefs=1;ExportSelected=0;ExportTangents=0;ExportAnimations=0;SampleAnim=1;ExportAnimClip=0;BakeMatrices=0;ExportRelativePaths=1;AnimStart=0;AnimEnd=3.33333;</comments>
+      <source_data>file:///E:/Projects/Zenith/Zenith2/bin/Prototype/Common/GameObjects/missile.max</source_data>
+    </contributor>
+    <created>2010-02-04T20:53:26Z</created>
+    <modified>2010-02-04T20:53:27Z</modified>
+    <unit meter="1" name="meter"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_images>
+    <image id="plaques04.dds" name="plaques04_dds">
+      <init_from>./plaques04.dds</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="_9_-_Default" name="_9_-_Default">
+      <instance_effect url="#_9_-_Default-fx">
+        <setparam ref="sunColor">
+          <float4>1 1 1 1</float4>
+        </setparam>
+        <setparam ref="sunAmbient">
+          <float4>0.5 0.5 0.5 1</float4>
+        </setparam>
+        <setparam ref="diffuseTexture">
+          <surface type="2D">
+            <init_from>plaques04.dds</init_from>
+            <format>A8R8G8B8</format>
+          </surface>
+        </setparam>
+      </instance_effect>
+    </material>
+  </library_materials>
+  <library_effects>
+    <effect id="_9_-_Default-fx" name="_9_-_Default">
+      <profile_COMMON>
+        <technique sid="common">
+          <blinn>
+            <ambient>
+              <color>0.588 0.588 0.588 1</color>
+            </ambient>
+            <diffuse>
+              <color>0.588 0.588 0.588 1</color>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>0.415939</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <reflectivity>
+              <float>1</float>
+            </reflectivity>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+          <extra>
+            <technique profile="FCOLLADA">
+              <spec_level>
+                <float>0</float>
+              </spec_level>
+              <emission_level>
+                <float>0</float>
+              </emission_level>
+            </technique>
+          </extra>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="MAX3D">
+          <faceted>0</faceted>
+          <double_sided>0</double_sided>
+          <wireframe>0</wireframe>
+          <face_map>0</face_map>
+        </technique>
+        <technique profile="NV_import">
+          <import profile="d3dfx" url="..%5C..%5C..%5CZenithDatas%5CDefaultShader.fx"/>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_geometries>
+    <geometry id="Box02-mesh" name="Box02">
+      <mesh>
+        <source id="Box02-mesh-positions">
+          <float_array id="Box02-mesh-positions-array" count="72">-0.352615 -0.429865 -0.048234 0.059892 -0.429865 -0.446624 -0.352615 0.143612 -0.048234 0.059892 0.143612 -0.446624 0.045773 -0.429865 0.364273 0.458281 -0.429865 -0.034116 0.045773 0.143612 0.364273 0.458281 0.143612 -0.034116 0.005509 2.24214 -0.041999 0.053656 2.24214 -0.088498 0.052008 2.24214 0.006148 0.100156 2.24214 -0.040351 -0.913345 -0.194685 -0.057997 0.06038 -1.02648 -0.474687 -0.913345 -0.091567 -0.057997 0.06038 -0.980208 -0.474687 0.045284 -1.02648 0.392336 1.01901 -0.194685 -0.024353 0.045284 -0.980208 0.392336 1.01901 -0.091567 -0.024353 -0.371634 -0.535642 -0.463693 0.434584 -0.535642 -0.463693 -0.371634 -0.535642 0.336806 0.434584 -0.535642 0.336806</float_array>
+          <technique_common>
+            <accessor source="#Box02-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Box02-mesh-normals">
+          <float_array id="Box02-mesh-normals-array" count="300">-0.393424 -0.000000 -0.919357 -0.393424 -0.000000 -0.919357 -0.393423 0 -0.919357 -0.393423 0 -0.919357 0.393423 0 0.919357 0.393423 0 0.919358 0.393423 0 0.919358 0.393423 0 0.919358 0 -1 -0.000000 0 -1 0 0 -1 -0.000000 0 -1 -0.000000 0.425189 0 -0.905104 0.425189 0 -0.905104 0.425189 0 -0.905104 0.425189 0 -0.905104 0 1 0 0 1 0 0 1 0 0 1 0 -0.425189 0.000000 0.905105 -0.425189 0.000000 0.905105 -0.425189 0 0.905105 -0.425189 0 0.905105 -0.689685 0.11982 -0.714127 -0.689685 0.11982 -0.714127 -0.689685 0.11982 -0.714127 -0.689685 0.11982 -0.714127 -0.689685 0.11982 -0.714127 -0.689685 0.11982 -0.714127 0.689685 0.11982 0.714127 0.689685 0.11982 0.714127 0.689685 0.11982 0.714127 0.689686 0.11982 0.714127 0.689685 0.11982 0.714127 0.689685 0.11982 0.714127 0.714127 0.11982 -0.689685 0.714127 0.11982 -0.689685 0.714127 0.11982 -0.689685 0.714127 0.11982 -0.689685 0.714127 0.11982 -0.689685 0.714127 0.11982 -0.689685 -0.714127 0.11982 0.689685 -0.714127 0.11982 0.689685 -0.714127 0.11982 0.689685 -0.714127 0.11982 0.689685 -0.714127 0.11982 0.689685 -0.714127 0.11982 0.689685 -0.694582 0.017657 -0.719197 -0.694582 0.017657 -0.719197 -0.694582 0.017657 -0.719197 -0.115695 0.314951 -0.94203 -0.115695 0.314951 -0.94203 -0.115695 0.314952 -0.94203 -0.35436 -0.860116 -0.366918 -0.35436 -0.860116 -0.366918 -0.35436 -0.860116 -0.366918 0.361403 -0.043514 0.931394 0.361403 -0.043514 0.931394 0.361403 -0.043514 0.931394 0.35436 -0.860117 0.366917 0.35436 -0.860117 0.366917 0.35436 -0.860117 0.366917 -0.361403 -0.043514 -0.931394 -0.361403 -0.043514 -0.931394 -0.361403 -0.043514 -0.931394 0.694582 0.017657 0.719197 0.694582 0.017657 0.719197 0.694582 0.017657 0.719197 0.115695 0.314952 0.94203 0.115695 0.314952 0.94203 0.115695 0.314951 0.94203 -0.718912 -0.033247 0.694306 -0.718912 -0.033247 0.694306 -0.718912 -0.033247 0.694306 0.274673 -0.682988 0.676817 0.274673 -0.682988 0.676817 0.274673 -0.682988 0.676817 0.718911 -0.033247 -0.694306 0.718911 -0.033247 -0.694306 0.718911 -0.033247 -0.694306 -0.274673 -0.682988 -0.676817 -0.274673 -0.682988 -0.676817 -0.274673 -0.682988 -0.676817 0.366918 0.860116 -0.35436 0.366918 0.860116 -0.35436 0.366918 0.860116 -0.35436 0.407552 0.022973 -0.912893 0.407552 0.022973 -0.912893 0.407552 0.022973 -0.912893 -0.366918 0.860116 0.35436 -0.366918 0.860116 0.35436 -0.366918 0.860116 0.35436 -0.407552 0.022972 0.912893 -0.407552 0.022972 0.912893 -0.407552 0.022972 0.912893 0 -1 0 0 -1 0 0 -1 0 0 -1 0</float_array>
+          <technique_common>
+            <accessor source="#Box02-mesh-normals-array" count="100" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Box02-mesh-map-channel1">
+          <float_array id="Box02-mesh-map-channel1-array" count="84">0.290389 0.182844 0.290389 0.709611 0.182844 0.290389 0.290389 0.358118 0.290389 0.709611 0.358118 0.290389 0.290389 0.182844 0.709611 0.709611 0.182844 0.709611 0.290389 0.358118 0.709611 0.709611 0.358118 0.709611 0.475535 0.999501 0.475534 0.524466 0.999501 0.475534 0.475535 0.999501 0.524466 0.524466 0.999501 0.524466 0.000499 0.254723 0.000499 0.724119 0.000499 0.275881 0.000499 0.286239 0.000499 0.724119 0.01464 0.275881 0.27588 0.000499 0.724119 0.999501 0.254723 0.999501 0.27588 0.01464 0.724119 0.999501 0.286239 0.999501 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 1 0 1 1 0</float_array>
+          <technique_common>
+            <accessor source="#Box02-mesh-map-channel1-array" count="28" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Box02-mesh-vertices">
+          <input semantic="POSITION" source="#Box02-mesh-positions"/>
+        </vertices>
+        <triangles material="_9_-_Default" count="38">
+          <input semantic="VERTEX" source="#Box02-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Box02-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Box02-mesh-map-channel1" offset="2" set="1"/>
+          <p>12 0 12 14 1 14 15 2 15 15 2 15 13 3 13 12 0 12 16 4 16 17 5 17 19 6 19 19 6 19 18 7 18 16 4 16 0 8 0 1 9 1 5 10 5 5 10 5 4 11 4 0 8 0 13 12 13 15 13 15 19 14 19 19 14 19 17 15 17 13 12 13 9 16 9 8 17 8 10 18 10 10 18 10 11 19 11 9 16 9 14 20 14 12 21 12 16 22 16 16 22 16 18 23 18 14 20 14 3 24 3 2 25 2 8 26 8 8 27 8 9 28 9 3 29 3 6 30 6 7 31 7 11 32 11 11 33 11 10 34 10 6 35 6 7 36 7 3 37 3 9 38 9 9 39 9 11 40 11 7 41 7 2 42 2 6 43 6 10 44 10 10 45 10 8 46 8 2 47 2 2 48 2 3 49 3 15 50 15 15 51 15 14 52 14 2 53 2 1 54 1 0 55 0 12 56 12 12 57 12 13 58 13 1 59 1 4 60 4 5 61 5 17 62 17 17 63 17 16 64 16 4 65 4 7 66 7 6 67 6 18 68 18 18 69 18 19 70 19 7 71 7 5 72 5 1 73 1 13 74 13 13 75 13 17 76 17 5 77 5 0 78 0 4 79 4 16 80 16 16 81 16 12 82 12 0 83 0 3 84 3 7 85 7 19 86 19 19 87 19 15 88 15 3 89 3 6 90 6 2 91 2 14 92 14 14 93 14 18 94 18 6 95 6 22 96 26 20 97 24 23 98 27 21 99 25 23 98 27 20 97 24</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="missile.max" name="missile_max">
+      <node id="Box02-node" name="Box02" type="NODE">
+        <translate>-0.000423 -0.03326 0.001428</translate>
+        <instance_geometry url="#Box02-mesh">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="_9_-_Default" target="#_9_-_Default"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <extra>
+        <technique profile="FCOLLADA">
+          <start_time>0</start_time>
+          <end_time>3.33333</end_time>
+        </technique>
+      </extra>
+      <extra>
+        <technique profile="MAX3D">
+          <frame_rate>30</frame_rate>
+        </technique>
+      </extra>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#missile.max"/>
+  </scene>
+</COLLADA>

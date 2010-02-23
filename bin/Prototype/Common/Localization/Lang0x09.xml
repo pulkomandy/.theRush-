@@ -1,0 +1,192 @@
+<STR id="Graphics" lib="Graphics" />
+<STR id="Controls" lib="Controls" />
+
+<STR id="Accelerate" lib="Accelerate" />
+<STR id="Brake" lib="Brake" />
+<STR id="LeftBrake" lib="Left brake" />
+<STR id="RightBrake" lib="Right brake" />
+
+<STR id="Booster" lib="Booster" />
+<STR id="AttackBonus" lib="Use weapon" />
+
+<STR id="ViewChange" lib="View change" />
+
+<STR id="LeftTurn" lib="Left turn" />
+<STR id="RightTurn" lib="Right turn" />
+<STR id="AskForInput" lib="Use the input you want to bind." />
+<STR id="PauseInGame" lib="Pause/Game menu" />
+<STR id="Mouse" lib="Mouse" />
+<STR id="Button" lib="Button" />
+<STR id="ESCAPE" lib="Esc." />          
+<STR id="BACK" lib="Back" />
+<STR id="TAB" lib="Tab." />
+<STR id="RETURN" lib="Enter" />
+<STR id="LCONTROL" lib="Left CTRL" />
+<STR id="LSHIFT" lib="Left Shift" />
+<STR id="BACKSLASH" lib="Back Slash" />
+<STR id="RSHIFT" lib="Right Shift" />
+<STR id="LMENU" lib="Left Lenu" />
+<STR id="SPACE" lib="Space" />
+<STR id="CAPITAL" lib="Caps Lock" />
+<STR id="F1" lib="F1" />
+<STR id="F2" lib="F2" />
+<STR id="F3" lib="F3" />
+<STR id="F4" lib="F4" />
+<STR id="F5" lib="F5" />
+<STR id="F6" lib="F6" />
+<STR id="F7" lib="F7" />
+<STR id="F8" lib="F8" />
+<STR id="F9" lib="F9" />
+<STR id="F10" lib="F10" />
+<STR id="NUMLOCK" lib="Num. Lock" />
+<STR id="SCROLL" lib="Scroll Lock" />
+<STR id="NUMPAD7" lib="7" />
+<STR id="NUMPAD8" lib="8" />
+<STR id="NUMPAD9" lib="9" />
+<STR id="NUMPAD4" lib="4" />
+<STR id="NUMPAD5" lib="5" />
+<STR id="NUMPAD6" lib="6" />
+<STR id="NUMPAD1" lib="1" />
+<STR id="NUMPAD2" lib="2" />
+<STR id="NUMPAD3" lib="3" />
+<STR id="NUMPAD0" lib="0" />
+<STR id="DECIMAL" lib="." />
+<STR id="KANA" lib="Kana" />
+<STR id="NEXTTRACK" lib="Piste Suiv." />
+<STR id="NUMPADENTER" lib="Entrée" />
+<STR id="RCONTROL" lib="Ctrl Droit." />        
+<STR id="MUTE" lib="Muet" />
+<STR id="CALCULATOR" lib="Calc" />
+<STR id="PLAYPAUSE" lib="Play-Pause" />
+<STR id="MEDIASTOP" lib="Stop" />
+<STR id="VOLUMEDOWN" lib="Vol -" />
+<STR id="VOLUMEUP" lib="Vol +" />
+<STR id="WEBHOME" lib="Web Home" />
+<STR id="SYSRQ" lib="Sys. Req." />
+<STR id="RMENU" lib="Alt Droit" />
+<STR id="PAUSE" lib="Pause" />
+<STR id="HOME" lib="Home" />
+<STR id="UP" lib="Up" />
+<STR id="PRIOR" lib="Prior." />
+<STR id="LEFT" lib="Left" />
+<STR id="RIGHT" lib="Right" />
+<STR id="END" lib="End" />
+<STR id="DOWN" lib="Down" />
+<STR id="NEXT" lib="Next" />
+<STR id="INSERT" lib="Insert" />
+<STR id="DELETE" lib="Delete" />
+<STR id="LWIN" lib="Left Windows" />
+<STR id="RWIN" lib="Right Windows" />
+<STR id="APPS" lib="Apps" />
+<STR id="POWER" lib="Power" />
+<STR id="SLEEP" lib="Sleep" />
+<STR id="WAKE" lib="Wake" />
+<STR id="WEBSEARCH" lib="Web search" />
+<STR id="WEBFAVORITES" lib="Web Fav." />
+<STR id="WEBREFRESH" lib="Web refresh" />
+<STR id="WEBSTOP" lib="Web Stop" />
+<STR id="WEBFORWARD" lib="Web Next" />
+<STR id="WEBBACK" lib="Web Back" />
+<STR id="MYCOMPUTER" lib="My Computer" />
+<STR id="MAIL" lib="Mail" />
+<STR id="MEDIASELECT" lib="Media Select" />
+
+<STR id="RESUMEGAME" lib="Resume Game" />
+<STR id="CONFIG" lib="Configuration" />
+<STR id="LEAVEGAME" lib="Quit" />
+<STR id="YES" lib="Yes" />
+<STR id="NO" lib="No" />
+<STR id="WISHTOQUIT" lib="Do you want to quit?" />
+<STR id="LANINTERNET" lib="Lan/Internet" />
+<STR id="CAREER" lib="Career" />
+<STR id="QUICKRACE" lib="Quick Race" />
+<STR id="CREDITS" lib="Credits" />
+
+<STR id="PLAYER" lib="Player" />
+<STR id="CAMERA" lib="Camera" />
+<STR id="SOUND" lib="Sound" />
+
+<STR id="INTERNET" lib="Internet" />
+<STR id="LAN" lib="Lan" />
+<STR id="FAVORITES" lib="Favorites" />
+
+<STR id="LANJOIN" lib="Join" />
+<STR id="LANCREATE" lib="New server" />
+<STR id="ADDSERVER" lib="Add Server" />
+
+<STR id="NAME" lib="Name" />
+<STR id="PLAYERS" lib="Players" />
+<STR id="STATUS" lib="Status" />
+<STR id="TRACK" lib="Track" />
+<STR id="MODE" lib="Mode" />
+<STR id="PING" lib="Ping" />
+
+<STR id="REFRESH" lib="Refresh" />
+<STR id="OK" lib="Ok" />
+<STR id="CANCEL" lib="Cancel" />
+<STR id="TYPESERVER" lib="Type server URL" />
+
+<STR id="WORLD" lib="World" />
+<STR id="GAMETYPE" lib="Game type" />
+<STR id="SERVERSTARTED" lib="Server started" />
+
+<STR id="LAUNCH" lib="Launch" />
+<STR id="SIMPLERACE" lib="Simple race" />
+<STR id="SURVIVOR" lib="Survivor" />
+<STR id="PLAYERNAME" lib="Player name" />
+<STR id="SFXVOLUME" lib="SFX volume" />
+<STR id="MUSICVOLUME" lib="Music volume" />
+<STR id="RESOLUTION" lib="Resolution" />
+<STR id="SHADOWQUALITY" lib="Shadows quality" />
+<STR id="REFLECTIONQUALITY" lib="Reflection quality" />
+<STR id="WATERQUALITY" lib="Ocean quality" />
+<STR id="DISABLED" lib="Disabled" />
+<STR id="MEDIUM" lib="Medium" />
+<STR id="HIGH" lib="High" />
+<STR id="VERYHIGH" lib="Very high" />
+<STR id="LOW" lib="Low" />
+<STR id="FULLSCREEN" lib="Full screen" />
+<STR id="DEPTHOFFIELD" lib="Depth of field" />
+<STR id="MOTIONBLUR" lib="Motion blur" />
+<STR id="CHKMUSIC" lib="Music" />
+<STR id="VSYNC" lib="V. sync" />
+<STR id="Go Race" lib="Go race" />
+<STR id="Statistics" lib="Statistics" />
+<STR id="StatString" lib="Temps de jeu en solo :%d Jours %d Heures %d Minutes \n Temps de jeu en réseau :%d Jours %d Heures %d Minutes\n%5.2f Km parcourus\n%d Opposants détruits\n%d Bonus 1 utilisés\n%d Bonus 2 utilisés\n%d Bonus 3 utilisés\n%d Bonus 4 utilisés\n%d Bonus 5 utilisés" />
+<STR id="WAITINGSERVERLOADING" lib="Waiting server" />
+<STR id="SPECTATOR" lib=".01 Spectator" />
+<STR id="DORUN" lib=".02 Run ( %d positions )" />
+<STR id="DISCON" lib="Connection error." />
+<STR id="HASQUITGAME" lib="has quit game." />
+<STR id="LAPS" lib="Laps" />
+<STR id="RESTART" lib="Restart" />
+<STR id="NEXTRACE" lib="Next race" />
+<STR id="REPLAYRACE" lib="Play again" />
+<STR id="QUITTOMAINMENU" lib="Quit to menu" />
+<STR id="GOTOLOBBY" lib="Go to lobby" />
+<STR id="MAINMENU" lib="Main menu" />
+
+<STR id="HASJOINEDGAME" lib=" joined the game " />
+<STR id="HASCHANGEDNAMETO" lib=" renamed to " />
+<STR id="BACK2CAREER" lib="Career mode" />
+<STR id="SUREBACKTOCAREER" lib="Sure to get back to career menu?" />
+<STR id="CHOOSESHIP" lib="Ship selection" />
+<STR id="BEFORECOUNT" lib="%2.1f seconds before race" />
+<STR id="UNDEFINED" lib="Undefined" />
+<STR id="READY" lib="Ready" />
+<STR id="WAITINGOTHERS" lib="Waiting players" />
+<STR id="BEFORENEXTMAP" lib="%2.1f Seconds before next race" />
+<STR id="BEFOREENDS" lib="%2.1f Seconds before race end" />
+<STR id="NINENINELOADING" lib=".99 LOADING" />
+<STR id="CONSERV" lib="Connecting " />
+<STR id="SELSHIP" lib=".00 Your ship" />
+<STR id="SCREENCHANGED" lib="Screen parameter will occur next time you'll run the game." />
+<STR id="SPECTATOR2" lib="Spectator" />
+<STR id="COCKPIT" lib="Cockpit" />
+<STR id="FOLLOWER" lib="Follower" />
+<STR id=".01 Track" lib=".01 Track" />
+<STR id=".02 Mode" lib=".02 Mode" />
+<STR id=".03 Ship" lib=".03 Ship" />
+<STR id="ORBITINGNEAR" lib="Orbit near" />
+<STR id="ORBITINGFAR" lib="Orbit" />
+<STR id="NLAPS" lib="         %d Lap(s)" />

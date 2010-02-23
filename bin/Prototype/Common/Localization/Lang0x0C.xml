@@ -1,0 +1,194 @@
+<STR id="Graphics" lib="Graphismes" />
+<STR id="Controls" lib="Contrôles" />
+
+<STR id="Accelerate" lib="Accélération" />
+<STR id="Brake" lib="Frein" />
+<STR id="LeftBrake" lib="Frein Gauche" />
+<STR id="RightBrake" lib="Frein Droit" />
+
+<STR id="Booster" lib="Booster" />
+<STR id="AttackBonus" lib="Attaque/Bonus" />
+
+<STR id="ViewChange" lib="Changement Vue" />
+
+<STR id="LeftTurn" lib="Tourner à gauche" />
+<STR id="RightTurn" lib="Tourner à droite" />
+<STR id="AskForInput" lib="Utilisez le contrôle que vous désirez associer." />
+<STR id="PauseInGame" lib="Pause/Menu du jeu" />
+<STR id="Mouse" lib="Souris" />
+<STR id="Button" lib="Bouton" />
+<STR id="ESCAPE" lib="Echappe" />          
+<STR id="BACK" lib="Retour" />
+<STR id="TAB" lib="Tabulation" />
+<STR id="RETURN" lib="Entrée" />
+<STR id="LCONTROL" lib="Ctrl Gauche" />
+<STR id="LSHIFT" lib="Shift Gauche" />
+<STR id="BACKSLASH" lib="Back Slash" />
+<STR id="RSHIFT" lib="Shift Droit" />
+<STR id="LMENU" lib="Menu Gauche" />
+<STR id="SPACE" lib="Espace" />
+<STR id="CAPITAL" lib="Verr.Maj." />
+<STR id="F1" lib="F1" />
+<STR id="F2" lib="F2" />
+<STR id="F3" lib="F3" />
+<STR id="F4" lib="F4" />
+<STR id="F5" lib="F5" />
+<STR id="F6" lib="F6" />
+<STR id="F7" lib="F7" />
+<STR id="F8" lib="F8" />
+<STR id="F9" lib="F9" />
+<STR id="F10" lib="F10" />
+<STR id="NUMLOCK" lib="Verr. Num." />
+<STR id="SCROLL" lib="Scroll" />
+<STR id="NUMPAD7" lib="7" />
+<STR id="NUMPAD8" lib="8" />
+<STR id="NUMPAD9" lib="9" />
+<STR id="NUMPAD4" lib="4" />
+<STR id="NUMPAD5" lib="5" />
+<STR id="NUMPAD6" lib="6" />
+<STR id="NUMPAD1" lib="1" />
+<STR id="NUMPAD2" lib="2" />
+<STR id="NUMPAD3" lib="3" />
+<STR id="NUMPAD0" lib="0" />
+<STR id="DECIMAL" lib="." />
+<STR id="KANA" lib="Kana" />
+<STR id="NEXTTRACK" lib="Piste Suiv." />
+<STR id="NUMPADENTER" lib="Entrée" />
+<STR id="RCONTROL" lib="Ctrl Droit." />        
+<STR id="MUTE" lib="Muet" />
+<STR id="CALCULATOR" lib="Calc" />
+<STR id="PLAYPAUSE" lib="Play-Pause" />
+<STR id="MEDIASTOP" lib="Stop" />
+<STR id="VOLUMEDOWN" lib="Vol -" />
+<STR id="VOLUMEUP" lib="Vol +" />
+<STR id="WEBHOME" lib="Web Home" />
+<STR id="SYSRQ" lib="Sys. Req." />
+<STR id="RMENU" lib="Alt Droit" />
+<STR id="PAUSE" lib="Pause" />
+<STR id="HOME" lib="Début" />
+<STR id="UP" lib="NumPad Haut" />
+<STR id="PRIOR" lib="Page Suiv." />
+<STR id="LEFT" lib="NumPad Gauche" />
+<STR id="RIGHT" lib="NumPad Droit" />
+<STR id="END" lib="Fin" />
+<STR id="DOWN" lib="NumPad Bas" />
+<STR id="NEXT" lib="NumPad Suiv" />
+<STR id="INSERT" lib="Insertion" />
+<STR id="DELETE" lib="Suppr." />
+<STR id="LWIN" lib="Windows Gauche" />
+<STR id="RWIN" lib="Windows Droit" />
+<STR id="APPS" lib="App. Menu" />
+<STR id="POWER" lib="Power" />
+<STR id="SLEEP" lib="Sleep" />
+<STR id="WAKE" lib="Réveil" />
+<STR id="WEBSEARCH" lib="Recherche Web." />
+<STR id="WEBFAVORITES" lib="Fav. Web" />
+<STR id="WEBREFRESH" lib="Raffr. Web" />
+<STR id="WEBSTOP" lib="Web Stop" />
+<STR id="WEBFORWARD" lib="Web Suivant" />
+<STR id="WEBBACK" lib="Web Retour" />
+<STR id="MYCOMPUTER" lib="Mon Ordinateur" />
+<STR id="MAIL" lib="Courier" />
+<STR id="MEDIASELECT" lib="Select. Média" />
+
+<STR id="RESUMEGAME" lib="Retour" />
+<STR id="CONFIG" lib="Configuration" />
+<STR id="LEAVEGAME" lib="Quitter" />
+<STR id="YES" lib="Oui" />
+<STR id="NO" lib="Non" />
+<STR id="WISHTOQUIT" lib="Voulez-vous vraiment quitter?" />
+<STR id="LANINTERNET" lib="Lan/Internet" />
+<STR id="CAREER" lib="Carrière" />
+<STR id="QUICKRACE" lib="Course rapide" />
+<STR id="CREDITS" lib="Credits" />
+
+<STR id="PLAYER" lib="Joueur" />
+<STR id="CAMERA" lib="Camera" />
+<STR id="SOUND" lib="Son" />
+
+<STR id="INTERNET" lib="Internet" />
+<STR id="LAN" lib="Lan" />
+<STR id="FAVORITES" lib="Favoris" />
+
+<STR id="LANJOIN" lib="Rejoindre" />
+<STR id="LANCREATE" lib="Créer serveur" />
+<STR id="ADDSERVER" lib="Ajouter serveur" />
+
+<STR id="NAME" lib="Nom" />
+<STR id="PLAYERS" lib="Joueurs" />
+<STR id="STATUS" lib="Status" />
+<STR id="TRACK" lib="Circuit" />
+<STR id="MODE" lib="Mode" />
+<STR id="PING" lib="Ping" />
+
+<STR id="REFRESH" lib="Rafraichir" />
+<STR id="OK" lib="Ok" />
+<STR id="CANCEL" lib="Annuler" />
+<STR id="TYPESERVER" lib="Tapez l'adresse du serveur" />
+
+<STR id="WORLD" lib="Monde" />
+<STR id="TRACK" lib="Piste" />
+<STR id="GAMETYPE" lib="Type de jeu" />
+<STR id="SERVERSTARTED" lib="Serveur Démarré" />
+
+<STR id="LAUNCH" lib="Lancer" />
+<STR id="SIMPLERACE" lib="Course Simple" />
+<STR id="SURVIVOR" lib="Survivant" />
+<STR id="PLAYERNAME" lib="Nom du pilote" />
+<STR id="SFXVOLUME" lib="Volume Effets" />
+<STR id="MUSICVOLUME" lib="Volume Musique" />
+<STR id="RESOLUTION" lib="Résolution" />
+<STR id="SHADOWQUALITY" lib="Qualité ombrage" />
+<STR id="REFLECTIONQUALITY" lib="Qualité réflexion" />
+<STR id="WATERQUALITY" lib="Qualité océan" />
+<STR id="DISABLED" lib="Désactivé" />
+<STR id="MEDIUM" lib="Moyen" />
+<STR id="HIGH" lib="Haut" />
+<STR id="VERYHIGH" lib="Très haut" />
+<STR id="LOW" lib="Basse" />
+<STR id="FULLSCREEN" lib="Plein écran" />
+<STR id="DEPTHOFFIELD" lib="Profondeur de champs" />
+<STR id="MOTIONBLUR" lib="Flou directionnel" />
+<STR id="CHKMUSIC" lib="Musique" />
+<STR id="VSYNC" lib="Synchro. verticale" />
+<STR id="Go Race" lib="Courir" />
+<STR id="Statistics" lib="Statistiques" />
+<STR id="StatString" lib="Temps de jeu en solo :%d Jours %d Heures %d Minutes \n Temps de jeu en réseau :%d Jours %d Heures %d Minutes\n%5.2f Km parcourus\n%d Opposants détruits\n%d Bonus 1 utilisés\n%d Bonus 2 utilisés\n%d Bonus 3 utilisés\n%d Bonus 4 utilisés\n%d Bonus 5 utilisés" />
+<STR id="WAITINGSERVERLOADING" lib="Attente synchro serveur" />
+<STR id="SPECTATOR" lib=".01 Spectateur" />
+<STR id="DORUN" lib=".02 Courrir ( %d positions )" />
+<STR id="DISCON" lib="Echec de connection." />
+<STR id="HASQUITGAME" lib="a quitter le jeu." />
+<STR id="LAPS" lib="Tours" />
+<STR id="RESTART" lib="Recommencer" />
+<STR id="NEXTRACE" lib="Course suivante" />
+<STR id="REPLAYRACE" lib="Rejouer" />
+<STR id="QUITTOMAINMENU" lib="Quitter vers le menu" />
+<STR id="GOTOLOBBY" lib="Accès au lobby" />
+<STR id="MAINMENU" lib="Menu principal" />
+
+<STR id="HASJOINEDGAME" lib=" a rejoint le jeu " />
+<STR id="HASCHANGEDNAMETO" lib=" a changé de nom en " />
+<STR id="BACK2CAREER" lib="Menu carrière" />
+<STR id="SUREBACKTOCAREER" lib="Etes-vous sur de retourner au menu carrière?" />
+<STR id="CHOOSESHIP" lib="Selection vaisseau" />
+<STR id="BEFORECOUNT" lib="%2.1f secondes avant la course" />
+<STR id="UNDEFINED" lib="Non défini" />
+<STR id="READY" lib="Pret" />
+<STR id="WAITINGOTHERS" lib="Attente de joueurs" />
+<STR id="BEFORENEXTMAP" lib="%2.1f secondes avant le prochain circuit" />
+<STR id="BEFOREENDS" lib="%2.1f secondes avant la fin de course" />
+
+<STR id="NINENINELOADING" lib=".99 CHARGEMENT" />
+<STR id="CONSERV" lib="Connection à " />
+<STR id="SELSHIP" lib=".00 Votre vaisseau" />
+<STR id="SCREENCHANGED" lib="La modification des paramètres écran aura lieu au prochain lancement du jeu." />
+<STR id="SPECTATOR2" lib="Spectateur" />
+<STR id="COCKPIT" lib="Cockpit" />
+<STR id="FOLLOWER" lib="Suiveuse" />
+<STR id=".01 Track" lib=".01 Piste" />
+<STR id=".02 Mode" lib=".02 Mode" />
+<STR id=".03 Ship" lib=".03 Vaisseau" />
+<STR id="ORBITINGNEAR" lib="Orbite proche" />
+<STR id="ORBITINGFAR" lib="Orbite" />
+<STR id="NLAPS" lib="         %d Tour(s)" />

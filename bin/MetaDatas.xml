@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<MetaDatas>
+<Meta File="./Prototype/Common/Sounds/WallCollisionDefault.wav" Type="Audio" Is3DSound="TRUE"/>
+<Meta File="./Prototype/Common/Sounds/MenuError.wav" Type="Audio" Is3DSound="FALSE" />
+<Meta File="./Prototype/Common/Sounds/MenuNoCancel.wav" Type="Audio" Is3DSound="FALSE" />
+<Meta File="./Prototype/Common/Sounds/MenuQuestion.wav" Type="Audio" Is3DSound="FALSE" />
+<Meta File="./Prototype/Common/Sounds/MenuYesOK.wav" Type="Audio" Is3DSound="FALSE" />
+<Meta File="./Prototype/Common/Sounds/Voice/missile_available.wav" Type="Audio" Is3DSound="FALSE" />
+<Meta File="./Prototype/Common/Sounds/Voice/homing_missile_available.wav" Type="Audio" Is3DSound="FALSE" />
+<Meta File="./Prototype/Common/Sounds/Voice/smoke_available.wav" Type="Audio" Is3DSound="FALSE" />
+<Meta File="./Prototype/Common/Sounds/Voice/protection_shield_available.wav" Type="Audio" Is3DSound="FALSE" />
+<Meta File="./Prototype/Common/Sounds/Voice/destruction_shield_available.wav" Type="Audio" Is3DSound="FALSE" />
+<Meta File="./Prototype/Common/Sounds/Voice/mines_available.wav" Type="Audio" Is3DSound="FALSE" />
+<Meta File="./Prototype/Common/Sounds/Voice/more_energy_available.wav" Type="Audio" Is3DSound="FALSE" />
+<Meta File="./Prototype/Common/Sounds/Voice/gravity_grip_available.wav" Type="Audio" Is3DSound="FALSE" />
+<Meta File="./Prototype/Common/Sounds/Voice/booster_available.wav" Type="Audio" Is3DSound="FALSE" />
+<Meta File="./Prototype/Common/Sounds/Voice/autopilot_available.wav" Type="Audio" Is3DSound="FALSE" />
+
+</MetaDatas>
