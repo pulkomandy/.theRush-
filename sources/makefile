@@ -26,7 +26,7 @@ all:
 clean:
 	@(cd libbase && $(MAKE) $@)
 	@(cd libplatform && $(MAKE) $@)
-	@(cd librender && $(MAKE) $@)                   
+	@(cd librender && $(MAKE) $@)
 	@(cd libworld && $(MAKE) $@)
 	@(cd libgame && $(MAKE) $@)
 	@(cd testunit && $(MAKE) $@)
