@@ -64,7 +64,7 @@ $(LIB): $(OBJ)
 
 clean:
 	@rm -rf *.o
-	@rm ../../libs/$(LIB)
+	@rm -f ../../libs/$(LIB)
 
 mrproper: clean
 	@rm -rf $(EXEC)
