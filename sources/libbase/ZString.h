@@ -54,7 +54,7 @@ inline void strcat_s(char *dst, int , const char *src)
 	 
 	 
 	 int indfile = indSrc;
-	 while (szBuf[indSrc] != '/')
+	 while (szBuf[indSrc] != '/' && indSrc > 0)
 		 indSrc--;
 	 if (szFile)
 	 {
@@ -193,11 +193,8 @@ class    tstring
         tstring GetBaseName() const
         {
             char filen[_MAX_PATH];
-		    //char ext[_MAX_PATH];
 
 		    _splitpath_s(stringData, NULL, 0, NULL, 0, filen, _MAX_PATH, NULL, 0);
-            //tstring basename = filen;
-            //basename += ext;
             return filen;
 
         }
