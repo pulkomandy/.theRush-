@@ -173,9 +173,6 @@ public:
 
 	//virtual void RenderView(ICamera *pCam, IWorld *pWorld, int SizeX, int SizeY, bool bMainView) {}
 
-	virtual unsigned long GetMemoryUsed() const { return sizeof(ZDisplayDeviceNULL); }
-
-
 	virtual void DrawIndexedPrimitives( uint8 aPrimitive, unsigned int BaseVertexIndex,
   unsigned int MinIndex,
   unsigned int NumVertices,

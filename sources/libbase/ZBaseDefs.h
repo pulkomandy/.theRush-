@@ -26,8 +26,10 @@
 #include <stdlib.h>
 #endif
 
+#include <stdint.h>
 
-typedef unsigned long tulong;
+
+typedef uint32_t tulong;
 typedef long tlong;
 typedef double tdouble;
 

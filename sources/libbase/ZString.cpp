@@ -72,10 +72,7 @@ const tstring    operator +    (const tchar * chaine, const tstring & str)
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-//! @param path        the file path.
-//! @param filename    the file name.
 //! @param file        a file pointer. If NULL the function open the file "path + filename".
-//! @return                PSM_OK if the function succeed, PSM_ERR if it fail.
 
 void tstring::LoadFile(ZFile & file)
 {
@@ -83,17 +80,10 @@ void tstring::LoadFile(ZFile & file)
 
     if(length > 0)
     {
-        if(stringData)
-        {
-            stringData = (tchar *)realloc(stringData, (length + 1) * sizeof(tchar));
-        }
-        else
-        {
-            stringData = (tchar *)malloc((length + 1) * sizeof(tchar));
-        }
+        stringData = (tchar *)realloc(stringData, (length + 1) * sizeof(tchar));
+		assert(stringData != NULL);
 
         file.Read(stringData, length);
-
         stringData[length]= '\0';
     }
 }
