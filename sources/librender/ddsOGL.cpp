@@ -277,30 +277,20 @@ void CDDSImage::create_textureCubemap(unsigned int format, unsigned int componen
 //
 // filename - fully qualified name of DDS image
 // flipImage - specifies whether image is flipped on load, default is true
-//void TGEStreamRead(void *Str, int count, void *dest);
 bool CDDSImage::load(unsigned char *aStream, bool flipImage)
 {
-//    assert(filename.length() != 0);
-    
     // clear any previously loaded images
     clear();
     
-    // open file
-	/*
-    FILE *fp = fopen(filename.c_str(), "rb");
-    if (fp == NULL)
-        return false;
-*/
     // read in file marker, make sure its a DDS file
     char filecode[4];
-    //TGEStreamRead(aStream, 4, filecode);//fread(filecode, 1, 4, fp);
 
 	memcpy(filecode, aStream, 4);
 	aStream += 4;
 
     if (strncmp(filecode, "DDS ", 4) != 0)
     {
-        //fclose(fp);
+		cerr << "WARNING - Not a DDS buffer" << endl;
         return false;
     }
 
@@ -354,7 +344,7 @@ bool CDDSImage::load(unsigned char *aStream, bool flipImage)
                 m_components = 4;
                 break;
             default:
-                //fclose(fp);
+				cerr << "WARNING - Wrong DDS format : " << hex << ddsh.ddspf.dwFourCC << endl;
                 return false;
         }
     }
@@ -380,7 +370,7 @@ bool CDDSImage::load(unsigned char *aStream, bool flipImage)
 	}
     else 
     {
-        //fclose(fp);
+		cerr << "WARNING - Wrong DDS pixelformat" << endl;
         return false;
     }
     
@@ -473,8 +463,6 @@ bool CDDSImage::load(unsigned char *aStream, bool flipImage)
         m_images[2] = tmp;
     }
     
-    //fclose(fp);
-
     m_valid = true;
 
     return true;
@@ -1305,7 +1293,10 @@ GLuint UploadDDS(unsigned char *tgeStream, int &w, int &h, int& nbmml)
 {
 	GLuint texobj;
 	CDDSImage img;
-	img.load(tgeStream, false);
+	if (! img.load(tgeStream, false)) {
+		cerr << "WARNING - image load fail ! ";
+		assert(false);
+	}
 	w = img.get_width();
 	h = img.get_height();
 	nbmml = img.get_num_mipmaps();
