@@ -483,20 +483,17 @@ void ZFile::GetFilesList(std::vector<tstring>& aList, const char *szPath, const 
 						if (bRecurs)
 							GetFilesList(aList, wildc2.c_str(), szWild, bRecurs, bDirectoriesInsteadOfFiles, bCompletePath);
 					}
-					else
+					else if (!bDirectoriesInsteadOfFiles)
 					{
-						if (!bDirectoriesInsteadOfFiles)
+						if (strstr(wildc2.c_str(), szWild))
 						{
-							if (strstr(wildc2.c_str(), szWild))
+							if (bCompletePath)
 							{
-								if (bCompletePath)
-								{
-									aList.push_back(wildc2);
-								}
-								else
-								{
-									aList.push_back(fileinfo.name);
-								}
+								aList.push_back(wildc2);
+							}
+							else
+							{
+								aList.push_back(fileinfo.name);
 							}
 						}
 					}
@@ -515,52 +512,50 @@ void ZFile::GetFilesList(std::vector<tstring>& aList, const char *szPath, const 
 	struct dirent *lecture;	
 	DIR *rep;
 	rep = opendir(szPath);	
+	struct stat entry_info;
 
 	while ((lecture = readdir(rep)))
 	{
-                if ( strcmp(lecture->d_name, ".") && strcmp(lecture->d_name, "..") && (lecture->d_name[0] != '.') )
-                {
+		if ( lecture->d_name[0] != '.' )
+		{
+			tstring wildc2;
+			wildc2 = szPath;
+			wildc2 += lecture->d_name;
+			stat(wildc2, &entry_info);
+			if (S_ISDIR(entry_info.st_mode))
+			{
+				if (bDirectoriesInsteadOfFiles)
+				{
+					if (bCompletePath)
+					{
+						aList.push_back(wildc2);
+					}
+					else
+					{
+						aList.push_back(lecture->d_name);
+					}
+				}
 
-                        tstring wildc2;
-                        wildc2 = szPath;
-                        wildc2 += lecture->d_name;
-                        if (lecture->d_type == DT_DIR)
-                        {
-                                if (bDirectoriesInsteadOfFiles)
-							{
-							if (bCompletePath)
-							{
-								aList.push_back(wildc2);
-							}
-							else
-							{
-								aList.push_back(lecture->d_name);
-							}
-							}
-
-                                wildc2+="/";
-                                if (bRecurs)
-                                        GetFilesList(aList, wildc2.c_str(), szWild, bRecurs, bDirectoriesInsteadOfFiles, bCompletePath);
-                        }
-                        else if (lecture->d_type == DT_REG)
-                        {
-                                if (!bDirectoriesInsteadOfFiles)
-                                        if (strstr(wildc2.c_str(), szWild))
-							{
-                                               								if (bCompletePath)
-								{
-									aList.push_back(wildc2);
-								}
-								else
-								{
-									aList.push_back(lecture->d_name);
-								}
-							}
-                        }
-
-                }
-
-
+				wildc2+="/";
+				if (bRecurs)
+					GetFilesList(aList, wildc2.c_str(), szWild, bRecurs, bDirectoriesInsteadOfFiles, bCompletePath);
+			}
+			else if (S_ISREG(entry_info.st_mode))
+			{
+				if (!bDirectoriesInsteadOfFiles)
+					if (strstr(wildc2.c_str(), szWild))
+					{
+						if (bCompletePath)
+						{
+							aList.push_back(wildc2);
+						}
+						else
+						{
+							aList.push_back(lecture->d_name);
+						}
+					}
+			}
+		}
 	}
 
 	closedir(rep);	

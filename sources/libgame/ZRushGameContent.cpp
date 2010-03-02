@@ -20,6 +20,7 @@ ZRushGameContent::ZRushGameContent()
 	mMapBricks.Attach((ZGameResources*)_New(ZGameResources));
 
 	ZFile::GetFilesList(mTeams, "Prototype/Teams/", "", false, true, false);
+	assert(mTeams.size() > 0);
 	ZFile::GetFilesList(mWorlds, "Prototype/Worlds/", "", false, true, false);
 	ZFile::GetFilesList(mMusicsFileNames, "Prototype/Common/Musics/", "", false, false, true);	
 
@@ -29,6 +30,7 @@ ZRushGameContent::ZRushGameContent()
 		const tstring &teamName = mTeams[i];
 		ZFile::GetFilesList(mTeamsShipsNames[teamName], tstring("Prototype/Teams/")+teamName+"/", "", false, true, false);
 	}
+
 	// worlds
 	for (unsigned int i=0;i<mWorlds.size();i++)
 		ZFile::GetFilesList(mWorldsTracksNames[mWorlds[i]], tstring("Prototype/Worlds/")+mWorlds[i]+"/Tracks/", ".track", false, false, false);
@@ -145,6 +147,7 @@ ZTransform * ZRushGameContent::GetRandomShip()
 
 const tstring& ZRushGameContent::GetRandomShipName()
 {
+	assert(GetTeams().size() > 0);
 	const std::vector<tstring>& aShipsNames = GetShipsNames(GetTeams()[rand()%GetTeams().size()]);
 	return aShipsNames[rand()%aShipsNames.size()];
 }
