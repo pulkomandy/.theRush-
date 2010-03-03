@@ -62,22 +62,6 @@ enum
   ZCG_GL_VIEW_PROJECTION_MATRIX
  };
 
-enum FFxEnum
-{
-	FFX_GLOBAL=0,
-	FFX_LOCAL=1,
-
-	FFX_POSITION=3,
-	FFX_DIRECTION=2,
-	FFX_UP=1,
-
-	FFX_VERTEX_DOMAIN = 4,//CG_VERTEX_DOMAIN,
-	FFX_FRAGMENT_DOMAIN = 5,//CG_FRAGMENT_DOMAIN,
-
-	FFX_PROGRAM_ERROR = 0x80000000
-
-};
-
 //---------------------------------------------------------------------------------
 // abstract parameter class
 //---------------------------------------------------------------------------------
@@ -339,7 +323,7 @@ class FFxProgram //: public FFxParamable
 {
 public:
 	FFxProgram();
-	FFxProgram(FFxEnum aProfileDomain, const char* aFileName, const char* aEntryName, const char** args);
+	FFxProgram(CGdomain aProfileDomain, const char* aFileName, const char* aEntryName, const char** args);
 	virtual ~FFxProgram();
 
 	// building
@@ -362,7 +346,7 @@ public:
 	tstring				mEntry;				// entry name
 	tstring				mArgs;				// args used at compile time
 	CGprofile			mProfile;			// profile
-	FFxEnum				mProfileDomain;		// profile
+	CGdomain			mProfileDomain;		// profile
 	const char*			mSourceBuffer;
 	std::vector<FFxParamConnection> mConnections;
 

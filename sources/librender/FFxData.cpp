@@ -287,6 +287,9 @@ bool FFxDataTransformVector::getVector(tvector4& aVector) const
 	return false;
 }
 
+#define FFX_GLOBAL CG_NUMBER_OF_DOMAINS
+#define FFX_DIRECTION CG_NUMBER_OF_DOMAINS+1
+
 void FFxDataTransformVector::apply(CGparameter aParam)
 {
 	//$PSGL specific

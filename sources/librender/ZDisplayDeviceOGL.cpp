@@ -41,6 +41,7 @@
 #include "../libworld/libworld.h"
 #include "ZRenderTargetOGL.h"
 
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 extern IDisplayDevice * GDD;
 extern CGcontext gDefaultCGcontext;
@@ -56,15 +57,15 @@ extern ZTexture *gCurrentZBufferTexture          ;
 extern ZTexture* m_pJitterTexture                ;
 extern ZTexture* GpSMZTexture                    ;
 /*
-void DisplayDeviceInitBase(IDisplayDevice *device)
-{
-  gCurrentFrameBufferTexture = device->NewTexture();
-  gCurrentMiniFrameBufferTexture = device->NewTexture();
-  gCurrentZBufferTexture = device->NewTexture();
-  m_pJitterTexture = device->NewTexture();
-  GpSMZTexture = device->NewTexture();
+   void DisplayDeviceInitBase(IDisplayDevice *device)
+   {
+   gCurrentFrameBufferTexture = device->NewTexture();
+   gCurrentMiniFrameBufferTexture = device->NewTexture();
+   gCurrentZBufferTexture = device->NewTexture();
+   m_pJitterTexture = device->NewTexture();
+   GpSMZTexture = device->NewTexture();
 
-	IRenderingContext* rc = device->GetContextToBuild();
+   IRenderingContext* rc = device->GetContextToBuild();
   for(int i = 0; i < 8; i++ )
   {
     rc->GetShadowMapBuffer()[i].m_pSMZTexture = device->NewTexture();
@@ -547,9 +548,10 @@ bool ZDisplayDeviceOGL::Create( INITPARAMS * pParam)
 #ifdef _DEBUG
 	cgGLSetDebugMode(CG_TRUE);
 #endif
+    cgSetErrorCallback(CGerrorCallback);
+	cgSetParameterSettingMode(gDefaultCGcontext, CG_DEFERRED_PARAMETER_SETTING);
     cgGLRegisterStates(gDefaultCGcontext);
     cgGLSetManageTextureParameters(gDefaultCGcontext, CG_TRUE);
-    cgSetErrorCallback(CGerrorCallback);
 
 	ZFx *pfx = DirectLoad("./ZenithDatas/DebugShader.fx");
 	LOG("Shader has %d techniques\n", pfx->mTechniques.size());

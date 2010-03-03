@@ -27,6 +27,21 @@
 #endif
 #include <Cg/cgGL.h>
 
+static void checkForCgError(const char *situation)
+{
+	CGerror error;
+	const char *string = cgGetLastErrorString(&error);
+
+	if (error != CG_NO_ERROR) {
+		printf("CGERR: %s: %s\n",
+				situation, string);
+		if (error == CG_COMPILER_ERROR) {
+//			printf("%s\n", cgGetLastListing(prof));
+			printf("compile error\n");
+		}
+	}
+}
+
 //---------------------------------------------------------------------------------
 // Static data FFxProgram
 //---------------------------------------------------------------------------------
@@ -43,14 +58,6 @@ const char* COMPILE_ARGS[] =
 	0
 };
 
-const char* COMPILE_ARGS_OPENGL[] =
-{
-	"-DCM=100.0",
-	"-Dps_2_0=glslf",
-	"-Dvs_2_0=glslv",
-	0
-};
-
 
 //---------------------------------------------------------------------------------
 // FFxProgram
@@ -59,12 +66,12 @@ FFxProgram::FFxProgram() :
 mProgramFlags(0),
 mProgram(0),
 mSourceBuffer(0),
-mProfileDomain (FFX_VERTEX_DOMAIN),
+mProfileDomain (CG_VERTEX_DOMAIN),
 mProfile((CGprofile) 0)
 {
 }
 
-FFxProgram::FFxProgram(FFxEnum aProfileDomain, const char* aFileName, const char* aEntry, const char** aArgs) :
+FFxProgram::FFxProgram(CGdomain aProfileDomain, const char* aFileName, const char* aEntry, const char** aArgs) :
 mProgramFlags(0),
 mProgram(0),
 mSourceBuffer(0),
@@ -72,12 +79,14 @@ mProfileDomain(aProfileDomain)
 {
 #ifdef WIN32
 	if (GDD->GetClassID() == ClassIDZDisplayDeviceDX9)
-		mProfile = (aProfileDomain == FFX_VERTEX_DOMAIN) ?cgD3D9GetLatestVertexProfile():cgD3D9GetLatestPixelProfile();
+		mProfile = (aProfileDomain == CG_VERTEX_DOMAIN) ?cgD3D9GetLatestVertexProfile():cgD3D9GetLatestPixelProfile();
 	else
 #endif
 	{
-		mProfile = (aProfileDomain == FFX_VERTEX_DOMAIN) ?cgGLGetLatestProfile(CG_GL_VERTEX):cgGLGetLatestProfile(CG_GL_FRAGMENT );
-		
+		mProfile = (aProfileDomain == CG_VERTEX_DOMAIN) ?cgGLGetLatestProfile(CG_GL_VERTEX):cgGLGetLatestProfile(CG_GL_FRAGMENT );
+
+		cgGLSetOptimalOptions(mProfile);
+		checkForCgError("setprofile");
 	}
 
 	mFileName = aFileName;
@@ -117,7 +126,7 @@ void FFxProgram::addParamConnection(const tstring& aFrom, const tstring& aTo)
 void FFxProgram::useDefaultProgram(CGcontext aContext)
 {
 //	mProgramFlags.setf(FFX_PROGRAM_ERROR);
-	if (mProfileDomain == FFX_VERTEX_DOMAIN)
+	if (mProfileDomain == CG_VERTEX_DOMAIN)
 	{
 		mProgram = sDefaultVertexProgram;
 	}
@@ -138,13 +147,13 @@ char* resolveIncludes(char * src)
 	const char* pInclude;
 	int srcSize = (int)strlen(src);
 	int offset = 0;
-	while (pInclude = strstr(src+offset, "#include"))
+	while ((pInclude = strstr(src+offset, "#include")))
 	{
-
 		char* fstart;
 		char* fend;
 		if ((fstart = strchr((char*)pInclude, '\"')) && (fend = strchr(fstart+1, '\"')) )
 		{
+			chdir("ZenithDatas");
 			int includePos = int(pInclude - src);
 			tstring	fname(fstart+1, uint(fend-fstart-1));
 			ZFile file;
@@ -166,6 +175,7 @@ char* resolveIncludes(char * src)
 			src = newSrc;
 			srcSize = newSize;
 			offset = includePos+1;
+			chdir("..");
 		}
 
 	}
@@ -244,14 +254,27 @@ bool FFxProgram::init(CGcontext aContext)
 #endif
 	{
 		// opengl
-		mProgram = cgCreateProgram(aContext, fileType, mSourceBuffer, mProfile, mEntry.c_str(), COMPILE_ARGS);
+		//mProgram = cgCreateProgram(aContext, fileType, mSourceBuffer, mProfile, mEntry.c_str(), COMPILE_ARGS);
+		mProfile = (mProfileDomain == CG_VERTEX_DOMAIN) ?cgGLGetLatestProfile(CG_GL_VERTEX):cgGLGetLatestProfile(CG_GL_FRAGMENT );
+		assert(cgGLIsProfileSupported(mProfile));
+		mProgram = cgCreateProgramFromFile(aContext, fileType, mFileName, mProfile, mEntry.c_str(), COMPILE_ARGS);
+		if (mProgram == NULL) {
+			CGerror error;
+			const char* errTxt = cgGetLastErrorString(&error);
+			LOG ("ERROR %x: can't compile %s : %s\n", error, mFileName.c_str(), errTxt);
+			useDefaultProgram(aContext);
+			assert(false);
+			return false;
+		}
 		cgGLLoadProgram(mProgram);
+		checkForCgError("loadprog");
 	}
 	if (mProgram == 0)
 	{
 		CGerror error = cgGetError();
 		LOG ("ERROR %x: can't load or compile %s : %s\n", error, mFileName.c_str(), cgGetLastErrorString(&error));
 		useDefaultProgram(aContext);
+		assert(false);
 		return false;
 	}
 	return true;

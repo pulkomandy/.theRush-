@@ -1,7 +1,7 @@
 //------------------------------------
 #ifdef CM
-#include "./ZenithDatas/ShadowTechnics.fx"
-#include "./ZenithDatas/std.fx"
+#include "ShadowTechnics.fx"
+#include "std.fx"
 
 
 #else

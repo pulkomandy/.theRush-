@@ -62,7 +62,7 @@ FFxProgram* FFxImport::importCgProgram(const char* aFileName, CGprogram program)
 	// import program source information
 	FFxProgram*	fxProgram = new FFxProgram();
 	fxProgram->mProfile = cgGetProgramProfile(program);
-	fxProgram->mProfileDomain = (FFxEnum) cgGetProfileDomain(fxProgram->mProfile);
+	fxProgram->mProfileDomain = cgGetProfileDomain(fxProgram->mProfile);
 	fxProgram->mFileName = aFileName;
 	fxProgram->mSourceBuffer = cgGetProgramString(program, CG_PROGRAM_SOURCE );
 	fxProgram->mEntry = cgGetProgramString(program, CG_PROGRAM_ENTRY);
@@ -249,14 +249,16 @@ bool FFxImport::importCgfx(ZFx* fx, CGcontext aContext, const char* aFileName, c
 			nBuf.Replace("ps_2_0","arbfp1");
 			nBuf.Replace("vs_2_0","arbvp1");
 
-			
-			effect = cgCreateEffect(aContext, nBuf.c_str(), args);
+			//effect = cgCreateEffect(aContext, nBuf.c_str(), args);
+			effect = cgCreateEffectFromFile(aContext, aFileName, args);
 		}
 		
 
 		
  		if (!effect)//checkCgError())
 		{
+			LOG ("importCgfx ERROR: can't load or compile %s : %s\n", aFileName, cgGetLastListing(aContext));
+
 			delete [] buf;
 			// display last listing
 			return false;

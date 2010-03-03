@@ -589,8 +589,8 @@ bool ZFx::importProgramFromCgfx(const char* aCgfxFileName, const char* aVertexEn
 {
 	FFxTechnique* technique = new FFxTechnique();
 	FFxPass* pass = new FFxPass();
-	FFxProgram* vertexProgram = new FFxProgram(FFX_VERTEX_DOMAIN, aCgfxFileName, aVertexEntry, 0);
-	FFxProgram* fragmentProgram = new FFxProgram(FFX_FRAGMENT_DOMAIN, aCgfxFileName, aFragmentEntry, 0);
+	FFxProgram* vertexProgram = new FFxProgram(CG_VERTEX_DOMAIN, aCgfxFileName, aVertexEntry, 0);
+	FFxProgram* fragmentProgram = new FFxProgram(CG_FRAGMENT_DOMAIN, aCgfxFileName, aFragmentEntry, 0);
 
 	pass->addProgram(vertexProgram);
 	pass->addProgram(fragmentProgram);
@@ -615,8 +615,8 @@ bool ZFx::importProgramFromCg(const char* aVertexShader, const char* aFragmentSh
 {
 	FFxTechnique* technique = new FFxTechnique();
 	FFxPass* pass = new FFxPass();
-	FFxProgram* vertexProgram = new FFxProgram(FFX_VERTEX_DOMAIN, aVertexShader, "main", 0);
-	FFxProgram* fragmentProgram = new FFxProgram(FFX_FRAGMENT_DOMAIN, aFragmentShader, "main", 0);
+	FFxProgram* vertexProgram = new FFxProgram(CG_VERTEX_DOMAIN, aVertexShader, "main", 0);
+	FFxProgram* fragmentProgram = new FFxProgram(CG_FRAGMENT_DOMAIN, aFragmentShader, "main", 0);
 
 	pass->addProgram(vertexProgram);
 	pass->addProgram(fragmentProgram);

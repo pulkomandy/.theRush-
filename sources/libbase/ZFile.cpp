@@ -138,6 +138,7 @@ bool ZFile::Open(const tstring & p_fullName, const ZOPEN_FLAG p_flags, bool bSto
 			{
 				// file not found
 				LOG("Err loading file %s \n",mFullName.c_str());
+				assert(false);
 			}
 			tstring errOpening("Cannot open file " + mFullName);
 			ZASSERT( (mHandle != 0) , errOpening.c_str() );
