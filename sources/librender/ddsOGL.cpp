@@ -163,6 +163,7 @@
 #include <GL/gl.h>
 #endif
 
+#include <iostream>
 #include <stdio.h>
 #include <assert.h>
 #include "ddsOGL.h"
@@ -290,7 +291,7 @@ bool CDDSImage::load(unsigned char *aStream, bool flipImage)
 
     if (strncmp(filecode, "DDS ", 4) != 0)
     {
-		cerr << "WARNING - Not a DDS buffer" << endl;
+		std::cerr << "WARNING - Not a DDS buffer" << endl;
         return false;
     }
 
@@ -344,7 +345,7 @@ bool CDDSImage::load(unsigned char *aStream, bool flipImage)
                 m_components = 4;
                 break;
             default:
-				cerr << "WARNING - Wrong DDS format : " << hex << ddsh.ddspf.dwFourCC << endl;
+				std::cerr << "WARNING - Wrong DDS format : " << hex << ddsh.ddspf.dwFourCC << endl;
                 return false;
         }
     }
@@ -370,7 +371,7 @@ bool CDDSImage::load(unsigned char *aStream, bool flipImage)
 	}
     else 
     {
-		cerr << "WARNING - Wrong DDS pixelformat" << endl;
+		std::cerr << "WARNING - Wrong DDS pixelformat" << endl;
         return false;
     }
     
@@ -1294,7 +1295,7 @@ GLuint UploadDDS(unsigned char *tgeStream, int &w, int &h, int& nbmml)
 	GLuint texobj;
 	CDDSImage img;
 	if (! img.load(tgeStream, false)) {
-		cerr << "WARNING - image load fail ! ";
+		std::cerr << "WARNING - image load fail ! ";
 		assert(false);
 	}
 	w = img.get_width();

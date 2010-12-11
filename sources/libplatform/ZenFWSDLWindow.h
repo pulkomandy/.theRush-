@@ -1,12 +1,7 @@
 #ifndef ZENFWSDLWINDOW_H__
 #define ZENFWSDLWINDOW_H__
 
-#if (defined(WIN32) || defined(MAC_OS))
-#include "SDL.h"
-#include "SDL_syswm.h"
-#else
 #include <SDL/SDL.h>
-#endif
 void InjectChar(unsigned long pWParam);
 void InjectKeyDown(unsigned long pWParam);
 void InjectKeyUp(unsigned long pWParam);

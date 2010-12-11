@@ -1,6 +1,9 @@
 #ifndef ZFX_H__
 #define ZFX_H__
 
+#undef __STRICT_ANSI__
+#include <string.h>
+
 #include <Cg/cg.h>
 
 #include "FFx.h"

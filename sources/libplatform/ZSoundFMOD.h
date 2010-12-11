@@ -269,10 +269,10 @@ public:
 */
 	ZSoundSample*	NewSoundSample(bool b3D, bool bStreamed);
 
-	void			setDefaultGroupVolume(int aGroup) {}
+	void			setDefaultGroupVolume(int /*aGroup*/) {}
 	int				getDefaultGroupVolume() { return 0; }
-	void			setGroupMasterVolume(int aGroup, float aLeft, float aRight) {}
-	void			getGroupMasterVolume(int aGroup, float& aLeft, float& aRight) {}
+	void			setGroupMasterVolume(int /*aGroup*/, float /*aLeft*/, float /*aRight*/) {}
+	void			getGroupMasterVolume(int /*aGroup*/, float& /*aLeft*/, float& /*aRight*/) {}
 
 private:
 	FMOD::System    *fsystem;

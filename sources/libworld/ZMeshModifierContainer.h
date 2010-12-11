@@ -9,7 +9,7 @@ public:
 	ZMeshModifier();
 	virtual ~ZMeshModifier();
 
-	virtual void Tick(float aTimeEllapsed) { }
+	virtual void Tick(float /*aTimeEllapsed*/) { }
 
 };
 

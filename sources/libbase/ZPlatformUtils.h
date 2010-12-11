@@ -22,16 +22,21 @@
 #ifndef ZPLATFORMUTILS_H__
 #define ZPLATFORMUTILS_H__
 
-#ifdef WIN32
+#ifdef _WIN32
 #include <windows.h>
+#include <windef.h>
 #include <process.h>
 #include <direct.h>
+#include "targetver.h"
 #include <shlobj.h>
+#include <cstdio>
 #endif
 
 #ifdef LINUX
 #include <pthread.h>
 #endif
+
+#include "ZBaseDefs.h"
 
 // returns directory to Images folder
 __inline const char * GetPictureDirectoy()
@@ -42,9 +47,9 @@ __inline const char * GetPictureDirectoy()
 	#ifdef MAC_OS
 	return "~/pictures/";
 #else	// WIN32
-	WCHAR szLongPath[_MAX_PATH] = { 0 };
+	wchar_t szLongPath[MAX_PATH] = { 0 };
 	LPITEMIDLIST pidlDocFiles;
-	HRESULT hr = SHGetFolderLocation(NULL, 
+	/*HRESULT hr =*/ SHGetFolderLocation(NULL, 
 		CSIDL_MYPICTURES, 
 		NULL,
 		0,
@@ -56,7 +61,7 @@ __inline const char * GetPictureDirectoy()
 	pMalloc->Free(pidlDocFiles);
 	pMalloc->Release();
 	static char imgPath[MAX_PATH];
-	sprintf_s(imgPath, MAX_PATH, "%ws",szLongPath);
+	sprintf(imgPath, /*MAX_PATH,*/ "%ls",szLongPath);
 	return imgPath;
 #endif
 #endif
@@ -72,9 +77,9 @@ __inline const char * GetHomeDirectoy()
 	#ifdef MAC_OS
 	return "~/";
 #else	// WIN32
-	WCHAR szLongPath[_MAX_PATH] = { 0 };
+	WCHAR szLongPath[MAX_PATH] = { 0 };
 	LPITEMIDLIST pidlDocFiles;
-	HRESULT hr = SHGetFolderLocation(NULL, 
+	/*HRESULT hr =*/ SHGetFolderLocation(NULL, 
 		CSIDL_PERSONAL, 
 		NULL,
 		0,
@@ -86,7 +91,7 @@ __inline const char * GetHomeDirectoy()
 	pMalloc->Free(pidlDocFiles);
 	pMalloc->Release();
 	static char imgPath[MAX_PATH];
-	sprintf_s(imgPath, MAX_PATH, "%ws",szLongPath);
+	sprintf(imgPath/*, MAX_PATH*/, "%ls",szLongPath);
 	strcat(imgPath, "/");
 	return imgPath;
 #endif

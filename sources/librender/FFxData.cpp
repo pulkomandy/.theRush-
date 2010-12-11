@@ -287,8 +287,8 @@ bool FFxDataTransformVector::getVector(tvector4& aVector) const
 	return false;
 }
 
-#define FFX_GLOBAL CG_NUMBER_OF_DOMAINS
-#define FFX_DIRECTION CG_NUMBER_OF_DOMAINS+1
+#define FFX_GLOBAL 99
+#define FFX_DIRECTION 100
 
 void FFxDataTransformVector::apply(CGparameter aParam)
 {
@@ -323,7 +323,7 @@ void FFxDataTransformVector::apply(CGparameter aParam)
 // FFxData read
 //---------------------------------------------------------------------------------
 
-FFxData* FFxData::create(CGtype aType, const float* aValues, int aSize, bool bKeepPtr)
+FFxData* FFxData::create(CGtype aType, const float* aValues, int /*aSize*/, bool bKeepPtr)
 {
 	FFxData*	data = 0;
 
@@ -375,8 +375,8 @@ mFloat1Ptr(aFloat1Ptr),
 mFloat2Ptr(aFloat2Ptr),
 mFloat1(aFloat1),
 mFloat2(aFloat2),
-mOp(aOp),
-mValue(tvector4::zero)
+mValue(tvector4::zero),
+mOp(aOp)
 {
 }
 
@@ -442,8 +442,8 @@ mFloat1Ptr(aFloat1Ptr),
 mFloat2Ptr(aFloat2Ptr),
 mFloat1(aFloat1),
 mFloat2(aFloat2),
-mOp(aOp),
-mValue(tvector4::zero)
+mValue(tvector4::zero),
+mOp(aOp)
 {
 }
 

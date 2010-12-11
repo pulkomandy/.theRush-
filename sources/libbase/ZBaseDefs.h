@@ -21,8 +21,9 @@
 #ifndef ZBASEDEFS_H__
 #define ZBASEDEFS_H__
 
-#ifdef WIN32
+#ifdef _WIN32
 #include <windows.h>
+#undef __STRICT_ANSI__
 #include <stdlib.h>
 #endif
 
@@ -65,7 +66,6 @@ inline bool isPowerOf2(unsigned int n)
 #include <vector>
 #include <list>
 #include <map>
-#include <string>
 
 #define tarray std::vector
 #define tlist std::list
@@ -102,7 +102,7 @@ typedef struct TargaHeader_t {
 void Zexit(int aRet);
 
 
-#ifdef WIN32
+#ifdef _WIN32
 typedef CRITICAL_SECTION ZCriticalSection_t;
 typedef HWND WindowHandle_t;
 typedef HANDLE ThreadHandle_t;
@@ -130,8 +130,7 @@ typedef struct RECT
 } RECT;
 
 
-#define _MAX_PATH 256
-#define MAX_PATH _MAX_PATH
+#define MAX_PATH PATH_MAX
 
 #define stricmp strcasecmp
 #define _stricmp strcasecmp
@@ -151,7 +150,6 @@ inline void strlwr(char *)
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <unistd.h>
-#include <string.h>
 
 inline char* GetCurrentDirectory(int bufLength, char *pszDest)
 {

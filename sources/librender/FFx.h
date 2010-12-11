@@ -34,6 +34,9 @@
 #include <d3dx9core.h>
 #endif
 
+#include "../libworld/ZTransform.h"
+#include "..\librender\IDisplayDevice.h"
+
 extern CGcontext			gDefaultCGcontext;
 
 
@@ -302,12 +305,13 @@ struct FFxSetParam : public FFxParam //, IFFxSetParam
 struct FFxSamplerParam
 {
 	FFxSamplerParam() : mCGparam(0), mTexture(NULL), mTextureIndex(-1) {};
-	FFxSamplerParam(CGparameter	p, int i, int smpidx, ZTexture* tex) : mCGparam(p), mTextureIndex(i), mSamplerIndex(smpidx), mTexture(tex) {};
 
 	CGparameter	mCGparam;			// sampler param
-  ZTexture* mTexture;
+	ZTexture* mTexture;
 	uint32		mTextureIndex;		// texture index
 	int32		mSamplerIndex;
+
+	FFxSamplerParam(CGparameter	p, int i, int smpidx, ZTexture* tex) : mCGparam(p), mTexture(tex), mTextureIndex(i), mSamplerIndex(smpidx) {};
 };
 
 //---------------------------------------------------------------------------------

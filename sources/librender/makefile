@@ -2,7 +2,7 @@ DEBUG=no
 CC=g++
 RANLIB=ranlib
 ifeq ($(DEBUG),yes)
-	CFLAGS=-W -Wall   -g -DLINUX -I../../3rdparty/RakNet-3.6201/Source -I/usr/include/CEGUI/ -I../ -I../../3rdparty/bullet-2.74/src -I/usr/local/include/fmodex
+	CFLAGS=-W -Wall   -g -I../../3rdparty/RakNet-3.6201/Source -I/usr/include/CEGUI/ -I../ -I../../3rdparty/bullet-2.74/src -I/usr/local/include/fmodex -Ih:\qt\directx\include\ 
 	LDFLAGS=-lm
 	AR = ar
 	ARFLAGS = rcs
@@ -10,7 +10,7 @@ ifeq ($(DEBUG),yes)
 	LIB=librenderD.a
 
 else
-	CFLAGS=-W -Wall -O3 -DLINUX -I../../3rdparty/RakNet-3.6201/Source -I/usr/include/CEGUI/ -I../ -I../../3rdparty/bullet-2.74/src -I/usr/local/include/fmodex
+	CFLAGS=-W -Wall -O3 -I../../3rdparty/RakNet-3.6201/Source -I/usr/include/CEGUI/ -I../ -I../../3rdparty/bullet-2.74/src -I/usr/local/include/fmodex -Ih:/qt/directx/include/
 	LDFLAGS= -O3 -lm
 	AR = ar
 	ARFLAGS = rcs

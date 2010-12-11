@@ -2,7 +2,7 @@ DEBUG=no
 CC=g++
 RANLIB=ranlib
 ifeq ($(DEBUG),yes)
-	CFLAGS=-W -Wall -ansi  -g -DLINUX -I/usr/include -I../../3rdparty/RakNet-3.6201/Source -I../../3rdparty/bullet-2.74/src -I../../3rdparty/tinyxml -I/usr/local/include/fmodex
+	CFLAGS=-W -Wall -g -I/usr/include -I../../3rdparty/RakNet-3.6201/Source -I../../3rdparty/bullet-2.74/src -I../../3rdparty/tinyxml -I/usr/local/include/fmodex -Ih:/Qt/directx/include/ -Ih:/Qt/FMOD/api/inc/
 	LDFLAGS=-lm
 	AR = ar
 	ARFLAGS = rcs
@@ -10,7 +10,7 @@ ifeq ($(DEBUG),yes)
 	LIB=libbaseD.a
 
 else
-	CFLAGS=-W -Wall -ansi  -O3 -DLINUX -I/usr/include -I../../3rdparty/RakNet-3.6201/Source -I../../3rdparty/bullet-2.74/src -I../../3rdparty/tinyxml -I/usr/local/include/fmodex
+	CFLAGS=-W -Wall -O3 -I/usr/include -I../../3rdparty/RakNet-3.6201/Source -I../../3rdparty/bullet-2.74/src -I../../3rdparty/tinyxml -I/usr/local/include/fmodex -Ih:/Qt/directx/include/ -Ih:/Qt/FMOD/api/inc/
 	LDFLAGS= -O3 -lm
 	AR = ar
 	ARFLAGS = rcs

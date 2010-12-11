@@ -22,6 +22,9 @@
 #define ZMESHINSTANCE_H__
 
 #include "../librender/ZMaterial.h"
+#include "../libworld/ZMesh.h"
+#include "../libworld/ZPhysicTriMeshInstance.h"
+#include "../libbase/ZLogger.h"
 
 DECLAREZCLASS(ZMeshInstance);
 class IPhysicModel;
@@ -109,7 +112,7 @@ public:
 
 	void Delete() { delete this; }
 
-	void EnableOcclusionQuery(bool bEnable)
+	void EnableOcclusionQuery(bool /*bEnable*/)
 	{
 		/* FIXME
 		if ((bEnable)&&(!mOcclusionQuery.ptr()))

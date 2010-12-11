@@ -1,6 +1,8 @@
 #ifndef ZPHYSICTRIMESHINSTANCE_H__
 #define ZPHYSICTRIMESHINSTANCE_H__
 
+#include "ZPhysicWorldBullet.h"
+
 DECLAREZCLASS(ZPhysicTriMeshInstance);
 
 class ZPhysicTriMeshInstance : public ZBaseClass

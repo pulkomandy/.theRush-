@@ -82,9 +82,9 @@ public:
             mFrameUpdating = false; 
     }
 
-    virtual void *Lock(uint16 aSurfaceNb) { return NULL; }
-    virtual void Unlock(uint16 aSurfaceNb) {}
-    virtual void Bind(uint8 aLevel) {}
+    virtual void *Lock(uint16 /*aSurfaceNb*/) { return NULL; }
+    virtual void Unlock(uint16 /*aSurfaceNb*/) {}
+    virtual void Bind(uint8 /*aLevel*/) {}
 
 
     virtual uint32 GetWidth() { return mWidth; }
@@ -101,13 +101,13 @@ public:
 	{ 
 		return mEnabledDecoding; 
 	}
-	virtual void ForceTextureHandle(void*pHandle) {}
+	virtual void ForceTextureHandle(void*/*pHandle*/) {}
 
 	virtual void SetLastFrameTime(float aTime) { mLastFrameTime = aTime; }
 	virtual float GetLastFrameTime() { return mLastFrameTime; }
 	virtual void ReinitStreaming() {}
 
-	virtual void SetLoop(bool bLoop) { }
+	virtual void SetLoop(bool /*bLoop*/) { }
 	virtual void Reset() {}
 
 

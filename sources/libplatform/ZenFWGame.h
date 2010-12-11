@@ -22,7 +22,7 @@ public:
 	virtual ~ZGame()
 	{
 	}
-	virtual void Update(float aTimeEllapsed)
+	virtual void Update(float /*aTimeEllapsed*/)
 	{
 	}
 	virtual void SetSpeed(float fSpeed) { mSpeed = fSpeed; }

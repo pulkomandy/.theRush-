@@ -22,6 +22,7 @@
 #ifndef ZMESH_H__
 #define ZMESH_H__
 
+#include "..\librender\IStreamArrays.h"
 
 
 DECLAREZCLASS(ZMesh);

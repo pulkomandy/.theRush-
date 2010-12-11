@@ -1,6 +1,8 @@
 #ifndef LIBWORLD_H__
 #define LIBWORLD_H__
 
+#include "ZPhysicWorldBullet.h"
+#include "ZMeshInstance.h"
 #include "ZSpatialEntity.h"
 #include "ZMesh.h"
 #include "ZMeshBuilder.h"
@@ -8,8 +10,6 @@
 #include "ZCamera.h"
 #include "ZCascadedShadows.h"
 #include "ZScene.h"
-#include "ZPhysicWorldBullet.h"
-#include "ZMeshInstance.h"
 #include "ZOccluderBox.h"
 #include "ZAnimation.h"
 

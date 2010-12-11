@@ -28,11 +28,7 @@
 
 #endif
 
-#if (defined(WIN32) || defined(MAC_OS))
-#include "SDL.h"
-#else
 #include <SDL/SDL.h>
-#endif
 #include <Cg/cg.h>
 #ifdef WIN32
 #include <Cg/cgD3D9.h>

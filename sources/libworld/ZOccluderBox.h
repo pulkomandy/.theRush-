@@ -48,8 +48,8 @@ public:
         return nInst;
     }
 
-	virtual void Load(ZFile *pFile) { }
-	virtual void Save(ZFile *pFile) { }
+	virtual void Load(ZFile */*pFile*/) { }
+	virtual void Save(ZFile */*pFile*/) { }
 
 protected:
 

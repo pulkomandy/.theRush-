@@ -10,11 +10,7 @@
 #include "ZLogger.h"
 #include "ZSerializator.h"
 
-#if (defined(WIN32) || defined(MAC_OS))
-#include "SDL.h"
-#else
 #include <SDL/SDL.h>
-#endif
 
 ZLogger GLOG;
 

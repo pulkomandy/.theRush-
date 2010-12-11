@@ -2,7 +2,7 @@ DEBUG=no
 CC=g++
 RANLIB=ranlib
 ifeq ($(DEBUG),yes)
-	CFLAGS=-W -Wall -ansi  -g -DLINUX -I../librender -I../../3rdparty/ -I/usr/include -I../../3rdparty/tinyxml -I../../3rdparty/RakNet-3.6201/Source -I../../3rdparty/bullet-2.74/src -I/usr/local/include/fmodex
+	CFLAGS=-W -Wall -ansi  -g -I../librender -I../../3rdparty/ -I/usr/include -I../../3rdparty/tinyxml -I../../3rdparty/RakNet-3.6201/Source -I../../3rdparty/bullet-2.74/src -I/usr/local/include/fmodex
 	LDFLAGS=-lm
 	AR = ar
 	ARFLAGS = rcs
@@ -10,7 +10,7 @@ ifeq ($(DEBUG),yes)
 	LIB=libworldD.a
 
 else
-	CFLAGS=-W -Wall -ansi  -O3 -DLINUX -I../librender -I../../3rdparty/ -I/usr/include -I../../3rdparty/tinyxml -I../../3rdparty/RakNet-3.6201/Source -I../../3rdparty/bullet-2.74/src -I/usr/local/include/fmodex
+	CFLAGS=-W -Wall -ansi  -O3 -I../librender -I../../3rdparty/ -I/usr/include -I../../3rdparty/tinyxml -I../../3rdparty/RakNet-3.6201/Source -I../../3rdparty/bullet-2.74/src -I/usr/local/include/fmodex
 	LDFLAGS= -O3 -lm
 	AR = ar
 	ARFLAGS = rcs

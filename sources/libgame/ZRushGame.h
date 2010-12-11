@@ -40,8 +40,8 @@ public:
 	virtual ZShip* AddShip(const char *szShipName, bool bServerSide);
 	virtual void Update(float aTimeEllapsed);
 	
-	virtual void Connect(const tstring& url, unsigned short aPort) {}
-	virtual void ActAsServer(unsigned short aPort) {}
+	virtual void Connect(const tstring& /*url*/, unsigned short /*aPort*/) {}
+	virtual void ActAsServer(unsigned short /*aPort*/) {}
 	virtual void SetGameSet(const GameSet_t& gameSet);
 	void BuildEditorGameTest();
 

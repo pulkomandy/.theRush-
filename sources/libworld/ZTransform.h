@@ -21,6 +21,9 @@
 #ifndef ZTRANSFORM_H__
 #define ZTRANSFORM_H__
 
+#include "ZSpatialEntity.h"
+#include "../libbase/ZSmartPtr.h"
+
 class ZScene;
 
 DECLAREZCLASS(ZTransform);

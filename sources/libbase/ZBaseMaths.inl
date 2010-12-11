@@ -1236,7 +1236,7 @@ inline void tmatrix::Identity()
 		0,0,1,0,
 		0,0,0,1);
 }
-#ifdef WIN32
+#if defined(WIN32) && !defined(__GNUC__)
 inline void SSE_MatrixF_x_MatrixF(const float *matA, const float *matB, float *result)
 {
 	__asm
@@ -1251,71 +1251,71 @@ inline void SSE_MatrixF_x_MatrixF(const float *matA, const float *matB, float *r
 			movss       xmm2, [edx+4]
 		mulps       xmm0, xmm1
 			shufps      xmm2, xmm2, 0
-			movups      xmm3, [ecx+10h]
+			movups      xmm3, [ecx+0x10]
 		movss       xmm7, [edx+8]
 		mulps       xmm2, xmm3
 			shufps      xmm7, xmm7, 0
 			addps       xmm0, xmm2
-			movups      xmm4, [ecx+20h]
-		movss       xmm2, [edx+0Ch]
+			movups      xmm4, [ecx+0x20]
+		movss       xmm2, [edx+0x0C]
 		mulps       xmm7, xmm4
 			shufps      xmm2, xmm2, 0
 			addps       xmm0, xmm7
-			movups      xmm5, [ecx+30h]
-		movss       xmm6, [edx+10h]
+			movups      xmm5, [ecx+0x30]
+		movss       xmm6, [edx+0x10]
 		mulps       xmm2, xmm5
-			movss       xmm7, [edx+14h]
+			movss       xmm7, [edx+0x14]
 		shufps      xmm6, xmm6, 0
 			addps       xmm0, xmm2
 			shufps      xmm7, xmm7, 0
 			movlps      [eax], xmm0
 			movhps      [eax+8], xmm0
 			mulps       xmm7, xmm3
-			movss       xmm0, [edx+18h]
+			movss       xmm0, [edx+0x18]
 		mulps       xmm6, xmm1
 			shufps      xmm0, xmm0, 0
 			addps       xmm6, xmm7
 			mulps       xmm0, xmm4
-			movss       xmm2, [edx+24h]
+			movss       xmm2, [edx+0x24]
 		addps       xmm6, xmm0
-			movss       xmm0, [edx+1Ch]
-		movss       xmm7, [edx+20h]
+			movss       xmm0, [edx+0x1C]
+		movss       xmm7, [edx+0x20]
 		shufps      xmm0, xmm0, 0
 			shufps      xmm7, xmm7, 0
 			mulps       xmm0, xmm5
 			mulps       xmm7, xmm1
 			addps       xmm6, xmm0
 			shufps      xmm2, xmm2, 0
-			movlps      [eax+10h], xmm6
-			movhps      [eax+18h], xmm6
+			movlps      [eax+0x10], xmm6
+			movhps      [eax+0x18], xmm6
 			mulps       xmm2, xmm3
-			movss       xmm6, [edx+28h]
+			movss       xmm6, [edx+0x28]
 		addps       xmm7, xmm2
 			shufps      xmm6, xmm6, 0
-			movss       xmm2, [edx+2Ch]
+			movss       xmm2, [edx+0x2C]
 		mulps       xmm6, xmm4
 			shufps      xmm2, xmm2, 0
 			addps       xmm7, xmm6
 			mulps       xmm2, xmm5
-			movss       xmm0, [edx+34h]
+			movss       xmm0, [edx+0x34]
 		addps       xmm7, xmm2
 			shufps      xmm0, xmm0, 0
-			movlps      [eax+20h], xmm7
-			movss       xmm2, [edx+30h]
-		movhps      [eax+28h], xmm7
+			movlps      [eax+0x20], xmm7
+			movss       xmm2, [edx+0x30]
+		movhps      [eax+0x28], xmm7
 			mulps       xmm0, xmm3
 			shufps      xmm2, xmm2, 0
-			movss       xmm6, [edx+38h]
+			movss       xmm6, [edx+0x38]
 		mulps       xmm2, xmm1
 			shufps      xmm6, xmm6, 0
 			addps       xmm2, xmm0
 			mulps       xmm6, xmm4
-			movss       xmm7, [edx+3Ch]
+			movss       xmm7, [edx+0x3C]
 		shufps      xmm7, xmm7, 0
 			addps       xmm2, xmm6
 			mulps       xmm7, xmm5
 			addps       xmm2, xmm7
-			movups      [eax+30h], xmm2
+			movups      [eax+0x30], xmm2
 	}
 }
 

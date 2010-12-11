@@ -1,6 +1,7 @@
 #ifndef LIBBASE_H__
 #define LIBBASE_H__
 
+#include "ZGameResources.h"
 #include "ZBaseDefs.h"
 #include "ZPlatformUtils.h"
 #include "ZBaseMaths.h"
@@ -19,7 +20,6 @@
 #include "ZCollisionsUtils.h"
 #include "ZFrustum.h"
 #include "ZDatasResource.h"
-#include "ZGameResources.h"
 #include "ZFunctionSlot.h"
 #include "ZPIDCtrl.h"
 #include "ZFSM.h"

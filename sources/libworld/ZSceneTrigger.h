@@ -2,6 +2,8 @@
 #define ZSCENETRIGGER_H__
 
 #include "ZTrigger.h"
+#include "..\libbase\ZProfiler.h"
+#include "..\libbase\ZCollisionsUtils.h"
 
 class ZSceneTrigger
 {
@@ -84,11 +86,14 @@ public:
 						{
 							if ( ( pTrig->mFilterGroup&aTriggersList[lott]->mFilterMask ) &&
 								( aTriggersList[lott]->mFilterGroup&pTrig->mFilterMask ) )
-							// should check group&filter here
-							if (pTrig < aTriggersList[lott])
-								mTriggerPeers->push_back( TriggerCheckPeer_t( pTrig, aTriggersList[lott]));
-							else
-								mTriggerPeers->push_back( TriggerCheckPeer_t( aTriggersList[lott], pTrig));
+							{
+								// should check group&filter here
+								if (pTrig < aTriggersList[lott]) {
+									mTriggerPeers->push_back( TriggerCheckPeer_t( pTrig, aTriggersList[lott]));
+								} else {
+									mTriggerPeers->push_back( TriggerCheckPeer_t( aTriggersList[lott], pTrig));
+								}
+							}
 						}
 					}
 				}

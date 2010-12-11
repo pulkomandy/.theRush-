@@ -21,6 +21,8 @@
 #ifndef IDISPLAYDEVICE_H__
 #define IDISPLAYDEVICE_H__
 
+#include "..\librender\ZTexture.h"
+
 /*! \file IDisplayDevice.h
     \brief Display Device Interface
     Handles polygonal display
@@ -45,7 +47,6 @@ DECLAREZCLASS(ZOcclusionQueryDX9);
 
 class IVertexArray;
 class IIndexArray;
-class ZTexture;
 class IMesh;
 class ZRenderQueue;
 

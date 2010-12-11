@@ -1,6 +1,8 @@
 #ifndef ZGAMESET_H__
 #define ZGAMESET_H__
 
+#include <stdlib.h>
+
 typedef struct GameSet_t
 {
 	GameSet_t()

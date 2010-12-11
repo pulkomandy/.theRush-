@@ -24,6 +24,10 @@
 
 #include "../librender/librender.h"
 #include "../libworld/libworld.h"
+#include "..\libworld\ZTransform.h"
+#include "..\libworld\ZPhysicWorldBullet.h"
+#include "..\libworld\ZMeshInstance.h"
+#include "..\libbase\ZSerializator.h"
 
 DECLAREZCLASS(ZGameResources);
 
@@ -263,7 +267,7 @@ public:
 	}
 
 	void SetOutputThread(ZDatasProcessor *pThread) { mOutputThread = pThread; }
-	virtual ZBaseClass* CreateInstance(void *pParam) { return NULL; }
+	virtual ZBaseClass* CreateInstance(void */*pParam*/) { return NULL; }
 
 	virtual void ProcessDatas() = 0;
 

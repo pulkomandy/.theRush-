@@ -14,7 +14,7 @@ public:
 	virtual ~ZGameEntity();
 
 	virtual void BroadcastDestruction() {}
-	virtual void Tick(float timeEllapsed) {}
+	virtual void Tick(float /*timeEllapsed*/) {}
 
 	ZGameEntitiesManager *mManager;
 };

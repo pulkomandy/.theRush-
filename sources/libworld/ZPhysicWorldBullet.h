@@ -3,6 +3,7 @@
 #define ZPHYSICWORLDBULLET_H__
 
 #include "../libbase/LibBase.h"
+#include "../libbase/ZDatasResource.h"
 
 
 #include "LinearMath/btVector3.h"
@@ -27,6 +28,7 @@
 #include "BulletDynamics/ConstraintSolver/btSequentialImpulseConstraintSolver.h"
 #include "BulletCollision/CollisionShapes/btTriangleIndexVertexArray.h"
 #include "BulletCollision/CollisionShapes/btBvhTriangleMeshShape.h"
+
 
 #if 0
 #include "GL_ShapeDrawer.h"

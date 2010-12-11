@@ -64,8 +64,8 @@ public:
     }
 
 
-	virtual void Load(ZFile *pFile) { }
-	virtual void Save(ZFile *pFile) { }
+	virtual void Load(ZFile */*pFile*/) { }
+	virtual void Save(ZFile */*pFile*/) { }
 
 	unsigned int mFilterGroup; // groups it belongs to
 	unsigned int mFilterMask; // groups it can trigger with

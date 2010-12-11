@@ -30,7 +30,6 @@
 #include "ZBaseDefs.h"
 #if (defined(LINUX) || defined(MAC_OS))
 #include <memory.h>
-#include <stdlib.h>
 
 
 
@@ -184,27 +183,27 @@ class    tstring
 		    //char drive[_MAX_DRIVE];
 		    //char dir[_MAX_DIR];
 		    //char file[_MAX_PATH];
-		    char ext[_MAX_PATH];
+		    char ext[MAX_PATH];
 
-		    _splitpath_s(stringData, NULL, 0, NULL, 0, NULL, 0, ext, _MAX_PATH);
+		    _splitpath(stringData, NULL, NULL, NULL, ext);
             return ext;
         }
 
         tstring GetBaseName() const
         {
-            char filen[_MAX_PATH];
+            char filen[MAX_PATH];
 
-		    _splitpath_s(stringData, NULL, 0, NULL, 0, filen, _MAX_PATH, NULL, 0);
+		    _splitpath(stringData, NULL, NULL, filen, NULL);
             return filen;
 
         }
 
         tstring GetFileName() const
         {
-            char filen[_MAX_PATH];
+            char filen[MAX_PATH];
 		    char ext[_MAX_PATH];
 
-		    _splitpath_s(stringData, NULL, 0, NULL, 0, filen, _MAX_PATH, ext, _MAX_PATH);
+		    _splitpath(stringData, NULL, NULL, filen, ext);
             tstring basename = filen;
             basename += ext;
             return basename;
@@ -212,10 +211,10 @@ class    tstring
 
         tstring GetPath() const
         {
-            char path[_MAX_PATH];
+            char path[MAX_PATH];
 		    //char ext[_MAX_PATH];
 
-		    _splitpath_s(stringData, NULL, 0, path, _MAX_PATH, NULL, 0, NULL, 0);
+		    _splitpath(stringData, NULL, path, NULL, NULL);
             //tstring basename = filen;
             //basename += ext;
             return path;
@@ -283,12 +282,12 @@ class    tstring
 
             if(stringData)
             {
-                strcpy_s(tmpS.stringData, (tmpS.length + 1), stringData);
+                strncpy(tmpS.stringData, stringData, (tmpS.length + 1));
             }
 
             if(str.stringData)
             {
-                strcat_s(tmpS.stringData, (tmpS.length + 1), str.stringData);
+                strncat(tmpS.stringData, str.stringData, (tmpS.length + 1));
             }
 
             return tmpS;
@@ -318,12 +317,12 @@ class    tstring
 
             if(stringData)
             {
-                strcpy_s(tmpS.stringData, (tmpS.length + 1), stringData);
+                strncpy(tmpS.stringData, stringData, (tmpS.length + 1));
             }
 
             if(str)
             {
-                strcat_s(tmpS.stringData, (tmpS.length + 1), str);
+                strncat(tmpS.stringData, str, (tmpS.length + 1));
             }
 
             return tmpS;
@@ -406,7 +405,7 @@ class    tstring
 
                 stringData[length]= '\0';
                 length += (tulong)strlen(str);
-                strcat_s(stringData, len1, str);
+                strncat(stringData, str, len1);
             }
         }
 
@@ -437,7 +436,7 @@ class    tstring
             if(str.stringData && stringData)
             {
                 tulong pos;
-                strcpy_s(tmpS.stringData, (length + 1), stringData);
+                strncpy(tmpS.stringData, stringData, (length + 1));
 
                 while(tmpS.Find(str,&pos))
                 {
@@ -473,7 +472,7 @@ class    tstring
             if(str && stringData)
             {
                 tulong pos;
-                strcpy_s(tmpS.stringData, (length + 1), stringData);
+                strncpy(tmpS.stringData, stringData, (length + 1));
 
                 while(tmpS.Find(str,&pos))
                 {
@@ -628,7 +627,7 @@ class    tstring
                     }
                     else
                     {
-                        switch(stringData[i])
+                        switch((unsigned char)stringData[i])
                         {
                             case 129:
                             case 150:
@@ -737,7 +736,7 @@ class    tstring
         {
 			// DON'T use vsprintf_s here. CEGUI shits it.
             tchar strToWrite[4000];
-#ifdef WIN32
+#if defined(WIN32) && !defined(__GNUC__)
             vsprintf_s(strToWrite, 4000, format, *ptr_arg);    // on ecrit dans le buffer
 #else
             vsprintf(strToWrite, format, *ptr_arg);
@@ -751,7 +750,7 @@ class    tstring
 
             va_list ptr_arg;
             va_start(ptr_arg, format);
-#ifdef WIN32
+#if defined(WIN32) && !defined(__GNUC__)
             vsprintf_s(strToWrite, 4000, format, ptr_arg);    // on ecrit dans le buffer
 #else
             vsprintf(strToWrite, format, ptr_arg);
@@ -817,7 +816,7 @@ inline void tstring::operator = ( const tstring & str )
             stringData = (tchar *)malloc((length + 1) * sizeof(tchar));
         }
 
-        strcpy_s(stringData, (length + 1), str.stringData);
+        strncpy(stringData, str.stringData, (length + 1));
     }
     else
     {
@@ -851,7 +850,7 @@ inline void tstring::operator = ( const char * str )
             stringData = (tchar *)malloc((length + 1) * sizeof(tchar));
         }
 
-        strcpy_s(stringData, (length + 1), str);
+        strncpy(stringData, str, (length + 1));
     }
     else
     {
