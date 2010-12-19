@@ -1,6 +1,7 @@
-#include "stdafx.h"
 #include "ZBonusSmoke.h"
 #include "ZBonusParameters.h"
+
+#include "ZShip.h"
 
 void ZBonusSmoke::SetActive()
 {

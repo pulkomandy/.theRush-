@@ -21,6 +21,8 @@
 #ifndef IINPUT_H__
 #define IINPUT_H__
 
+#include "..\libbase\ZSerializator.h"
+
 #ifdef WIN32
 DECLAREZCLASS(ZDirectInput8);
 #endif

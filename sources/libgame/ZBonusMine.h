@@ -1,6 +1,9 @@
 #ifndef ZBONUSMINE_H__
 #define ZBONUSMINE_H__
 
+#include "ZBonus.h"
+#include "../libbase/ZBaseMaths.h"
+
 class ZBonusMine : public ZBonus
 {
 public:

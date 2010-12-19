@@ -20,11 +20,12 @@
 //
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
 #include "ZGuiEndResults.h"
 #include "ZProtoGUI.h"
 #include "../libplatform/libplatform.h"
 #include "../libbase/LibBase.h"
+
+#include <CEGUI.h>
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -42,9 +43,9 @@ void GuiEndResult::Build(IProtoGUI *pGUI)
 	// --
 
 
-	ImagesetManager::getSingleton().createImagesetFromImageFile("logoWinnerFirst", "./Prototype/Common/Menu/First.tga");
-	ImagesetManager::getSingleton().createImagesetFromImageFile("logoWinnerSecond", "./Prototype/Common/Menu/Second.tga");
-	ImagesetManager::getSingleton().createImagesetFromImageFile("logoWinnerThird", "./Prototype/Common/Menu/Third.tga");
+	ImagesetManager::getSingletonPtr()->createFromImageFile("logoWinnerFirst", "./Prototype/Common/Menu/First.tga");
+	ImagesetManager::getSingletonPtr()->createFromImageFile("logoWinnerSecond", "./Prototype/Common/Menu/Second.tga");
+	ImagesetManager::getSingletonPtr()->createFromImageFile("logoWinnerThird", "./Prototype/Common/Menu/Third.tga");
 
 
 

@@ -5,6 +5,9 @@
 #include "ZShipAI.h"
 #include "ZShipBonus.h"
 
+#include "../libgame/ZRushGame.h"
+#include "../libgame/ZShipPhysics.h"
+
 DECLAREZCLASS(ZShip);
 DECLAREZCLASS(ZNetShip);
 

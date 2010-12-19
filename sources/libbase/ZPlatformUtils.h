@@ -23,12 +23,12 @@
 #define ZPLATFORMUTILS_H__
 
 #ifdef _WIN32
+#include "targetver.h"
+#include <shlobj.h>
 #include <windows.h>
 #include <windef.h>
 #include <process.h>
 #include <direct.h>
-#include "targetver.h"
-#include <shlobj.h>
 #include <cstdio>
 #endif
 

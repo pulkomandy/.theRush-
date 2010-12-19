@@ -1,6 +1,8 @@
 #ifndef ZRUSHGAME_H__
 #define ZRUSHGAME_H__
 
+#include "..\libbase\ZSerializator.h"
+
 class FSMClientBase;
 
 
@@ -25,6 +27,7 @@ struct ZNMSG_UseBonus;
 #include "ZBonusParameters.h"
 #include "../libplatform/ZenFWNode.h"
 #include "../libplatform/ZenFWGame.h"
+#include "..\libgame\ZGameTriggers.h"
 
 class ZMine;
 class ZMissile;
@@ -57,11 +60,11 @@ public:
 
 	// messages
 	virtual void SendNetMessage(const ZNMSG_AskSlot & msg, bool bBroadcast = true);
-	virtual void SendNetMessage(const ZNMSG_ClientMapLoadingDone & msg, bool bBroadcast = true) {}
-	virtual void SendNetMessage(const ZNMSG_RaceStartsInNSeconds& msg, bool bBroadcast = true) {}
-	virtual void SendNetMessage(const ZNMSG_CountDownStarts& msg, bool bBroadcast = true) {}
-	virtual void SendNetMessage(const ZNMSG_RaceEndsInNSeconds& msg, bool bBroadcast = true) {}
-	virtual void SendNetMessage(const ZNMSG_SlotsAvailable& msg, bool bBroadcast = true) {}
+	virtual void SendNetMessage(const ZNMSG_ClientMapLoadingDone & /*msg*/, bool bBroadcast = true) {}
+	virtual void SendNetMessage(const ZNMSG_RaceStartsInNSeconds& /*msg*/, bool bBroadcast = true) {}
+	virtual void SendNetMessage(const ZNMSG_CountDownStarts& /*msg*/, bool bBroadcast = true) {}
+	virtual void SendNetMessage(const ZNMSG_RaceEndsInNSeconds& /*msg*/, bool bBroadcast = true) {}
+	virtual void SendNetMessage(const ZNMSG_SlotsAvailable& /*msg*/, bool bBroadcast = true) {}
 	virtual void SendLapTime(ZShip *pShip, float aTime);
 	virtual void SendShipUseBonus(ZShip *pShip);
 

@@ -1,6 +1,7 @@
-#include "stdafx.h"
 #include "ZBonusEnergy.h"
 #include "ZBonusParameters.h"
+
+#include "ZShip.h"
 
 void ZBonusEnergy::SetActive()
 {

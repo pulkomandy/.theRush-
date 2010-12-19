@@ -2,6 +2,8 @@
 #define ZTRACKBONUS_H__
 class ZShip;
 #include "FSMTrackBonus.h"
+#include "..\librender\FFx.h"
+
 DECLAREZCLASS(ZTrackBonus);
 
 

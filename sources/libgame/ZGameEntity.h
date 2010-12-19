@@ -1,6 +1,9 @@
 #ifndef ZGAMEENTITY_H__
 #define ZGAMEENTITY_H__
 
+#include "../libbase/ZBaseClass.h"
+#include "../libbase/ZSerializator.h"
+
 class ZGameEntitiesManager;
 
 class ZGameEntity : public ZBaseClass

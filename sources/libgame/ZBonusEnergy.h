@@ -1,6 +1,8 @@
 #ifndef ZBONUSENERGY_H__
 #define ZBONUSENERGY_H__
 
+#include "ZBonus.h"
+
 class ZBonusEnergy : public ZBonus
 {
 public:

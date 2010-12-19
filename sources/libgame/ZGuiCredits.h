@@ -22,6 +22,8 @@
 #ifndef GUICREDITS_H__
 #define GUICREDITS_H__
 
+#include "IProtoGUI.h"
+
 #include "CEGUI.h"
 class ZProtoGUI;
 using namespace CEGUI;

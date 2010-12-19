@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "ZBonusMachineGun.h"
 #include "ZBonusParameters.h"
 
@@ -10,7 +9,7 @@ void ZBonusMachineGun::Use()
 {
 }
 
-void ZBonusMachineGun::Tick(float aTimeEllapsed)
+void ZBonusMachineGun::Tick(float /*aTimeEllapsed*/)
 {
 }
 

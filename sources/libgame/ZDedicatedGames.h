@@ -1,6 +1,8 @@
 #ifndef ZDEDICATEDGAMES_H__
 #define ZDEDICATEDGAMES_H__
 
+#include "ZGameSet.h"
+
 class ZDedicatedGames
 {
 public:

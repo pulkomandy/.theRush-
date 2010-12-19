@@ -13,6 +13,10 @@
 #ifndef CASCADED_SHADOWS_H
 #define CASCADED_SHADOWS_H
 
+#include "..\libbase\ZFrustum.h"
+#include "..\libworld\ZCamera.h"
+
+
 typedef struct shadowmap_t
 {
 	// shadow map rendering

@@ -22,6 +22,9 @@
 #ifndef GuiEndResult_H__
 #define GuiEndResult_H__
 
+
+#include "IProtoGUI.h"
+
 #include "CEGUI.h"
 
 class ZProtoGUI;

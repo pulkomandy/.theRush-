@@ -1,6 +1,8 @@
 #ifndef ZBONUSBOOSTER_H__
 #define ZBONUSBOOSTER_H__
 
+#include "ZBonus.h"
+
 class ZBonusBooster : public ZBonus
 {
 public:

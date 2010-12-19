@@ -1,6 +1,8 @@
 #ifndef ZBONUSGRAVITYGRIP_H__
 #define ZBONUSGRAVITYGRIP_H__
 
+#include "ZBonus.h"
+
 class ZBonusGravityGrip : public ZBonus
 {
 public:

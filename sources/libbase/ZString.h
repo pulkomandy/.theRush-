@@ -24,6 +24,8 @@
 
 // Includes ///////////////////////////////////////////////////////////////////////////////////////
 
+#include "targetver.h"
+#undef __STRINCT_ANSI__
 #include <string.h>
 #include <stdio.h>
 #include <stdarg.h>
@@ -150,7 +152,7 @@ class    tstring
 
         tstring(int);
 
-        tstring(const char *start, uint alength)
+        tstring(const char *start, unsigned int alength)
         {
             length = alength;
             stringData = (tchar *)malloc((length + 1) * sizeof(tchar));
@@ -201,7 +203,7 @@ class    tstring
         tstring GetFileName() const
         {
             char filen[MAX_PATH];
-		    char ext[_MAX_PATH];
+		    char ext[MAX_PATH];
 
 		    _splitpath(stringData, NULL, NULL, filen, ext);
             tstring basename = filen;
@@ -253,9 +255,9 @@ class    tstring
         inline operator char*();
         inline operator const char*() const;
 
-        inline tchar    &operator[](uint16 i){return stringData[i];}
-      inline tchar    GetCar(uint16 i){ return stringData[i]; }
-      inline tchar    GetCar(uint32 i){ return stringData[i]; }
+        inline tchar    &operator[](uint16_t i){return stringData[i];}
+      inline tchar    GetCar(uint16_t i){ return stringData[i]; }
+      inline tchar    GetCar(uint32_t i){ return stringData[i]; }
 
 	  static const char *GetScreenShotDirectory();
 
@@ -685,7 +687,7 @@ class    tstring
 
             for(i=length-1;i>=0; i--)
             {
-                tmp += GetCar((uint32)i);
+                tmp += GetCar((uint32_t)i);
             }
 
             *this = tmp;

@@ -1,6 +1,8 @@
 #ifndef ZBONUSAUTOPILOT_H__
 #define ZBONUSAUTOPILOT_H__
 
+#include "ZBonus.h"
+
 class ZBonusAutopilot : public ZBonus
 {
 public:

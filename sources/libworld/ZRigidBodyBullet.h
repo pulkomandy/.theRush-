@@ -1,6 +1,8 @@
 #ifndef ZRIGIDBODYBULLET_H__
 #define ZRIGIDBODYBULLET_H__
 
+#include "..\libbase\ZSmartPtr.h"
+
 DECLAREZCLASS(ZRigidBody);
 
 class ZRigidBody : public ZBaseClass

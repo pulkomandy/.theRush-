@@ -21,6 +21,10 @@
 
 #ifndef GUIMESSAGEBOX_H__
 #define GUIMESSAGEBOX_H__
+
+#include "..\libbase\ZFunctionSlot.h"
+#include "IProtoGUI.h"
+
 #include "CEGUI.h"
 class ZProtoGUI;
 using namespace CEGUI;

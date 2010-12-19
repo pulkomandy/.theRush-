@@ -1,6 +1,7 @@
-#include "stdafx.h"
 #include "ZBonusAutopilot.h"
 #include "ZBonusParameters.h"
+
+#include "ZShip.h"
 
 void ZBonusAutopilot::SetActive()
 {

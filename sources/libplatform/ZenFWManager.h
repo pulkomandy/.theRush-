@@ -26,7 +26,6 @@
 #include <vector>
 //#include "ZenFWLane.h"
 #include "../libbase/LibBase.h"
-#include "../libgame/libgame.h"
 #include "../libgame/ZLocalisation.h"
 #include "../libgame/ZProtoConfig.h"
 class ZenFWLane;

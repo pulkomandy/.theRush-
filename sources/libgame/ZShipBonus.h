@@ -3,10 +3,16 @@
 
 #include "ZBonus.h"
 
+#include "..\libworld\ZMeshInstance.h"
+
 class ZShipBonus
 {
 public:
-	ZShipBonus() : mCurrentBonus(NULL), mCurrentBonusIndex(-1), mbInited(false), mShieldMesh(NULL)
+	ZShipBonus() 
+		: 
+		mCurrentBonusIndex(-1), 
+			mCurrentBonus(NULL), 
+		mbInited(false), mShieldMesh(NULL)
 	{
 	}
 	virtual ~ZShipBonus();

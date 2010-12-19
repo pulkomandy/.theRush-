@@ -21,9 +21,11 @@
 
 #ifndef _FFX_H_
 #define _FFX_H_
-#include "../libbase/LibBase.h"
-/*
+#include "../libworld/ZTransform.h"
+#include "..\librender\IDisplayDevice.h"
+
 #include <Cg/cg.h>
+/*
 #ifdef WIN32
 #include <Cg/cgD3D9.h>
 #endif
@@ -33,9 +35,6 @@
 #include <d3d9.h>
 #include <d3dx9core.h>
 #endif
-
-#include "../libworld/ZTransform.h"
-#include "..\librender\IDisplayDevice.h"
 
 extern CGcontext			gDefaultCGcontext;
 

@@ -1,5 +1,6 @@
-#include "stdafx.h"
 #include "ZGameTriggers.h"
+#include "ZShip.h"
+#include "ZTrackBonus.h"
 
 void ShipTrackBonusTrigger::CallBack(ZTrigger* trig1, ZTrigger* trig2)
 {

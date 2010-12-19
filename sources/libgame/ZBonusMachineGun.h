@@ -1,6 +1,8 @@
 #ifndef ZBONUSMACHINEGUN_H__
 #define ZBONUSMACHINEGUN_H__
 
+#include "ZBonus.h"
+
 class ZBonusMachineGun : public ZBonus
 {
 public:

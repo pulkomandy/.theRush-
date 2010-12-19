@@ -2492,10 +2492,10 @@ inline tcolor::tcolor()
 inline tcolor::tcolor( tulong dw )
 {
 	const float f = 1.0f / 255.0f;
-	r = f * (float) (uint8) (dw >> 16);
-	g = f * (float) (uint8) (dw >>  8);
-	b = f * (float) (uint8) (dw >>  0);
-	a = f * (float) (uint8) (dw >> 24);
+	r = f * (float) (uint8_t) (dw >> 16);
+	g = f * (float) (uint8_t) (dw >>  8);
+	b = f * (float) (uint8_t) (dw >>  0);
+	a = f * (float) (uint8_t) (dw >> 24);
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////

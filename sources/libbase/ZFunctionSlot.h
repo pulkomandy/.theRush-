@@ -22,6 +22,9 @@
 #ifndef ZFUNCTIONSLOT_H__
 #define ZFUNCTIONSLOT_H__
 
+#include "targetver.h"
+#undef __STRICT_ANSI__
+#include <stdlib.h>
 
 class ZSlotFunctorBase
 {

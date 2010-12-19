@@ -1,6 +1,8 @@
 #ifndef ZBONUSSMOKE_H__
 #define ZBONUSSMOKE_H__
 
+#include "ZBonus.h"
+
 class ZBonusSmoke : public ZBonus
 {
 public:

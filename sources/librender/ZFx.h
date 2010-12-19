@@ -1,12 +1,13 @@
 #ifndef ZFX_H__
 #define ZFX_H__
 
+#include "FFx.h"
+
 #undef __STRICT_ANSI__
 #include <string.h>
 
 #include <Cg/cg.h>
 
-#include "FFx.h"
 
 DECLAREZCLASS(ZFx);
 
@@ -73,7 +74,7 @@ public:
 	{
 		for (uint i =0;i<mSamplerParams.size();i++)
 		{
-			if (!stricmp(mSamplerParams[i].szSamplerName, szName))
+			if (!_stricmp(mSamplerParams[i].szSamplerName, szName))
 				return i;
 		}
 		return -1;

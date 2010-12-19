@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "ZBonusParameters.h"
 
 BEGIN_SERIALIZATION(ZBonusParameters)

@@ -20,10 +20,10 @@
 //
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
 #include "ZGuiCredits.h"
 #include "ZGuiMainMenu.h"
 #include "ZProtoGUI.h"
+#include "IProtoGUI.h"
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 /*
@@ -332,7 +332,7 @@ void GuiCredits::Build(IProtoGUI *pGUI)
 	for (int i=0;i<26;i++)
 	{
 		char nn[512];
-		sprintf_s(nn, 512, "CreditsString%d", i);
+		snprintf(nn, 512, "CreditsString%d", i);
 		CreditsText[i] = winMgr.createWindow("TaharezLook/StaticText", nn);
 		crdfrm->addChildWindow(CreditsText[i]);
 		CreditsText[i]->setProperty("FrameEnabled", "false");

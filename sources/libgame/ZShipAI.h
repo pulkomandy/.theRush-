@@ -1,6 +1,8 @@
 #ifndef ZSHIPAI_H__
 #define ZSHIPAI_H__
 
+#include "../libbase/ZPIDCtrl.h"
+
 class ZShip;
 struct keysStruct;
 

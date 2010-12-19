@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "ZBonusHomingMissile.h"
 #include "ZBonusParameters.h"
 
@@ -10,7 +9,7 @@ void ZBonusHomingMissile::Use()
 {
 }
 
-void ZBonusHomingMissile::Tick(float aTimeEllapsed)
+void ZBonusHomingMissile::Tick(float /*aTimeEllapsed*/)
 {
 }
 

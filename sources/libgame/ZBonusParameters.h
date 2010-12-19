@@ -1,6 +1,9 @@
 #ifndef ZBONUSPARAMETERS_H__
 #define ZBONUSPARAMETERS_H__
 
+#include "../libbase/ZBaseClass.h"
+#include "../libbase/ZSerializator.h"
+
 DECLAREZCLASS(ZBonusParameters);
 
 class ZBonusParameters : public ZBaseClass

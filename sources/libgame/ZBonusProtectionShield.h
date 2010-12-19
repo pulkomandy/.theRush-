@@ -1,6 +1,8 @@
 #ifndef ZBONUSPROTECTIONSHIELD_H__
 #define ZBONUSPROTECTIONSHIELD_H__
 
+#include "ZBonus.h"
+
 class ZBonusProtectionShield : public ZBonus
 {
 public:

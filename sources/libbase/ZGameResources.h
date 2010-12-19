@@ -24,6 +24,7 @@
 
 #include "../librender/librender.h"
 #include "../libworld/libworld.h"
+#include "../libworld/ZScene.h"
 #include "..\libworld\ZTransform.h"
 #include "..\libworld\ZPhysicWorldBullet.h"
 #include "..\libworld\ZMeshInstance.h"

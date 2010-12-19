@@ -1,9 +1,11 @@
 #ifndef ZRENDERQUEUE_H__
 #define ZRENDERQUEUE_H__
 
-#include "../libworld/libworld.h"
 #include "../libworld/ZMesh.h"
 #include "../libworld/ZMeshInstance.h"
+#include "..\libworld\ZCascadedShadows.h"
+
+#include "../libbase/ZFrustum.h"
 
 class ZRenderQueue
 {

@@ -1,6 +1,6 @@
-#include "stdafx.h"
 #include "ZBonusGravityGrip.h"
 #include "ZBonusParameters.h"
+#include "ZShip.h"
 
 void ZBonusGravityGrip::SetActive()
 {

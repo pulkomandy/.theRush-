@@ -1,6 +1,8 @@
 #ifndef ZDDEGAME_H__
 #define ZDDEGAME_H__
 
+#include "ZRushGame.h"
+
 class ZDDEGame : public ZGame
 {
 public:

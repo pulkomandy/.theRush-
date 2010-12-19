@@ -1,6 +1,7 @@
-#include "stdafx.h"
-#include "ZBonusMine.h"
 #include "ZBonusParameters.h"
+#include "ZBonusMine.h"
+
+#include "ZShip.h"
 
 void ZBonusMine::SetActive()
 {

@@ -20,8 +20,8 @@
 //
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
 #include "ZGuiIngameMenu.h"
+
 #include "ZProtoGUI.h"
 #include "../libplatform/libplatform.h"
 #include "ZGuiUtils.h"

@@ -22,6 +22,10 @@
 #ifndef GUICONFIG_H__
 #define GUICONFIG_H__
 
+#include "..\libbase\ZFunctionSlot.h"
+#include "..\libbase\ZString.h"
+#include "IProtoGui.h"
+
 #include "CEGUI.h"
 class ZProtoGUI;
 using namespace CEGUI;

@@ -1,7 +1,10 @@
 #ifndef ZGAMESET_H__
 #define ZGAMESET_H__
 
+#undef __STRICT_ANSI__
 #include <stdlib.h>
+
+#include "../libbase/ZLogger.h"
 
 typedef struct GameSet_t
 {
@@ -29,8 +32,8 @@ typedef struct GameSet_t
 	{
 		bool bequal = true;
 
-		bequal &= (!stricmp(mCurrentMapName, other.mCurrentMapName));//(other.mCurrentMapName == mCurrentMapName);
-		bequal &= (!stricmp(mCurrentWorldName, other.mCurrentWorldName));//(other.mCurrentMapName == mCurrentMapName);
+		bequal &= (!_stricmp(mCurrentMapName, other.mCurrentMapName));//(other.mCurrentMapName == mCurrentMapName);
+		bequal &= (!_stricmp(mCurrentWorldName, other.mCurrentWorldName));//(other.mCurrentMapName == mCurrentMapName);
 		bequal &= (mbHasBonus == other.mbHasBonus);
 		bequal &= (mGameType == other.mGameType);
 		bequal &= (mNbLaps == other.mNbLaps);

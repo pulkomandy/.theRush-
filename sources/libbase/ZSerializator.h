@@ -21,6 +21,7 @@
 #ifndef ZSERIALIZATOR_H__
 #define ZSERIALIZATOR_H__
 
+#include "ZSerializableClasses.h"
 #include "ZBaseClass.h"
 #include <memory.h>
 
@@ -65,7 +66,6 @@ struct luaL_Reg;
 // list registered class/structs
 // allow new creation from a class ID
 
-#include "ZSerializableClasses.h"
 
 extern ZSerializableClasses gSerializableClasses[];
 /*
@@ -228,8 +228,8 @@ typedef struct SerializableField
 
     const char *name;
     int size_fieldsOffset; // can be a pointer to a SerializableField array for class agregat in another class-> so is int, but serialized as int32
-    uint32 offset;
-    uint32 count;
+    uint32_t offset;
+    uint32_t count;
     TClassID classID;                // classID is a SerBaseType for basic type
     SerializableType type;
     const char *mEnumStr;

@@ -21,6 +21,10 @@
 #ifndef ZLOGGER_H__
 #define ZLOGGER_H__
 
+#include "ZBaseClass.h"
+#include "ZSerializator.h"
+#include "ZSmartPtr.h"
+
 // levels:
 // console : Infos returned by scripting commands
 // Log   : Infos from engine (init, close,...)

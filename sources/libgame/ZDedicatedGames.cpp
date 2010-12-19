@@ -1,4 +1,5 @@
-#include "stdafx.h"
+#include "ZDedicatedGames.h"
+#include "../libbase/ZFile.h"
 #include "tinyxml.h"
 
 ZDedicatedGames *GDedicatedGames = NULL;

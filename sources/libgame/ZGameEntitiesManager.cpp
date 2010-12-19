@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "ZGameEntitiesManager.h"
 #include "ZMissile.h"
 #include "ZMine.h"

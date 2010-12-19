@@ -35,6 +35,8 @@
 #endif
 //#include "../LibPlatform/ZDatasProcessor.h"
 
+#include "../libbase/ZBaseMaths.h"
+#include "..\libbase\ZSerializator.h"
 
 #include <vector>
 #include <map>

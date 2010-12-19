@@ -21,6 +21,13 @@
 #ifndef ZSCENE_H__
 #define ZSCENE_H__
 
+#include "..\libbase\ZSerializator.h"
+#include "..\libbase\ZSmartPtr.h"
+#include "..\libbase\ZDatasResource.h"
+#include "..\libworld\ZSpatialEntity.h"
+#include "..\libworld\ZCamera.h"
+
+class ZRenderQueue;
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 class ZScene;

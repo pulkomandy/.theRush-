@@ -1,6 +1,7 @@
-#include "stdafx.h"
 #include "ZBonusDestructionShield.h"
 #include "ZBonusParameters.h"
+
+#include "ZShip.h"
 
 void ZBonusDestructionShield::SetActive()
 {

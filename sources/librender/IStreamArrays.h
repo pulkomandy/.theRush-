@@ -1,6 +1,7 @@
 #ifndef ISTREAMARRAYS_H__
 #define ISTREAMARRAYS_H__
 
+#include "..\libbase\ZSerializator.h"
 
 enum IMESH_VAF
 {

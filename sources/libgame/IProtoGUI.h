@@ -1,6 +1,10 @@
 #ifndef IPROTOGUI_H__
 #define IPROTOGUI_H__
 
+#include "..\libbase\ZSerializator.h"
+#include "..\libbase\ZFunctionSlot.h"
+#include "IProtoGUI.h"
+
 DECLAREZCLASS(ZProtoGUI);
 
 class IProtoGUI : public ZBaseClass

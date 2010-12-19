@@ -22,7 +22,9 @@
 #ifndef ZMESH_H__
 #define ZMESH_H__
 
+#include "..\libbase\ZBVolume.h"
 #include "..\librender\IStreamArrays.h"
+#include "..\librender\IDisplayDevice.h"
 
 
 DECLAREZCLASS(ZMesh);

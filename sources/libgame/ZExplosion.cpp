@@ -1,5 +1,6 @@
-#include "stdafx.h"
 #include "ZExplosion.h"
+
+#include "ZGameEntitiesManager.h"
 
 BEGIN_SERIALIZATION(ZExplosion)
 END_SERIALIZATION()

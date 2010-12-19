@@ -40,16 +40,12 @@ typedef unsigned char tuchar;
 typedef short tshort;
 typedef unsigned short tushort;
 
-typedef unsigned char uint8;
 typedef char int8;
-typedef unsigned short uint16;
 typedef short int16;
-typedef unsigned int uint32;
 typedef int int32;
 
 typedef unsigned short TClassID;
 
-typedef unsigned int uint;
 #define SAFE_DELETE(x) if (x) { delete x; x = NULL; }
 #define    FLOAT_EPSILON    float(1.192092896e-07)    // Smallest positive number x, such that x+1.0 is not equal to 1.0
 const float        RealEpsilon=FLOAT_EPSILON*16.f;
@@ -205,7 +201,6 @@ inline void strlwr(char *pszBuf)
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <unistd.h>
-#include <string.h>
 
 inline char* GetCurrentDirectory(int bufLength, char *pszDest)
 {

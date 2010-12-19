@@ -19,16 +19,11 @@
 // GNU General Public License for more details.
 //
 
-#include "stdafx.h"
 #include "ZGuiConfig.h"
 #include "ZProtoGUI.h"
 #include "../libplatform/libplatform.h"
 #include "ZGuiUtils.h"
-#if (defined(WIN32) || (MAC_OS))
-#include "SDL.h"
-#else
 #include <SDL/SDL.h>
-#endif
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
 typedef struct CTRLEntry
@@ -547,7 +542,7 @@ void GuiConfig::Build(ZProtoGUI *pGUI)
 			aheight = height;
 
 			mResolutions.push_back(resval_t(width, height));
-			sprintf_s (tmps, 512, "%d x %d", width, height);
+			snprintf(tmps, 512, "%d x %d", width, height);
 			cbresolution->addItem (new ListboxTextItem(tmps));
 
 			if ((width == optWidth)&&(height == optHeight))

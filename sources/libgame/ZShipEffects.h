@@ -1,6 +1,8 @@
 #ifndef ZSHIPEFFECTS_H__
 #define ZSHIPEFFECTS_H__
 
+#include "../libbase/ZSerializator.h"
+
 DECLAREZCLASS(ZShipEffectsNULL);
 DECLAREZCLASS(ZShipEffects);
 class ZShip;
@@ -26,7 +28,7 @@ public:
 	virtual ~ZShipEffectsNULL()
 	{
 	}
-	virtual void SetShip(ZShip *pShip) {}
+	virtual void SetShip(ZShip */*pShip*/) {}
 	virtual void Collision() {}
 };
 

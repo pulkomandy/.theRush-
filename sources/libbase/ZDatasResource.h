@@ -3,7 +3,11 @@
 
 #include <list>
 #include <vector>
-#include <iterator>
+//#include <iterator>
+
+#include "ZBaseClass.h"
+#include "ZPlatformUtils.h"
+
 
 template <typename T> struct ZDataResource
 {

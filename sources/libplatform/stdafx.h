@@ -12,8 +12,6 @@
 
 
 // TODO: reference additional headers your program requires here
-#include "../librender/librender.h"
-#include "../libworld/libworld.h"
 #include "../libgame/libgame.h"
 #include "libplatform.h"
 

@@ -22,7 +22,7 @@
 #ifndef ZBASECLASS_H__
 #define ZBASECLASS_H__
 
-#include "..\libbase\ZString.h"
+#include "ZString.h"
 
 // Includes ///////////////////////////////////////////////////////////////////////////////////////
 

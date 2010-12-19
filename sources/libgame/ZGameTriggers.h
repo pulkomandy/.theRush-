@@ -1,6 +1,9 @@
 #ifndef ZGAMETRIGGERS_H__
 #define ZGAMETRIGGERS_H__
 
+#include "..\libbase\ZSerializator.h"
+#include "..\libworld\ZScene.h"
+
 DECLAREZCLASS(ZShip);
 
 

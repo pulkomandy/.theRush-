@@ -1,6 +1,7 @@
 #ifndef ZPHYSICTRIMESH_H__
 #define ZPHYSICTRIMESH_H__
 
+#include "..\libbase\ZSmartPtr.h"
 
 class ZMesh;
 class btConcaveShape;

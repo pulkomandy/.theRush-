@@ -1,5 +1,3 @@
-#include "stdafx.h"
-
 #include "ZDDEGame.h"
 #include "../libplatform/ZenFWManager.h"
 #include "../libplatform/ZenFWVRAMService.h"

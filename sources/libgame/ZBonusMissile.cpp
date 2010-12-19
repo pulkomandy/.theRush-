@@ -1,6 +1,7 @@
-#include "stdafx.h"
 #include "ZBonusMissile.h"
 #include "ZBonusParameters.h"
+
+#include "ZShip.h"
 
 void ZBonusMissile::SetActive()
 {

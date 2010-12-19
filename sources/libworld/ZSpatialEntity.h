@@ -21,8 +21,8 @@
 #ifndef ZSPATIALENTITY_H__
 #define ZSPATIALENTITY_H__
 
-#include "..\libbase\ZBaseClass.h"
 #include "..\libbase\ZSerializator.h"
+#include "..\libbase\ZBaseClass.h"
 #include "..\libbase\ZBaseMaths.h"
 #include "..\libbase\ZBVolume.h"
 

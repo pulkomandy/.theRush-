@@ -1,7 +1,9 @@
 #ifndef ZPHYSICTRIMESHINSTANCE_H__
 #define ZPHYSICTRIMESHINSTANCE_H__
 
-#include "ZPhysicWorldBullet.h"
+#include <btBulletCollisionCommon.h>
+
+class ZPhysicWorldBullet;
 
 DECLAREZCLASS(ZPhysicTriMeshInstance);
 
