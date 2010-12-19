@@ -19,7 +19,6 @@
 // GNU General Public License for more details.
 //
 
-#include "stdafx.h"
 #include "ZGuiProgress.h"
 #include "ZProtoGUI.h"
 
@@ -27,24 +26,24 @@
 
 void GuiProgress::Build(ZProtoGUI *pGUI)
 {
-	ImagesetManager::getSingleton().createImagesetFromImageFile("LoadingAnim00", "./Prototype/Common/Menu/LoadingAnim/LoadingAnim0000.tga");
-	ImagesetManager::getSingleton().createImagesetFromImageFile("LoadingAnim01", "./Prototype/Common/Menu/LoadingAnim/LoadingAnim0001.tga");
-	ImagesetManager::getSingleton().createImagesetFromImageFile("LoadingAnim02", "./Prototype/Common/Menu/LoadingAnim/LoadingAnim0002.tga");
-	ImagesetManager::getSingleton().createImagesetFromImageFile("LoadingAnim03", "./Prototype/Common/Menu/LoadingAnim/LoadingAnim0003.tga");
-	ImagesetManager::getSingleton().createImagesetFromImageFile("LoadingAnim04", "./Prototype/Common/Menu/LoadingAnim/LoadingAnim0004.tga");
-	ImagesetManager::getSingleton().createImagesetFromImageFile("LoadingAnim05", "./Prototype/Common/Menu/LoadingAnim/LoadingAnim0005.tga");
-	ImagesetManager::getSingleton().createImagesetFromImageFile("LoadingAnim06", "./Prototype/Common/Menu/LoadingAnim/LoadingAnim0006.tga");
-	ImagesetManager::getSingleton().createImagesetFromImageFile("LoadingAnim07", "./Prototype/Common/Menu/LoadingAnim/LoadingAnim0007.tga");
-	ImagesetManager::getSingleton().createImagesetFromImageFile("LoadingAnim08", "./Prototype/Common/Menu/LoadingAnim/LoadingAnim0008.tga");
-	ImagesetManager::getSingleton().createImagesetFromImageFile("LoadingAnim09", "./Prototype/Common/Menu/LoadingAnim/LoadingAnim0009.tga");
-	ImagesetManager::getSingleton().createImagesetFromImageFile("LoadingAnim10", "./Prototype/Common/Menu/LoadingAnim/LoadingAnim0010.tga");
-	ImagesetManager::getSingleton().createImagesetFromImageFile("LoadingAnim11", "./Prototype/Common/Menu/LoadingAnim/LoadingAnim0011.tga");
-	ImagesetManager::getSingleton().createImagesetFromImageFile("LoadingAnim12", "./Prototype/Common/Menu/LoadingAnim/LoadingAnim0012.tga");
-	ImagesetManager::getSingleton().createImagesetFromImageFile("LoadingAnim13", "./Prototype/Common/Menu/LoadingAnim/LoadingAnim0013.tga");
-	ImagesetManager::getSingleton().createImagesetFromImageFile("LoadingAnim14", "./Prototype/Common/Menu/LoadingAnim/LoadingAnim0014.tga");
-	ImagesetManager::getSingleton().createImagesetFromImageFile("LoadingAnim15", "./Prototype/Common/Menu/LoadingAnim/LoadingAnim0015.tga");
+	ImagesetManager::getSingleton().createFromImageFile("LoadingAnim00", "./Prototype/Common/Menu/LoadingAnim/LoadingAnim0000.tga");
+	ImagesetManager::getSingleton().createFromImageFile("LoadingAnim01", "./Prototype/Common/Menu/LoadingAnim/LoadingAnim0001.tga");
+	ImagesetManager::getSingleton().createFromImageFile("LoadingAnim02", "./Prototype/Common/Menu/LoadingAnim/LoadingAnim0002.tga");
+	ImagesetManager::getSingleton().createFromImageFile("LoadingAnim03", "./Prototype/Common/Menu/LoadingAnim/LoadingAnim0003.tga");
+	ImagesetManager::getSingleton().createFromImageFile("LoadingAnim04", "./Prototype/Common/Menu/LoadingAnim/LoadingAnim0004.tga");
+	ImagesetManager::getSingleton().createFromImageFile("LoadingAnim05", "./Prototype/Common/Menu/LoadingAnim/LoadingAnim0005.tga");
+	ImagesetManager::getSingleton().createFromImageFile("LoadingAnim06", "./Prototype/Common/Menu/LoadingAnim/LoadingAnim0006.tga");
+	ImagesetManager::getSingleton().createFromImageFile("LoadingAnim07", "./Prototype/Common/Menu/LoadingAnim/LoadingAnim0007.tga");
+	ImagesetManager::getSingleton().createFromImageFile("LoadingAnim08", "./Prototype/Common/Menu/LoadingAnim/LoadingAnim0008.tga");
+	ImagesetManager::getSingleton().createFromImageFile("LoadingAnim09", "./Prototype/Common/Menu/LoadingAnim/LoadingAnim0009.tga");
+	ImagesetManager::getSingleton().createFromImageFile("LoadingAnim10", "./Prototype/Common/Menu/LoadingAnim/LoadingAnim0010.tga");
+	ImagesetManager::getSingleton().createFromImageFile("LoadingAnim11", "./Prototype/Common/Menu/LoadingAnim/LoadingAnim0011.tga");
+	ImagesetManager::getSingleton().createFromImageFile("LoadingAnim12", "./Prototype/Common/Menu/LoadingAnim/LoadingAnim0012.tga");
+	ImagesetManager::getSingleton().createFromImageFile("LoadingAnim13", "./Prototype/Common/Menu/LoadingAnim/LoadingAnim0013.tga");
+	ImagesetManager::getSingleton().createFromImageFile("LoadingAnim14", "./Prototype/Common/Menu/LoadingAnim/LoadingAnim0014.tga");
+	ImagesetManager::getSingleton().createFromImageFile("LoadingAnim15", "./Prototype/Common/Menu/LoadingAnim/LoadingAnim0015.tga");
 
-	ImagesetManager::getSingleton().createImagesetFromImageFile("BackUniform", "./Prototype/Common/Menu/backuniform.tga");
+	ImagesetManager::getSingleton().createFromImageFile("BackUniform", "./Prototype/Common/Menu/backuniform.tga");
 
 
 	mGUI = (ZProtoGUI*)pGUI;
@@ -194,7 +193,7 @@ void GuiProgress::Tick()
 		static int loadinganimidx = 0;
 		static float anmdlaid = 0.f;
 		char tmps[512];
-		sprintf_s(tmps, 512, "set:LoadingAnim%02d image:full_image", loadinganimidx);
+		snprintf(tmps, 512, "set:LoadingAnim%02d image:full_image", loadinganimidx);
 		anmdlaid+=gTimer.GetEllapsed();
 		if (anmdlaid >0.125f)
 		{

@@ -1,5 +1,3 @@
-#include "stdafx.h"
-
 #include "BitStream.h"
 #include "NetworkIDManager.h"
 #include "GetTime.h"
@@ -27,6 +25,7 @@ using namespace RakNet;
 #include "ZNetMissile.h"
 #include "ZNetMine.h"
 #include "ZNetExplosion.h"
+#include "ZProtoGUI.h"
 
 
 static const int DEFAULT_SERVER_MILLISECONDS_BETWEEN_UPDATES=50;

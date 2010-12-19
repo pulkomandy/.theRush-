@@ -1,6 +1,5 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
 #include "../libplatform/libplatform.h"
 #include "../libworld/libworld.h"
 
@@ -175,7 +174,7 @@ void ZRushTrack::DeformMesh(ZMesh *meshSrc, const tmatrix & srcMeshMat, ZMesh *m
 {
 	int aNbStackedMeshes = mBricks.size();
 
-	uint8 *mvtSrc = (uint8 *)meshSrc->GetVertexBuffer()->Lock(VAL_READONLY);
+	uint8_t *mvtSrc = (uint8_t *)meshSrc->GetVertexBuffer()->Lock(VAL_READONLY);
 	tvector3 vtMin(99999999.f, 99999999.f, 99999999.f), vtMax(-99999999.f, -99999999.f, -99999999.f);
 
 	tmatrix ares;
@@ -184,7 +183,7 @@ void ZRushTrack::DeformMesh(ZMesh *meshSrc, const tmatrix & srcMeshMat, ZMesh *m
 	int mvs = meshSrc->GetVertexBuffer()->GetVertexSize();
 
 	meshDst->GetVertexBuffer()->Init(meshSrc->GetVertexBuffer()->GetFormat(), mcnt, true);
-	uint8 *mvtDst = (uint8 *)meshDst->GetVertexBuffer()->Lock(VAL_WRITE);
+	uint8_t *mvtDst = (uint8_t *)meshDst->GetVertexBuffer()->Lock(VAL_WRITE);
 
 
 
@@ -192,7 +191,7 @@ void ZRushTrack::DeformMesh(ZMesh *meshSrc, const tmatrix & srcMeshMat, ZMesh *m
 	memcpy(mvtDst, mvtSrc, mvs * mcnt);
 
 	float oneoL = 1.0f/meshLengths[i];
-	for (uint j = 0;j<mcnt;j++)
+	for (unsigned int j = 0;j<mcnt;j++)
 	{
 		tmatrix ares;
 
@@ -271,7 +270,7 @@ void ZRushTrack::DeformMeshForPhysic(ZMesh *meshSrc, const tmatrix & srcMeshMat,
 {
 	int aNbStackedMeshes = mBricks.size();
 
-	uint8 *mvtSrc = (uint8 *)meshSrc->GetVertexBuffer()->Lock(VAL_READONLY);
+	uint8_t *mvtSrc = (uint8_t *)meshSrc->GetVertexBuffer()->Lock(VAL_READONLY);
 
 	tmatrix ares;
 
@@ -281,7 +280,7 @@ void ZRushTrack::DeformMeshForPhysic(ZMesh *meshSrc, const tmatrix & srcMeshMat,
 
 
 	float oneoL = 1.0f/meshLengths[i];
-	for (uint j = 0;j<mcnt;j++)
+	for (unsigned int j = 0;j<mcnt;j++)
 	{
 		tmatrix ares;
 		*mvtDst = *(tvector3*)(&mvtSrc[j*mvs]);
@@ -476,7 +475,7 @@ void ZRushTrack::Compute()
 	samplesRot.resize(nbKeys * keyGranul);
 	float *lng = new float[nbKeys * keyGranul ];
 
-	for (i=0;i< uint(nbKeys * keyGranul);i++)
+	for (i=0;i< (nbKeys * keyGranul);i++)
 	{
 		tvector3 res;
 		tvector4 resq;
@@ -501,7 +500,7 @@ void ZRushTrack::Compute()
 
 	lng[0] = 0;
 	float aCurveLength = 0;
-	for (i=1;i< uint(nbKeys * keyGranul);i++)
+	for (i=1;i< (nbKeys * keyGranul);i++)
 	{
 		float stln = Distance(samplesPos[i], samplesPos[i-1]);
 		lng[i] = stln + lng[i-1];
@@ -514,7 +513,7 @@ void ZRushTrack::Compute()
 	mPerKeyDistance.resize(nbKeys);
 	float mpkcurDistance = 0;
 	float prevLng = 0;
-	for (i=0;i< uint(nbKeys );i++)
+	for (i=0;i< (nbKeys );i++)
 	{
 		float mpkcurLength = 0;
 
@@ -526,7 +525,7 @@ void ZRushTrack::Compute()
 			prevLng = lng[i*keyGranul + j];
 		}
 		mPerKeyLength[i] = mpkcurLength;
-		if (i != (uint(nbKeys )-1))
+		if (i != ((nbKeys )-1))
 			mPerKeyDistance[i+1] = mpkcurDistance;
 	}
 	// --
@@ -722,7 +721,7 @@ void ZRushTrack::Compute()
 
 		for (j=0;j<meshSrc->GetNbSubMeshes();j++)
 		{
-			uint32 aStart, aCount;
+			uint32_t aStart, aCount;
 			meshSrc->GetSubMesh(j, &aStart, &aCount);
 			meshDst->AddSubMesh(aStart, aCount);
 		}
@@ -813,7 +812,7 @@ void ZRushTrack::Compute()
 	if (UseEditingGizmo)
 	{
 		BuidEditingKeyBoxes();
-		ComputeTrackBand(&mAIPoints[0], uint(mBricks.size()*SPLITCOUNT));
+		ComputeTrackBand(&mAIPoints[0], (mBricks.size()*SPLITCOUNT));
 	}
 
 
@@ -915,12 +914,12 @@ bool ZRushTrack::GetClosestSampledPoint(const tvector3& mobilePoint,
 		mProjY.Normalize();
 	}
 
-	uint loopSC = uint(mBricks.size()*SPLITCOUNT);
+	unsigned int loopSC = (mBricks.size()*SPLITCOUNT);
 	int loopthru = loopSC;
 
 	tvector3 ptCol;
-	uint i;
-	uint localIdx;
+	unsigned int i;
+	unsigned int localIdx;
 
 	//uint halfss = 10;
 
@@ -943,7 +942,7 @@ bool ZRushTrack::GetClosestSampledPoint(const tvector3& mobilePoint,
 
 	tvector3 amobilePoint = projectWithGrav(mobilePoint);
 
-	for (i=0;i<(uint)loopthru;i++)
+	for (i=0;i<loopthru;i++)
 	{
 		tvector3 tv1 = projectWithGrav(mAIPoints[(localIdx+i)%loopSC].mRailRight);
 		tvector3 tv2 = projectWithGrav(mAIPoints[(localIdx+i)%loopSC].mRailLeft);
@@ -1299,7 +1298,7 @@ void ZRushTrack::BuidEditingKeyBoxes()
 	mKeyTransforms.clear();
 
 	//mKeyMeshesIndex = 0;
-	for (uint kk = 0;kk<zat->m_KeyFrameList.size()-1;kk++)
+	for (unsigned int kk = 0;kk<zat->m_KeyFrameList.size()-1;kk++)
 	{
 		tvector4 curVector = zar->m_KeyFrameList[kk].m_Value;
 		tquaternion hlpq(curVector.x, curVector.y, curVector.z, curVector.w);// = zar->m_KeyFrameList[kk].m_Value;
@@ -1341,7 +1340,7 @@ bool ZRushTrack::PickAnimationKey(const tvector3 & rayOrigin, const tvector3 & r
 	ZAnimationTrack<tvector3>* zat = (ZAnimationTrack<tvector3>*)dt->m_AnimTrackList[0];
 	//ZAnimationTrack<tquaternion>* zar = (ZAnimationTrack<tquaternion>*)dt->m_AnimTrackList[1];
 
-	for (uint kk = 0;kk<zat->m_KeyFrameList.size()-1;kk++)
+	for (unsigned int kk = 0;kk<zat->m_KeyFrameList.size()-1;kk++)
 	{
 
 		tvector3 aminB,amaxB;
@@ -1468,7 +1467,7 @@ void ZRushTrack::GetBonus(int idx, char &aLeft, char &aRight, float &decal) cons
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-void ZRushTrack::ComputeTrackBand(AIPoint_t* mPoints, uint nbPoints)
+void ZRushTrack::ComputeTrackBand(AIPoint_t* mPoints, unsigned int nbPoints)
 {
 	IVertexArray * normvt = GDD->NewVertexArray(); ////
 	DPVA(normvt);
@@ -1484,7 +1483,7 @@ void ZRushTrack::ComputeTrackBand(AIPoint_t* mPoints, uint nbPoints)
 	mimi->SetVisible(true);
 
 
-	uint8 *normnewVA = (uint8*)normvt->Lock(VAL_WRITE);
+	uint8_t *normnewVA = (uint8_t*)normvt->Lock(VAL_WRITE);
 	nnormGen->AddSubMesh(0, (nbPoints-1)*6 );
 
 	//mimi->GetMaterial(0)->setEffect(mRaceLineFX.ptr());
@@ -1496,7 +1495,7 @@ void ZRushTrack::ComputeTrackBand(AIPoint_t* mPoints, uint nbPoints)
 
 
 	static const int RaceLineHeight = 5;
-	for (uint i = 0 ; i < (nbPoints-1) ; i ++)
+	for (unsigned int i = 0 ; i < (nbPoints-1) ; i ++)
 	{
 		int ci = i;
 		int cip = (i+1)%nbPoints;
@@ -1583,8 +1582,8 @@ void ZRushTrack::SaveTrack(ZFile& file)
 	unsigned char format = 1;
 	file << format;
 
-	uint i;
-	uint32 mNbTrackPieces = (uint32)mBricks.size();
+	unsigned int i;
+	uint32_t mNbTrackPieces = (uint32_t)mBricks.size();
 	file << mNbTrackPieces;
 
 	file.Write( &mTrackBonusEdit[0], sizeof(TrackBonusEdit_t) * mNbTrackPieces );
@@ -1602,7 +1601,7 @@ void ZRushTrack::SaveTrack(ZFile& file)
 
 void ZRushTrack::LoadTrack(ZFile& file)
 {
-	uint32 mNbTrackPieces;
+	uint32_t mNbTrackPieces;
 	file >> mNbTrackPieces;
 
 	mTrackBonusEdit.resize(mNbTrackPieces);

@@ -22,6 +22,7 @@
 #define ZBASEDEFS_H__
 
 #ifdef _WIN32
+#include "targetver.h"
 #include <windows.h>
 #undef __STRICT_ANSI__
 #include <stdlib.h>

@@ -1,4 +1,9 @@
-#include "stdafx.h"
+#include "ZShipAI.h"
+
+#include "..\libbase\ZSerializator.h"
+#include "..\libgame\ZShipPhysics.h"
+#include "..\libgame\ZShip.h"
+#include "..\libgame\ZRushTrack.h"
 
 BEGIN_SERIALIZATION(ZShipAI)
 SERIALIZE_FLOAT(mPID.Ki)

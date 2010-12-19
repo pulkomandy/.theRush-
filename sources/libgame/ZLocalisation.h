@@ -9,6 +9,8 @@
 #ifndef ZLOCALISATION_H__
 #define ZLOCALISATION_H__
 
+#include "..\libbase\ZSerializator.h"
+
 #ifdef MAC_OS
 CFStringRef supportedLanguages[] = {CFSTR("en"), CFSTR("fr")};
 unsigned char supportedCodes[] = {0x09, 0x0C};

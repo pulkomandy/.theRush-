@@ -2,6 +2,8 @@
 #ifndef ZRUSHGAMECONTENT_H__
 #define ZRUSHGAMECONTENT_H__
 
+#include "../libbase/ZGameResources.h"
+
 DECLAREZCLASS(ZRushGameContent);
 
 class ZRushGameContent : public ZBaseClass

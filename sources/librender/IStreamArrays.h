@@ -51,10 +51,10 @@ DECLAREZCLASS(ZIndexArray);
 class IVertexArray : public ZBaseClass
 {
 public:
-    virtual void Init(uint32 aFormat, int aQty, bool aKeepVBORam = false, uint32 aFlag = VACF_NORMAL) = 0;
-    virtual uint32 GetFormat() const = 0;
-    virtual uint32 GetVertexSize() const = 0;
-    virtual uint32 GetVertexCount() const = 0;
+    virtual void Init(uint32_t aFormat, int aQty, bool aKeepVBORam = false, uint32_t aFlag = VACF_NORMAL) = 0;
+    virtual uint32_t GetFormat() const = 0;
+    virtual uint32_t GetVertexSize() const = 0;
+    virtual uint32_t GetVertexCount() const = 0;
 
 	// reset (clear VRAM pointer but don't destroy ram things)
 	virtual void Reset() {}
@@ -67,13 +67,13 @@ public:
 	virtual void BindHWI(IVertexArray *pInstancesStream) = 0;
 };
 
-unsigned int GetVertexSizeFromFormat(uint32 aFormat);
+unsigned int GetVertexSizeFromFormat(uint32_t aFormat);
 
 class IIndexArray : public ZBaseClass
 {
 public:
-    virtual void Init(int aQty, uint32 aFlag = VACF_NORMAL) = 0;
-    virtual uint32 GetIndexCount() = 0;
+    virtual void Init(int aQty, uint32_t aFlag = VACF_NORMAL) = 0;
+    virtual uint32_t GetIndexCount() = 0;
 
 	// reset (clear VRAM pointer but don't destroy ram things)
 	virtual void Reset() {}

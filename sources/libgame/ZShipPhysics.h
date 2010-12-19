@@ -21,7 +21,17 @@
 #ifndef ZSHIPPHYSICS_H__
 #define ZSHIPPHYSICS_H__
 
+#include "../libbase/ZBaseMaths.h"
+#include "..\libbase\ZSmartPtr.h"
+#include "..\libworld\ZRigidBodyBullet.h"
+#include "..\libworld\ZTransform.h"
+
+class ZPhysicWorldBullet;
+class ZPhysicTriMesh;
+class ZTransform;
+class ZShip;
 class ZRushGame;
+
 struct ShipSync_t;
 struct ServerShipSync_t;
 

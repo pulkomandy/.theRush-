@@ -25,7 +25,8 @@
 // Includes ///////////////////////////////////////////////////////////////////////////////////////
 
 #include "targetver.h"
-#undef __STRINCT_ANSI__
+#undef __STRICT_ANSI__
+#include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
 #include <stdarg.h>

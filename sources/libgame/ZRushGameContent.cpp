@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "../libbase/LibBase.h"
 #include "../libplatform/libplatform.h"
 

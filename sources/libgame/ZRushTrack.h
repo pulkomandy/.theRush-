@@ -56,7 +56,7 @@ public:
 											float &upDownFactor,
 											float& distanceToBorder);
 
-	unsigned int GetNbSamples() { return uint(mBricks.size()*SPLITCOUNT); }
+	unsigned int GetNbSamples() { return (mBricks.size()*SPLITCOUNT); }
 	const tmatrix GetBrickMatrix(unsigned int aIndex) const;
 
 	void Tick(float aTimeEllapsed);
@@ -238,7 +238,7 @@ protected:
 	smartptr<ZMesh> mKeyCubeMesh;
 	//ZMeshInstance *mTrackBand;
 	ZTransform* mTrandBandTransform;
-	void ComputeTrackBand(AIPoint_t* mPoints, uint nbPoints);
+	void ComputeTrackBand(AIPoint_t* mPoints, unsigned int nbPoints);
 	smartptr<ZTexture> mTrackBandTexture;
 	smartptr<ZTexture> mKeyTexture;
 	// Bonus

@@ -75,7 +75,7 @@ public:
 	}
 
 
-    void Init(uint32 aNbPairs, ZFx *afx, ZTexture *ptex);
+    void Init(uint32_t aNbPairs, ZFx *afx, ZTexture *ptex);
 
 	void SetLastPair(const tvector3 &vt, float aAlpha, float aWidth, float timeEllapsed);
 
@@ -86,7 +86,7 @@ public:
 
 		tvector3 amin(9999999,9999999,9999999), amax(-9999999,-9999999,-9999999);
 		trailVT *avt = (trailVT*)mTrailVT;
-		for(uint dca = 0;dca<mMaxIndex;dca++)
+		for(unsigned int dca = 0;dca<mMaxIndex;dca++)
 		{
 			amin.Minimize(avt->pos);
 			amax.Maximize(avt->pos);
@@ -124,8 +124,8 @@ public:
 
 protected:
     smartptr<ZMeshInstance> mMesh;
-    uint32 mMaxIndex;
-    uint32 mIndex;
+    uint32_t mMaxIndex;
+    uint32_t mIndex;
     tvector3 mLastPair;
     tvector3 mLastDir;
     bool mbSecondHalf;

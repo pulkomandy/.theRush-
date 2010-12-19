@@ -1,11 +1,12 @@
 #ifndef ZRUSHNETGAME_H__
 #define ZRUSHNETGAME_H__
 
-
+#include <string>
 
 #include "ZNetMessages.h"
 #include "ZNetFactory.h"
 
+#include <NetworkIDManager.h>
 
 class ZShip;
 class ZNetShip;

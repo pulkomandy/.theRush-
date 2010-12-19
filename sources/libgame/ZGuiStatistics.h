@@ -24,6 +24,7 @@
 
 
 class ZProtoGUI;
+class IProtoGUI;
 #include "CEGUI.h"
 using namespace CEGUI;
 

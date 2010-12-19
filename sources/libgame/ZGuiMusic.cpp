@@ -19,9 +19,9 @@
 // GNU General Public License for more details.
 //
 
-#include "stdafx.h"
 #include "ZGuiMusic.h"
 #include "ZProtoGUI.h"
+#include "IProtoGUI.h"
 #include "../libplatform/libplatform.h"
 
 #ifndef WIN32
@@ -39,7 +39,7 @@ void GuiMusic::Build(IProtoGUI *pGUI)
 
 	WindowManager& winMgr = WindowManager::getSingleton();
 
-	ImagesetManager::getSingleton().createImagesetFromImageFile("MusiqueIcone", "./Prototype/Common/Menu/musique.tga");
+	ImagesetManager::getSingleton().createFromImageFile("MusiqueIcone", "./Prototype/Common/Menu/musique.tga");
 
 	mMusicInfoFrame = (FrameWindow*)winMgr.createWindow("TaharezLook/FrameWindow", "ChatWindow");
 	mMusicInfoFrame->setTitleBarEnabled(false);

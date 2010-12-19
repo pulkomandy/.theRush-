@@ -2,9 +2,11 @@
 #ifndef ZPHYSICWORLDBULLET_H__
 #define ZPHYSICWORLDBULLET_H__
 
-#include "../libbase/LibBase.h"
 #include "../libbase/ZDatasResource.h"
 
+#include "../libbase/ZBaseMaths.h"
+#include "..\libbase\ZSerializator.h"
+#include "ZPhysicTriMesh.h"
 
 #include "LinearMath/btVector3.h"
 #include "LinearMath/btMatrix3x3.h"
@@ -29,14 +31,14 @@
 #include "BulletCollision/CollisionShapes/btTriangleIndexVertexArray.h"
 #include "BulletCollision/CollisionShapes/btBvhTriangleMeshShape.h"
 
+class ZRigidBody;
+class ZPhysicTriMeshInstance;
 
 #if 0
 #include "GL_ShapeDrawer.h"
 #endif
 //#include "../LibPlatform/ZDatasProcessor.h"
 
-#include "../libbase/ZBaseMaths.h"
-#include "..\libbase\ZSerializator.h"
 
 #include <vector>
 #include <map>
@@ -86,9 +88,6 @@ DECLAREZCLASS(ZPhysicWorldBullet);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include "ZRigidBodyBullet.h"
-#include "ZPhysicTriMesh.h"
-#include "ZPhysicTriMeshInstance.h"
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -140,34 +139,8 @@ public:
 	ZRigidBody *CreateRigidBodySphere(float aRadius = 1.f, float aMass = 1.f);
 	ZRigidBody *CreateRigidBodyShip(ZPhysicTriMesh * aCollisionMesh, float aMass = 1.f, ZBaseClass *pBaseClass = NULL);
 
-	ZPhysicTriMeshInstance* AddPhysicModelToWorld(ZPhysicTriMesh * nMesh, ZBaseClass *pBase, unsigned int aFilterGroup = 1, unsigned int aFilterMask = 255, tmatrix *pMat = NULL)
-	{
-		ZPhysicTriMeshInstance *nTMInstance = (ZPhysicTriMeshInstance*)_New(ZPhysicTriMeshInstance);
-
-		// job
-		JobEntry_t entry;	
-		entry.mType = NEW_COLLISION_MESH_IW;
-		entry.mColMesh = nTMInstance;
-		entry.filterMask = aFilterMask;
-		entry.filterGroup = aFilterGroup;
-		entry.baseClassUserPtr = pBase;
-		nTMInstance->Init(this, nMesh, pMat);
-
-		//nMesh->mPhysicWorld.Attach(this);
-		//mJobs.push_back(entry);
-		mJobs.ArrayToList(NULL, &entry, 1);
-
-		return nTMInstance;
-	}
-
-	virtual void RemoveCollisionMesh(ZPhysicTriMeshInstance* pMesh)
-	{
-		JobEntry_t entry;
-		entry.mType = DELETE_COLLISION_MESH_IW;
-		entry.mColMesh = pMesh;
-		pMesh->AddRef();
-		mJobs.ArrayToList(NULL, &entry, 1);
-	}
+	ZPhysicTriMeshInstance* AddPhysicModelToWorld(ZPhysicTriMesh * nMesh, ZBaseClass *pBase, unsigned int aFilterGroup = 1, unsigned int aFilterMask = 255, tmatrix *pMat = NULL);
+	virtual void RemoveCollisionMesh(ZPhysicTriMeshInstance* pMesh);
 	
 	// fills dest buffer and returns the actual number of collisions
 	virtual PhysCollision_t * GetCollisionList(int &aNbCollisions);

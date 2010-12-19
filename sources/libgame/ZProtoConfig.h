@@ -9,6 +9,9 @@
 #ifndef ZPROTOCONFIG_H__
 #define ZPROTOCONFIG_H__
 
+#include "..\libbase\ZSerializator.h"
+#include "../librender/IDisplayDevice.h"
+
 DECLAREZCLASS(ZProtoConfig);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -111,7 +114,7 @@ public:
 
 	 void AddFavoriteURL(const char *szURL)
 	{
-		for (::uint i=0;i<mFavURL.size();i++)
+		for (unsigned int i=0;i<mFavURL.size();i++)
 		{
 			if (!strcmp(mFavURL[i], szURL))
 				return;

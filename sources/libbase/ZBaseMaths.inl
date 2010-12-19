@@ -789,10 +789,14 @@ inline void tvector3::Normal(const tvector3 & point1, const tvector3 & point2, c
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 inline float InvSqrt_Lomont(float x)
 {
+	union {
+		float f;
+		int i;
+	} z;
 	float xhalf = 0.5f*x;
-	int i = *(int*)&x;
-	i = 0x5f375a84 - (i>>1); // hidden initial guess, fast
-	x = *(float*)&i;
+	z.f = x;
+	z.i = 0x5f375a84 - (z.i>>1); // hidden initial guess, fast
+	x = z.f;
 	x = x*(1.5f-xhalf*x*x);
 	return x;
 }

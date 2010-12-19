@@ -22,6 +22,7 @@
 #define IDISPLAYDEVICE_H__
 
 #include "..\librender\ZTexture.h"
+#include "../libbase/ZBaseMaths.h"
 
 /*! \file IDisplayDevice.h
     \brief Display Device Interface
@@ -132,8 +133,8 @@ public:
 	virtual void DrawFSQuadAO() = 0;
 	virtual void* GetAPITexture(bool wantZTexture = false) = 0;
 	virtual void Save(const char *szFile) = 0;
-	virtual uint32 GetWidth() = 0;
-	virtual uint32 GetHeight() = 0;
+	virtual uint32_t GetWidth() = 0;
+	virtual uint32_t GetHeight() = 0;
 	virtual ZTexture * GetTexture() = 0;
 	virtual void StretchCopyTo(IRenderTarget *pDest, RECT *pSrcRect = NULL, RECT *pDstRect = NULL) = 0;
 	virtual ZTexture *BuildCopy() = 0;
@@ -262,13 +263,13 @@ public:
 	virtual int GetWidth() = 0;
 	virtual int GetHeight() = 0;
 
-	virtual void DrawIndexedPrimitives( uint8 aPrimitive, unsigned int BaseVertexIndex,
+	virtual void DrawIndexedPrimitives( uint8_t aPrimitive, unsigned int BaseVertexIndex,
 		unsigned int MinIndex,
 		unsigned int NumVertices,
 		unsigned int StartIndex,
 		unsigned int IndexCount) = 0;
 
-	virtual void DrawPrimitives( uint8 aPrimitive, unsigned int StartVertex,
+	virtual void DrawPrimitives( uint8_t aPrimitive, unsigned int StartVertex,
 		unsigned int  vertexCount) = 0;
 
 

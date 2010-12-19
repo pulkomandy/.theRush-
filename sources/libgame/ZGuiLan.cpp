@@ -19,7 +19,6 @@
 // GNU General Public License for more details.
 //
 
-#include "stdafx.h"
 #include "ZGuiLan.h"
 #include "ZProtoGUI.h"
 #include "ZGuiUtils.h"
@@ -501,27 +500,27 @@ void GuiLan::AddServer(MultiColumnList* mcl, const char *serverName, int nbPlaye
 {	
 	char iit1[512];
 	char iit2[512];
-	sprintf_s(iit1, 512, "%d", nbPlayers);
-	sprintf_s(iit2, 512, "%d", aPing);
+	snprintf(iit1, 512, "%d", nbPlayers);
+	snprintf(iit2, 512, "%d", aPing);
 
 	int rowid = 0;
     ListboxTextItem* item = new ListboxTextItem(serverName);
-    item->setSelectionBrushImage(&ImagesetManager::getSingleton().getImageset("TaharezLook")->getImage("MultiListSelectionBrush"));
+	//item->setSelectionBrushImage(ImagesetManager::getSingleton().getIterator().getCurrentValue()->getImage("MultiListSelectionBrush"));
 	rowid = mcl->addRow(item, 100);
     item = new ListboxTextItem(iit1);
-    item->setSelectionBrushImage(&ImagesetManager::getSingleton().getImageset("TaharezLook")->getImage("MultiListSelectionBrush"));
+    //item->setSelectionBrushImage(ImagesetManager::getSingleton().getIterator()).getCurrentValue()->getImage("MultiListSelectionBrush"));
 	mcl->setItem(item, 101, rowid);
     item = new ListboxTextItem(szStatus);
-    item->setSelectionBrushImage(&ImagesetManager::getSingleton().getImageset("TaharezLook")->getImage("MultiListSelectionBrush"));
+    //item->setSelectionBrushImage(ImagesetManager::getSingleton().getIterator()).getCurrentValue()->getImage("MultiListSelectionBrush"));
 	mcl->setItem(item, 102, rowid);
     item = new ListboxTextItem(szMapName);
-    item->setSelectionBrushImage(&ImagesetManager::getSingleton().getImageset("TaharezLook")->getImage("MultiListSelectionBrush"));
+    //item->setSelectionBrushImage(ImagesetManager::getSingleton().getIterator()).getCurrentValue()->getImage("MultiListSelectionBrush"));
 	mcl->setItem(item, 103, rowid);
     item = new ListboxTextItem(szMode);
-    item->setSelectionBrushImage(&ImagesetManager::getSingleton().getImageset("TaharezLook")->getImage("MultiListSelectionBrush"));
+    //item->setSelectionBrushImage(ImagesetManager::getSingleton().getIterator()).getCurrentValue()->getImage("MultiListSelectionBrush"));
 	mcl->setItem(item, 104, rowid);
     item = new ListboxTextItem(iit2);
-    item->setSelectionBrushImage(&ImagesetManager::getSingleton().getImageset("TaharezLook")->getImage("MultiListSelectionBrush"));
+    //item->setSelectionBrushImage(ImagesetManager::getSingleton().getIterator()).getCurrentValue()->getImage("MultiListSelectionBrush"));
 	mcl->setItem(item, 105, rowid);
 	
 }

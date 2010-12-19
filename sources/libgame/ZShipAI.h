@@ -2,6 +2,7 @@
 #define ZSHIPAI_H__
 
 #include "../libbase/ZPIDCtrl.h"
+#include "..\libbase\ZSerializator.h"
 
 class ZShip;
 struct keysStruct;

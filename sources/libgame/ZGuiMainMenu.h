@@ -22,6 +22,9 @@
 #ifndef GUIMAINMENU_H__
 #define GUIMAINMENU_H__
 
+
+#include "IProtoGUI.h"
+
 #include "CEGUI.h"
 class ZProtoGUI;
 using namespace CEGUI;

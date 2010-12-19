@@ -1,4 +1,5 @@
-#include "stdafx.h"
+#include "ZShipBonus.h"
+
 #include "ZBonusMissile.h"
 #include "ZBonusHomingMissile.h"
 #include "ZBonusSmoke.h"
@@ -10,6 +11,7 @@
 #include "ZBonusMachineGun.h"
 #include "ZBonusBooster.h"
 #include "ZBonusAutopilot.h"
+#include "../libbase/ZProfiler.h"
 
 ZShipBonus::~ZShipBonus()
 {

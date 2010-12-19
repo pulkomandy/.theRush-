@@ -132,12 +132,12 @@ struct FFxDataMatrix : public FFxData
 
 struct FFxDataGlMatrix : public FFxData
 {
-	FFxDataGlMatrix(uint32 aGLMatrixID, uint32 aGLMatrixOp);
+	FFxDataGlMatrix(uint32_t aGLMatrixID, uint32_t aGLMatrixOp);
 	void apply(CGparameter aParam);
 
 
-	uint32	mGLMatrixID;
-	uint32	mGLMatrixOp;
+	uint32_t	mGLMatrixID;
+	uint32_t	mGLMatrixOp;
 };
 
 struct FFxDataString : public FFxData
@@ -151,15 +151,15 @@ struct FFxDataString : public FFxData
 
 struct FFxDataTransformVector : public FFxData
 {
-	FFxDataTransformVector(ZTransform*,  uint32 aVectorIndex, uint32 aSpace);
+	FFxDataTransformVector(ZTransform*,  uint32_t aVectorIndex, uint32_t aSpace);
 	void apply(CGparameter aParam);
 
 	void setVector(const tvector4& aVector);
 	bool getVector(tvector4& aVector) const;
 
 	smartptr<ZTransform>	mTransform;
-	uint32			mSpace;
-	uint32			mVectorIndex;
+	uint32_t			mSpace;
+	uint32_t			mVectorIndex;
 };
 
 struct FFxDataFloatAttr : public FFxData
@@ -252,8 +252,8 @@ struct FFxBindParam
 	~FFxBindParam() {};
 
 	CGenum			mClass;
-	uint32			mMatrixID;
-	uint32			mMatrixOp;
+	uint32_t			mMatrixID;
+	uint32_t			mMatrixOp;
 };
 
 //---------------------------------------------------------------------------------
@@ -307,7 +307,7 @@ struct FFxSamplerParam
 
 	CGparameter	mCGparam;			// sampler param
 	ZTexture* mTexture;
-	uint32		mTextureIndex;		// texture index
+	uint32_t		mTextureIndex;		// texture index
 	int32		mSamplerIndex;
 
 	FFxSamplerParam(CGparameter	p, int i, int smpidx, ZTexture* tex) : mCGparam(p), mTexture(tex), mTextureIndex(i), mSamplerIndex(smpidx) {};
@@ -343,7 +343,7 @@ protected:
 	void				useDefaultProgram(CGcontext aContext);
 
 public:
-	uint32			mProgramFlags;		// flags for the program
+	uint32_t			mProgramFlags;		// flags for the program
 	CGprogram			mProgram;			// vertex or shader program
 	tstring				mFileName;			// filename source or binary (detected by extension)
 	tstring				mEntry;				// entry name
@@ -418,14 +418,14 @@ struct FFxTechnique : public FFxParamable
 	// building
 	void					addPass(FFxPass* aPass);
 	FFxPass*				getNamedPass(const tstring& aName);
-	uint32					registerSemanticParameter(CGparameter aParam, const char* aSemantic);
+	uint32_t					registerSemanticParameter(CGparameter aParam, const char* aSemantic);
 
 	// runtime init
 	void					init(CGcontext aContext);
 
 	// rendering
 	void					beginMaterial(ZMaterial* aMaterial);
-	void					setPassState(uint aPassNum);
+	void					setPassState(unsigned int aPassNum);
 	void					setPassState(int aPass, RenderingState_t rs);
 
 	tstring					mName;

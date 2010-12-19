@@ -48,14 +48,14 @@ public:
 	bool open(bool bAlreadyOpen);
 	bool close();
 	bool setPass(int32 aNum);
-	uint32 getNumPasses() const;
+	uint32_t getNumPasses() const;
 
 	virtual void					SetTechnic(unsigned int aTech) { mTechnic = aTech; }
 	virtual unsigned int			GetTechnic() { return mTechnic; }
 
 	// Physics material
-	void				setPhysicsMaterialID(uint32 mat)			{ mPhysicsMaterial = mat; }
-	uint32				getPhysicsMaterialID() const						{ return mPhysicsMaterial; }
+	void				setPhysicsMaterialID(uint32_t mat)			{ mPhysicsMaterial = mat; }
+	uint32_t				getPhysicsMaterialID() const						{ return mPhysicsMaterial; }
 
     virtual tulong GetMemoryUsed() const { return tulong(sizeof(ZMaterial)+mParams.size()*sizeof(FFxSetParam*)+mEffectFileName.Length()+mTextures.size()*sizeof(smartptr<ZTexture>)); }
 
@@ -76,8 +76,8 @@ protected:
 	tstring						mEffectFileName;
 	smartptr<ZFx>						mEffect;
     std::vector<smartptr<ZTexture> >	mTextures;
-	uint32						mPhysicsMaterial;
-    uint32                      mTexIndex;
+	uint32_t						mPhysicsMaterial;
+    uint32_t                      mTexIndex;
 	unsigned int				mTechnic;
 };
 

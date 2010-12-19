@@ -20,10 +20,10 @@
 //
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
 #include "ZGuiQuickrace.h"
 
 #include "ZProtoGUI.h"
+#include "IProtoGUI.h"
 #include "ZGuiUtils.h"
 #include "../libplatform/libplatform.h"
 #include "ZGuiLapChoser.h"

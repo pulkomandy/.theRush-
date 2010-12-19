@@ -123,7 +123,7 @@ public:
 
     void ResampleKeys(float timescale) 
     {
-		for (::uint i=0;i<m_KeyFrameList.size();i++)
+		for (unsigned int i=0;i<m_KeyFrameList.size();i++)
         {
             m_KeyFrameList[i].m_Time = i*timescale;
         }

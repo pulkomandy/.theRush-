@@ -19,7 +19,6 @@
 // GNU General Public License for more details.
 //
 
-#include "stdafx.h"
 #include "ZGuiSpectator.h"
 #include "ZProtoGUI.h"
 #include "../libplatform/libplatform.h"

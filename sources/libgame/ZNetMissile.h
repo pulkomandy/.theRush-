@@ -5,6 +5,8 @@
 #include "ReplicaManager2.h"
 using namespace RakNet;
 
+class ZRushNetGame;
+
 class ZNetMissile : public ZMissile, public Replica2
 {
 public:

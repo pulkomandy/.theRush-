@@ -22,8 +22,8 @@
 
 #include "ZGuiIngameMenu.h"
 
+#include "../libbase/ZPlatformUtils.h"
 #include "ZProtoGUI.h"
-#include "../libplatform/libplatform.h"
 #include "ZGuiUtils.h"
 //extern GameContentManager *gContentManager;
 

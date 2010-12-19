@@ -22,6 +22,8 @@
 #ifndef GuiQuickrace_H__
 #define GuiQuickrace_H__
 
+#include "IProtoGUI.h"
+
 class ZProtoGUI;
 #include "CEGUI.h"
 using namespace CEGUI;

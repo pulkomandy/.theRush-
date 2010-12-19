@@ -3,7 +3,7 @@
 
 #include <btBulletCollisionCommon.h>
 
-class ZPhysicWorldBullet;
+#include "ZPhysicWorldBullet.h"
 
 DECLAREZCLASS(ZPhysicTriMeshInstance);
 

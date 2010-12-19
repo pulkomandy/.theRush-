@@ -1,6 +1,5 @@
 //////////////////////////////////////////////////////////////////////////////////////////////
 	
-#include "stdafx.h"
 #include "BitStream.h"
 #include "NetworkIDManager.h"
 #include "GetTime.h"
@@ -115,7 +114,7 @@ tstring ZLapsTimes::BuildEndResults(ZRushGame *pGame) const
 		int min = int(pres[i].totalTime)/60;
 		int sec = (int(pres[i].totalTime)%60);
 		int cent = (int(pres[i].totalTime*100)%100);
-		sprintf_s(tmps, 512, ".%02d %d:%02d.%02d %s %s\n", i+1, min, sec, cent, pGame->GetNickName(pres[i].pShip), (pres[i].bestLap?"*":""));
+		snprintf(tmps, 512, ".%02d %d:%02d.%02d %s %s\n", i+1, min, sec, cent, pGame->GetNickName(pres[i].pShip), (pres[i].bestLap?"*":""));
 		res += tmps;
 
 	}

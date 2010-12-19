@@ -1,5 +1,11 @@
-#include "stdafx.h"
 #include "ZMissile.h"
+
+
+#include "../libworld/ZMeshInstance.h"
+#include "..\libgame\ZRushGameContent.h"
+#include "..\libgame\ZBonusParameters.h"
+#include "..\libgame\ZGameEntitiesManager.h"
+#include "..\libgame\ZRushTrack.h"
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 

@@ -1,10 +1,12 @@
 #ifndef ZFX_H__
 #define ZFX_H__
 
-#include "FFx.h"
 
 #undef __STRICT_ANSI__
+#include "targetver.h"
 #include <string.h>
+
+#include "FFx.h"
 
 #include <Cg/cg.h>
 
@@ -37,8 +39,8 @@ public:
 	FFxTechnique*			getNamedTechnique(const tstring& aName);
 
 	// rendering
-	FFxTechnique*			selectTechniqueByIndex(uint32 aTechniqueNum);
-	FFxTechnique*			selectTechniqueByIndex(uint32 aNum, ZMaterial *pMat);
+	FFxTechnique*			selectTechniqueByIndex(uint32_t aTechniqueNum);
+	FFxTechnique*			selectTechniqueByIndex(uint32_t aNum, ZMaterial *pMat);
 	FFxTechnique*			selectTechniqueByName(const tstring& aName);
 
 	bool					beginMaterial(ZMaterial* aMaterial);
@@ -72,7 +74,7 @@ public:
 	}
 	virtual int			GetSamplerByName(const char*szName)
 	{
-		for (uint i =0;i<mSamplerParams.size();i++)
+		for (unsigned int i =0;i<mSamplerParams.size();i++)
 		{
 			if (!_stricmp(mSamplerParams[i].szSamplerName, szName))
 				return i;

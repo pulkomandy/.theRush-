@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "BitStream.h"
 #include "NetworkIDManager.h"
 #include "GetTime.h"
@@ -17,6 +16,7 @@ using namespace RakNet;
 #include "ZNetMissile.h"
 #include "ZNetMine.h"
 #include "ZNetExplosion.h"
+#include "ZProtoGui.h"
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 

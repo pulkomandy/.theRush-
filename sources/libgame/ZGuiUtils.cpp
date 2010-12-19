@@ -19,7 +19,6 @@
 // GNU General Public License for more details.
 //
 
-#include "stdafx.h"
 #include "ZGuiUtils.h"
 #include "ZProtoGUI.h"
 
@@ -90,10 +89,10 @@ void ThumbnailChange(Window *pWnd, int worldIdx, int trackIdx)
 	tstring trackname;
 	trackname.Printf("./Prototype/Worlds/%s/Tracks/%s", sworld.c_str(), strk.c_str());
 	trackname.Replace(".track", "Thumb.tga");
-	if (ImagesetManager::getSingleton().isImagesetPresent("ThumbImageImageSet"))
-		ImagesetManager::getSingleton().destroyImageset("ThumbImageImageSet");
+//	if (ImagesetManager::getSingleton().isImagesetPresent("ThumbImageImageSet"))
+//		ImagesetManager::getSingleton().destroyImageset("ThumbImageImageSet");
 
-	ImagesetManager::getSingleton().createImagesetFromImageFile("ThumbImageImageSet", trackname.c_str());
+	ImagesetManager::getSingleton().createFromImageFile("ThumbImageImageSet", trackname.c_str());
 
 	pWnd->setProperty("Image", "set:ThumbImageImageSet image:full_image");
 }

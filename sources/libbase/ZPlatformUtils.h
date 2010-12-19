@@ -24,6 +24,7 @@
 
 #ifdef _WIN32
 #include "targetver.h"
+#undef __STRICT_ANSI__
 #include <shlobj.h>
 #include <windows.h>
 #include <windef.h>

@@ -18,7 +18,6 @@
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 // GNU General Public License for more details.
 //
-#include "stdafx.h"
 #include "ZGuiMainMenu.h"
 #include "ZProtoGUI.h"
 #include "ZGuiUtils.h"
@@ -56,7 +55,7 @@ void GuiMainmenu::Build(IProtoGUI *pGUI)
 	mFontArial8 = mGUI->mFontArial8;
 	mFontArial24 = mGUI->mFontArial24;
 
-	ImagesetManager::getSingleton().createImagesetFromImageFile("logoRush", "./Prototype/Common/Menu/MenuLogo.tga");
+	ImagesetManager::getSingleton().createFromImageFile("logoRush", "./Prototype/Common/Menu/MenuLogo.tga");
 
 
 

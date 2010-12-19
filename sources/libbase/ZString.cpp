@@ -17,13 +17,16 @@
 //
 // Includes ///////////////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
 #include "ZString.h"
 #include "ZFile.h"
-#ifdef WIN32
+#include "ZPlatformUtils.h"
+#ifdef _WIN32
+#include "targetver.h"
 #include <direct.h>
 #include <shlobj.h>
 #endif
+
+#include <assert.h>
 
 
 // Globals ////////////////////////////////////////////////////////////////////////////////////////
@@ -164,7 +167,7 @@ void tstring::SaveFile(ZFile & file) const
 void tstring::SimplifyPath()
 {
 	char npath[MAX_PATH+1];
-	uint curc = 0;
+	unsigned int curc = 0;
 	int av = 0;
 
 	while(curc<length)

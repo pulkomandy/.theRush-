@@ -22,6 +22,9 @@
 #ifndef ZGUIUTILS_H__
 #define ZGUIUTILS_H__
 
+#include "..\libbase\ZFunctionSlot.h"
+#include "..\libbase\ZString.h"
+
 class ZProtoGUI;
 #include "CEGUI.h"
 using namespace CEGUI;

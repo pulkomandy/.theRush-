@@ -10,8 +10,6 @@
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 // GNU General Public License for more details.
 //
-#include "stdafx.h"
-
 #include "ZProtoGUI.h"
 #include "ZGuiProgress.h"
 #include "../libplatform/libplatform.h"
@@ -81,12 +79,12 @@ ZProtoGUI::ZProtoGUI() : winMgr(WindowManager::getSingleton())
 	GProtoGui = this;
 
 	// scheme
-	ImagesetManager::getSingleton().createImageset("./Prototype/Common/Menu/CEGUISkin/TaharezLook.imageset");
-	SchemeManager::getSingleton().loadScheme("./Prototype/Common/Menu/CEGUISkin/TaharezLook.scheme");
+	ImagesetManager::getSingleton().create("./Prototype/Common/Menu/CEGUISkin/TaharezLook.imageset");
+	//SchemeManager::getSingleton().load("./Prototype/Common/Menu/CEGUISkin/TaharezLook.scheme");
 
 	// Fonts
-	mFontArial8 = FontManager::getSingleton().createFont("./Prototype/Common/Menu/Arial.font");
-	mFontArial24 = FontManager::getSingleton().createFont("./Prototype/Common/Menu/Arial24.font");
+	mFontArial8 = &FontManager::getSingleton().create("./Prototype/Common/Menu/Arial.font");
+	mFontArial24 = &FontManager::getSingleton().create("./Prototype/Common/Menu/Arial24.font");
 
 	//root
 	root = (DefaultWindow*)winMgr.createWindow("DefaultWindow", "Root");

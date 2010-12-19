@@ -1,5 +1,3 @@
-#include "stdafx.h"
-
 #include "BitStream.h"
 #include "NetworkIDManager.h"
 #include "GetTime.h"

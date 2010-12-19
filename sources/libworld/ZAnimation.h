@@ -93,7 +93,7 @@ public:
 
     void RemoveKey(float time) 
     {
-        for (uint i=0;i<m_AnimTrackList.size();i++)
+        for (unsigned int i=0;i<m_AnimTrackList.size();i++)
         {
             switch (m_AnimTrackList[i]->m_KeyFrameType)
             {
@@ -110,7 +110,7 @@ public:
     }
     void ResampleKeys(float timescale) 
     {
-        for (uint i=0;i<m_AnimTrackList.size();i++)
+        for (unsigned int i=0;i<m_AnimTrackList.size();i++)
         {
             switch (m_AnimTrackList[i]->m_KeyFrameType)
             {
@@ -160,7 +160,7 @@ public:
 	virtual tulong GetMemoryUsed() const 
 	{
 		tulong sz = sizeof(ZAnimation);
-        for (uint i=0;i<m_AnimTrackList.size();i++)
+        for (unsigned int i=0;i<m_AnimTrackList.size();i++)
         {
 			sz += m_AnimTrackList[i]->GetMemoryUsed();
 		}

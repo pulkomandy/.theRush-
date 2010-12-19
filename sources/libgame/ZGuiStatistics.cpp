@@ -19,9 +19,9 @@
 // GNU General Public License for more details.
 //
 
-#include "stdafx.h"
 #include "ZGuiStatistics.h"
 #include "ZProtoGUI.h"
+#include "IProtoGUI.h"
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 

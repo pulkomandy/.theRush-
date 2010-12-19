@@ -1,5 +1,9 @@
-#include "stdafx.h"
 #include "ZMine.h"
+
+#include "../libgame/ZRushGameContent.h"
+#include "../libgame/ZGameTriggers.h"
+#include "../libgame/ZBonusParameters.h"
+#include "../libgame/ZGameEntitiesManager.h"
 
 BEGIN_SERIALIZATION(ZMine)
 END_SERIALIZATION()

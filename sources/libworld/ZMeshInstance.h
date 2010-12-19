@@ -22,8 +22,8 @@
 #define ZMESHINSTANCE_H__
 
 #include "../librender/ZMaterial.h"
-#include "../libworld/ZMesh.h"
-#include "../libworld/ZPhysicTriMeshInstance.h"
+#include "ZMesh.h"
+#include "ZPhysicTriMeshInstance.h"
 #include "../libbase/ZLogger.h"
 
 DECLAREZCLASS(ZMeshInstance);
@@ -67,13 +67,13 @@ public:
         {
             mMaterial.resize(pMesh->GetNbSubMeshes());
 
-            for (uint i = nbSt ; i < pMesh->GetNbSubMeshes() ; i++)
+            for (unsigned int i = nbSt ; i < pMesh->GetNbSubMeshes() ; i++)
             {
                 mMaterial[i] = (ZMaterial*)_New(ZMaterial);
                 //mMaterial[i]->setEffect(IFx::getDefaultFX());
             }
         }
-        else for (uint i = (uint)mMaterial.size()-1 ; i > pMesh->GetNbSubMeshes() ; i--)
+        else for (unsigned int i = (unsigned int)mMaterial.size()-1 ; i > pMesh->GetNbSubMeshes() ; i--)
         {
 			mMaterial[i]->SubRef();
             mMaterial.resize(pMesh->GetNbSubMeshes());

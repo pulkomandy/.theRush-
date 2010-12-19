@@ -1,6 +1,10 @@
 #ifndef ZNETMESSAGES_H__
 #define ZNETMESSAGES_H__
 
+#include "ZShip.h"
+
+#include <MessageIdentifiers.h>
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 enum ZNETMESSAGE
 {

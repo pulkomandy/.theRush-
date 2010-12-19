@@ -22,6 +22,9 @@
 #ifndef GUIMUSIC_H__
 #define GUIMUSIC_H__
 
+
+#include "IProtoGUI.h"
+
 #include "CEGUI.h"
 
 class ZProtoGUI;

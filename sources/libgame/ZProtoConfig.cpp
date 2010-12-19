@@ -6,7 +6,9 @@
 // Description :
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "ZProtoConfig.h"
+#include "../libbase/ZFile.h"
+
 #include "tinyxml.h"
 
 #ifndef WIN32
@@ -235,7 +237,7 @@ void ZProtoConfig::WriteConfig() const
 		fmt.Printf("<Player name=\"%s\" />\n",
 			mPlayerName.c_str());
 		// fav URL
-		for(::uint ui = 0;ui<mFavURL.size();ui++)
+		for(unsigned int ui = 0;ui<mFavURL.size();ui++)
 		{
 			fmt.Printf("<Favorite url=\"%s\" />\n",
 				mFavURL[ui].c_str());

@@ -516,3 +516,34 @@ void ZPhysicWorldBullet::RemoveRigidBody(ZRigidBody *pRigidBody)
 void ZPhysicWorldBullet::Delete(ZRigidBody *pModel)
 {
 }
+
+
+
+	ZPhysicTriMeshInstance* ZPhysicWorldBullet::AddPhysicModelToWorld(ZPhysicTriMesh * nMesh, ZBaseClass *pBase, unsigned int aFilterGroup = 1, unsigned int aFilterMask = 255, tmatrix *pMat = NULL)
+	{
+		ZPhysicTriMeshInstance *nTMInstance = (ZPhysicTriMeshInstance*)_New(ZPhysicTriMeshInstance);
+
+		// job
+		JobEntry_t entry;	
+		entry.mType = NEW_COLLISION_MESH_IW;
+		entry.mColMesh = nTMInstance;
+		entry.filterMask = aFilterMask;
+		entry.filterGroup = aFilterGroup;
+		entry.baseClassUserPtr = pBase;
+		nTMInstance->Init(this, nMesh, pMat);
+
+		//nMesh->mPhysicWorld.Attach(this);
+		//mJobs.push_back(entry);
+		mJobs.ArrayToList(NULL, &entry, 1);
+
+		return nTMInstance;
+	}
+
+	virtual void ZPhysicWorldBullet::RemoveCollisionMesh(ZPhysicTriMeshInstance* pMesh)
+	{
+		JobEntry_t entry;
+		entry.mType = DELETE_COLLISION_MESH_IW;
+		entry.mColMesh = pMesh;
+		pMesh->AddRef();
+		mJobs.ArrayToList(NULL, &entry, 1);
+	}

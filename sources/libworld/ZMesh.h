@@ -86,25 +86,25 @@ public:
 	*/
 	void ComputeBSphere();
 
-    void AddSubMesh(uint32 aStart, uint32 aCount)
+    void AddSubMesh(uint32_t aStart, uint32_t aCount)
     {
         mSubMeshes.push_back(tSubMesh(aStart, aCount));
     }
-    void SetSubMesh(uint32 aSMNb, uint32 aStart, uint32 aCount)
+    void SetSubMesh(uint32_t aSMNb, uint32_t aStart, uint32_t aCount)
     {
         mSubMeshes[aSMNb].mStart = aStart;
         mSubMeshes[aSMNb].mCount = aCount;
     }
-    void GetSubMesh(uint32 aSMNb, uint32 *aStart, uint32 *aCount) const
+    void GetSubMesh(uint32_t aSMNb, uint32_t *aStart, uint32_t *aCount) const
     {
         *aStart = mSubMeshes[aSMNb].mStart;
         *aCount = mSubMeshes[aSMNb].mCount;
     }
 
-    static void RemoveRedundancy(void *pVT, int vtSize, int vtCount, uint16 *pind, int* nind, void *pNewVT, int *pNewVtNb);
-	static void RemoveRedundancy2(void *pVTSrc, int nbVTSrc, int vtSize, uint16 *pind, int nind, void *pVTDst, int *nbVTDst);
+    static void RemoveRedundancy(void *pVT, int vtSize, int vtCount, uint16_t *pind, int* nind, void *pNewVT, int *pNewVtNb);
+	static void RemoveRedundancy2(void *pVTSrc, int nbVTSrc, int vtSize, uint16_t *pind, int nind, void *pVTDst, int *nbVTDst);
 
-    void Draw(uint32 aSubMesh)
+    void Draw(uint32_t aSubMesh)
     {
 
         if (mIndexArray.ptr())
@@ -155,7 +155,7 @@ public:
 
     }
 
-	void DrawInstanced(uint32 /*aSubMesh*/, uint32 /*aQty*/)
+	void DrawInstanced(uint32_t /*aSubMesh*/, uint32_t /*aQty*/)
 	{
 #if 0
 		IDirect3DDevice9 *pd3dDevice = GDD->GetD3D9Device();
@@ -181,12 +181,12 @@ public:
 
     bool PickRay(const tvector3 & origin, const tvector3 &dir, tvector3& normal, float &t, unsigned int *pTriNb = NULL);
 
-    void SetPrimitive(uint8 aPrim) { mPrimitive = aPrim; }
-    uint8 GetPrimitive() const { return mPrimitive; }
+    void SetPrimitive(uint8_t aPrim) { mPrimitive = aPrim; }
+    uint8_t GetPrimitive() const { return mPrimitive; }
 
     tulong GetMemoryUsed() const { return sizeof(ZMesh); }
 
-    uint32 GetNbSubMeshes() const { return (uint32)mSubMeshes.size(); }
+    uint32_t GetNbSubMeshes() const { return (uint32_t)mSubMeshes.size(); }
 
 	void Explode();
 	tvector3 GetFaceNormal(unsigned int aFaceNb);
@@ -195,7 +195,7 @@ public:
 	void SetFaceUV(unsigned int aFaceNb, const tvector2 &translation, const tvector2& scale);
 	void GetAdjacentFaces(unsigned int aFaceNb, unsigned int &face1, unsigned int &face2, unsigned int &face3);
 
-	bool BuildMerged(std::vector<ZMesh*>& aMeshList, uint aVAFormat);
+	bool BuildMerged(std::vector<ZMesh*>& aMeshList, unsigned int aVAFormat);
 
 	void SetPhysicTriMesh(ZPhysicTriMesh *pModel) 
 	{ 
@@ -211,17 +211,17 @@ protected:
 	//tvector4 mBSphere;
     smartptr<IIndexArray> mIndexArray;
     smartptr<IVertexArray> mVertexArray;
-    uint8 mPrimitive;
+    uint8_t mPrimitive;
     ZBoundingVolume mBVolume;
 
     typedef struct tSubMesh
     {
-        tSubMesh(uint32 aStart, uint32 aCount)
+        tSubMesh(uint32_t aStart, uint32_t aCount)
         {
             mStart = aStart;
             mCount = aCount;
         }
-        uint32 mStart, mCount;
+        uint32_t mStart, mCount;
         
 
     } tSubMesh;

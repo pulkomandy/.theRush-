@@ -2,6 +2,8 @@
 #define ZNETMINE_H__
 
 #include "ZMine.h"
+#include "ZRushNetGame.h"
+
 #include "ReplicaManager2.h"
 using namespace RakNet;
 

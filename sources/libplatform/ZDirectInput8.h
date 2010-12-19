@@ -23,13 +23,13 @@
 #define ZDIRECTINPUT8_H__
 
 #define DIRECTINPUT_VERSION 0x800
-
 #include <dinput.h>
 
 #define KEYDOWN(name, key) (name[key] & 0x80)
 #define KEYUP(name, key) (!(name[key] & 0x80))
 
 
+#include "IInput.h"
 
 ////////////////////////////////////////////////////////////
 

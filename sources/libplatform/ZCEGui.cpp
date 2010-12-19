@@ -10,12 +10,12 @@
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 // GNU General Public License for more details.
 //
-#include "stdafx.h"
 #include "../libbase/ZFile.h"
 #include "../libbase/ZProfiler.h"
 #include "../libbase/ZBaseDefs.h"
 #include "../libbase/ZPlatformUtils.h"
 #include "../libbase/ZSerializator.h"
+#include "IDisplayDevice.h"
 
 #include "CEGUI.h"
 #include "XMLParserModules/TinyXMLParser/CEGUITinyXMLParserModule.h"
@@ -26,9 +26,9 @@
 #include "CEGUIFactoryModule.h"
 
 #ifdef WIN32
-#include "RendererModules/directx9GUIRenderer/d3d9renderer.h"
+#include "RendererModules/direct3d9/ceguidirect3d9renderer.h"
 #endif
-#include "RendererModules/OpenGLGUIRenderer/openglrenderer.h"
+#include "RendererModules/OpenGL/ceguiopenglrenderer.h"
 
 
 CEGUI::Renderer* myRenderer = NULL;
@@ -96,6 +96,10 @@ public:
 		data.setData(NULL);
 	}
 
+    virtual size_t getResourceGroupFileNames(std::vector<CEGUI::String>& out_vec,
+                                             const CEGUI::String& file_pattern,
+                                             const CEGUI::String& resource_group) {};
+
 //const String & 	getDefaultResourceGroup (void) const
 
 //void 	setDefaultResourceGroup (const String &resourceGroup)
@@ -113,7 +117,7 @@ void InitCEGui()
 
 
 	myParser =		new CEGUI::TinyXMLParser();
-	mySystem =		new CEGUI::System(myRenderer, &gZenithResManager, myParser);//,"./CEGUIConfig.xsd", "cegui.log" );
+	mySystem =		&CEGUI::System::create(*myRenderer, &gZenithResManager, myParser);
 
 	GBCEGUIInited = true;
 
@@ -143,7 +147,7 @@ void UninitCEGui()
 {
 	GBCEGUIInited = false;
 
-	delete mySystem;
+//	delete mySystem;
 //	delete script_module;
 	delete myRenderer;
 
@@ -159,7 +163,7 @@ void CEGuiPreResetDevice()
 		return;
 #ifdef WIN32
 	if (GDD->GetClassID() == ClassIDZDisplayDeviceDX9)
-		((CEGUI::DirectX9Renderer*)myRenderer)->preD3DReset();
+		((CEGUI::Direct3D9Renderer*)myRenderer)->preD3DReset();
 #endif
 	
 }
@@ -170,7 +174,7 @@ void CEGuiPostResetDevice()
 		return;
 #ifdef WIN32
 	if (GDD->GetClassID() == ClassIDZDisplayDeviceDX9)
-		((CEGUI::DirectX9Renderer*)myRenderer)->postD3DReset();
+		((CEGUI::Direct3D9Renderer*)myRenderer)->postD3DReset();
 #endif
 
 }

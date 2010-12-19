@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "ZNetMine.h"
 #include "StringTable.h"
 

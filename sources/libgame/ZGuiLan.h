@@ -21,6 +21,9 @@
 
 #ifndef GUILan_H__
 #define GUILan_H__
+
+#include "IProtoGUI.h"
+
 #include "CEGUI.h"
 class ZProtoGUI;
 using namespace CEGUI;

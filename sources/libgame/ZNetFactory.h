@@ -1,6 +1,10 @@
 #ifndef ZNETFACTORY_H__
 #define ZNETFACTORY_H__
 
+#include "ZShip.h"
+
+#include <ReplicaManager2.h>
+
 class ZRushNetGame;
 class GameConnection : public Connection_RM2
 {

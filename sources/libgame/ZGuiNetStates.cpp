@@ -21,7 +21,6 @@
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
 #include "ZGuiNetStates.h"
 #include "ZProtoGUI.h"
 #include "ZGuiUtils.h"
@@ -322,7 +321,7 @@ void GuiNetStates::Tick()
 		else
 		{
 			char tmps[512];
-			sprintf_s(tmps, 512, mCountDownString/*GLoc->GetString("BEFOREENDS")*/, mCountDownTime);
+			snprintf(tmps, 512, mCountDownString/*GLoc->GetString("BEFOREENDS")*/, mCountDownTime);
 			mNetInfosLib->setText(tmps);
 		}
 	}

@@ -19,7 +19,6 @@
 // GNU General Public License for more details.
 //
 
-#include "stdafx.h"
 #include "ZGuiMessagebox.h"
 #include "ZProtoGUI.h"
 #include "../libplatform/libplatform.h"
@@ -165,7 +164,7 @@ void GuiMessagebox::Tick()
 		static int loadinganimidx = 0;
 		static float anmdlaid = 0.f;
 		char tmps[512];
-		sprintf_s(tmps, 512, "set:LoadingAnim%02d image:full_image", loadinganimidx);
+		snprintf(tmps, 512, "set:LoadingAnim%02d image:full_image", loadinganimidx);
 		anmdlaid+=gTimer.GetEllapsed();
 		if (anmdlaid >0.125f)
 		{

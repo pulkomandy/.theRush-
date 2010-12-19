@@ -82,17 +82,17 @@ public:
             mFrameUpdating = false; 
     }
 
-    virtual void *Lock(uint16 /*aSurfaceNb*/) { return NULL; }
-    virtual void Unlock(uint16 /*aSurfaceNb*/) {}
-    virtual void Bind(uint8 /*aLevel*/) {}
+    virtual void *Lock(uint16_t /*aSurfaceNb*/) { return NULL; }
+    virtual void Unlock(uint16_t /*aSurfaceNb*/) {}
+    virtual void Bind(uint8_t /*aLevel*/) {}
 
 
-    virtual uint32 GetWidth() { return mWidth; }
-    virtual uint32 GetHeight() { return mHeight; }
-    virtual uint32 GetBPP() { return mBPP; }
+    virtual uint32_t GetWidth() { return mWidth; }
+    virtual uint32_t GetHeight() { return mHeight; }
+    virtual uint32_t GetBPP() { return mBPP; }
 
-    virtual uint8 GetType() { return mType; }
-	virtual void SetType(uint8 atype) { mType = atype; }
+    virtual uint8_t GetType() { return mType; }
+	virtual void SetType(uint8_t atype) { mType = atype; }
 
     virtual void * GetPlatformHandle() const { return NULL; }
     virtual tulong GetMemoryUsed() const { return sizeof(ZTexture); }
@@ -115,7 +115,7 @@ protected:
     // user must free returned buffer
     int mWidth, mHeight, mBPP;
 	int mNbMipmaps;
-    uint8 mType;
+    uint8_t mType;
 	bool mEnabledDecoding;
     // update
     bool mFrameUpdating;

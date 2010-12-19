@@ -2,7 +2,8 @@ DEBUG=no
 CC=g++
 RANLIB=ranlib
 ifeq ($(DEBUG),yes)
-	CFLAGS=-W -Wall -ansi  -g -I../librender -I/usr/include/CEGUI/ -I/usr/include -I../../3rdparty/RakNet-3.6201/Source -I../../3rdparty/bullet-2.74/src -I../../3rdparty/zlib-1.2.3 -Ih:/Qt/FMOD/api/inc/ -Ih:/Qt/directx/include/
+	CFLAGS=-W -Wall -ansi  -g -I../librender -I/usr/include/CEGUI/ -I/usr/include -I../../3rdparty/RakNet-3.6201/Source -I../../3rdparty/bullet-2.74/src -I../../3rdparty/zlib-1.2.3 -Ih:/Qt/FMOD/api/inc/ -Ih:/Qt/directx/include/ \
+		-Ih:/Qt/CEGUI-SDK-0.7.5-mingw/cegui/include
 	LDFLAGS=-lm
 	AR = ar
 	ARFLAGS = rcs
@@ -10,7 +11,9 @@ ifeq ($(DEBUG),yes)
 	LIB=libplatformD.a
 
 else
-	CFLAGS=-W -Wall -ansi  -O3 -I../librender -I/usr/include/CEGUI/ -I/usr/include -I../../3rdparty/RakNet-3.6201/Source -I../../3rdparty/bullet-2.74/src -I../../3rdparty/zlib-1.2.3 -Ih:/Qt/FMOD/api/inc/ -Ih:/Qt/directx/include/
+	CFLAGS=-W -Wall -ansi  -O3 -I../librender \
+		-Ih:/Qt/CEGUI-SDK-0.7.5-mingw/cegui/include \
+		-I/usr/include -I../../3rdparty/RakNet-3.6201/Source -I../../3rdparty/bullet-2.74/src -I../../3rdparty/zlib-1.2.3 -Ih:/Qt/FMOD/api/inc/ -Ih:/Qt/directx/include/
 	LDFLAGS= -O3 -lm
 	AR = ar
 	ARFLAGS = rcs
