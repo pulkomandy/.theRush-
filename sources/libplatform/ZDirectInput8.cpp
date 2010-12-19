@@ -22,12 +22,14 @@
 #ifdef _WIN32
 
 #include "ZDirectInput8.h"
-#include "../libbase/ZString.h"
 
 #include "targetver.h"
 #include <shlobj.h>
 //#include <malloc.h>
+#include <math.h>
 
+#include "IInput.h"
+#include "../libbase/ZProfiler.h"
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -242,9 +244,50 @@ void ZDirectInput8::HandleMouse()
     if (m_pDIMouse) m_pDIMouse->Acquire();
 }
 
+
+/************************************************************************/
+//Method:    EnumAxesCallback
+//Purpose:    Joystick Axes Enumeration Callback
+/************************************************************************/
+bool __stdcall EnumAxesCallback(const DIDEVICEOBJECTINSTANCE *pdidoi, VOID *pContext)
+{
+    /*
+    HWND hDlg = (HWND)pContext;
+
+    DIPROPRANGE diprg; 
+    diprg.diph.dwSize       = sizeof(DIPROPRANGE); 
+    diprg.diph.dwHeaderSize = sizeof(DIPROPHEADER); 
+    diprg.diph.dwHow        = DIPH_BYID; 
+    diprg.diph.dwObj        = pdidoi->dwType; // Specify the enumerated axis
+    diprg.lMin              = -1000; 
+    diprg.lMax              = +1000; 
+    
+    // Set the range for the axis
+    if( FAILED( g_pDI8->m_pDIJoy->SetProperty( DIPROP_RANGE, &diprg.diph ) ) )
+        return DIENUM_STOP;
+*/
+    return DIENUM_CONTINUE;
+}
+
+/************************************************************************/
+//Method:    EnumJoysticksCallback
+//Purpose:    Joystick Enumeration Callback
+/************************************************************************/
+bool __stdcall EnumJoysticksCallback(const DIDEVICEINSTANCE *pdidInstance, VOID *pContext)
+{
+    ZDirectInput8 * pCtx = (ZDirectInput8*)pContext;
+    HRESULT hr;
+
+    hr = pCtx->m_pDI->CreateDevice( pdidInstance->guidInstance, &pCtx->m_pDIJoy, NULL );
+
+    if( FAILED(hr) ) 
+        return DIENUM_CONTINUE;
+
+    return DIENUM_STOP;
+}
 void ZDirectInput8::HandlePad()
 {
-	if( FAILED(m_pDI->EnumDevices( DI8DEVCLASS_GAMECTRL, (LPDIENUMDEVICESCALLBACKW)EnumJoysticksCallback, this, DIEDFL_ATTACHEDONLY ) ) )
+	if( FAILED(m_pDI->EnumDevices( DI8DEVCLASS_GAMECTRL, (LPDIENUMDEVICESCALLBACKA)EnumJoysticksCallback, this, DIEDFL_ATTACHEDONLY ) ) )
 		return ;
 
 	if (!m_pDIJoy) 
@@ -260,7 +303,7 @@ void ZDirectInput8::HandlePad()
 	if ( FAILED(m_pDIJoy->GetCapabilities(&m_DIDevCaps) ) )
 		return ;
 
-	if ( FAILED(m_pDIJoy->EnumObjects((LPDIENUMDEVICEOBJECTSCALLBACKW) EnumAxesCallback, (VOID*)mhWnd, DIDFT_AXIS ) ) )
+	if ( FAILED(m_pDIJoy->EnumObjects((LPDIENUMDEVICEOBJECTSCALLBACKA) EnumAxesCallback, (VOID*)mhWnd, DIDFT_AXIS ) ) )
 		return ;
 
 	if(m_pDIJoy) 
@@ -444,47 +487,6 @@ bool ZDirectInput8::MButtonUp(BYTE button)
         return TRUE;
 
     return FALSE;
-}
-
-/************************************************************************/
-//Method:    EnumAxesCallback
-//Purpose:    Joystick Axes Enumeration Callback
-/************************************************************************/
-bool __stdcall EnumAxesCallback(const DIDEVICEOBJECTINSTANCE *pdidoi, VOID *pContext)
-{
-    /*
-    HWND hDlg = (HWND)pContext;
-
-    DIPROPRANGE diprg; 
-    diprg.diph.dwSize       = sizeof(DIPROPRANGE); 
-    diprg.diph.dwHeaderSize = sizeof(DIPROPHEADER); 
-    diprg.diph.dwHow        = DIPH_BYID; 
-    diprg.diph.dwObj        = pdidoi->dwType; // Specify the enumerated axis
-    diprg.lMin              = -1000; 
-    diprg.lMax              = +1000; 
-    
-    // Set the range for the axis
-    if( FAILED( g_pDI8->m_pDIJoy->SetProperty( DIPROP_RANGE, &diprg.diph ) ) )
-        return DIENUM_STOP;
-*/
-    return DIENUM_CONTINUE;
-}
-
-/************************************************************************/
-//Method:    EnumJoysticksCallback
-//Purpose:    Joystick Enumeration Callback
-/************************************************************************/
-bool __stdcall EnumJoysticksCallback(const DIDEVICEINSTANCE *pdidInstance, VOID *pContext)
-{
-    ZDirectInput8 * pCtx = (ZDirectInput8*)pContext;
-    HRESULT hr;
-
-    hr = pCtx->m_pDI->CreateDevice( pdidInstance->guidInstance, &pCtx->m_pDIJoy, NULL );
-
-    if( FAILED(hr) ) 
-        return DIENUM_CONTINUE;
-
-    return DIENUM_STOP;
 }
 
 /************************************************************************/

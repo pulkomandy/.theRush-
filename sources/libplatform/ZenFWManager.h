@@ -25,9 +25,11 @@
 
 #include <vector>
 //#include "ZenFWLane.h"
-#include "../libbase/LibBase.h"
+#include "..\libbase\ZSmartPtr.h"
 #include "../libgame/ZLocalisation.h"
 #include "../libgame/ZProtoConfig.h"
+#include "..\libworld\ZPhysicWorldBullet.h"
+#include "..\libworld\ZScene.h"
 class ZenFWLane;
 class ZenFWManager;
 class ZenFWNode;

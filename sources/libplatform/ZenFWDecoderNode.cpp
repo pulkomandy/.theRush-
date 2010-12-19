@@ -18,11 +18,17 @@
 //
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
 #include <math.h>
 #include "zlib.h"
-#include "../libworld/libworld.h"
-#include "../libgame/libgame.h"
+
+#include "ZenFWDecoderNode.h"
+
+#include "ZenFWVRAMService.h"
+
+#include "..\libworld\ZMeshInstance.h"
+#include "..\libworld\ZImportExport.h"
+#include "..\libgame\ZRushTrack.h"
+#include "..\libplatform\ZSoundFMOD.h"
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 

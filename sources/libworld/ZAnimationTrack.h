@@ -11,7 +11,6 @@
 #define ZAnimationData_H
 
 // Includes ///////////////////////////////////////////////////////////////////////////////////////
-#include "../libbase/LibBase.h"
 #include "../libbase/ZFile.h"
 #include "ZKeyFrame.h"
 

@@ -33,7 +33,7 @@
 class ZRefCounter //: public PSM_BaseClass
 {
     private:
-        tlong        mRefCount;
+        long        mRefCount;
 
     public:
         // Default constructor.
@@ -51,7 +51,7 @@ class ZRefCounter //: public PSM_BaseClass
 				delete this;
 		}
 
-        tlong GetCount() { return mRefCount; }
+        long GetCount() { return mRefCount; }
 };
 #if 0
 template <class Type> class h
