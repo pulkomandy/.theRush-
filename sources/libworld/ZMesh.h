@@ -26,6 +26,7 @@
 #include "..\librender\IStreamArrays.h"
 #include "..\librender\IDisplayDevice.h"
 
+class ZPhysicTriMesh;
 
 DECLAREZCLASS(ZMesh);
 

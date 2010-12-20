@@ -22,10 +22,10 @@
 #ifndef ZENFWLOADERNODE_H__
 #define ZENFWLOADERNODE_H__
 
+#include "../libbase/ZMetaDatas.h"
+#include "ZenFWNode.h"
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-class ZenFWNode;
 
 class ZenFWLoaderNode;
 extern ZenFWLoaderNode *mGLoaderService;

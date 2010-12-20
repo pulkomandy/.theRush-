@@ -18,9 +18,17 @@
 //
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "ZenFWManager.h"
+#include "ZenFWNode.h"
+#include "ZenFWLane.h"
+#include "ZenFWLoaderNode.h"
+#include "ZenFWDecoderNode.h"
+#include "ZenFWVRAMService.h"
+#include "../libbase/ZLogger.h"
+#include "../libbase/ZTimer.h"
 
-///////////////////////////////////////////////////////////////////////////////////////////////////
+class IInput;
+class ZenFWRenderQueueBuilder;
 
 ZenFWManager *ZManager;
 IInput *GInputDevice = NULL;
@@ -108,7 +116,7 @@ void ZenFWManager::Init(int aForceNbCores)
 	mNnbCores = (mNnbCores>31)?31:mNnbCores;
 	mActiveThreads = (1<<mNnbCores)-1;
 
-	for (uint i=1;i<mNnbCores;i++)
+	for (unsigned int i=1;i<mNnbCores;i++)
 	{
 		mLanes.push_back(new ZenFWLane(i));
 	}
@@ -147,7 +155,7 @@ void ZenFWManager::Init(int aForceNbCores)
 
 void ZenFWManager::ResumeAllSuspendedLanes()
 {
-	for (uint i=1;i<mNnbCores;i++)
+	for (unsigned int i=1;i<mNnbCores;i++)
 	{
 		mLanes[i]->Resume();
 	}
@@ -162,7 +170,7 @@ void ZenFWManager::Uninit()
 		return;
 
 	Stop();
-	for (uint i = 0;i<mLanes.size();i++)
+	for (unsigned int i = 0;i<mLanes.size();i++)
 	{
 		delete mLanes[i];
 	}
@@ -205,7 +213,7 @@ void ZenFWManager::Run()
 	
 	LOG("Framework Manager running.\n");
 
-	for (uint i=0;i<mLanes.size();i++)
+	for (unsigned int i=0;i<mLanes.size();i++)
 	{
 		mLanes[i]->StartLane();
 	}
@@ -215,7 +223,7 @@ void ZenFWManager::Run()
 		if (GAskForQuit)
 			Stop();
 	}
-	for (uint i = 0;i<mLanes.size();i++)
+	for (unsigned int i = 0;i<mLanes.size();i++)
 	{
 		delete mLanes[i];
 	}
@@ -275,7 +283,7 @@ void ZenFWManager::DumpList()
 	for (;iter != mNodesDictionnary.end(); ++iter)
 	{
 		char tmps[512];
-		sprintf_s(tmps, 512, "  --- %s Frm %d Priority %d\n", (*iter)->GetName(), (*iter)->GetLastFrame(), (*iter)->GetPriority());
+		snprintf(tmps, 512, "  --- %s Frm %d Priority %d\n", (*iter)->GetName(), (*iter)->GetLastFrame(), (*iter)->GetPriority());
 		OutputDebugStringA(tmps);
 	}
 	OutputDebugStringA("\n");

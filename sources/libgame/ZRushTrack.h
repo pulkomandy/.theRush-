@@ -5,6 +5,7 @@
 #include "ZTrackBonus.h"
 
 class ZPhysicWorldBullet;
+class ZMeshInstance;
 
 DECLAREZCLASS(ZRushTrack);
 

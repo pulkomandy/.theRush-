@@ -18,9 +18,8 @@
 //
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
-//#include "ZenFWFramework.h"
-#include "../librender/librender.h"
+#include "ZenFWVRAMService.h"
+
 #include "../librender/GLee.h"
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -99,7 +98,7 @@ void ZenFWVRAMService::ProcessDatas()
 			IndexArrayJob_t mIAJob[16];
 			unsigned int nbEntries = mIndexArrayJobList.ListToArray((ZBaseClass **)mEntry, mIAJob, 16);
 
-			for (uint i=0;i<nbEntries;i++)
+			for (unsigned int i=0;i<nbEntries;i++)
 			{
 				const IndexArrayJob_t& iaj = mIAJob[i];
 				IIndexArray *iia = mEntry[i];
@@ -127,7 +126,7 @@ void ZenFWVRAMService::ProcessDatas()
 			VertexArrayJob_t mVAJob[16];
 			unsigned int nbEntries = mVertexArrayJobList.ListToArray((ZBaseClass **)mEntry, mVAJob, 16);
 
-			for (uint i=0;i<nbEntries;i++)
+			for (unsigned int i=0;i<nbEntries;i++)
 			{
 				const VertexArrayJob_t& vaj = mVAJob[i];
 				IVertexArray *iva = mEntry[i];
@@ -196,14 +195,14 @@ void ZenFWVRAMService::ProcessDatas()
 #ifdef WIN32
 			if (GDD->GetClassID() == ClassIDZDisplayDeviceDX9)
 			{
-				for (uint i=0;i<nbEntries;i++)
+				for (unsigned int i=0;i<nbEntries;i++)
 					((IDirect3DVertexBuffer9*)mVA[i])->Release();
 			}
 			else
 #endif
 			if (GDD->GetClassID() == ClassIDZDisplayDeviceOGL)
 			{
-				for (uint i=0;i<nbEntries;i++)
+				for (unsigned int i=0;i<nbEntries;i++)
 					glDeleteBuffers(1, (GLuint*)mVA[i]);
 			}
 		}
@@ -218,14 +217,14 @@ void ZenFWVRAMService::ProcessDatas()
 #ifdef WIN32
 			if (GDD->GetClassID() == ClassIDZDisplayDeviceDX9)
 			{
-				for (uint i=0;i<nbEntries;i++)
+				for (unsigned int i=0;i<nbEntries;i++)
 					((IDirect3DIndexBuffer9*)mIA[i])->Release();
 			}
 			else
 #endif
 			if (GDD->GetClassID() == ClassIDZDisplayDeviceOGL)
 			{
-				for (uint i=0;i<nbEntries;i++)
+				for (unsigned int i=0;i<nbEntries;i++)
 					glDeleteBuffers(1, (GLuint*)mIA[i]);
 			}
 			
@@ -254,7 +253,7 @@ void ZenFWVRAMService::ProcessDatas()
 			TextureUpdateJob_t mtuJob[16];
 			unsigned int nbEntries = mTextureUpdateJobList.ListToArray((ZBaseClass **)mEntry, mtuJob, 16);
 
-			for (uint i =0;i<nbEntries;i++)
+			for (unsigned int i =0;i<nbEntries;i++)
 			{
 
 #ifdef WIN32

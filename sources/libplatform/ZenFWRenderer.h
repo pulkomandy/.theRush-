@@ -1,8 +1,9 @@
 #ifndef ZENFWRENDERER_H__
 #define ZENFWRENDERER_H__
 
-#include "../libworld/libworld.h"
-#include "../libgame/libgame.h"
+#include "ZenFWNode.h"
+#include "../libworld/ZAtmosphere.h"
+#include "../libgame/IProtoGUI.h"
 
 class ZSoundManager;
 

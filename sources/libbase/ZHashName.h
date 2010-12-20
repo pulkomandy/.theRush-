@@ -1,11 +1,10 @@
 #ifndef ZHASHNAME_H__
 #define ZHASHNAME_H__
 
-#ifdef WIN32
-typedef unsigned __int32 HASH;
-#else
-typedef unsigned int HASH;
-#endif
+#include <inttypes.h>
+
+typedef uint32_t HASH;
+
 inline HASH GetHash(const char *pszStr)
 {
 	HASH ret = 0;

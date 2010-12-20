@@ -18,7 +18,13 @@
 //
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "ZenFWLoaderNode.h"
+#include "ZenFWDecoderNode.h"
+#include "../libbase/ZLogger.h"
+#include "..\libplatform\ZSoundFMOD.h"
+#include "..\libgame\ZRushTrack.h"
+#include "..\libworld\ZMeshInstance.h"
+
 #include <stdio.h>
 
 #ifdef WIN32
@@ -58,11 +64,7 @@ void ZenFWLoaderNode::Run()
 				
 
 				FILE *fp = NULL;
-	#ifdef WIN32
-				fopen_s(&fp, mBases[i]->GetName().c_str(), "rb");
-	#else
 				fp = fopen(mBases[i]->GetName().c_str(), "rb");
-	#endif
 				if (fp)
 				{
 	#ifdef WIN32

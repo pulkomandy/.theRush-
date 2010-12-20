@@ -2,8 +2,8 @@
 #define ZPHYSICTRIMESH_H__
 
 #include "..\libbase\ZSmartPtr.h"
+#include "..\libworld\ZMesh.h"
 
-class ZMesh;
 class btConcaveShape;
 
 class ZPhysicTriMesh : public ZBaseClass

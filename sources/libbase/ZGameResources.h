@@ -22,8 +22,6 @@
 #ifndef ZGAMERESOURCES_H__
 #define ZGAMERESOURCES_H__
 
-#include "../librender/librender.h"
-#include "../libworld/libworld.h"
 #include "../libworld/ZScene.h"
 #include "..\libworld\ZTransform.h"
 #include "..\libworld\ZPhysicWorldBullet.h"

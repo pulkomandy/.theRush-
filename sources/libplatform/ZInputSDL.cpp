@@ -19,18 +19,15 @@
 //
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
-//#include "../LibBase/LibBase.h"
+#include "IInput.h"
+
+#include <math.h>
 
 #ifdef LINUX
 #define __int64 long
 #endif
 
-#if (defined(WIN32)||defined(MAC_OS))
-#include "SDL.h"
-#else
 #include <SDL/SDL.h>
-#endif
 
 #define KEYDOWN(name, key) (name[key] & 0xFF)
 #define KEYUP(name, key) (!(name[key] & 0xFF))

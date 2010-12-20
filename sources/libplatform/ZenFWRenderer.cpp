@@ -1,5 +1,9 @@
-#include "stdafx.h"
-#include "librender.h"
+#include "ZenFWRenderer.h"
+#include "ZSoundFMOD.h"
+#include "ZenFWVRAMService.h"
+#include "../librender/ZRenderQueue.h"
+#include "IInput.h"
+#include "..\libbase\ZTimer.h"
 
 ZenFWRenderer::~ZenFWRenderer()
 {

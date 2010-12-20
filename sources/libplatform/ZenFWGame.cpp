@@ -1,5 +1,10 @@
-#include "stdafx.h"
-#include "librender.h"
+#include "ZenFWGame.h"
+#include "IInput.h"
+#include "../libgame/ZRushGameContent.h"
+#include "../libgame/ZRushTrack.h"
+#include "../libgame/ZRushGame.h"
+#include "../libgame/CameraMotion.h"
+#include "../libbase/ZTimer.h"
 
 ZenFWGame *GGame = NULL;
 

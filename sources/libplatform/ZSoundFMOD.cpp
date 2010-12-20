@@ -17,8 +17,13 @@
 //
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
-#include "../libbase/LibBase.h"
+#include "ZSoundFMOD.h"
+
+#include "../libbase/ZLogger.h"
+#include "../libbase/ZFile.h"
+#include "../libbase/ZProfiler.h"
+#include "../libbase/ZTimer.h"
+#include "..\libworld\ZCamera.h"
 
 #include <fmod.hpp>
 #include <fmod_errors.h>
@@ -48,7 +53,7 @@ void ERRCHECK(FMOD_RESULT result)
 }
 
 
-FMOD_RESULT F_CALLBACK FMODopen(const char *name, int unicode, unsigned int *filesize, void **handle, void **userdata)
+FMOD_RESULT F_CALLBACK FMODopen(const char *name, int /*unicode*/, unsigned int *filesize, void **handle, void **userdata)
 {
     if (name)
     {
@@ -177,7 +182,7 @@ void	ZSoundManager::Init()
     result = fsystem->init(100, FMOD_INIT_NORMAL, 0);
     ERRCHECK(result);
 
-    result = fsystem->setFileSystem(FMODopen, FMODclose, FMODread, FMODseek, 2048);
+    result = fsystem->setFileSystem(&FMODopen, &FMODclose, &FMODread, &FMODseek, NULL, NULL, 2048);
     ERRCHECK(result);
 
     /*
@@ -411,7 +416,7 @@ float	ZSoundInstance::getPlaybackTime()
 
 
 
-void	ZSoundInstance::play(const bool aFlags)
+void	ZSoundInstance::play(const bool /*aFlags*/)
 {
 	if (isPlaying())
 		return;

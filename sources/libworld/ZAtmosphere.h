@@ -1,6 +1,9 @@
 #ifndef ZATMOSPHERE_H__
 #define ZATMOSPHERE_H__
 
+#include "../libworld/ZMeshInstance.h"
+#include "../libbase/ZBaseMaths.h"
+
 DECLAREZCLASS(ZAtmosphere);
 
 class ZAtmosphere : public ZBaseClass

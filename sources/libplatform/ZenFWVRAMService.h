@@ -26,7 +26,7 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include "ZenFWManager.h"
-//#include "../ZDatasProcessor.h"
+#include "..\libbase\ZGameResources.h"
 
 class ZenFWVRAMService;
 extern ZenFWVRAMService *VRAMService;

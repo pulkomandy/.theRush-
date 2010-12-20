@@ -32,6 +32,7 @@ struct ZNMSG_UseBonus;
 class ZMine;
 class ZMissile;
 class ZExplosion;
+class ZHUDMeshModifier;
 
 class ZRushGame : public ZGame, public ZGameEntitiesManager
 {

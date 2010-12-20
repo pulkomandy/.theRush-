@@ -1,6 +1,9 @@
 #ifndef ZENFWSDLWINDOW_H__
 #define ZENFWSDLWINDOW_H__
 
+#include "ZenFWNode.h"
+#include "IInput.h"
+
 #include <SDL/SDL.h>
 void InjectChar(unsigned long pWParam);
 void InjectKeyDown(unsigned long pWParam);

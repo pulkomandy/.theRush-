@@ -1,5 +1,12 @@
-#include "stdafx.h"
-#include "librender.h"
+#include "ZenFWViewer.h"
+
+#include "IInput.h"
+#include "..\libgame\ZRushTrack.h"
+#include "..\libgame\ZRushGame.h"
+#include "..\libworld\ZRigidBodyBullet.h"
+#include "ZenFWLoaderNode.h"
+#include "../libworld/ZAtmosphere.h"
+#include "../libbase/ZTimer.h"
 
 ZenFWViewer *GViewer = NULL;
 
@@ -144,7 +151,7 @@ void ZenFWViewer::Run()
 	{
 		tstring dir;
 		unsigned long imgcnt = (unsigned long)(gTimer.GetTime()* 100.f);
-		dir.Printf("%s\\TheRush_Picture_%d", GetPictureDirectoy(), imgcnt );
+		dir.Printf("%s\\TheRush_Picture_%d", GetPictureDirectory(), imgcnt );
 
 		GDD->CaptureColorBuffer(dir.c_str());
 	}

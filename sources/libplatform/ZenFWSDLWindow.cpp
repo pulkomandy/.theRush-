@@ -1,12 +1,21 @@
-#include "stdafx.h"
+#include "ZenFWSDLWindow.h"
+
+#include "../libbase/ZLogger.h"
+#include "..\libgame\IProtoGUI.h"
+
 #ifdef WIN32
+#include "targetver.h"
+#include <windows.h>
+#include <windef.h>
+
+#include <SDL/SDL.h>
 #include "CEGUI.h"
 
 
 inline std::string ScancodeToString(int scancode)
 {
    std::string value;
-   BYTE keyboardState[256];
+   uint8_t keyboardState[256];
    unsigned char buffer[2];
    buffer[0] = buffer[1] = '\0';
 

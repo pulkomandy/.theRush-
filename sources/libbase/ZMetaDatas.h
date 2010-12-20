@@ -1,6 +1,10 @@
 #ifndef ZMETADATAS_H__
 #define ZMETADATAS_H__
 
+#include "ZHashName.h"
+
+#include <map>
+
 typedef struct MetaData_t
 {
 	enum DataType

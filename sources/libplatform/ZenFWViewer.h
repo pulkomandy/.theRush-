@@ -1,6 +1,10 @@
 #ifndef ZENFWVIEWER_H__
 #define ZENFWVIEWER_H__
 
+#include "ZenFWNode.h"
+
+#include "..\libbase\ZGameResources.h"
+
 class ZMesh;
 class ZenFWViewer;
 extern ZenFWViewer *GViewer;

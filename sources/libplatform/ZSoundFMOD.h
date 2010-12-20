@@ -20,6 +20,9 @@
 #ifndef ZSOUNDFMOD_LIB_H_
 #define ZSOUNDFMOD_LIB_H_
 
+#include "..\libbase\ZSerializator.h"
+#include "..\libworld\ZTransform.h"
+
 #include <fmod.hpp>
 
 
