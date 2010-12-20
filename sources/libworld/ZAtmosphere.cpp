@@ -1,4 +1,6 @@
-#include "stdafx.h"
+#include "ZAtmosphere.h"
+
+#include "ZMeshBuilder.h"
 
 ZAtmosphere *gAtmosphere = NULL;
 

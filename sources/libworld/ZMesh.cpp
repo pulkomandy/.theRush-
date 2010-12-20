@@ -18,8 +18,10 @@
 //
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "ZMesh.h"
+
 #include "MiniBall/Sphere.h"
+#include "../libbase/ZLogger.h"
 
 IIndexArray *mPreviousIA = NULL;
 IVertexArray *mPreviousVA = NULL;
@@ -59,15 +61,15 @@ bool ZMesh::PickRay(const tvector3 & origin, const tvector3 &dir, tvector3& norm
                 float aNT = 2.0f;
 				bool bCol = false;
 
-                uint8 * aVts = (uint8 *)mVertexArray->Lock(VAL_READONLY);
-                uint16 *inds = (uint16*)mIndexArray->Lock(VAL_READONLY);
+                uint8_t * aVts = (uint8_t *)mVertexArray->Lock(VAL_READONLY);
+                uint16_t *inds = (uint16_t*)mIndexArray->Lock(VAL_READONLY);
 				for (unsigned int asbm = 0;asbm<mSubMeshes.size();asbm++)
 				{
                 for (unsigned int i=0;i<mSubMeshes[asbm].mCount/3;i++)
                 {
-                    uint8 *aVts1 = aVts + mVertexArray->GetVertexSize()*inds[i*3 + mSubMeshes[asbm].mStart];
-                    uint8 *aVts2 = aVts + mVertexArray->GetVertexSize()*inds[i*3 + 1 + mSubMeshes[asbm].mStart];
-                    uint8 *aVts3 = aVts + mVertexArray->GetVertexSize()*inds[i*3 + 2 + mSubMeshes[asbm].mStart];
+                    uint8_t *aVts1 = aVts + mVertexArray->GetVertexSize()*inds[i*3 + mSubMeshes[asbm].mStart];
+                    uint8_t *aVts2 = aVts + mVertexArray->GetVertexSize()*inds[i*3 + 1 + mSubMeshes[asbm].mStart];
+                    uint8_t *aVts3 = aVts + mVertexArray->GetVertexSize()*inds[i*3 + 2 + mSubMeshes[asbm].mStart];
                     /*
                     aVts2 
                     tvector3* vert2 = (tvector3*)aVts;
@@ -128,7 +130,7 @@ bool ZMesh::PickRay(const tvector3 & origin, const tvector3 &dir, tvector3& norm
                 float aNT = 2.0f;
 				bool bCol = false;
 
-                uint8 * aVts = (uint8 *)mVertexArray->Lock(VAL_READONLY);
+                uint8_t * aVts = (uint8_t *)mVertexArray->Lock(VAL_READONLY);
                 for (unsigned int i=0;i<mVertexArray->GetVertexCount()/3;i++)
                 {
                     tvector3* vert1 = (tvector3*)aVts;
@@ -186,24 +188,24 @@ This function assumes that indices are not relevant as input.
 Each triangle is composed of sequential 3 vertices.
 So, implicitely, there will be vtcount/3 triangles.
 */
-void ZMesh::RemoveRedundancy(void *pVT, int vtSize, int vtCount, uint16 *pind, int* nind, void *pNewVT, int *pNewVtNb)
+void ZMesh::RemoveRedundancy(void *pVT, int vtSize, int vtCount, uint16_t *pind, int* nind, void *pNewVT, int *pNewVtNb)
 {
     unsigned int i;
-    uint8 *vts = (uint8 *)pVT;
+    uint8_t *vts = (uint8_t *)pVT;
     int totalRedundancy = 0;
-    uint16 *nn = (uint16*)malloc(sizeof(uint16) * vtCount);
-    uint16 *nnRec = (uint16*)malloc(sizeof(uint16) * vtCount);
+    uint16_t *nn = (uint16_t*)malloc(sizeof(uint16_t) * vtCount);
+    uint16_t *nnRec = (uint16_t*)malloc(sizeof(uint16_t) * vtCount);
 
     bool *bKeepVt = (bool*)malloc(sizeof(bool) * vtCount);
     memset(bKeepVt, 1, sizeof(bool) * vtCount);
     
-    for (i=0;i<(uint)vtCount;i++)
+    for (i=0;i<(unsigned int)vtCount;i++)
     {
         nn[i] = i;
     }
     int recIdx = 0;
 
-    for (i=0;i<(uint)vtCount;i++)
+    for (i=0;i<(unsigned int)vtCount;i++)
     {
         int cnt = 0;
 
@@ -231,10 +233,10 @@ void ZMesh::RemoveRedundancy(void *pVT, int vtSize, int vtCount, uint16 *pind, i
     LOG("Total Vertex Redundancy = %d on %d vertices -> %d vertices.\r\n", totalRedundancy, vtCount, vtCount-totalRedundancy);
     // --
     *pNewVtNb = vtCount-totalRedundancy;
-    uint8 *tcpy = (uint8*)pNewVT;
-	memcpy( pind, nnRec, sizeof(uint16)*vtCount);
+    uint8_t *tcpy = (uint8_t*)pNewVT;
+	memcpy( pind, nnRec, sizeof(uint16_t)*vtCount);
 	
-    for (i=0;i<(uint)vtCount;i++)
+    for (i=0;i<(unsigned int)vtCount;i++)
     {
         if (bKeepVt[i])
         {
@@ -254,24 +256,24 @@ void ZMesh::RemoveRedundancy(void *pVT, int vtSize, int vtCount, uint16 *pind, i
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-void ZMesh::RemoveRedundancy2(void *pVTSrc, int nbVTSrc, int vtSize, uint16 *pind, int nind, void *pVTDst, int *nbVTDst)
+void ZMesh::RemoveRedundancy2(void *pVTSrc, int nbVTSrc, int vtSize, uint16_t *pind, int nind, void *pVTDst, int *nbVTDst)
 {
 	unsigned int i;
-    uint8 *vts = (uint8 *)pVTSrc;
+    uint8_t *vts = (uint8_t *)pVTSrc;
     int totalRedundancy = 0;
 
-    uint16 *nnRec = (uint16*)malloc(sizeof(uint16) * nbVTSrc);
+    uint16_t *nnRec = (uint16_t*)malloc(sizeof(uint16_t) * nbVTSrc);
 
     bool *bKeepVt = (bool*)malloc(sizeof(bool) * nbVTSrc);
     memset(bKeepVt, 1, sizeof(bool) * nbVTSrc);
 
     int recIdx = 0;
-    for (i=0;i<(uint)nbVTSrc;i++)
+    for (i=0;i<(unsigned int)nbVTSrc;i++)
     {
 		nnRec[i] = i;
 	}
 
-    for (i=0;i<(uint)nbVTSrc;i++)
+    for (i=0;i<(unsigned int)nbVTSrc;i++)
     {
         int cnt = 0;
 
@@ -298,13 +300,13 @@ void ZMesh::RemoveRedundancy2(void *pVTSrc, int nbVTSrc, int vtSize, uint16 *pin
     LOG("Total Vertex Redundancy = %d on %d vertices -> %d vertices.\r\n", totalRedundancy, nbVTSrc, nbVTSrc-totalRedundancy);
     // --
     *nbVTDst = nbVTSrc-totalRedundancy;
-    uint8 *tcpy = (uint8*)pVTDst;
+    uint8_t *tcpy = (uint8_t*)pVTDst;
 	//memcpy( pind, nnRec, sizeof(uint16)*vtCount);
 
 	
 	// compile vertex
 	recIdx = 0;
-    for (i=0;i<(uint)nbVTSrc;i++)
+    for (i=0;i<(unsigned int)nbVTSrc;i++)
     {
         if (bKeepVt[i]) // if we keep it, we stack it and set proper nnRec
         {
@@ -342,7 +344,7 @@ void ZMesh::Explode()
 	unsigned char *ptrd = (unsigned char *)normvt->Lock(VAL_WRITE);
 	unsigned char *ptrs = (unsigned char *)mVertexArray->Lock(VAL_READONLY);
 	unsigned short *pind = (unsigned short *)mIndexArray->Lock(VAL_READONLY);
-	for (uint i=0;i<mIndexArray->GetIndexCount();i++)
+	for (unsigned int i=0;i<mIndexArray->GetIndexCount();i++)
 	{
 		memcpy(ptrd+(i*mVertexArray->GetVertexSize()), 
 			ptrs+(pind[i]*mVertexArray->GetVertexSize()), 
@@ -479,7 +481,7 @@ void ZMesh::GetAdjacentFaces(unsigned int aFaceNb, unsigned int &face1, unsigned
 	ptrs = ptrs2;
 	
 	int ptav=0;
-	for (uint i=0;i<mVertexArray->GetVertexCount();i+=3)
+	for (unsigned int i=0;i<mVertexArray->GetVertexCount();i+=3)
 	{
 		if (i != (aFaceNb*3))
 		{
@@ -541,7 +543,7 @@ void ZMesh::GetAdjacentFaces(unsigned int aFaceNb, unsigned int &face1, unsigned
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-inline void StackVertexData(float **pSrc, float **pDst, uint currentChunk, uint chunkFloatSize, uint srcFormat, uint dstFormat)
+inline void StackVertexData(float **pSrc, float **pDst, unsigned int currentChunk, unsigned int chunkFloatSize, unsigned int srcFormat, unsigned int dstFormat)
 {
 	if (dstFormat&currentChunk)
 	{
@@ -564,19 +566,19 @@ inline void StackVertexData(float **pSrc, float **pDst, uint currentChunk, uint 
 	}
 }
 
-bool ZMesh::BuildMerged(std::vector<ZMesh*>& aMeshList, uint aVAFormat)
+bool ZMesh::BuildMerged(std::vector<ZMesh*>& aMeshList, unsigned int aVAFormat)
 {
 	if (aMeshList.empty())
 		return false;
 
 	// check types
 	bool bHasIndex = (aMeshList[0]->GetIndexBuffer() != NULL);
-	uint8 prim = aMeshList[0]->GetPrimitive();
+	uint8_t prim = aMeshList[0]->GetPrimitive();
 	
-	uint nbVertices = aMeshList[0]->GetVertexBuffer()->GetVertexCount();
-	uint nbIndices = (aMeshList[0]->GetIndexBuffer() != NULL)?aMeshList[0]->GetIndexBuffer()->GetIndexCount():0;
+	unsigned int nbVertices = aMeshList[0]->GetVertexBuffer()->GetVertexCount();
+	unsigned int nbIndices = (aMeshList[0]->GetIndexBuffer() != NULL)?aMeshList[0]->GetIndexBuffer()->GetIndexCount():0;
 
-	for (uint i = 1;i<aMeshList.size();i++)
+	for (unsigned int i = 1;i<aMeshList.size();i++)
 	{
 		if (aMeshList[i]->GetPrimitive() != prim)
 			return false;
@@ -615,28 +617,28 @@ bool ZMesh::BuildMerged(std::vector<ZMesh*>& aMeshList, uint aVAFormat)
 	}
 
 	// append vertex array
-	std::vector<uint> mVTDecals;
+	std::vector<unsigned int> mVTDecals;
 	mVTDecals.resize(aMeshList.size());
-	uint aDecal = 0;
+	unsigned int aDecal = 0;
 
 	tvector3 vMin = aMeshList[0]->GetBVolume().GetBoxMin();
 	tvector3 vMax = aMeshList[0]->GetBVolume().GetBoxMax();
 
 	float *pDst = (float*)nvt->Lock(VAL_WRITE);
 	//float *pDstSvg = pDst;
-	for (uint i = 0;i<aMeshList.size();i++)
+	for (unsigned int i = 0;i<aMeshList.size();i++)
 	{
 		mVTDecals[i] = aDecal;
 		
 		IVertexArray *pVertAS = aMeshList[i]->GetVertexBuffer();
 		float *pSrc = (float*)pVertAS->Lock(VAL_READONLY);
 
-		uint srcFormat = pVertAS->GetFormat();
+		unsigned int srcFormat = pVertAS->GetFormat();
 
 		vMin.Minimize(aMeshList[i]->GetBVolume().GetBoxMin());
 		vMax.Maximize(aMeshList[i]->GetBVolume().GetBoxMax());
 
-		for (uint j = 0;j<aMeshList[i]->GetVertexBuffer()->GetVertexCount();j++)
+		for (unsigned int j = 0;j<aMeshList[i]->GetVertexBuffer()->GetVertexCount();j++)
 		{
 			// VAF_XYZ = 1,
 			StackVertexData(&pSrc, &pDst, VAF_XYZ, 3, srcFormat, aVAFormat);
@@ -679,11 +681,11 @@ bool ZMesh::BuildMerged(std::vector<ZMesh*>& aMeshList, uint aVAFormat)
 	{
 		unsigned short *pDstI = (unsigned short*)nin->Lock(VAL_WRITE);
 		//unsigned short *pDstISvg = pDstI;
-		for (uint i = 0;i<aMeshList.size();i++)
+		for (unsigned int i = 0;i<aMeshList.size();i++)
 		{
 			unsigned short *pSrcI = (unsigned short*)aMeshList[i]->GetIndexBuffer()->Lock(VAL_READONLY);
 
-			for (uint j = 0;j<aMeshList[i]->GetIndexBuffer()->GetIndexCount();j++)
+			for (unsigned int j = 0;j<aMeshList[i]->GetIndexBuffer()->GetIndexCount();j++)
 			{
 				*pDstI++ = *pSrcI++ + mVTDecals[i];
 			}

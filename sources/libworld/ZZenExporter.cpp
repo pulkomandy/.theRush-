@@ -18,7 +18,16 @@
 //
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "ZImportExport.h"
+#include "../libbase/ZFile.h"
+#include "ZTransform.h"
+#include "ZMeshInstance.h"
+#include "ZAnimation.h"
+#include "../libbase/ZGameResources.h"
+
+class ZMesh;
+class IVertexArray;
+class IIndexArray;
 
 /*
 #include "ZAnimation.h"
@@ -146,13 +155,13 @@ void ZZenExporter::SaveTransform(ZTransform *ptr)
 		{
 			mMeshRep.insert(std::make_pair(pMesh,pMesh));
 			// save it
-			uint8 prim = pMesh->GetPrimitive();
+			uint8_t prim = pMesh->GetPrimitive();
 			mFile << prim;
 
 			ZBoundingVolume & pbv = pMesh->GetBVolume();
 			mFile << pbv;
-			uint32 aStart, aCount;
-			for (uint i=0;i<nbsu;i++)
+			uint32_t aStart, aCount;
+			for (unsigned int i=0;i<nbsu;i++)
 			{
 				pMesh->GetSubMesh(i, &aStart, &aCount);
 				mFile << aStart;
@@ -169,9 +178,9 @@ void ZZenExporter::SaveTransform(ZTransform *ptr)
 			if (!bFound)
 			{
 
-				uint32 vaformat = pva->GetFormat();
-				uint32 vasize = pva->GetVertexSize();
-				uint32 vacount = pva->GetVertexCount();
+				uint32_t vaformat = pva->GetFormat();
+				uint32_t vasize = pva->GetVertexSize();
+				uint32_t vacount = pva->GetVertexCount();
 				mFile << vaformat;
 				mFile << vasize;
 				mFile << vacount;
@@ -198,7 +207,7 @@ void ZZenExporter::SaveTransform(ZTransform *ptr)
 
 				if (!bFound)
 				{
-					uint32 iacount = pia->GetIndexCount();
+					uint32_t iacount = pia->GetIndexCount();
 					mFile << iacount;
 					mFile.Write(pia->Lock(VAL_READONLY), iacount*sizeof(unsigned short));
 					pia->Unlock();
@@ -209,20 +218,20 @@ void ZZenExporter::SaveTransform(ZTransform *ptr)
 
 		}
 		// material
-		for (uint i=0;i<nbsu;i++)
+		for (unsigned int i=0;i<nbsu;i++)
 		{
 			ZMaterial *pMat = pmi->GetMaterial(i);
 			mFile.Write(pMat->getEffect()->GetName());
 			const std::vector<smartptr<ZTexture> >& texl = pMat->getTextureArray();
 			unsigned short nbt = texl.size();
 			mFile << nbt;
-			for (uint j=0;j<nbt;j++)
+			for (unsigned int j=0;j<nbt;j++)
 			{
 				mFile.Write(texl[j]->GetName());
 			}
 			unsigned short nbp = pMat->getNumParams();
 			mFile << nbp;
-			for (uint j=0;j<nbp;j++)
+			for (unsigned int j=0;j<nbp;j++)
 			{
 				FFxSetParam *pms = pMat->getParam(j);
 				tvector4 pval;
@@ -268,7 +277,7 @@ void ZZenExporter::SaveTransform(ZTransform *ptr)
 
 
 	// childs
-	uint nbChilds = ptr->mChilds.size();
+	unsigned int nbChilds = ptr->mChilds.size();
 	mFile << nbChilds;
 	std::list<smartptr<ZTransform> >::iterator iter = ptr->mChilds.begin();
 	for (; iter != ptr->mChilds.end(); ++iter)
@@ -292,7 +301,7 @@ bool ZZenExporter::Export(const char *szPath, ZGameResources *pGR)
 	mFile << nbTr;
 
 	// Transforms
-	for (uint i =0;i<nbTr; i++)
+	for (unsigned int i =0;i<nbTr; i++)
 	{
 		ZTransform *ptr = mTransToSer[i];
 		
@@ -344,14 +353,14 @@ void ZZenImporter::LoadTransform(ZMeshInstance *pFirst, ZTransform *pParent, ZGa
 			pmi->SetMesh( pMesh );
 			mMeshRep.insert(std::make_pair(mID, pMesh));
 			// load it
-			uint8 prim;
+			uint8_t prim;
 			mFile >> prim;
 			pMesh->SetPrimitive(prim);
 
 			ZBoundingVolume & pbv = pMesh->GetBVolume();
 			mFile >> pbv;
-			uint32 aStart, aCount;
-			for (uint i=0;i<nbsu;i++)
+			uint32_t aStart, aCount;
+			for (unsigned int i=0;i<nbsu;i++)
 			{
 				mFile >> aStart;
 				mFile >> aCount;
@@ -366,9 +375,9 @@ void ZZenImporter::LoadTransform(ZMeshInstance *pFirst, ZTransform *pParent, ZGa
 			}
 			else
 			{
-				uint32 vaformat;
-				uint32 vasize;
-				uint32 vacount;
+				uint32_t vaformat;
+				uint32_t vasize;
+				uint32_t vacount;
 				mFile >> vaformat;
 				mFile >> vasize;
 				mFile >> vacount;
@@ -392,7 +401,7 @@ void ZZenImporter::LoadTransform(ZMeshInstance *pFirst, ZTransform *pParent, ZGa
 				else
 				{
 					IIndexArray *pia = GDD->NewIndexArray();
-					uint32 iacount;
+					uint32_t iacount;
 					mFile >> iacount;
 					pia->Init(iacount);
 					mFile.Read(pia->Lock(VAL_WRITE), iacount*sizeof(unsigned short));
@@ -404,7 +413,7 @@ void ZZenImporter::LoadTransform(ZMeshInstance *pFirst, ZTransform *pParent, ZGa
 			}
 		}
 		// material
-		for (uint i=0;i<nbsu;i++)
+		for (unsigned int i=0;i<nbsu;i++)
 		{
 			ZMaterial *pMat = pmi->GetMaterial(i);
 			tstring effectName;
@@ -412,7 +421,7 @@ void ZZenImporter::LoadTransform(ZMeshInstance *pFirst, ZTransform *pParent, ZGa
 			pMat->setEffect(DirectLoad(effectName.c_str()));
 			unsigned short nbt;
 			mFile >> nbt;
-			for (uint j=0;j<nbt;j++)
+			for (unsigned int j=0;j<nbt;j++)
 			{
 				tstring texname;
 				mFile.Read(texname);
@@ -421,7 +430,7 @@ void ZZenImporter::LoadTransform(ZMeshInstance *pFirst, ZTransform *pParent, ZGa
 			unsigned short nbp;
 			mFile >> nbp;
 			pMat->connectEffect(true, false);
-			for (uint j=0;j<nbp;j++)
+			for (unsigned int j=0;j<nbp;j++)
 			{
 				FFxSetParam *pms = pMat->getParam(j);
 				tvector4 pval;
@@ -477,9 +486,9 @@ void ZZenImporter::LoadTransform(ZMeshInstance *pFirst, ZTransform *pParent, ZGa
 		ptr->SetParent(pParent);
 
 	// childs
-	uint nbChilds;
+	unsigned int nbChilds;
 	mFile >> nbChilds;
-	for (uint i=0;i<nbChilds;i++)
+	for (unsigned int i=0;i<nbChilds;i++)
 	{
 		LoadTransform( pFirst, ptr, pGR );
 	}
@@ -503,7 +512,7 @@ bool ZZenImporter::Import(const char *szPath, const char *pBuf,
 	unsigned int nbTr;
 	mFile >> nbTr;
 
-	for (uint i =0;i<nbTr; i++)
+	for (unsigned int i =0;i<nbTr; i++)
 	{
 		LoadTransform(pFirst, NULL, pGR);
 	}

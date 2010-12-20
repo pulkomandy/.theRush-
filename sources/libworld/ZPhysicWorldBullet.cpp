@@ -1,10 +1,12 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-#include "stdafx.h"
 #include "ZPhysicWorldBullet.h"
-#include "../libgame/libgame.h"
-#include "../libplatform/libplatform.h"
+
+#include "ZPhysicTriMeshInstance.h"
+#include "ZRigidBodyBullet.h"
+#include "../libbase/ZProfiler.h"
+#include "../libgame/ZRushGame.h"
 
 BEGIN_SERIALIZATION(ZPhysicWorldBullet)
 END_SERIALIZATION()
@@ -519,7 +521,7 @@ void ZPhysicWorldBullet::Delete(ZRigidBody *pModel)
 
 
 
-	ZPhysicTriMeshInstance* ZPhysicWorldBullet::AddPhysicModelToWorld(ZPhysicTriMesh * nMesh, ZBaseClass *pBase, unsigned int aFilterGroup = 1, unsigned int aFilterMask = 255, tmatrix *pMat = NULL)
+	ZPhysicTriMeshInstance* ZPhysicWorldBullet::AddPhysicModelToWorld(ZPhysicTriMesh * nMesh, ZBaseClass *pBase, unsigned int aFilterGroup, unsigned int aFilterMask, tmatrix *pMat)
 	{
 		ZPhysicTriMeshInstance *nTMInstance = (ZPhysicTriMeshInstance*)_New(ZPhysicTriMeshInstance);
 
@@ -539,7 +541,7 @@ void ZPhysicWorldBullet::Delete(ZRigidBody *pModel)
 		return nTMInstance;
 	}
 
-	virtual void ZPhysicWorldBullet::RemoveCollisionMesh(ZPhysicTriMeshInstance* pMesh)
+	void ZPhysicWorldBullet::RemoveCollisionMesh(ZPhysicTriMeshInstance* pMesh)
 	{
 		JobEntry_t entry;
 		entry.mType = DELETE_COLLISION_MESH_IW;

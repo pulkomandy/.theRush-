@@ -18,7 +18,8 @@
 //
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "ZLight.h"
+#include "../libbase/ZFile.h"
 
 BEGIN_SERIALIZATION(ZLight)
 END_SERIALIZATION()

@@ -1,6 +1,10 @@
 #ifndef ZMESHMODIFIERCONTAINER_H__
 #define ZMESHMODIFIERCONTAINER_H__
 
+#include "../libbase/ZSmartPtr.h"
+#include "../libbase/ZBaseClass.h"
+#include "../libbase/ZSerializator.h"
+
 class ZMeshModifier : public ZBaseClass
 {
 public:

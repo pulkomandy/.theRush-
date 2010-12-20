@@ -18,15 +18,21 @@
 //
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "ZImportExport.h"
 
-#include "../libbase/LibBase.h"
-#include "../librender/librender.h"
-//#include "../libplatform/ZenFWVRAMService.h"
+#include "../libbase/ZBaseMaths.h"
+#include "../libbase/ZLogger.h"
+#include "ZTexture.h"
+#include "ZMesh.h"
+#include "ZMeshInstance.h"
+#include "ZCamera.h"
+#include "ZAnimation.h"
+#include "../libbase/ZGameResources.h"
 
-
+#include <string>
 #include "tinyxml.h"
 
+class ZTransform;
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 /*
@@ -106,7 +112,7 @@ protected:
 
     typedef struct mixArray
     {
-        mixArray(std::vector<float>* afloats, uint aNbToCopy, uint aoffset, uint astride, uint VAF)
+        mixArray(std::vector<float>* afloats, unsigned int aNbToCopy, unsigned int aoffset, unsigned int astride, unsigned int VAF)
         {
             mfloats = afloats;
             mNbToCopy = aNbToCopy;
@@ -116,10 +122,10 @@ protected:
         }
 
         std::vector<float>* mfloats;
-        uint mNbToCopy;
-        uint offset;
-        uint stride;
-        uint mVAF;
+        unsigned int mNbToCopy;
+        unsigned int offset;
+        unsigned int stride;
+        unsigned int mVAF;
     } mixArray;
 
 
@@ -428,7 +434,7 @@ void ZImporterCollada::LoadEffects(TiXmlElement* pElt, const char *szPath)
 						zapsl.Replace("%5C","\\");
 
 #ifdef WIN32
-						sprintf_s(tmpfxurl, 512, szurl);
+						snprintf(tmpfxurl, 512, szurl);
 #else
 						snprintf(tmpfxurl, 512, szurl);
 #endif
@@ -521,7 +527,7 @@ void ReadUI16Array(std::vector<unsigned short>& array, tstring &str)
     const char *psz = str.c_str();
     for (unsigned int i=0;i<array.size(); i++)
     {
-        array[i] = (uint16)atof(psz);
+        array[i] = (uint16_t)atof(psz);
         psz+=(strlen(psz)+1);
     }
 }
@@ -536,8 +542,8 @@ void ReadUndefinedUI16Array(std::vector<unsigned short>& array, tstring &str)
 
     while (idx>0) //for (unsigned int i=0;i<array.size(); i++)
     {
-        array.push_back((uint16)atof(psz));
-        uint32 clulen = (uint32)(strlen(psz)+1);
+        array.push_back((uint16_t)atof(psz));
+        uint32_t clulen = (uint32_t)(strlen(psz)+1);
         idx -= clulen;
         psz += clulen;
     }
@@ -700,7 +706,7 @@ void ZImporterCollada::LoadGeometry(TiXmlElement* pElt)
 	    for(;pMeshElem;pMeshElem = pMeshElem->NextSiblingElement("mesh"))
 	    {
             // per mesh data
-            std::vector<uint8> mixVT;
+            std::vector<uint8_t> mixVT;
             IVertexArray * pVA = GDD->NewVertexArray();
 			DPVA(pVA);
             ZMesh *mgMesh = (ZMesh*)_New(ZMesh);
@@ -709,7 +715,7 @@ void ZImporterCollada::LoadGeometry(TiXmlElement* pElt)
             mMI->mColladaMeshes.insert(std::make_pair(geometryID, mgMesh));
 
             tvector3 aBMin, aBMax;
-            uint32 mVAFormat = 0;
+            uint32_t mVAFormat = 0;
 
             unsigned int aColladaVTSize = 0;
 
@@ -819,7 +825,7 @@ void ZImporterCollada::LoadGeometry(TiXmlElement* pElt)
                                     aBMin = aBMax = *(tvector3*)&(*pvect)[0];
                                     ConvertVector3(&aBMin);
                                     ConvertVector3(&aBMax);
-                                    for (uint sw = 0;sw<pvect->size(); sw+=3)
+                                    for (unsigned int sw = 0;sw<pvect->size(); sw+=3)
                                     {
                                         ConvertVector3((tvector3*)&(*pvect)[sw]);
                                         aBMin.Minimize(*(tvector3*)&(*pvect)[sw]);
@@ -846,7 +852,7 @@ void ZImporterCollada::LoadGeometry(TiXmlElement* pElt)
                                 mVAFormat |= VAF_NORMAL;
                                 if (mbFirstIteration)
                                 {
-                                    for (uint sw = 0;sw<pvect->size(); sw+=3)
+                                    for (unsigned int sw = 0;sw<pvect->size(); sw+=3)
                                     {
                                         ConvertVector3((tvector3*)&(*pvect)[sw]);
                                     }
@@ -878,7 +884,7 @@ void ZImporterCollada::LoadGeometry(TiXmlElement* pElt)
                                     mVAFormat |= VAF_TEX0;
                                     if (mbFirstIteration)
                                     {
-                                        for (uint sw = 1;sw<pvect->size(); sw+=3)
+                                        for (unsigned int sw = 1;sw<pvect->size(); sw+=3)
                                         {
                                             (*pvect)[sw] = 1-(*pvect)[sw];
                                         }
@@ -904,7 +910,7 @@ void ZImporterCollada::LoadGeometry(TiXmlElement* pElt)
 
                                     if (mbFirstIteration)
                                     {
-                                        for (uint sw = 1;sw<pvect->size(); sw+=3)
+                                        for (unsigned int sw = 1;sw<pvect->size(); sw+=3)
                                         {
                                             (*pvect)[sw] = 1-(*pvect)[sw];
                                         }
@@ -931,7 +937,7 @@ void ZImporterCollada::LoadGeometry(TiXmlElement* pElt)
                                 mVAFormat |= VAF_BITANGENT;
                                 if (mbFirstIteration)
                                 {
-                                    for (uint sw = 0;sw<pvect->size(); sw+=3)
+                                    for (unsigned int sw = 0;sw<pvect->size(); sw+=3)
                                     {
                                         ConvertVector3((tvector3*)&(*pvect)[sw]);
                                     }
@@ -958,7 +964,7 @@ void ZImporterCollada::LoadGeometry(TiXmlElement* pElt)
                                 mVAFormat |= VAF_BINORMAL;
                               if (mbFirstIteration)
                                 {
-                                    for (uint sw = 0;sw<pvect->size(); sw+=3)
+                                    for (unsigned int sw = 0;sw<pvect->size(); sw+=3)
                                     {
                                         ConvertVector3((tvector3*)&(*pvect)[sw]);
                                     }
@@ -980,7 +986,7 @@ void ZImporterCollada::LoadGeometry(TiXmlElement* pElt)
 							tstring triIndices = pTriElem->FirstChild()->ToText()->Value();
 							std::vector<unsigned short> localIndices;
 							ReadUndefinedUI16Array(localIndices, triIndices);
-                            uint nbIdx = (uint)localIndices.size() ;
+                            unsigned int nbIdx = (unsigned int)localIndices.size() ;
 
                             // mix vertex array
 
@@ -991,12 +997,12 @@ void ZImporterCollada::LoadGeometry(TiXmlElement* pElt)
                             mgMesh->AddSubMesh(stIdx, smCnt);
 
                             mixVT.resize( ((aColladaVTSize * (stIdx + smCnt) )) );
-                            uint8 * mixVT2 = &mixVT[stIdx * aColladaVTSize];
+                            uint8_t * mixVT2 = &mixVT[stIdx * aColladaVTSize];
                             for (unsigned int j=0;j<nbIdx;j+=(maxoffset+1))
                             {
                                 for (unsigned int i=0;i<nbInputs;i++)
                                 {
-                                    uint16 p =localIndices[j+mInputArray[i].offset];
+                                    uint16_t p =localIndices[j+mInputArray[i].offset];
 
                                     //std::vector<float>* pvect = mInputArray[i].mfloats;
                                     int tmpstrd = mInputArray[i].stride;
@@ -1022,8 +1028,8 @@ void ZImporterCollada::LoadGeometry(TiXmlElement* pElt)
 
             // optimise array before
 
-            uint16 *nInd = (uint16*)malloc((nbVts * sizeof(uint16)));
-            uint8 *newVtArray = (uint8*)malloc(GVTS * nbVts * sizeof(uint8));
+            uint16_t *nInd = (uint16_t*)malloc((nbVts * sizeof(uint16_t)));
+            uint8_t *newVtArray = (uint8_t*)malloc(GVTS * nbVts * sizeof(uint8_t));
             int nNbInd;
             int newNbVt;
             mgMesh->RemoveRedundancy(&mixVT[0], GVTS, nbVts, nInd, &nNbInd,
@@ -1044,7 +1050,7 @@ void ZImporterCollada::LoadGeometry(TiXmlElement* pElt)
             // set index array
 
             pIA->Init(nNbInd);
-            memcpy(pIA->Lock(VAL_WRITE), nInd, nNbInd*sizeof(uint16));
+            memcpy(pIA->Lock(VAL_WRITE), nInd, nNbInd*sizeof(uint16_t));
             pIA->Unlock();
 
             // Create vertex array
@@ -1108,7 +1114,7 @@ void ZImporterCollada::SetBindedMaterial(TiXmlElement* pElt, ZMeshInstance *pMes
 						}
 
 						pMesh->GetMaterial(nbSubMesh)->connectEffect(true, false);
-						for (uint zzb = 0; zzb < (*itertpa).second.size(); zzb++)
+						for (unsigned int zzb = 0; zzb < (*itertpa).second.size(); zzb++)
 						{
 							effectParameters& efp = (*itertpa).second[zzb];
 							if (efp.pTex)
@@ -1610,7 +1616,7 @@ void ZImporterCollada::LoadAnimations(TiXmlElement* pElt)
 			NodeDestChan[0] = 0;
 			// get destination
 			bool p2 = false;
-			for (uint ic=0; ic < strlen(chanTarget); ic++)
+			for (unsigned int ic=0; ic < strlen(chanTarget); ic++)
 			{
 				char tmpc[]={0,0};
 				tmpc[0] = chanTarget[ic];
@@ -1618,9 +1624,9 @@ void ZImporterCollada::LoadAnimations(TiXmlElement* pElt)
 					p2 = true;
 				else
 				if (p2)
-					strcat_s(NodeDestChan, 512, tmpc);
+					strncat(NodeDestChan, tmpc, 512);
 				else
-					strcat_s(NodeDest, 512, tmpc);
+					strncat(NodeDest, tmpc, 512);
 			}
 
 			explodedAnim_t *mWEA;
@@ -1670,7 +1676,7 @@ void ZImporterCollada::LoadAnimations(TiXmlElement* pElt)
 					mWEA->mTranslationArray = new std::vector<float>;
 				bDeleteTransArray = true;
 				mWEA->mTranslationArray->resize(mWorkingArray->size()*3);
-				for (uint convz = 0;convz<mWorkingArray->size();convz++)
+				for (unsigned int convz = 0;convz<mWorkingArray->size();convz++)
 				{
 					(*mWEA->mTranslationArray)[convz*3+2] = (*mWorkingArray)[convz];
 				}
@@ -1681,7 +1687,7 @@ void ZImporterCollada::LoadAnimations(TiXmlElement* pElt)
 					mWEA->mTranslationArray = new std::vector<float>;
 				bDeleteTransArray = true;
 				mWEA->mTranslationArray->resize(mWorkingArray->size()*3);
-				for (uint convz = 0;convz<mWorkingArray->size();convz++)
+				for (unsigned int convz = 0;convz<mWorkingArray->size();convz++)
 				{
 					(*mWEA->mTranslationArray)[convz*3] = (*mWorkingArray)[convz];
 				}
@@ -1692,7 +1698,7 @@ void ZImporterCollada::LoadAnimations(TiXmlElement* pElt)
 					mWEA->mTranslationArray = new std::vector<float>;
 				bDeleteTransArray = true;
 				mWEA->mTranslationArray->resize(mWorkingArray->size()*3);
-				for (uint convz = 0;convz<mWorkingArray->size();convz++)
+				for (unsigned int convz = 0;convz<mWorkingArray->size();convz++)
 				{
 					(*mWEA->mTranslationArray)[convz*3+1] = (*mWorkingArray)[convz];
 				}

@@ -10,9 +10,18 @@
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 // GNU General Public License for more details.
 //
-#include "stdafx.h"
-#include <math.h>
 #include "ZCascadedShadows.h"
+
+#include "IDisplayDevice.h"
+#include "ZScene.h"
+#include "ZAtmosphere.h"
+
+#include <assert.h>
+#include <d3d9.h>
+#include <math.h>
+
+class ZFx;
+class FFxTechnique;
 
 #define DegreeToRadian(fDegrees) ((3.14159265f/180.0f)*fDegrees)
 
@@ -925,7 +934,7 @@ void RenderCascadedShadowMaps(shadowmap_t * aShdmi)
 
 
 			// instancing entry point test ***
-			for (uint kjh = 0;kjh<smi.mNbCasterMeshes;kjh++)
+			for (unsigned int kjh = 0;kjh<smi.mNbCasterMeshes;kjh++)
 			{
 				ZMeshInstance *pCaster = smi.mCasterMeshes[kjh];
 				const tmatrix& wldm = smi.mCasterMeshesMatrix[kjh];
@@ -934,8 +943,8 @@ void RenderCascadedShadowMaps(shadowmap_t * aShdmi)
 				mShadowEffect->setViewDependentMatrices();
 				D3D9SetPrograms(mShadowEffect);
 
-				uint nbsu = pCaster->GetMesh()->GetNbSubMeshes();
-				for (uint iasm = 0;iasm<nbsu; iasm++)
+				unsigned int nbsu = pCaster->GetMesh()->GetNbSubMeshes();
+				for (unsigned int iasm = 0;iasm<nbsu; iasm++)
 				{
 					/*
 					// set First texture(diffuse)

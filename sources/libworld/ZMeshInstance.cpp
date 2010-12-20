@@ -18,7 +18,7 @@
 //
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "ZMeshInstance.h"
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -41,7 +41,7 @@ ZMeshInstance::~ZMeshInstance()
 	if (mPhysicModel&&mPhysicModel->mPhysicWorld)
 		mPhysicModel->mPhysicWorld->RemoveCollisionMesh((ZPhysicCollisionMeshBullet*)mPhysicModel);
 */
-    for (uint i=0;i<mMaterial.size();i++)
+    for (unsigned int i=0;i<mMaterial.size();i++)
         delete mMaterial[i];
 	mMaterial.clear();
 }
@@ -64,10 +64,10 @@ ZSpatialEntity * ZMeshInstance::Clone()
 	*/
 
 
-	for (uint i=0;i<nInst->mMaterial.size();i++)
+	for (unsigned int i=0;i<nInst->mMaterial.size();i++)
 		delete nInst->mMaterial[i];
 
-	for (uint i=0;i<mMaterial.size();i++)
+	for (unsigned int i=0;i<mMaterial.size();i++)
 	{
 		nInst->mMaterial[i] = mMaterial[i]->Clone();
 	}

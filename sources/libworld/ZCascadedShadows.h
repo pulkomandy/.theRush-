@@ -16,6 +16,9 @@
 #include "..\libbase\ZFrustum.h"
 #include "..\libworld\ZCamera.h"
 
+class ZMeshInstance;
+class ZTexture;
+
 
 typedef struct shadowmap_t
 {

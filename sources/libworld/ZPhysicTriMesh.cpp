@@ -1,4 +1,8 @@
-#include "stdafx.h"
+#include "ZPhysicTriMesh.h"
+
+#include <BulletCollision/CollisionShapes/btConcaveShape.h>
+#include <BulletCollision/CollisionShapes/btTriangleIndexVertexArray.h>
+#include <BulletCollision/GImpact/btGImpactShape.h>
 
 BEGIN_SERIALIZATION(ZPhysicTriMesh)
 END_SERIALIZATION()

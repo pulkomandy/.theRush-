@@ -21,6 +21,9 @@
 #ifndef ZTRIGGER_H__
 #define ZTRIGGER_H__
 
+#include "../libbase/ZSerializator.h"
+#include "ZSpatialEntity.h"
+
 // Includes ///////////////////////////////////////////////////////////////////////////////////////
 
 DECLAREZCLASS(ZTrigger);

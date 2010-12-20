@@ -22,6 +22,8 @@
 #ifndef ZFRUSTUM_H__
 #define ZFRUSTUM_H__
 
+#include "../libbase/ZBaseMaths.h"
+
 struct ZFrustum  
 {
 public:

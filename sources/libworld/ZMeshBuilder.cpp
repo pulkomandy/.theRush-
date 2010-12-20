@@ -19,7 +19,9 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-#include "stdafx.h"
+#include "ZMeshBuilder.h"
+#include "ZMesh.h"
+#include "ZMeshInstance.h"
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -27,7 +29,7 @@ typedef struct helpersMeshVT
 {
     tvector3 pos;
     //tvector3 normal;
-    uint32 col;
+    uint32_t col;
 	float u,v;
 } helpersMeshVT;
 
@@ -35,7 +37,7 @@ typedef struct helpersMeshVTX
 {
     tvector3 pos;
     tvector3 normal;
-    uint32 col;
+    uint32_t col;
 	float u,v;
 } helpersMeshVTX;
 
@@ -133,7 +135,7 @@ ZMesh * CreateBox(const tvector3 &size, const tcolor &col)
 
     normvt->Unlock();
 
-    uint16* ids = (uint16*)indices->Lock(VAL_WRITE);
+    uint16_t* ids = (uint16_t*)indices->Lock(VAL_WRITE);
 
     ids[0] = 0;
     ids[1] = 1;
@@ -290,7 +292,7 @@ ZMesh * CreateFacetedBox(const tvector3 &size)
 
     normvt->Unlock();
 
-    uint16* ids = (uint16*)indices->Lock(VAL_WRITE);
+	uint16_t* ids = (uint16_t*)indices->Lock(VAL_WRITE);
 
 	int ind = 0;
 	for (int i=0;i<36;i+=6)
@@ -401,7 +403,7 @@ ZMesh * CreateWireBox(const tvector3 &size, const tcolor &col)
 
     normvt->Unlock();
 
-    uint16* ids = (uint16*)indices->Lock(VAL_WRITE);
+    uint16_t* ids = (uint16_t*)indices->Lock(VAL_WRITE);
 
     ids[0] = 0;
     ids[1] = 1;
@@ -701,7 +703,7 @@ ZMesh* CreatePyramid(float width, float depth, float height, const tcolor & col)
 
     normvt->Unlock();
 
-    uint16* ids = (uint16*)indices->Lock(VAL_WRITE);
+    uint16_t* ids = (uint16_t*)indices->Lock(VAL_WRITE);
 
     ids[0] = 0;
     ids[1] = 1;
@@ -910,7 +912,7 @@ ZMesh * CreateCone(float radius, float length, int nbSegments)
 	vts[nbSegments] = tvector3::zero;
     normvt->Unlock();
 
-    uint16* ids = (uint16*)indices->Lock(VAL_WRITE);
+    uint16_t* ids = (uint16_t*)indices->Lock(VAL_WRITE);
 
 	// cap
 	for (int i=0;i<(nbSegments-2);i++)
@@ -971,7 +973,7 @@ ZMesh * CreateSkyBox()
 
     normvt->Unlock();
 
-    uint16* indexbuffer = (uint16*)indices->Lock(VAL_WRITE);
+    uint16_t* indexbuffer = (uint16_t*)indices->Lock(VAL_WRITE);
 /*
 	indexbuffer[0] = 0;
 	indexbuffer[1] = 1;
@@ -1116,7 +1118,7 @@ ZMesh * BuildScreenQuad(float SizeX, float SizeY)
 
 ZMesh* CreateGeodesicSphere(int anbIter, float radius)
 {
-	uint16 *Ind = new uint16 [24];
+	uint16_t *Ind = new uint16_t [24];
 	int curnbindices = 24;
 	tvector3 *Verts = new tvector3 [6];
 	int curnbverts = 6;
@@ -1201,11 +1203,11 @@ ZMesh* CreateGeodesicSphere(int anbIter, float radius)
 	{
 		int newnbindices = curnbindices*4;
 		int newnbverts = (curnbindices/3) * 6;
-		uint16 *nextInd = new uint16 [newnbindices];
+		uint16_t *nextInd = new uint16_t [newnbindices];
 		tvector3 *nextVerts = new tvector3 [newnbverts];
 
 		tvector3 *pnv = nextVerts;
-		uint16 *pni = nextInd;
+		uint16_t *pni = nextInd;
 		int vtDecal = 0;
 
 		for (int i=0;i<curnbindices;i+=3)
@@ -1311,8 +1313,8 @@ ZMesh* CreateGeodesicSphere(int anbIter, float radius)
 	}
     normvt->Unlock();
 
-    uint16* ids = (uint16*)indices->Lock(VAL_WRITE);
-	memcpy(ids, Ind, sizeof(uint16)*optiNbInd);
+    uint16_t* ids = (uint16_t*)indices->Lock(VAL_WRITE);
+	memcpy(ids, Ind, sizeof(uint16_t)*optiNbInd);
     indices->Unlock();
 
 
@@ -1361,7 +1363,7 @@ ZMeshInstance * AddRect(float x, float y, float sx, float sy, float u1, float v1
 
     normvt->Unlock();
 
-    uint16* ids = (uint16*)indices->Lock(VAL_WRITE);
+    uint16_t* ids = (uint16_t*)indices->Lock(VAL_WRITE);
 	
     ids[0] = 2;
     ids[1] = 1;

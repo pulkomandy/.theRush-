@@ -1,4 +1,9 @@
-#include "stdafx.h"
+#include "ZHUDMeshModifier.h"
+
+#include "..\libbase\ZSerializator.h"
+#include "..\libbase\ZProfiler.h"
+#include "ZTransformInertia.h"
+#include "ZCamera.h"
 
 BEGIN_SERIALIZATION(ZHUDMeshModifier)
 END_SERIALIZATION()

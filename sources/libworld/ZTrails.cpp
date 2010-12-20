@@ -18,7 +18,7 @@
 //
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "ZTrails.h"
 #include "../libplatform/ZenFWManager.h"
 #include "../libplatform/ZenFWVRAMService.h"
 
@@ -29,7 +29,7 @@ END_SERIALIZATION()
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-void ZTrails::Init(uint32 aNbPairs, ZFx *afx, ZTexture *ptex)
+void ZTrails::Init(uint32_t aNbPairs, ZFx *afx, ZTexture *ptex)
 {
 	if (mTrailVT)
 		delete [] mTrailVT;

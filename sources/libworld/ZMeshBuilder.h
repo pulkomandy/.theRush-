@@ -1,6 +1,10 @@
 #ifndef ZMESHBUILDER_H__
 #define ZMESHBUILDER_H__
 
+#include "..\libbase\ZBaseMaths.h"
+
+class ZMesh;
+
 ZMesh * CreateWireGrid();
 
 /// Flat untextured box

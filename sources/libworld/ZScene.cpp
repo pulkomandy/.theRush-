@@ -18,8 +18,14 @@
 //
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "ZScene.h"
 #include "MiniBall/Sphere.h"
+#include "ZRenderQueue.h"
+#include "ZOccluderBox.h"
+#include "ZLight.h"
+
+
+class IWorld;
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 ZScene *GScene;
@@ -148,7 +154,7 @@ void ZCluster::Split()
 				mBVolume.mBSphere.y + decals[i].y*hr*0.5f,
 				mBVolume.mBSphere.z + decals[i].z*hr*0.5f,
 				hr);
-			for (uint j=0;j<mDispatch[i].size();j++)
+			for (unsigned int j=0;j<mDispatch[i].size();j++)
 			{
 				ZSpatialEntity *pEnt = mDispatch[i][j];
 

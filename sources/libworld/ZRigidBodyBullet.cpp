@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include "ZRigidBodyBullet.h"
 
 BEGIN_SERIALIZATION(ZRigidBody)
 END_SERIALIZATION()

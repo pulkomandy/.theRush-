@@ -21,6 +21,8 @@
 #ifndef ZTRANSFORMINERTIA_H__
 #define ZTRANSFORMINERTIA_H__
 
+#include "ZTransform.h"
+
 class ZScene;
 
 DECLAREZCLASS(ZTransformInertia);

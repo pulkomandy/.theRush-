@@ -1,6 +1,10 @@
 #ifndef ZIMPORTEXPORT_H__
 #define ZIMPORTEXPORT_H__
 
+#include "../libbase/ZBaseClass.h"
+#include "..\libbase\ZSerializator.h"
+
+class ZMeshInstance;
 class ZGameResources;
 
 class  IExporter : public ZBaseClass

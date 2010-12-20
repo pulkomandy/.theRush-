@@ -3,6 +3,7 @@
 
 #include "..\libbase\ZSmartPtr.h"
 #include "..\libworld\ZMesh.h"
+class ZMesh;
 
 class btConcaveShape;
 

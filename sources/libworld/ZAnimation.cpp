@@ -8,10 +8,9 @@
 
 // Includes ///////////////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
 #include "ZAnimation.h"
-//#include "ZKeyFrame.h"
-//#include "../World/ZNode.h"
+
+#include "..\libbase\ZSerializator.h"
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -31,7 +30,7 @@ void ZAnimationInstance::Init(tulong playtype, float speed, tulong priority)
 */
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-ZAnimationTrackInternal * ZAnimation::AddAnimationTrack(tstring name, ZANIMATION_KEY_TYPE keyType, ZANIMATION_INTERP_TYPE interpType)
+ZAnimationTrackInternal * ZAnimation::AddAnimationTrack(tstring /*name*/, ZANIMATION_KEY_TYPE keyType, ZANIMATION_INTERP_TYPE interpType)
 {
     ZAnimationTrackInternal * animTrack;
 

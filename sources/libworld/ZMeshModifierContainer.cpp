@@ -1,4 +1,6 @@
-#include "stdafx.h"
+#include "ZMeshModifierContainer.h"
+
+#include "..\libbase\ZProfiler.h"
 
 ZMeshModifierContainer *GMeshModifierContainer;
 

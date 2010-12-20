@@ -14,6 +14,8 @@
 
 #include "ZAnimationTrack.h"
 
+#include "..\libbase\ZSerializator.h"
+
 enum ANIM_CHUNKS
 {
 	ANIM_TRANSLATION = 1,
