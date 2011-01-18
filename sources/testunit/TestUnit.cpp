@@ -1,10 +1,12 @@
-#include "LibBase.h"
-#include "librender.h"
 #include "../libplatform/ZenFWManager.h"
 #include "../libplatform/ZenFWVRAMService.h"
 #include "../libplatform/ZenFWLoaderNode.h"
 #include "../libplatform/ZenFWGame.h"
-#include "libplatform.h"
+#include "../libplatform/ZenFWSDLWindow.h"
+#include "../libplatform/ZenFWRenderer.h"
+#include "../libplatform/ZenFWViewer.h"
+#include "../libplatform/ZenFWDecoderNode.h"
+#include "../libplatform/ZenFWSTDNodes.h"
 #include "TestExecutionNodes.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -23,8 +25,12 @@ using namespace RakNet;
 #include "../libplatform/ZenFWVRAMService.h"
 #include "../libplatform/ZenFWLoaderNode.h"
 #include "../libplatform/ZenFWGame.h"
-#include "../libgame/libgame.h"
 #include "../libgame/FSMBonus.h"
+#include "..\libgame\ZDedicatedGames.h"
+
+#include "../libbase/ZThread.h"
+#include "../libbase/ZTimer.h"
+#include "../libbase/ZFile.h"
 
 class CheckThread : public ZThread
 {
@@ -89,7 +95,7 @@ void TestUnitMile1()
 	mt.RotationQuaternion(tquaternion(0.1f, 0.2f, 0.3f, 0.4f));
 
 
-	LOG("System has %d processor(s). Image path is %s.\n", GetCoreCount(), GetPictureDirectoy());
+	LOG("System has %d processor(s). Image path is %s.\n", GetCoreCount(), GetPictureDirectory());
 	tmatrix res;
 	res.Inverse(mt);
 	LOG("-> %5.2f vs %5.2f\n", mt.V4.dir.y, res.V4.dir.y);
@@ -611,7 +617,6 @@ int main(int argc, char **argv)
 		ZMeshModifierContainer::Tick(0);
 	}
 	ZMeshModifierContainer::Tick(0);
-/*
 	tstring filename = GetHomeDirectoy();
 	filename += "toto.txt";
 	FILE *fp = fopen(filename.c_str(), "wb");

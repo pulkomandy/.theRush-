@@ -2,12 +2,12 @@ DEBUG=no
 CC=g++
 BULLETLIBPATHS=../../3rdparty/bullet-2.74/lib/
 ifeq ($(DEBUG),yes)
-	CFLAGS=-W -Wall -ansi  -g -DLINUX -I../libbase -I../libplatform -I../librender -I../../3rdparty/bullet-2.74/src -I../../3rdparty/RakNet-3.6201/Source -I/usr/local/include/fmodex
+	CFLAGS=-W -Wall -g -I../libbase -I../libplatform -I../librender -I../../3rdparty/bullet-2.74/src -I../../3rdparty/RakNet-3.6201/Source -I/usr/local/include/fmodex -Ih:/Qt/directx/include
 	LDFLAGS=
 	DEBUGSUFFIX=D
 	
 else
-	CFLAGS=-W -Wall -ansi  -O3 -DLINUX -I../libbase -I../libplatform -I../librender -I../../3rdparty/bullet-2.74/src -I../../3rdparty/RakNet-3.6201/Source -I/usr/local/include/fmodex
+	CFLAGS=-W -Wall -O3 -I../libbase -I../libplatform -I../librender -I../../3rdparty/bullet-2.74/src -I../../3rdparty/RakNet-3.6201/Source -I/usr/local/include/fmodex -Ih:/Qt/directx/include
 	LDFLAGS=
 	DEBUGSUFFIX=
 endif
@@ -23,7 +23,7 @@ else
 endif
 
 testunit: $(OBJ)
-	$(CC) -o ../../bin/$@ $^   ../../libs/libworld$(DEBUGSUFFIX).a ../../libs/libgame$(DEBUGSUFFIX).a ../../libs/libbase$(DEBUGSUFFIX).a ../../libs/libplatform$(DEBUGSUFFIX).a  ../../libs/libworld$(DEBUGSUFFIX).a ../../libs/miniball.a  ../../libs/libbase$(DEBUGSUFFIX).a ../../libs/librender$(DEBUGSUFFIX).a  $(LDFLAGS) -lrt -lSDL -lGL -lCEGUIBase -lCEGUITinyXMLParser -lCEGUIFalagardWRBase -lCEGUIOpenGLRenderer -lCg -lCgGL $(BULLETLIBPATHS)libbulletdynamics.a $(BULLETLIBPATHS)libbulletcollision.a $(BULLETLIBPATHS)libGIMPACTUtils.a $(BULLETLIBPATHS)libbulletmath.a $(BULLETLIBPATHS)libbulletmultithreaded.a $(BULLETLIBPATHS)libBulletColladaConverter.a $(BULLETLIBPATHS)libbulletsoftbody.a $(BULLETLIBPATHS)libcolladadom.a $(BULLETLIBPATHS)libconvexdecomposition.a $(BULLETLIBPATHS)libiff.a $(BULLETLIBPATHS)liblibxml.a ../../libs/zlib.a ../../libs/tinyxml.a ../../libs/libgame$(DEBUGSUFFIX).a ../../libs/libworld$(DEBUGSUFFIX).a -lraknet -lfmodex64
+	$(CC) -o ../../bin/$@ $^   ../../libs/libworld$(DEBUGSUFFIX).a ../../libs/libgame$(DEBUGSUFFIX).a ../../libs/libbase$(DEBUGSUFFIX).a ../../libs/libplatform$(DEBUGSUFFIX).a  ../../libs/libworld$(DEBUGSUFFIX).a ../../libs/miniball.a  ../../libs/libbase$(DEBUGSUFFIX).a ../../libs/librender$(DEBUGSUFFIX).a  $(LDFLAGS) -lSDL $(BULLETLIBPATHS)libbulletdynamics.a $(BULLETLIBPATHS)libbulletcollision.a $(BULLETLIBPATHS)libGIMPACTUtils.a $(BULLETLIBPATHS)libBulletColladaConverter.a $(BULLETLIBPATHS)libbulletsoftbody.a $(BULLETLIBPATHS)libcolladadom.a $(BULLETLIBPATHS)libconvexdecomposition.a ../../libs/zlib.a ../../libs/tinyxml.a ../../libs/libgame$(DEBUGSUFFIX).a ../../libs/libworld$(DEBUGSUFFIX).a -lraknet -lWs2_32 $(BULLETLIBPATHS)liblinearmath.a -lcg -lcggl -lopengl32 ../../libs/tinyxml.a -lfmodex -lceguibase -lceguitinyxmlparser -lwinmm
 
 TestUnit.o: TestUnit.cpp
 

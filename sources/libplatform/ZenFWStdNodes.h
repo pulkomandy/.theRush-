@@ -1,6 +1,8 @@
 #ifndef ZENFWSTDNODES_H__
 #define ZENFWSTDNODES_H__
 
+#include "../libworld/ZMeshModifierContainer.h"
+#include "../libbase/ZTimer.h"
 
 class ZenFWRenderQueueBuilder;
 extern ZenFWRenderQueueBuilder *GRQBNode;
