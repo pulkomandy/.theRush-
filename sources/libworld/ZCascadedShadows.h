@@ -13,8 +13,8 @@
 #ifndef CASCADED_SHADOWS_H
 #define CASCADED_SHADOWS_H
 
-#include "..\libbase\ZFrustum.h"
-#include "..\libworld\ZCamera.h"
+#include "../libbase/ZFrustum.h"
+#include "../libworld/ZCamera.h"
 
 class ZMeshInstance;
 class ZTexture;

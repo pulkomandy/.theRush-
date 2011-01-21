@@ -23,7 +23,7 @@
 #include "../libbase/ZFile.h"
 #include "../libbase/ZProfiler.h"
 #include "../libbase/ZTimer.h"
-#include "..\libworld\ZCamera.h"
+#include "../libworld/ZCamera.h"
 
 #include <fmod.hpp>
 #include <fmod_errors.h>

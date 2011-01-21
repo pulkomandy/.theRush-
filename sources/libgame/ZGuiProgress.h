@@ -22,7 +22,7 @@
 #ifndef GUIPROGRESS_H__
 #define GUIPROGRESS_H__
 
-#include "..\libworld\ZMeshInstance.h"
+#include "../libworld/ZMeshInstance.h"
 
 class ZProtoGUI;
 #include "CEGUI.h"

@@ -25,10 +25,10 @@
 
 #include "ZenFWVRAMService.h"
 
-#include "..\libworld\ZMeshInstance.h"
-#include "..\libworld\ZImportExport.h"
-#include "..\libgame\ZRushTrack.h"
-#include "..\libplatform\ZSoundFMOD.h"
+#include "../libworld/ZMeshInstance.h"
+#include "../libworld/ZImportExport.h"
+#include "../libgame/ZRushTrack.h"
+#include "../libplatform/ZSoundFMOD.h"
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 

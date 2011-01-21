@@ -1,8 +1,8 @@
 #ifndef ZHUDMESHMODIFIER_H__
 #define ZHUDMESHMODIFIER_H__
 
-#include "..\libbase\ZSerializator.h"
-#include "..\libbase\ZBaseMaths.h"
+#include "../libbase/ZSerializator.h"
+#include "../libbase/ZBaseMaths.h"
 #include "ZMeshModifierContainer.h"
 #include "ZMeshInstance.h"
 

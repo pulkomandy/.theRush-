@@ -1,6 +1,9 @@
+#include "ZBaseDefs.h"
 #include "targetver.h"
-#include <shlobj.h>
 #include <cstdio>
+#ifdef WIN32
+#include <shlobj.h>
+#endif
 
 __inline const char * GetPictureDirectory()
 {

@@ -17,9 +17,9 @@
 //
 // Includes ///////////////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
 #include "ZFile.h"
 #include "ZLogger.h"
+#include <cassert>
 #ifdef WIN32
 #include <io.h>
 #else
@@ -283,7 +283,7 @@ bool ZFile::Write(const void * p_buffer, const tulong sizeInBytes)
 
 bool ZFile::Write(const tstring & string)
 {
-	uint32 strl = string.Length();
+	uint32_t strl = string.Length();
 	*this << strl;
 	Write(string.c_str(), strl);
 
@@ -294,7 +294,7 @@ bool ZFile::Write(const tstring & string)
 
 bool ZFile::Read(tstring & string)
 {
-	uint32 strl;
+	uint32_t strl;
 	*this >> strl;
 	string.stringData = (tchar *)malloc(strl+1);
 	Read(string.stringData, strl);

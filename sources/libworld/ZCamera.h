@@ -21,8 +21,8 @@
 #ifndef ZCAMERA_H__
 #define ZCAMERA_H__
 
-#include "..\libbase\ZFrustum.h"
-#include "..\libworld\ZTransform.h"
+#include "../libbase/ZFrustum.h"
+#include "../libworld/ZTransform.h"
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 

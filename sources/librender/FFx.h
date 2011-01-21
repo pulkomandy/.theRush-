@@ -22,7 +22,7 @@
 #ifndef _FFX_H_
 #define _FFX_H_
 #include "../libworld/ZTransform.h"
-#include "..\librender\IDisplayDevice.h"
+#include "../librender/IDisplayDevice.h"
 
 #include <Cg/cg.h>
 /*

@@ -1,7 +1,7 @@
 #ifndef ZENFWGame_H__
 #define ZENFWGame_H__
 
-#include "..\libgame\ZGameSet.h"
+#include "../libgame/ZGameSet.h"
 
 class ZMesh;
 class ZenFWGame;

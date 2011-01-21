@@ -35,7 +35,6 @@
 #include <memory.h>
 
 
-
 inline void strcpy_s(char *dst, int , const char *src)
 {
     strcpy(dst, src);
@@ -45,32 +44,56 @@ inline void strcat_s(char *dst, int , const char *src)
 {
     strcat(dst, src);
 }
- inline void _splitpath_s(const char *szBuf, char *, int , char *szPath, int /*aPath*/, char *szFile, int /*aFile*/, char *szExt, int /*aExt*/)
- {
-	 int indSrc = strlen(szBuf);
-	 
-	 while (szBuf[indSrc] != '.')
-		 indSrc--;
-	 if (szExt)
+inline void _splitpath_s(const char *szBuf, char *, int , char *szPath, int /*aPath*/, char *szFile, int /*aFile*/, char *szExt, int /*aExt*/)
+{
+	int indSrc = strlen(szBuf);
+
+	while (szBuf[indSrc] != '.')
+	 indSrc--;
+	if (szExt)
+	strcpy( szExt, &szBuf[indSrc]);
+
+
+	int indfile = indSrc;
+	while (szBuf[indSrc] != '/' && indSrc > 0)
+	 indSrc--;
+	if (szFile)
+	{
+	memcpy(szFile, &szBuf[indSrc], indfile-indSrc);
+	szFile[indfile] = 0;
+	}
+	int indpath = indSrc;
+	if (szPath)
+	{
+	 memcpy(szPath, szBuf, indpath+1);
+	 szPath[indpath+1] = 0;
+	}
+	//_splitpath(szBuf, szDrive, szPath, szFile, szExt);
+}
+inline void _splitpath(const char *szBuf, char *, char *szPath, char *szFile, char *szExt) {
+	int indSrc = strlen(szBuf);
+
+	while (szBuf[indSrc] != '.')
+	 indSrc--;
+	if (szExt)
 		strcpy( szExt, &szBuf[indSrc]);
-	 
-	 
-	 int indfile = indSrc;
-	 while (szBuf[indSrc] != '/' && indSrc > 0)
-		 indSrc--;
-	 if (szFile)
-	 {
+
+
+	int indfile = indSrc;
+	while (szBuf[indSrc] != '/' && indSrc > 0)
+	 indSrc--;
+	if (szFile)
+	{
 		memcpy(szFile, &szBuf[indSrc], indfile-indSrc);
 		szFile[indfile] = 0;
-	 }
-	 int indpath = indSrc;
-	 if (szPath)
-	 {
+	}
+	int indpath = indSrc;
+	if (szPath)
+	{
 		 memcpy(szPath, szBuf, indpath+1);
 		 szPath[indpath+1] = 0;
-	 }
-     //_splitpath(szBuf, szDrive, szPath, szFile, szExt);
- }
+	}
+}
 #endif
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 

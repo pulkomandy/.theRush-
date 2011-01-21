@@ -21,7 +21,7 @@
 #ifndef ZBVOLUME_H__
 #define ZBVOLUME_H__
 
-#include "..\libbase\ZBaseMaths.h"
+#include "../libbase/ZBaseMaths.h"
 
 typedef struct ZBoundingVolume
 {

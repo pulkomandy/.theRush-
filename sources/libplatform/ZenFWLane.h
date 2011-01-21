@@ -21,7 +21,7 @@
 #ifndef ZENFWLane_H__
 #define ZENFWLane_H__
 
-#include "..\libbase\ZThread.h"
+#include "../libbase/ZThread.h"
 
 class ZenFWNode;
 class ZenFWLane : public ZThread

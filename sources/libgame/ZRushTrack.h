@@ -1,7 +1,7 @@
 #ifndef ZRUSHTRACK_H__
 #define ZRUSHTRACK_H__
 
-#include "..\libworld\ZAnimation.h"
+#include "../libworld/ZAnimation.h"
 #include "ZTrackBonus.h"
 
 class ZPhysicWorldBullet;

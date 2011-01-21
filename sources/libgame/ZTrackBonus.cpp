@@ -1,8 +1,8 @@
-#include "..\libbase\ZSerializator.h"
-#include "..\libgame\ZTrackBonus.h"
-#include "..\libgame\ZGameTriggers.h"
-#include "..\libgame\ZShip.h"
-#include "..\libworld\ZTrigger.h"
+#include "../libbase/ZSerializator.h"
+#include "../libgame/ZTrackBonus.h"
+#include "../libgame/ZGameTriggers.h"
+#include "../libgame/ZShip.h"
+#include "../libworld/ZTrigger.h"
 
 BEGIN_SERIALIZATION(ZTrackBonus)
 END_SERIALIZATION()

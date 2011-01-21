@@ -1,7 +1,7 @@
 #include "ZShipEffects.h"
 
-#include "..\libbase\ZSerializator.h"
-#include "..\libbase\ZProfiler.h"
+#include "../libbase/ZSerializator.h"
+#include "../libbase/ZProfiler.h"
 BEGIN_SERIALIZATION(ZShipEffectsNULL)
 END_SERIALIZATION()
 

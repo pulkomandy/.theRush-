@@ -18,9 +18,8 @@
 //
 // Includes ///////////////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
-
 #include "ZBaseClass.h"
+#include "ZSerializator.h"
 
 const tstring ZBaseClass::mUnnamed("Unnamed");
 

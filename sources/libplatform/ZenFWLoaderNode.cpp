@@ -21,9 +21,9 @@
 #include "ZenFWLoaderNode.h"
 #include "ZenFWDecoderNode.h"
 #include "../libbase/ZLogger.h"
-#include "..\libplatform\ZSoundFMOD.h"
-#include "..\libgame\ZRushTrack.h"
-#include "..\libworld\ZMeshInstance.h"
+#include "../libplatform/ZSoundFMOD.h"
+#include "../libgame/ZRushTrack.h"
+#include "../libworld/ZMeshInstance.h"
 
 #include <stdio.h>
 

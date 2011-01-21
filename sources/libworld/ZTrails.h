@@ -23,8 +23,8 @@
 
 #include "../libbase/ZBaseMaths.h"
 #include "../libbase/ZBaseClass.h"
-#include "..\libbase\ZSerializator.h"
-#include "..\libbase\ZSmartPtr.h"
+#include "../libbase/ZSerializator.h"
+#include "../libbase/ZSmartPtr.h"
 #include "ZMeshInstance.h"
 #include "FFx.h"
 

@@ -9,7 +9,6 @@
 
 // Includes ///////////////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
 #include "ZBaseDefs.h"
 #include "ZSerializableClasses.h"
 #include "ZBaseClass.h"
@@ -77,9 +76,9 @@ void DumpClasses()
     {
         if (gSerializableClasses[i].mCount!=0)
         {
-            uint32 memMin = -1;
-            uint32 memMax = 0;
-            uint32 memTotal = 0;
+            uint32_t memMin = -1;
+            uint32_t memMax = 0;
+            uint32_t memTotal = 0;
             for (ZBaseClass *pc = gSerializableClasses[i].mFirst; pc; pc=pc->mNextInstance)
             {
                 tulong mem = pc->GetMemoryUsed();

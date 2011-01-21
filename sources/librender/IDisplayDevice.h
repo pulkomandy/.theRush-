@@ -21,7 +21,7 @@
 #ifndef IDISPLAYDEVICE_H__
 #define IDISPLAYDEVICE_H__
 
-#include "..\librender\ZTexture.h"
+#include "../librender/ZTexture.h"
 #include "../libbase/ZBaseMaths.h"
 
 /*! \file IDisplayDevice.h

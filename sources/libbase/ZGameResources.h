@@ -23,10 +23,10 @@
 #define ZGAMERESOURCES_H__
 
 #include "../libworld/ZScene.h"
-#include "..\libworld\ZTransform.h"
-#include "..\libworld\ZPhysicWorldBullet.h"
-#include "..\libworld\ZMeshInstance.h"
-#include "..\libbase\ZSerializator.h"
+#include "../libworld/ZTransform.h"
+#include "../libworld/ZPhysicWorldBullet.h"
+#include "../libworld/ZMeshInstance.h"
+#include "../libbase/ZSerializator.h"
 
 DECLAREZCLASS(ZGameResources);
 

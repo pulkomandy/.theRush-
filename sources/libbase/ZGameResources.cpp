@@ -19,7 +19,6 @@
 //
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
 //#include "../libplatform/ZenFWNode.h"
 #include "../libplatform/ZenFWManager.h"
 #include "../libplatform/ZenFWVRAMService.h"

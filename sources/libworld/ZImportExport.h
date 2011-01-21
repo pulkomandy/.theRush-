@@ -2,7 +2,7 @@
 #define ZIMPORTEXPORT_H__
 
 #include "../libbase/ZBaseClass.h"
-#include "..\libbase\ZSerializator.h"
+#include "../libbase/ZSerializator.h"
 
 class ZMeshInstance;
 class ZGameResources;

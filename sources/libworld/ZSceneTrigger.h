@@ -2,8 +2,8 @@
 #define ZSCENETRIGGER_H__
 
 #include "ZTrigger.h"
-#include "..\libbase\ZProfiler.h"
-#include "..\libbase\ZCollisionsUtils.h"
+#include "../libbase/ZProfiler.h"
+#include "../libbase/ZCollisionsUtils.h"
 
 class ZSceneTrigger
 {

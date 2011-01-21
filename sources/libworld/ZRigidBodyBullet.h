@@ -1,8 +1,8 @@
 #ifndef ZRIGIDBODYBULLET_H__
 #define ZRIGIDBODYBULLET_H__
 
-#include "..\libworld\ZPhysicWorldBullet.h"
-#include "..\libbase\ZSmartPtr.h"
+#include "../libworld/ZPhysicWorldBullet.h"
+#include "../libbase/ZSmartPtr.h"
 
 #include <BulletDynamics/Dynamics/btRigidBody.h>
 

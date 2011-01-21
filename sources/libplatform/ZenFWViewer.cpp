@@ -1,9 +1,9 @@
 #include "ZenFWViewer.h"
 
 #include "IInput.h"
-#include "..\libgame\ZRushTrack.h"
-#include "..\libgame\ZRushGame.h"
-#include "..\libworld\ZRigidBodyBullet.h"
+#include "../libgame/ZRushTrack.h"
+#include "../libgame/ZRushGame.h"
+#include "../libworld/ZRigidBodyBullet.h"
 #include "ZenFWLoaderNode.h"
 #include "../libworld/ZAtmosphere.h"
 #include "../libbase/ZTimer.h"

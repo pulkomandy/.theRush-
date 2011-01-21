@@ -3,7 +3,7 @@
 
 #include "ZBonus.h"
 
-#include "..\libworld\ZMeshInstance.h"
+#include "../libworld/ZMeshInstance.h"
 
 class ZShipBonus
 {

@@ -5,7 +5,7 @@
 
 #include "../libbase/ZBaseMaths.h"
 #include "../libbase/ZSmartPtr.h"
-#include "..\libworld\ZTransform.h"
+#include "../libworld/ZTransform.h"
 
 DECLAREZCLASS(ZMine);
 DECLAREZCLASS(ZNetMine);

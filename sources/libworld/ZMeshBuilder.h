@@ -1,7 +1,7 @@
 #ifndef ZMESHBUILDER_H__
 #define ZMESHBUILDER_H__
 
-#include "..\libbase\ZBaseMaths.h"
+#include "../libbase/ZBaseMaths.h"
 
 class ZMesh;
 

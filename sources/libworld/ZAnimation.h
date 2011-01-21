@@ -14,7 +14,7 @@
 
 #include "ZAnimationTrack.h"
 
-#include "..\libbase\ZSerializator.h"
+#include "../libbase/ZSerializator.h"
 
 enum ANIM_CHUNKS
 {

@@ -237,7 +237,7 @@ void tstring::ComputeRelativeWD()
 
 const char *tstring::GetScreenShotDirectory()
 {
-	return GetPictureDirectoy();
+	return GetPictureDirectory();
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////

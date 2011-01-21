@@ -1,7 +1,7 @@
 #include "ZHUDMeshModifier.h"
 
-#include "..\libbase\ZSerializator.h"
-#include "..\libbase\ZProfiler.h"
+#include "../libbase/ZSerializator.h"
+#include "../libbase/ZProfiler.h"
 #include "ZTransformInertia.h"
 #include "ZCamera.h"
 

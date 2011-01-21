@@ -30,7 +30,7 @@
 
 #include "../libplatform/ZenFWManager.h"
 #include "FSMServerClassicRace.h"
-#include "..\libgame\ZRushTrack.h"
+#include "../libgame/ZRushTrack.h"
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 

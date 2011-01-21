@@ -3,7 +3,7 @@
 
 #include "ZenFWNode.h"
 
-#include "..\libbase\ZGameResources.h"
+#include "../libbase/ZGameResources.h"
 
 class ZMesh;
 class ZenFWViewer;

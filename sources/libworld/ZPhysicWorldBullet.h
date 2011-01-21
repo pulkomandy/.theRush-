@@ -5,7 +5,7 @@
 #include "../libbase/ZDatasResource.h"
 
 #include "../libbase/ZBaseMaths.h"
-#include "..\libbase\ZSerializator.h"
+#include "../libbase/ZSerializator.h"
 #include "ZPhysicTriMesh.h"
 
 #include "LinearMath/btVector3.h"

@@ -29,7 +29,7 @@
 #endif
 
 #include <stdint.h>
-
+#include <cstring>
 
 typedef uint32_t tulong;
 typedef long tlong;
@@ -111,8 +111,13 @@ inline char* GetCurrentDirectory(int bufLength, char *pszDest)
 
 #endif
 
+#ifdef __linux__
+#define LINUX
+#endif
+
 #ifdef LINUX
 #include <pthread.h>
+#include <limits.h>
 
 typedef pthread_mutex_t ZCriticalSection_t;
 typedef int WindowHandle_t;

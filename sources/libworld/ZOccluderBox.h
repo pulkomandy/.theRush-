@@ -21,7 +21,7 @@
 #ifndef ZOCCLUDERBOX_H__
 #define ZOCCLUDERBOX_H__
 
-#include "..\libbase\ZSerializator.h"
+#include "../libbase/ZSerializator.h"
 #include "ZSpatialEntity.h"
 
 // Includes ///////////////////////////////////////////////////////////////////////////////////////

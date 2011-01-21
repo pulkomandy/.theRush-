@@ -26,7 +26,7 @@ using namespace RakNet;
 #include "../libplatform/ZenFWLoaderNode.h"
 #include "../libplatform/ZenFWGame.h"
 #include "../libgame/FSMBonus.h"
-#include "..\libgame\ZDedicatedGames.h"
+#include "../libgame/ZDedicatedGames.h"
 
 #include "../libbase/ZThread.h"
 #include "../libbase/ZTimer.h"

@@ -22,9 +22,9 @@
 #define ZSHIPPHYSICS_H__
 
 #include "../libbase/ZBaseMaths.h"
-#include "..\libbase\ZSmartPtr.h"
-#include "..\libworld\ZRigidBodyBullet.h"
-#include "..\libworld\ZTransform.h"
+#include "../libbase/ZSmartPtr.h"
+#include "../libworld/ZRigidBodyBullet.h"
+#include "../libworld/ZTransform.h"
 
 class ZPhysicWorldBullet;
 class ZPhysicTriMesh;

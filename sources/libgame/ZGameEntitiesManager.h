@@ -2,7 +2,7 @@
 #define ZGAMEENTITIESMANAGER_H__
 
 #include "ZGameEntity.h"
-#include "..\libbase\ZBaseMaths.h"
+#include "../libbase/ZBaseMaths.h"
 
 class ZMissile;
 class ZMine;

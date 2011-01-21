@@ -1,3 +1,7 @@
+cmake_minimum_required(VERSION 2.6) # Pour éviter un warning au lancement de CMake, on doit préciser la version minimale
+
+# Nom du projet
+project(TheRush)
 #-------------------------------------------------------------------
 # This file is part of the CMake build system for GUCEF
 #     (Galaxy Unlimited Framework)

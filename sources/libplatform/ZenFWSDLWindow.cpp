@@ -1,7 +1,7 @@
 #include "ZenFWSDLWindow.h"
 
 #include "../libbase/ZLogger.h"
-#include "..\libgame\IProtoGUI.h"
+#include "../libgame/IProtoGUI.h"
 
 #ifdef WIN32
 #include "targetver.h"

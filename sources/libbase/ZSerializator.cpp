@@ -15,11 +15,12 @@
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 // GNU General Public License for more details.
 //
-#include "stdafx.h"
 #include "ZSerializator.h"
 #include <list>
 #include "ZLogger.h"
 #include "ZBaseMaths.h"
+#include "ZProfiler.h"
+#include "ZTimer.h"
 #include "tinyxml.h"
 #ifdef WIN32
 #include <io.h>

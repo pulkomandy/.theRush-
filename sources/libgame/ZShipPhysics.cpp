@@ -20,10 +20,10 @@
 
 #include "ZShipPhysics.h"
 
-#include "..\libbase\ZSerializator.h"
-#include "..\libbase\ZBaseMaths.h"
-#include "..\libgame\ZRushTrack.h"
-#include "..\libgame\ZRushGame.h"
+#include "../libbase/ZSerializator.h"
+#include "../libbase/ZBaseMaths.h"
+#include "../libgame/ZRushTrack.h"
+#include "../libgame/ZRushGame.h"
 #include "ZShip.h"
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////

@@ -6,8 +6,8 @@
 // Description :
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
 #include "ZLogger.h"
+#include "ZFile.h"
 #include "ZSerializator.h"
 
 #include <SDL/SDL.h>

@@ -21,7 +21,7 @@
 #ifndef ZCOLLISIONSUTILS_H__
 #define ZCOLLISIONSUTILS_H__
 
-#include "../libbase/ZBaseMAths.h"
+#include "../libbase/ZBaseMaths.h"
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 

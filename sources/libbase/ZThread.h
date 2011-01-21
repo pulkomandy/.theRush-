@@ -23,7 +23,7 @@
 
 // Includes ///////////////////////////////////////////////////////////////////////////////////////
 
-#include "..\libbase\ZBaseDefs.h"
+#include "../libbase/ZBaseDefs.h"
 
 #ifdef _WIN32
 #include <windows.h>

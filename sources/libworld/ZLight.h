@@ -21,7 +21,7 @@
 #ifndef ZLIGHT_H__
 #define ZLIGHT_H__
 
-#include "..\libbase\ZSerializator.h"
+#include "../libbase/ZSerializator.h"
 #include "ZSpatialEntity.h"
 #include "ZTransform.h"
 

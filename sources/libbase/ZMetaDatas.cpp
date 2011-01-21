@@ -1,5 +1,7 @@
-#include "stdafx.h"
 #include "tinyxml.h"
+#include "ZMetaDatas.h"
+#include "ZFile.h"
+#include "ZLogger.h"
 
 void ZMetaDatas::Init(const char *szPathTooXML)
 {
