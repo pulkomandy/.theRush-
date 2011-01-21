@@ -22,6 +22,8 @@
 #ifndef GIZMOTRANSFORMRENDER_H__
 #define GIZMOTRANSFORMRENDER_H__
 
+#include "libbase/ZBaseMaths.cpp"
+
 typedef tvector4 tplane;
 
 class CGizmoTransformRender  

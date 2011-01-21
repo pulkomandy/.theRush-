@@ -51,7 +51,7 @@ public:
 		mTransRotate.SetCameraMatrix(Model,Proj);
 	}
 
-	virtual void SetCam(PSM_Camera *pCam)
+	virtual void SetCam(ZCamera *pCam)
 	{
 		mTransMove.SetCam(pCam);
 		mTransRotate.SetCam(pCam);

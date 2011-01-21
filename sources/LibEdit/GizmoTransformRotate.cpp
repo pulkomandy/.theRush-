@@ -18,8 +18,8 @@
 //
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
 #include "GizmoTransformRotate.h"
+#include "librender/IDisplayDevice.h"
 #ifdef MAC_OS
 #import <OpenGL/OpenGL.h>
 #else

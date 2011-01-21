@@ -96,6 +96,7 @@ include_directories(
 	${BULLET_INCLUDE_DIRS}
 	${FMOD_INCLUDE_DIR}
 	../../3rdparty/tinyxml
+	..
 )
 link_directories(/usr/lib)
 

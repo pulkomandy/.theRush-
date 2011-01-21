@@ -21,6 +21,9 @@
 #ifndef GIZMOTRANSFORM_H__
 #define GIZMOTRANSFORM_H__
 
+#include "libworld/ZTransform.h"
+#include "libworld/ZCamera.h"
+#include "IGizmo.h"
 #include "GizmoTransformRender.h"
 
 class CGizmoTransform : public IGizmo , protected CGizmoTransformRender
