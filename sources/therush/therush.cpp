@@ -1,9 +1,18 @@
 // therush.cpp : définit le point d'entrée pour l'application console.
 //
 
-#include "stdafx.h"
-
-
+#include "../libplatform/ZenFWManager.h"
+#include "../libplatform/ZenFWLoaderNode.h"
+#include "../libplatform/ZenFWdecoderNode.h"
+#include "../libplatform/ZenFWVRAMService.h"
+#include "../librender/ZRenderQueue.h"
+#include "../libworld/ZMesh.h"
+#include "../libgame/ZDedicatedGames.h"
+#include "../libplatform/ZenFWGame.h"
+#include "../libplatform/ZenFWSDLWindow.h"
+#include "../libplatform/ZenFWRenderer.h"
+#include "../libplatform/ZenFWStdNodes.h"
+#include "../libplatform/ZenFWViewer.h"
 
 void ClientServer()
 {
@@ -186,19 +195,19 @@ int main(int argc, char **argv)
 	PROFILER_START(Main);
 
 
-	if (!argv[1])
+	if (argc == 0 || !argv[1])
 	{
 		// normal game
 		MainMenu();
 	}
 	else
 	{
-		if ( (!stricmp(argv[1], "dedicated")) || (!stricmp(argv[1], "server")) )
+		if ( (!strcmp(argv[1], "dedicated")) || (!strcmp(argv[1], "server")) )
 		{
 			// dedicated
 			DedicatedGame();
 		}
-		else if (!stricmp(argv[1], "client"))
+		else if (!strcmp(argv[1], "client"))
 		{
 			// client connect
 			if (!argv[2])
@@ -206,12 +215,12 @@ int main(int argc, char **argv)
 			else
 				ClientGame(argv[2]);
 		}
-		else if (!stricmp(argv[1], "clientserver"))
+		else if (!strcmp(argv[1], "clientserver"))
 		{
 			// server and connected client
 			ClientServer();
 		}
-		else if (!stricmp(argv[1], "solo"))
+		else if (!strcmp(argv[1], "solo"))
 		{
 			// Solo
 			SoloGame();

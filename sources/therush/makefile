@@ -2,12 +2,12 @@ DEBUG=no
 CC=g++
 BULLETLIBPATHS=../../3rdparty/bullet-2.74/lib/
 ifeq ($(DEBUG),yes)
-	CFLAGS=-W -Wall -ansi  -g -DLINUX -I../libbase -I../libplatform -I../librender -I../../3rdparty/bullet-2.74/src -I../../3rdparty/RakNet-3.6201/Source -I/usr/local/include/fmodex
+	CFLAGS=-W -Wall -ansi  -g -I../libbase -I../libplatform -I../librender -I../../3rdparty/bullet-2.74/src -I../../3rdparty/RakNet-3.6201/Source -I/usr/local/include/fmodex
 	LDFLAGS=
 	DEBUGSUFFIX=D
 	
 else
-	CFLAGS=-W -Wall -ansi  -O3 -DLINUX -I../libbase -I../libplatform -I../librender -I../../3rdparty/bullet-2.74/src -I../../3rdparty/RakNet-3.6201/Source -I/usr/local/include/fmodex
+	CFLAGS=-W -Wall -ansi  -O3 -I../libbase -I../libplatform -I../librender -I../../3rdparty/bullet-2.74/src -I../../3rdparty/RakNet-3.6201/Source -I/usr/local/include/fmodex
 	LDFLAGS=
 	DEBUGSUFFIX=
 endif
