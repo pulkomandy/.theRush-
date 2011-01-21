@@ -16,7 +16,7 @@ public:
 	{
 		mIndices = NULL;
 		mTrimesh = NULL;
-		mNbIndices = NULL;
+		mNbIndices = 0;
 	}
 	virtual ~ZPhysicTriMesh()
 	{

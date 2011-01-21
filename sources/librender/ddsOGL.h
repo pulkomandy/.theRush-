@@ -106,7 +106,7 @@ namespace nv_dds
         TextureFlat,    // 1D, 2D, and rectangle textures
         Texture3D,
         TextureCubemap
-    };
+    } TextureType;
 
     class CSurface
     {

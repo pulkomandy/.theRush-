@@ -6,7 +6,6 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 //--------------------------------------------------------------------------------------
 //#include "DXUT.h"
-#include "stdafx.h"
 #include <d3d9.h>
 #include <D3DX9.h>
 #include <DDraw.h>

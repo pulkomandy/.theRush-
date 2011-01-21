@@ -25,8 +25,10 @@
 #include "ZProtoGUI.h"
 #include "IProtoGUI.h"
 #include "ZGuiUtils.h"
-#include "../libplatform/libplatform.h"
 #include "ZGuiLapChoser.h"
+#include "ZLocalisation.h"
+#include "CameraMotion.h"
+#include "ZRushGame.h"
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 

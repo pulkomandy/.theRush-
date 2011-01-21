@@ -21,8 +21,9 @@
 
 #include "ZGuiMusic.h"
 #include "ZProtoGUI.h"
+#include "ZProtoConfig.h"
 #include "IProtoGUI.h"
-#include "../libplatform/libplatform.h"
+#include "libbase/ZTimer.h"
 
 #ifndef WIN32
 #include <sys/time.h>
@@ -39,7 +40,7 @@ void GuiMusic::Build(IProtoGUI *pGUI)
 
 	WindowManager& winMgr = WindowManager::getSingleton();
 
-	ImagesetManager::getSingleton().createFromImageFile("MusiqueIcone", "./Prototype/Common/Menu/musique.tga");
+	ImagesetManager::getSingleton().createImagesetFromImageFile("MusiqueIcone", "./Prototype/Common/Menu/musique.tga");
 
 	mMusicInfoFrame = (FrameWindow*)winMgr.createWindow("TaharezLook/FrameWindow", "ChatWindow");
 	mMusicInfoFrame->setTitleBarEnabled(false);

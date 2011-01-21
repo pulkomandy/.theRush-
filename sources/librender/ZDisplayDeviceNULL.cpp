@@ -18,8 +18,10 @@
 //
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
-
+#include "IDisplayDevice.h"
+#include "IStreamArrays.h"
+#include "libbase/ZLogger.h"
+#include <Cg/cg.h>
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 IDisplayDevice * GDD;
@@ -173,13 +175,13 @@ public:
 
 	//virtual void RenderView(ICamera *pCam, IWorld *pWorld, int SizeX, int SizeY, bool bMainView) {}
 
-	virtual void DrawIndexedPrimitives( uint8 aPrimitive, unsigned int BaseVertexIndex,
+	virtual void DrawIndexedPrimitives( uint8_t aPrimitive, unsigned int BaseVertexIndex,
   unsigned int MinIndex,
   unsigned int NumVertices,
   unsigned int StartIndex,
   unsigned int IndexCount) {}
 
-	virtual void DrawPrimitives( uint8 aPrimitive, unsigned int StartVertex,
+	virtual void DrawPrimitives( uint8_t aPrimitive, unsigned int StartVertex,
 		unsigned int  vertexCount) {}
 
 	virtual float* GetPPLuminance() { return NULL; }

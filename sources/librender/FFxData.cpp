@@ -18,8 +18,8 @@
 //
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
 #include "FFx.h"
+#include "libbase/ZLogger.h"
 
 
 #include <Cg/cg.h>
@@ -155,7 +155,7 @@ void FFxDataMatrix::apply(CGparameter aParam)
 // FFxDataMatrix
 //---------------------------------------------------------------------------------
 
-FFxDataGlMatrix::FFxDataGlMatrix(uint32 aGLMatrixID, uint32 aGLMatrixOp) :
+FFxDataGlMatrix::FFxDataGlMatrix(uint32_t aGLMatrixID, uint32_t aGLMatrixOp) :
 FFxData(CG_FLOAT4x4),
 mGLMatrixID(aGLMatrixID),
 mGLMatrixOp(aGLMatrixOp)
@@ -268,7 +268,7 @@ void FFxDataString::apply(CGparameter aParam)
 // FFxDataTransformVector
 //---------------------------------------------------------------------------------
 
-FFxDataTransformVector::FFxDataTransformVector(ZTransform* aTransform, uint32 aVectorIndex, uint32 aSpace) :
+FFxDataTransformVector::FFxDataTransformVector(ZTransform* aTransform, uint32_t aVectorIndex, uint32_t aSpace) :
 FFxData(CG_FLOAT4),
 mSpace(aSpace),
 mVectorIndex(aVectorIndex)

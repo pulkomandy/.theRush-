@@ -1,9 +1,11 @@
 #include "ZDDEGame.h"
-#include "../libplatform/ZenFWManager.h"
-#include "../libplatform/ZenFWVRAMService.h"
-#include "../libplatform/ZenFWLoaderNode.h"
-#include "../libplatform/ZenFWGame.h"
-#include "../libplatform/IInput.h"
+#include "libplatform/ZenFWManager.h"
+#include "libplatform/ZenFWVRAMService.h"
+#include "libplatform/ZenFWLoaderNode.h"
+#include "libplatform/ZenFWGame.h"
+#include "libworld/ZMeshBuilder.h"
+#include "libworld/ZRigidBodyBullet.h"
+#include "libplatform/IInput.h"
 BEGIN_SERIALIZATION(ZDDEGame)
 END_SERIALIZATION()
 

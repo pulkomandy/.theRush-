@@ -153,8 +153,8 @@
 //         image[0].get_mipmap(i).get_depth(), 0, image.get_format(), 
 //         GL_UNSIGNED_BYTE, image[0].get_mipmap(i));
 // }
-#include "stdafx.h"
 #include "GLee.h"
+#include "libbase/ZBaseDefs.h"
 
 #if defined(MAC_OS)
 #include <OpenGL/gl.h>
@@ -164,8 +164,9 @@
 #endif
 
 #include <iostream>
-#include <stdio.h>
-#include <assert.h>
+#include <cstdio>
+#include <cstring>
+#include <cassert>
 #include "ddsOGL.h"
 
 using namespace std;

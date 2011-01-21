@@ -1,4 +1,7 @@
-#include "../libplatform/libplatform.h"
+#include "ZShip.h"
+#include "ZRushGameContent.h"
+#include "ZRushTrack.h"
+#include "libplatform/IInput.h"
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 

@@ -22,9 +22,9 @@
 #ifndef GUICONFIG_H__
 #define GUICONFIG_H__
 
-#include "../libbase/ZFunctionSlot.h"
-#include "../libbase/ZString.h"
-#include "IProtoGui.h"
+#include "libbase/ZFunctionSlot.h"
+#include "libbase/ZString.h"
+#include "IProtoGUI.h"
 
 #include "CEGUI.h"
 class ZProtoGUI;

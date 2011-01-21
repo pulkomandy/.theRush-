@@ -22,6 +22,7 @@
 
 #include "ZGuiCredits.h"
 #include "ZGuiMainMenu.h"
+#include "libbase/ZTimer.h"
 #include "ZProtoGUI.h"
 #include "IProtoGUI.h"
 

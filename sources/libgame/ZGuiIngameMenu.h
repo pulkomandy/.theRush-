@@ -22,7 +22,7 @@
 #ifndef GuiIngameMenu_H__
 #define GuiIngameMenu_H__
 
-#include "../libbase/ZBaseMaths.h"
+#include "libbase/ZBaseMaths.h"
 
 #include "CEGUI.h"
 class ZProtoGUI;

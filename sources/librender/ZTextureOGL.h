@@ -3,6 +3,8 @@
 
 GLuint UploadDDS(unsigned char *tgeStream, int &w, int &h, int& nbmml);
 
+#include "ZTexture.h"
+
 class ZTextureOGL: public ZTexture
 {
 public:
@@ -24,7 +26,7 @@ public:
 
 		mTexture = UploadDDS(ptr, mWidth, mHeight, mNbMipmaps);
 	}
-	virtual void Bind(uint8 aLevel) 
+	virtual void Bind(uint8_t aLevel) 
 	{
 		glEnable(GL_TEXTURE_2D);
 		glActiveTextureARB( GL_TEXTURE0 + aLevel );

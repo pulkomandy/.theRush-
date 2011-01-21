@@ -1,7 +1,7 @@
 #ifndef ZRUSHGAME_H__
 #define ZRUSHGAME_H__
 
-#include "../libbase/ZSerializator.h"
+#include "libbase/ZSerializator.h"
 
 class FSMClientBase;
 
@@ -25,9 +25,9 @@ struct ZNMSG_UseBonus;
 #include "ZLapsTimes.h"
 #include "ZGameEntitiesManager.h"
 #include "ZBonusParameters.h"
-#include "../libplatform/ZenFWNode.h"
-#include "../libplatform/ZenFWGame.h"
-#include "../libgame/ZGameTriggers.h"
+#include "libplatform/ZenFWNode.h"
+#include "libplatform/ZenFWGame.h"
+#include "libgame/ZGameTriggers.h"
 
 class ZMine;
 class ZMissile;

@@ -12,6 +12,7 @@ using namespace RakNet;
 #include "ZNetFactory.h"
 
 #include "ZRushNetGame.h"
+#include "ZRushTrack.h"
 #include "ZNetShip.h"
 #include "FSMClientBase.h"
 

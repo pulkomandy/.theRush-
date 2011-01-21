@@ -18,9 +18,11 @@
 //
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
 #include "FFx.h"
 #include "FFxImport.h"
+#include "ZFx.h"
+#include "libbase/ZLogger.h"
+#include "libbase/ZFile.h"
 #ifdef WIN32
 #else
 #define _stricmp strcasecmp

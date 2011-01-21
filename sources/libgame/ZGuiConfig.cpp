@@ -21,7 +21,10 @@
 
 #include "ZGuiConfig.h"
 #include "ZProtoGUI.h"
-#include "../libplatform/libplatform.h"
+#include "ZProtoConfig.h"
+#include "ZLocalisation.h"
+#include "libplatform/IInput.h"
+
 #include "ZGuiUtils.h"
 #include <SDL/SDL.h>
 ///////////////////////////////////////////////////////////////////////////////////////////////////

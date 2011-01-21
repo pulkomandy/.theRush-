@@ -18,9 +18,7 @@
 //
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
 #include "GLee.h"
-#include "../libgame/libgame.h"
 #ifdef MAC_OS
 #import <OpenGL/OpenGL.h>
 #else
@@ -34,8 +32,10 @@
 #include <Cg/cgD3D9.h>
 #endif
 #include <Cg/cgGL.h>
-#include "../libworld/libworld.h"
 #include "ZRenderTargetOGL.h"
+#include "ZRenderQueue.h"
+#include "libbase/ZSerializator.h"
+#include "libbase/ZFile.h"
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -319,13 +319,13 @@ mD3DDevice->SetRenderState(D3DRS_ZWRITEENABLE, TRUE);
 	//virtual void RenderView(ICamera *pCam, IWorld *pWorld, int SizeX, int SizeY, bool bMainView) {}
 
 
-	virtual void DrawIndexedPrimitives( uint8 aPrimitive, unsigned int BaseVertexIndex,
+	virtual void DrawIndexedPrimitives( uint8_t aPrimitive, unsigned int BaseVertexIndex,
   unsigned int MinIndex,
   unsigned int NumVertices,
   unsigned int StartIndex,
   unsigned int IndexCount);
 
-	virtual void DrawPrimitives( uint8 aPrimitive, unsigned int StartVertex,
+	virtual void DrawPrimitives( uint8_t aPrimitive, unsigned int StartVertex,
 		unsigned int  vertexCount);
 
 	virtual float* GetPPLuminance() { return NULL; }
@@ -411,8 +411,8 @@ public:
 };
 
 
-BEGIN_SERIALIZATION(ZDisplayDeviceOGL)
-END_SERIALIZATION()
+BEGIN_SERIALIZATION(ZDisplayDeviceOGL);
+END_SERIALIZATION();
 
 int resizeWindow( int width, int height )
 {

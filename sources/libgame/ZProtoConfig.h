@@ -9,8 +9,8 @@
 #ifndef ZPROTOCONFIG_H__
 #define ZPROTOCONFIG_H__
 
-#include "../libbase/ZSerializator.h"
-#include "../librender/IDisplayDevice.h"
+#include "libbase/ZSerializator.h"
+#include "librender/IDisplayDevice.h"
 
 DECLAREZCLASS(ZProtoConfig);
 

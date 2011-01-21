@@ -18,8 +18,10 @@
 //
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
 #include "FFx.h"
+#include "libbase/ZLogger.h"
+#include "libbase/ZFile.h"
+#include <cassert>
 
 #include <Cg/cg.h>
 #ifdef WIN32

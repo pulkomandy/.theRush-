@@ -24,7 +24,10 @@
 #include "ZGuiNetStates.h"
 #include "ZProtoGUI.h"
 #include "ZGuiUtils.h"
-#include "../libplatform/libplatform.h"
+#include "libbase/ZTimer.h"
+#include "ZLocalisation.h"
+#include "ZRushGame.h"
+#include "CameraMotion.h"
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 

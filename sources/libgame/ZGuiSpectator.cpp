@@ -21,7 +21,9 @@
 
 #include "ZGuiSpectator.h"
 #include "ZProtoGUI.h"
-#include "../libplatform/libplatform.h"
+#include "ZLocalisation.h"
+#include "ZRushGame.h"
+#include "CameraMotion.h"
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 

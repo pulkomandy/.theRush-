@@ -23,8 +23,9 @@
 #include "ZProtoGUI.h"
 #include "ZGuiUtils.h"
 #include "ZRushGameContent.h"
-#include "../libplatform/libplatform.h"
 #include "ZGuiLapChoser.h"
+#include "ZLocalisation.h"
+#include "libplatform/ZenFWGame.h"
 
 #define ZENITH_TEST_SERVER "127.0.0.1"
 

@@ -22,6 +22,7 @@
 #ifndef SHIPCAMERA_H__
 #define SHIPCAMERA_H__
 
+#include "ZShip.h"
 
 class CameraMotion
 {

@@ -1,4 +1,9 @@
-#include "../libplatform/libplatform.h"
+#include "libbase/ZTimer.h"
+#include "ZProtoConfig.h"
+#include "FSMServerClassicRace.h"
+#include "ZHUDClassicRaceMeshModifier.h"
+#include "libplatform/ZSoundFMOD.h"
+#include "ZRushGameContent.h"
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 

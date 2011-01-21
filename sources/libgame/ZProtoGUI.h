@@ -31,7 +31,9 @@ using namespace CEGUI;
 #include "ZGuiQuickrace.h"
 #include "ZGuiSpectator.h"
 
-#include "../libplatform/libplatform.h"
+//~ #include "libplatform/libplatform.h"
+#include "libplatform/ZSoundFMOD.h"
+#include "ZRushGameContent.h"
 
 class ZProtoGUI : public IProtoGUI
 {

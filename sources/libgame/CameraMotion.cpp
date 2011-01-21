@@ -22,7 +22,8 @@
 #include "ZShip.h"
 
 #include "CameraMotion.h"
-#include "../libgame/ZRushTrack.h"
+#include "libgame/ZRushTrack.h"
+#include "libbase/ZTimer.h"
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 

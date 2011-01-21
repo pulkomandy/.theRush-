@@ -26,8 +26,10 @@
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include "../libbase/ZFSM.h"
-#include "../libgame/ZDedicatedGames.h"
+#include "libbase/ZFSM.h"
+#include "libgame/ZDedicatedGames.h"
+#include "ZRushGame.h"
+#include "ZNetMessages.h"
 
 
 

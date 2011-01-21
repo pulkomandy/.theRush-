@@ -16,7 +16,8 @@ using namespace RakNet;
 #include "ZNetMissile.h"
 #include "ZNetMine.h"
 #include "ZNetExplosion.h"
-#include "ZProtoGui.h"
+#include "ZProtoGUI.h"
+#include "libbase/ZTimer.h"
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 

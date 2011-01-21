@@ -21,7 +21,7 @@
 
 #include "ZGuiMessagebox.h"
 #include "ZProtoGUI.h"
-#include "../libplatform/libplatform.h"
+#include "libbase/ZTimer.h"
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 

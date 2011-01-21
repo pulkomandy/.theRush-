@@ -20,6 +20,8 @@
 //
 #include "ZGuiMainMenu.h"
 #include "ZProtoGUI.h"
+#include "ZLocalisation.h"
+#include "CameraMotion.h"
 #include "ZGuiUtils.h"
 //#include "ZGuiMusic.h"
 #include "ZGuiConfig.h"
@@ -31,8 +33,6 @@
 #include "ZGuiQuickrace.h"
 #include "ZGuiIngameMenu.h"
 //#include "ZGuiConsoleChat.h"
-#include "../libplatform/libplatform.h"
-#include "../libbase/LibBase.h"
 
 //extern GameContentManager *gContentManager;
 //extern GuiMusic mMusicGui;
@@ -55,7 +55,7 @@ void GuiMainmenu::Build(IProtoGUI *pGUI)
 	mFontArial8 = mGUI->mFontArial8;
 	mFontArial24 = mGUI->mFontArial24;
 
-	ImagesetManager::getSingleton().createFromImageFile("logoRush", "./Prototype/Common/Menu/MenuLogo.tga");
+	ImagesetManager::getSingleton().createImagesetFromImageFile("logoRush", "./Prototype/Common/Menu/MenuLogo.tga");
 
 
 

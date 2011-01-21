@@ -10,12 +10,12 @@
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 // GNU General Public License for more details.
 //
-#include "../libbase/ZFile.h"
-#include "../libbase/ZProfiler.h"
-#include "../libbase/ZBaseDefs.h"
-#include "../libbase/ZPlatformUtils.h"
-#include "../libbase/ZSerializator.h"
-#include "IDisplayDevice.h"
+#include "libbase/ZFile.h"
+#include "libbase/ZProfiler.h"
+#include "libbase/ZBaseDefs.h"
+#include "libbase/ZPlatformUtils.h"
+#include "libbase/ZSerializator.h"
+#include "librender/IDisplayDevice.h"
 
 #include "CEGUI.h"
 #include "XMLParserModules/TinyXMLParser/CEGUITinyXMLParserModule.h"
@@ -28,7 +28,7 @@
 #ifdef WIN32
 #include "RendererModules/direct3d9/ceguidirect3d9renderer.h"
 #endif
-#include "RendererModules/OpenGL/ceguiopenglrenderer.h"
+#include "RendererModules/OpenGLGUIRenderer/openglrenderer.h"
 
 
 CEGUI::Renderer* myRenderer = NULL;
@@ -117,7 +117,7 @@ void InitCEGui()
 
 
 	myParser =		new CEGUI::TinyXMLParser();
-	mySystem =		&CEGUI::System::create(*myRenderer, &gZenithResManager, myParser);
+	mySystem =		CEGUI::System::getSingletonPtr();//&CEGUI::System::create(*myRenderer, &gZenithResManager, myParser);
 
 	GBCEGUIInited = true;
 

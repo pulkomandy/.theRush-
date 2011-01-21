@@ -1,7 +1,7 @@
 #ifndef ZHUDCLASSICRACEMESHMODIFIER_H__
 #define ZHUDCLASSICRACEMESHMODIFIER_H__
 
-
+#include "libworld/ZHUDMeshModifier.h"
 
 DECLAREZCLASS(ZHUDClassicRaceMeshModifier);
 

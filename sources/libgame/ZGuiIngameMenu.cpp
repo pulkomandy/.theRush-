@@ -22,9 +22,14 @@
 
 #include "ZGuiIngameMenu.h"
 
-#include "../libbase/ZPlatformUtils.h"
+#include "libbase/ZPlatformUtils.h"
 #include "ZProtoGUI.h"
+#include "libbase/ZTimer.h"
 #include "ZGuiUtils.h"
+#include "libplatform/ZenFWGame.h"
+#include "libplatform/IInput.h"
+#include "CameraMotion.h"
+#include "libplatform/ZenFWViewer.h"
 //extern GameContentManager *gContentManager;
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////

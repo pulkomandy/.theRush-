@@ -21,6 +21,9 @@
 
 #include "ZGuiUtils.h"
 #include "ZProtoGUI.h"
+#include "ZLocalisation.h"
+#include "ZRushGame.h"
+#include "CameraMotion.h"
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -92,7 +95,7 @@ void ThumbnailChange(Window *pWnd, int worldIdx, int trackIdx)
 //	if (ImagesetManager::getSingleton().isImagesetPresent("ThumbImageImageSet"))
 //		ImagesetManager::getSingleton().destroyImageset("ThumbImageImageSet");
 
-	ImagesetManager::getSingleton().createFromImageFile("ThumbImageImageSet", trackname.c_str());
+	ImagesetManager::getSingleton().createImagesetFromImageFile("ThumbImageImageSet", trackname.c_str());
 
 	pWnd->setProperty("Image", "set:ThumbImageImageSet image:full_image");
 }

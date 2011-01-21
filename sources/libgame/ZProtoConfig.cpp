@@ -7,7 +7,7 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include "ZProtoConfig.h"
-#include "../libbase/ZFile.h"
+#include "libbase/ZFile.h"
 
 #include "tinyxml.h"
 
@@ -80,7 +80,7 @@ ZProtoConfig::~ZProtoConfig()
 void ZProtoConfig::ReadConfig()
 {
 	ZFile file;
-	tstring configName = GetHomeDirectoy();
+	tstring configName = GetHomeDirectory();
 	configName += ".the rush/Game.cfg";
 	if (file.Open(configName.c_str(), ZOPEN_READ, false))
 	{
@@ -180,7 +180,7 @@ void ZProtoConfig::WriteConfig() const
 {
 	// write
 	ZFile cfgFile;
-	tstring configName = GetHomeDirectoy();
+	tstring configName = GetHomeDirectory();
 	configName += ".the rush";//Game.cfg";
 #ifdef WIN32	
 	_mkdir(configName.c_str());

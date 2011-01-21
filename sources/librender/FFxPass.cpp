@@ -18,9 +18,9 @@
 //
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
 #include "FFx.h"
-#include "../libbase/LibBase.h"
+#include "ZFx.h"
+#include "ZMaterial.h"
 
 #include <Cg/cg.h>
 #ifdef WIN32

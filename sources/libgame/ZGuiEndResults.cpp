@@ -22,8 +22,11 @@
 
 #include "ZGuiEndResults.h"
 #include "ZProtoGUI.h"
-#include "../libplatform/libplatform.h"
-#include "../libbase/LibBase.h"
+#include "ZLocalisation.h"
+#include "ZRushGame.h"
+#include "CameraMotion.h"
+//~ #include "libplatform/libplatform.h"
+//~ #include "libbase/LibBase.h"
 
 #include <CEGUI.h>
 
@@ -43,9 +46,9 @@ void GuiEndResult::Build(IProtoGUI *pGUI)
 	// --
 
 
-	ImagesetManager::getSingletonPtr()->createFromImageFile("logoWinnerFirst", "./Prototype/Common/Menu/First.tga");
-	ImagesetManager::getSingletonPtr()->createFromImageFile("logoWinnerSecond", "./Prototype/Common/Menu/Second.tga");
-	ImagesetManager::getSingletonPtr()->createFromImageFile("logoWinnerThird", "./Prototype/Common/Menu/Third.tga");
+	ImagesetManager::getSingletonPtr()->createImagesetFromImageFile("logoWinnerFirst", "./Prototype/Common/Menu/First.tga");
+	ImagesetManager::getSingletonPtr()->createImagesetFromImageFile("logoWinnerSecond", "./Prototype/Common/Menu/Second.tga");
+	ImagesetManager::getSingletonPtr()->createImagesetFromImageFile("logoWinnerThird", "./Prototype/Common/Menu/Third.tga");
 
 
 

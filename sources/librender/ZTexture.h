@@ -21,6 +21,8 @@
 #ifndef ZTEXTURE_H__
 #define ZTEXTURE_H__
 
+#include "libbase/ZSerializator.h"
+
 enum TEXTURE_TYPE
 {
     TEXTURE_UNDEFINED,
