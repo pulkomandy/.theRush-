@@ -20,7 +20,7 @@
 
 #include "ZScene.h"
 #include "MiniBall/Sphere.h"
-#include "ZRenderQueue.h"
+#include "librender/ZRenderQueue.h"
 #include "ZOccluderBox.h"
 #include "ZLight.h"
 

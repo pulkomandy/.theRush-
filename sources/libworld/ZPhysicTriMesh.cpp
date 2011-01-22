@@ -2,7 +2,7 @@
 
 #include <BulletCollision/CollisionShapes/btConcaveShape.h>
 #include <BulletCollision/CollisionShapes/btTriangleIndexVertexArray.h>
-#include <BulletCollision/GImpact/btGImpactShape.h>
+#include <BulletCollision/Gimpact/btGImpactShape.h>
 
 BEGIN_SERIALIZATION(ZPhysicTriMesh)
 END_SERIALIZATION()

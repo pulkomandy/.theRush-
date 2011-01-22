@@ -21,12 +21,12 @@
 #ifndef ZTRAILS_H__
 #define ZTRAILS_H__
 
-#include "../libbase/ZBaseMaths.h"
-#include "../libbase/ZBaseClass.h"
-#include "../libbase/ZSerializator.h"
-#include "../libbase/ZSmartPtr.h"
+#include "libbase/ZBaseMaths.h"
+#include "libbase/ZBaseClass.h"
+#include "libbase/ZSerializator.h"
+#include "libbase/ZSmartPtr.h"
 #include "ZMeshInstance.h"
-#include "FFx.h"
+#include "librender/FFx.h"
 
 class ZFx;
 class ZTexture;
