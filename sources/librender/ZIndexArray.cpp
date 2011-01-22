@@ -18,8 +18,11 @@
 //
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
 
+#include <stdint.h>
+
+#include "libbase/ZSerializator.h"
+#include "IStreamArrays.h"
 
 
 class ZIndexArray : public IIndexArray
@@ -38,16 +41,16 @@ public:
 			free(mRamBuf);
     }
 
-    void Init(int aQty, uint32 aFlag)
+    void Init(int aQty, uint32_t aFlag)
     {
 		if (mRamBuf)
 			free(mRamBuf);
 
-		mRamBuf = (uint16*)malloc(aQty * sizeof(uint16));
+		mRamBuf = (uint16_t*)malloc(aQty * sizeof(uint16_t));
 		mIndexCount = aQty;
     }
 
-    uint32 GetIndexCount() { return mIndexCount; }
+    uint32_t GetIndexCount() { return mIndexCount; }
 
     void * Lock(IMESH_LOCK aFlag)
     {
@@ -63,10 +66,10 @@ public:
 
 	virtual void Unbind() {}
 
-	virtual tulong GetMemoryUsed() const { return (sizeof(ZIndexArray) + mIndexCount*sizeof(uint16)); }
+	virtual tulong GetMemoryUsed() const { return (sizeof(ZIndexArray) + mIndexCount*sizeof(uint16_t)); }
 
 protected:
-    uint32 mIndexCount;
+    uint32_t mIndexCount;
 	void *mRamBuf;
 };
 

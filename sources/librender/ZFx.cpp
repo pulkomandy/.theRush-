@@ -18,7 +18,6 @@
 //
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
 #include "FFx.h"
 #include "ZFx.h"
 #include "FFxImport.h"
@@ -32,6 +31,9 @@
 #endif
 */
 #include "IDisplayDevice.h"
+#include "libbase/ZLogger.h"
+#include "libbase/ZTimer.h"
+#include "libworld/ZCamera.h"
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 CGcontext gDefaultCGcontext;
@@ -288,9 +290,9 @@ struct FFxSemanticInfo
 	};
 
 	const char* mName;
-	uint32		mType;
-	uint32		mGLMatrixID;
-	uint32		mGLMatrixOp;
+	uint32_t	mType;
+	uint32_t	mGLMatrixID;
+	uint32_t	mGLMatrixOp;
 };
 
 
@@ -485,11 +487,11 @@ void dumpCgSamplerStateAssignment(CGparameter param, CGstateassignment sa, CGboo
 void ZFx::connectTechnique(FFxTechnique* technique, bool bAddNewParams)
 {
 	// traverse all passes
-	for (uint j=0; j<technique->mPasses.size(); j++)
+	for (unsigned int j=0; j<technique->mPasses.size(); j++)
 	{
 		FFxPass* pass = technique->mPasses[j];
 		// traverse all programs
-		for (uint k=0; k<pass->mPrograms.size(); k++)
+		for (unsigned int k=0; k<pass->mPrograms.size(); k++)
 		{
 			FFxProgram* program = pass->mPrograms[k];
 
@@ -562,7 +564,7 @@ void ZFx::connectTechnique(FFxTechnique* technique, bool bAddNewParams)
 void ZFx::connectProgramParameters(bool bAddNewParams)
 {
 	// traverse all techniques
-	for (uint i=0; i<mTechniques.size(); i++)
+	for (unsigned int i=0; i<mTechniques.size(); i++)
 	{
 		FFxTechnique* technique = mTechniques[i];
 		connectTechnique(technique, bAddNewParams);
@@ -652,7 +654,7 @@ void D3D9SetPrograms(ZFx* pAEffect)
 	else
 		pPass = pEffect->mCurTechnique->mPasses[0];
 
-	for (uint i=0;i<pPass->mPrograms.size();i++)
+	for (unsigned int i=0;i<pPass->mPrograms.size();i++)
 	{
 		pPass->mPrograms[i]->bind();
 	}

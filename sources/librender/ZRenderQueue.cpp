@@ -1,10 +1,13 @@
-#include "stdafx.h"
-//#include "../libplatform/libplatform.h"
+#include "ZRenderQueue.h"
 
 #include "../libplatform/ZenFWManager.h"
 #include "../libplatform/ZenFWVRAMService.h"
 #include "../libplatform/ZenFWLoaderNode.h"
 #include "../libplatform/ZenFWGame.h"
+#include "libworld/ZAtmosphere.h"
+#include "libgame/ZRushGame.h"
+#include "libworld/ZHUDMeshModifier.h"
+
 
 void ZRenderQueue::Begin()
 {
@@ -109,7 +112,7 @@ void ZRenderQueue::DrawMeshInstance(ZMeshInstance *mgMesh) const
 {
 
 	//uint nbsu = mgMesh->GetMesh()->GetNbSubMeshes();
-	for (uint iasm = 0;iasm<mgMesh->GetMesh()->GetNbSubMeshes(); iasm++)
+	for (unsigned int iasm = 0;iasm<mgMesh->GetMesh()->GetNbSubMeshes(); iasm++)
 	{
 
 		ZFx *nFX = mgMesh->GetMaterial(iasm)->getEffect();

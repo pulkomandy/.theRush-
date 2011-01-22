@@ -18,13 +18,12 @@
 //
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
 #include <vector>
-#include "../libbase/LibBase.h"
 
 #include "FFx.h"
 #include "ZFx.h"
 #include "ZMaterial.h"
+#include "libbase/ZLogger.h"
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -292,7 +291,7 @@ bool ZMaterial::open()
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-uint32	ZMaterial::getNumPasses() const
+uint32_t ZMaterial::getNumPasses() const
 {
 	if (!mEffect.ptr())
 		return 0;
@@ -321,7 +320,7 @@ bool ZMaterial::IsEsqualTo(ZMaterial *pMat)
 		return false;
 	if (pm->mTextures.size() != mTextures.size())
 		return false;
-	for (uint i=0;i<mTextures.size();i++)
+	for (unsigned int i=0;i<mTextures.size();i++)
 	{
 		if (mTextures[i] != pm->mTextures[i])
 			return false;

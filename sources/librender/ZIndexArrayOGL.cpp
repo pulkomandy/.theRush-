@@ -18,8 +18,6 @@
 //
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
-
 #include "GLee.h"
 #ifdef MAC_OS
 #import <OpenGL/OpenGL.h>
@@ -63,7 +61,7 @@ public:
 			free(mIndexBuffer);
     }
 
-    void Init(int aQty, uint32 aFlag)
+    void Init(int aQty, uint32_t aFlag)
     {
 		mFlag = aFlag;
 		mIndexCount = aQty;
@@ -75,7 +73,7 @@ public:
 
     }
 
-    uint32 GetIndexCount() { return mIndexCount; }
+    uint32_t GetIndexCount() { return mIndexCount; }
 
     void * Lock(IMESH_LOCK aFlag)
     {
@@ -94,7 +92,7 @@ public:
 			return;
 		if (GOGLThreadId != GetCurrentThreadId() )
 		{
-			VRAMService->AddIndexArrayJob(NULL, this, false, mIndexBuffer, mIndexCount*sizeof(uint16), false);
+			VRAMService->AddIndexArrayJob(NULL, this, false, mIndexBuffer, mIndexCount*sizeof(uint16_t), false);
 		}
 		else
 		{
@@ -133,9 +131,9 @@ public:
 	virtual tulong GetMemoryUsed() const { return (sizeof(ZIndexArrayOGL) + mIndexBufferSize); }
 
 protected:
-    uint32 mIndexCount;
-	uint32 mFlag;
-	uint32 mIndexBufferSize;
+    uint32_t mIndexCount;
+	uint32_t mFlag;
+	uint32_t mIndexBufferSize;
 	GLuint	mIndexBufferName;
 	unsigned short *mIndexBuffer;
 	IMESH_LOCK mLockFlag;
