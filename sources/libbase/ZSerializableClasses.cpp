@@ -44,7 +44,7 @@ void *ZSerializableClasses::FindInstanceByName(const char *pszName) const
 
 ZSerializableClasses * FindClassDefByName(const char *className)
 {
-    for (uint i=BASIC_TYPE_LIMIT;i<uint(BASIC_TYPE_LIMIT+gSerializableClassesCount);i++)
+    for (unsigned int i=BASIC_TYPE_LIMIT;i<(BASIC_TYPE_LIMIT+gSerializableClassesCount);i++)
     {
         if (gSerializableClasses[i].name)
         if (!strcmp(gSerializableClasses[i].name, className))
@@ -57,7 +57,7 @@ ZSerializableClasses * FindClassDefByName(const char *className)
 
 SerializableField *ZSerializableClasses::FindInEngineField(const char *szFieldName)
 {
-    for (uint i =0;i<mNbMembers;i++)
+    for (unsigned int i =0;i<mNbMembers;i++)
     {
         if (mFields[i].name)
             if (!strcmp(mFields[i].name, szFieldName))
@@ -72,7 +72,7 @@ void DumpClasses()
 {
 	LOG("name                            count  minmem  maxmem  avermem total mem\n");
 	LOG("------------------------------------------------------------------------\n");
-    for (uint i = 0 ; i < MAX_NUMBER_OF_SERIALIZABLE_CLASSES ; i ++ )
+    for (unsigned int i = 0 ; i < MAX_NUMBER_OF_SERIALIZABLE_CLASSES ; i ++ )
     {
         if (gSerializableClasses[i].mCount!=0)
         {
