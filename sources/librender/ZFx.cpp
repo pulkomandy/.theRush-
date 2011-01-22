@@ -190,7 +190,7 @@ void ZFx::init(CGcontext aContext, bool bAddNewParams)
 // runtime rendering
 
 
-FFxTechnique* ZFx::selectTechniqueByIndex(uint32 aNum)
+FFxTechnique* ZFx::selectTechniqueByIndex(uint32_t aNum)
 {
 	if (aNum < mTechniques.size())
 		mCurTechnique = mTechniques[aNum];
@@ -199,7 +199,7 @@ FFxTechnique* ZFx::selectTechniqueByIndex(uint32 aNum)
 	return mCurTechnique;
 }
 
-FFxTechnique* ZFx::selectTechniqueByIndex(uint32 aNum, ZMaterial *pMat)
+FFxTechnique* ZFx::selectTechniqueByIndex(uint32_t aNum, ZMaterial *pMat)
 {
 	if (aNum < mTechniques.size())
 	{

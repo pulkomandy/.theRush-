@@ -32,11 +32,13 @@
 #include <Cg/cgD3D9.h>
 #endif
 #include <Cg/cgGL.h>
+
 #include "IDisplayDevice.h"
 #include "ZRenderTargetOGL.h"
 #include "ZRenderQueue.h"
 #include "libbase/ZSerializator.h"
 #include "libbase/ZFile.h"
+#include "libgame/ZProtoConfig.h"
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -409,8 +411,8 @@ public:
 };
 
 
-BEGIN_SERIALIZATION(ZDisplayDeviceOGL);
-END_SERIALIZATION();
+BEGIN_SERIALIZATION(ZDisplayDeviceOGL)
+END_SERIALIZATION()
 
 int resizeWindow( int width, int height )
 {
@@ -562,7 +564,7 @@ bool ZDisplayDeviceOGL::Create( INITPARAMS * pParam)
 
 
 
-void ZDisplayDeviceOGL::DrawIndexedPrimitives( uint8 aPrimitive, unsigned int BaseVertexIndex,
+void ZDisplayDeviceOGL::DrawIndexedPrimitives( uint8_t aPrimitive, unsigned int BaseVertexIndex,
 								   unsigned int MinIndex,
 								   unsigned int NumVertices,
 								   unsigned int StartIndex,
@@ -615,7 +617,7 @@ void ZDisplayDeviceOGL::DrawIndexedPrimitives( uint8 aPrimitive, unsigned int Ba
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-void ZDisplayDeviceOGL::DrawPrimitives( uint8 aPrimitive, unsigned int StartVertex,  unsigned int  vertexCount)
+void ZDisplayDeviceOGL::DrawPrimitives( uint8_t aPrimitive, unsigned int StartVertex,  unsigned int  vertexCount)
 {
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 	switch(aPrimitive)
