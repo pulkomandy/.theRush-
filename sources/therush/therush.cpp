@@ -1,18 +1,18 @@
 // therush.cpp : définit le point d'entrée pour l'application console.
 //
 
-#include "../libplatform/ZenFWManager.h"
-#include "../libplatform/ZenFWLoaderNode.h"
-#include "../libplatform/ZenFWdecoderNode.h"
-#include "../libplatform/ZenFWVRAMService.h"
-#include "../librender/ZRenderQueue.h"
-#include "../libworld/ZMesh.h"
-#include "../libgame/ZDedicatedGames.h"
-#include "../libplatform/ZenFWGame.h"
-#include "../libplatform/ZenFWSDLWindow.h"
-#include "../libplatform/ZenFWRenderer.h"
-#include "../libplatform/ZenFWStdNodes.h"
-#include "../libplatform/ZenFWViewer.h"
+#include "libplatform/ZenFWManager.h"
+#include "libplatform/ZenFWLoaderNode.h"
+#include "libplatform/ZenFWDecoderNode.h"
+#include "libplatform/ZenFWVRAMService.h"
+#include "librender/ZRenderQueue.h"
+#include "libworld/ZMesh.h"
+#include "libgame/ZDedicatedGames.h"
+#include "libplatform/ZenFWGame.h"
+#include "libplatform/ZenFWSDLWindow.h"
+#include "libplatform/ZenFWRenderer.h"
+#include "libplatform/ZenFWStdNodes.h"
+#include "libplatform/ZenFWViewer.h"
 
 void ClientServer()
 {
