@@ -32,6 +32,7 @@
 #include <Cg/cgD3D9.h>
 #endif
 #include <Cg/cgGL.h>
+#include "IDisplayDevice.h"
 #include "ZRenderTargetOGL.h"
 #include "ZRenderQueue.h"
 #include "libbase/ZSerializator.h"
@@ -75,9 +76,6 @@ extern ZTexture* GpSMZTexture                    ;
   }
 }
 */
-
-
-
 
 
 class ZDisplayDeviceOGL : public IDisplayDevice

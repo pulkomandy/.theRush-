@@ -33,7 +33,9 @@ include_directories(
 	../3rdparty/tinyxml
 	.
 )
-link_directories(/usr/lib)
+link_directories(
+    /usr/lib
+)
 
  add_subdirectory(libbase)
  add_subdirectory(libedit)

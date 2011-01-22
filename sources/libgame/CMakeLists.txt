@@ -188,7 +188,7 @@ include_directories(
 	..
 )
 add_library(
-	libgame.a
+	game
 	${ALL_FILES}
 )
 

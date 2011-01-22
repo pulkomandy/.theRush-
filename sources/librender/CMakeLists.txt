@@ -103,7 +103,7 @@ include_directories(
 	..
 )
 add_library(
-	librender.a
+	render
 	${ALL_FILES}
 )
 

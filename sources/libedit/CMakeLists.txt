@@ -65,7 +65,7 @@ include_directories(
 	..
 )
 add_library(
-	libedit.a
+	edit
 	${ALL_FILES}
 )
 

@@ -80,14 +80,14 @@ set(BULLET_INCLUDE_DIRS /usr/include/bullet)
 include_directories(
 	${BULLET_INCLUDE_DIRS}
 	/usr/include/ZenLib
-	/usr/include/CEGUI/
+	/usr/include/CEGUI
 	/usr/include/fmodex
-	../../3rdparty/RakNet-3.6201/Source/
+	../../3rdparty/RakNet-3.6201/Source
 	#~ ../../3rdparty/tinyxml
 	..
 )
 add_library(
-	libplatform.a
+	platform
 	${ALL_FILES}
 )
 
