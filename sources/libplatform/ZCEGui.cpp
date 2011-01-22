@@ -28,7 +28,12 @@
 #ifdef WIN32
 #include "RendererModules/direct3d9/ceguidirect3d9renderer.h"
 #endif
-#include "RendererModules/OpenGLGUIRenderer/openglrenderer.h"
+
+#if CEGUI_VERSION_MINOR <= 6
+	#include "RendererModules/OpenGLGUIRenderer/openglrenderer.h"
+#else
+	#include "RendererModules/OpenGL/ceguiopenglrenderer.h"
+#endif
 
 
 CEGUI::Renderer* myRenderer = NULL;

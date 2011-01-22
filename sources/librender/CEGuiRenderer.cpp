@@ -18,12 +18,20 @@
 #ifdef WIN32
 #include <RendererModules/direct3d9/CEGUIdirect3d9renderer.h>
 #endif
-#include <RendererModules/OpenGLGUIRenderer/openglrenderer.h>
+#if CEGUI_VERSION_MINOR <= 6
+	#include "RendererModules/OpenGLGUIRenderer/openglrenderer.h"
+#else
+	#include "RendererModules/OpenGL/ceguiopenglrenderer.h"
+#endif
 
 
 #include "IDisplayDevice.h"
 
+#if CEGUI_VERSION_MINOR <= 6
 CEGUI::Renderer* GetDisplayDeviceCEGuiRendererInterface()
+#else
+CEGUI::Renderer& GetDisplayDeviceCEGuiRendererInterface()
+#endif
 {
 #ifdef WIN32
 	if (GDD->GetClassID() == ClassIDZDisplayDeviceDX9)
@@ -31,6 +39,9 @@ CEGUI::Renderer* GetDisplayDeviceCEGuiRendererInterface()
 	else
 #endif
 	if (GDD->GetClassID() == ClassIDZDisplayDeviceOGL)
-		//~ return CEGUI::OpenGLRenderer::create();
+#if CEGUI_VERSION_MINOR <= 6
 		return new CEGUI::OpenGLRenderer(0);
+#else
+		return CEGUI::OpenGLRenderer::create();
+#endif
 }

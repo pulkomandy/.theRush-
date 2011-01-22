@@ -81,12 +81,19 @@ ZProtoGUI::ZProtoGUI() : winMgr(WindowManager::getSingleton())
 	GProtoGui = this;
 
 	// scheme
+#if CEGUI_VERSION_MINOR <= 6
 	ImagesetManager::getSingleton().createImageset("./Prototype/Common/Menu/CEGUISkin/TaharezLook.imageset");
 	//SchemeManager::getSingleton().load("./Prototype/Common/Menu/CEGUISkin/TaharezLook.scheme");
 
 	// Fonts
 	mFontArial8 = FontManager::getSingleton().createFont("./Prototype/Common/Menu/Arial.font");
 	mFontArial24 = FontManager::getSingleton().createFont("./Prototype/Common/Menu/Arial24.font");
+#else
+	SchemeManager::getSingleton().create("./Prototype/Common/Menu/CEGUISkin/TaharezLook.scheme");
+	mFontArial8 = &FontManager::getSingleton().create("./Prototype/Common/Menu/Arial.font");
+	mFontArial24 = &FontManager::getSingleton().create("./Prototype/Common/Menu/Arial24.font");
+
+#endif
 
 	//root
 	root = (DefaultWindow*)winMgr.createWindow("DefaultWindow", "Root");

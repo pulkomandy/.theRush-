@@ -69,7 +69,7 @@ void FFxTechnique::beginMaterial(ZMaterial* aMaterial)
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-void FFxTechnique::setPassState(uint aPass)
+void FFxTechnique::setPassState(unsigned int aPass)
 {
 	if (aPass >= mPasses.size())
 	{

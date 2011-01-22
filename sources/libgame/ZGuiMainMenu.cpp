@@ -55,7 +55,11 @@ void GuiMainmenu::Build(IProtoGUI *pGUI)
 	mFontArial8 = mGUI->mFontArial8;
 	mFontArial24 = mGUI->mFontArial24;
 
+#if CEGUI_VERSION_MINOR <= 6
 	ImagesetManager::getSingleton().createImagesetFromImageFile("logoRush", "./Prototype/Common/Menu/MenuLogo.tga");
+#else
+	ImagesetManager::getSingleton().createFromImageFile("logoRush", "./Prototype/Common/Menu/MenuLogo.tga");
+#endif
 
 
 

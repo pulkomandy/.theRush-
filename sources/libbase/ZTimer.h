@@ -26,6 +26,10 @@
 #import <CoreFoundation/CoreFoundation.h>
 #endif
 
+#ifdef WIN32
+	#include <Windows.h>
+#endif
+
 #ifdef LINUX
 #include <sys/time.h>
 #endif

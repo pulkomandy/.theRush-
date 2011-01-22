@@ -46,9 +46,15 @@ void GuiEndResult::Build(IProtoGUI *pGUI)
 	// --
 
 
+#if CEGUI_VERSION_MINOR <= 6
 	ImagesetManager::getSingletonPtr()->createImagesetFromImageFile("logoWinnerFirst", "./Prototype/Common/Menu/First.tga");
 	ImagesetManager::getSingletonPtr()->createImagesetFromImageFile("logoWinnerSecond", "./Prototype/Common/Menu/Second.tga");
 	ImagesetManager::getSingletonPtr()->createImagesetFromImageFile("logoWinnerThird", "./Prototype/Common/Menu/Third.tga");
+#else
+	ImagesetManager::getSingletonPtr()->createFromImageFile("logoWinnerFirst", "./Prototype/Common/Menu/First.tga");
+	ImagesetManager::getSingletonPtr()->createFromImageFile("logoWinnerSecond", "./Prototype/Common/Menu/Second.tga");
+	ImagesetManager::getSingletonPtr()->createFromImageFile("logoWinnerThird", "./Prototype/Common/Menu/Third.tga");
+#endif
 
 
 

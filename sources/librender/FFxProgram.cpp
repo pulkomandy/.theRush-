@@ -157,7 +157,7 @@ char* resolveIncludes(char * src)
 		{
 			chdir("ZenithDatas");
 			int includePos = int(pInclude - src);
-			tstring	fname(fstart+1, uint(fend-fstart-1));
+			tstring	fname(fstart+1, (fend-fstart-1));
 			ZFile file;
             if (!file.Open(fname.c_str()))
 			{
@@ -165,7 +165,7 @@ char* resolveIncludes(char * src)
 				break;
 			}
             int includeSize = file.GetSize();
-			int newSize = srcSize + includeSize - (uint)(fend - pInclude);
+			int newSize = srcSize + includeSize - (fend - pInclude);
 
 			char* newSrc = (char*) new char [newSize];
 			memcpy(newSrc, src, includePos);

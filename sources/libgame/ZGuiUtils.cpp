@@ -95,7 +95,11 @@ void ThumbnailChange(Window *pWnd, int worldIdx, int trackIdx)
 //	if (ImagesetManager::getSingleton().isImagesetPresent("ThumbImageImageSet"))
 //		ImagesetManager::getSingleton().destroyImageset("ThumbImageImageSet");
 
+#if CEGUI_VERSION_MINOR <= 6
 	ImagesetManager::getSingleton().createImagesetFromImageFile("ThumbImageImageSet", trackname.c_str());
+#else
+	ImagesetManager::getSingleton().createFromImageFile("ThumbImageImageSet", trackname.c_str());
+#endif
 
 	pWnd->setProperty("Image", "set:ThumbImageImageSet image:full_image");
 }

@@ -40,7 +40,11 @@ void GuiMusic::Build(IProtoGUI *pGUI)
 
 	WindowManager& winMgr = WindowManager::getSingleton();
 
+#if CEGUI_VERSION_MINOR <= 6
 	ImagesetManager::getSingleton().createImagesetFromImageFile("MusiqueIcone", "./Prototype/Common/Menu/musique.tga");
+#else
+	ImagesetManager::getSingleton().createFromImageFile("MusiqueIcone", "./Prototype/Common/Menu/musique.tga");
+#endif
 
 	mMusicInfoFrame = (FrameWindow*)winMgr.createWindow("TaharezLook/FrameWindow", "ChatWindow");
 	mMusicInfoFrame->setTitleBarEnabled(false);
