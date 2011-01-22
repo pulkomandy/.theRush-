@@ -36,12 +36,8 @@
 
 #include "ZBaseDefs.h"
 
-// returns directory to Images folder
-__inline const char* GetPictureDirectory();
+const char * GetPictureDirectory();
 __inline const char * GetHomeDirectory();
-
-
-
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////

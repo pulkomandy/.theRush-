@@ -2,6 +2,7 @@
 #define ZTEXTUREDX9_H__
 
 #include "ddsDX9.h"
+#include "ZTexture.h"
 
 extern IDirect3DDevice9 *GD3D9Device;
 
@@ -27,7 +28,7 @@ public:
 		HRESULT hr = CreateDDSTextureFromMemory( GD3D9Device, ptr, memSize, &mTexture );
 	}
 
-    virtual void Bind(uint8 aLevel)
+    virtual void Bind(uint8_t aLevel)
     {
         GD3D9Device->SetTexture(aLevel, mTexture);
     }

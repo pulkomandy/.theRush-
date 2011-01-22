@@ -104,7 +104,7 @@ public:
 	}
 
     //virtual void BindAsTexture(int level, bool wantZTexture = false)
-    virtual void Bind(uint8 aLevel) 
+    virtual void Bind(uint8_t aLevel) 
 	{
 		GD3D9Device->SetTexture(aLevel, /*wantZTexture ? mZTexture :*/ mTexture);
 		//D3DXSaveTextureToFile("c:\\temp\\frnt1.dds", D3DXIFF_DDS , mTexture, 0);
@@ -158,8 +158,8 @@ public:
 
 		return mZTex;
 	}
-	virtual uint32 GetWidth() { return mSizeX; }
-	virtual uint32 GetHeight() { return mSizeY; }
+	virtual uint32_t GetWidth() { return mSizeX; }
+	virtual uint32_t GetHeight() { return mSizeY; }
 
 	virtual void StretchCopyTo(IRenderTarget *pDest, RECT *pSrcRect = NULL, RECT *pDstRect = NULL)
 	{

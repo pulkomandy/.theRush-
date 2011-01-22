@@ -54,16 +54,20 @@ add_executable(
 )
 find_library(MINIBALL_LIBRARY miniball PATHS ${CMAKE_SOURCE_DIR}/../libs)
 find_library(TINYXML_LIBRARY tinyxml PATHS ${CMAKE_SOURCE_DIR}/../libs)
-find_library(RAKNET_LIBRARY RakNet PATHS ${CMAKE_SOURCE_DIR}/../libs)
+#find_library(RAKNET_LIBRARY RakNet PATHS ${CMAKE_SOURCE_DIR}/../libs)
 if (NOT MINIBALL_LIBRARY)
 message(FATAL_ERROR "MiniBall not found !")
 endif (NOT MINIBALL_LIBRARY)
+
 if (NOT TINYXML_LIBRARY)
 message(FATAL_ERROR "TinyXML not found !")
 endif (NOT TINYXML_LIBRARY)
-if (NOT RAKNET_LIBRARY)
-message(FATAL_ERROR "RakNet not found !")
-endif (NOT RAKNET_LIBRARY)
+
+#if (NOT RAKNET_LIBRARY)
+#message(FATAL_ERROR "RakNet not found !")
+#endif (NOT RAKNET_LIBRARY)
+
+find_package(opengl)
 
 message(${RAKNET_LIBRARY})
 
@@ -78,18 +82,26 @@ target_link_libraries(
     LinearMath
     GIMPACTUtils
     BulletCollision
+    Bulletdynamics
     BulletMultiThreaded
+    BulletsoftBody
     pthread
     CEGUIBase
     CEGUIOpenGLRenderer
     CEGUITinyXMLParser
     ${TINYXML_LIBRARY}
     ${MINIBALL_LIBRARY}
-    ${RAKNET_LIBRARY}
+	# ${RAKNET_LIBRARY}
     fmodex
     Cg
     CgGL
     SDL
+	${OPENGL_LIBRARY}
+	glut32
+	glu32
+	Opengl32
+	winmm
+	gdi32
 )
 
 

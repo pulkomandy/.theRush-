@@ -18,14 +18,20 @@
 //
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
-#include "../libgame/libgame.h"
+#include <Cg/cg.h>
+#include <Cg/cgD3D9.h>
+
 #include "ZD3D9Enum.h"
 #include "ddsDX9.h"
 #include "DxErr.h"
-#include <Cg/cg.h>
-#include <Cg/cgD3D9.h>
-#include "../libworld/libworld.h"
+#include "IDisplayDevice.h"
+#include "IStreamArrays.h"
+#include "ZrenderQueue.h"
+#include "libbase/ZLogger.h"
+#include "libbase/ZBaseMaths.h"
+#include "libbase/ZString.h"
+#include "libbase/ZProfiler.h"
+#include "libgame/ZProtoConfig.h"
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 extern IDisplayDevice * GDD;
@@ -39,7 +45,7 @@ D3DFORMAT				mBackBufferFormatDX9, mBackBufferZStencilFormatDX9;
 HWND GEditorWindowHandle = 0;
 
 extern "C" {
-const char*  WINAPI DXGetErrorString9A(__in HRESULT hr)
+const char*  WINAPI DXGetErrorString9A(/*__in*/ HRESULT hr)
 {
 	return DXGetErrorStringA(hr);
 }
@@ -260,16 +266,16 @@ public:
 
 	//virtual void RenderView(ICamera *pCam, IWorld *pWorld, int SizeX, int SizeY, bool bMainView) {}
 
-	virtual unsigned long GetMemoryUsed() const { return sizeof(ZDisplayDeviceDX9); }
+	virtual tulong GetMemoryUsed() const { return sizeof(ZDisplayDeviceDX9); }
 
 
-	virtual void DrawIndexedPrimitives( uint8 aPrimitive, unsigned int BaseVertexIndex,
+	virtual void DrawIndexedPrimitives( uint8_t aPrimitive, unsigned int BaseVertexIndex,
   unsigned int MinIndex,
   unsigned int NumVertices,
   unsigned int StartIndex,
   unsigned int IndexCount);
 
-	virtual void DrawPrimitives( uint8 aPrimitive, unsigned int StartVertex,
+	virtual void DrawPrimitives( uint8_t aPrimitive, unsigned int StartVertex,
 		unsigned int  vertexCount);
 
 	virtual float* GetPPLuminance() { return NULL; }
@@ -345,7 +351,7 @@ public:
 	bool					mBeginSceneDone;
 
     bool                    mHWPShader, mHWVShader, mTnL;
-    uint32                  mTextureBpp;
+    uint32_t                  mTextureBpp;
     bool                    mTextureCompression;
     D3DCAPS9                mCaps;
     int                     mNbMRT;
@@ -354,7 +360,7 @@ public:
 
 	ZD3D9Enum               mD3DEnum;
 
-	uint					mBackBufWidth, mBackBufHeight;
+	unsigned int					mBackBufWidth, mBackBufHeight;
 
 	// file capture
 	tstring mColorFrameBufferFileName;
@@ -378,7 +384,8 @@ END_SERIALIZATION()
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-void ZDisplayDeviceDX9::DrawIndexedPrimitives( uint8 aPrimitive, unsigned int BaseVertexIndex,
+void ZDisplayDeviceDX9::DrawIndexedPrimitives( uint8_t aPrimitive,
+		unsigned int BaseVertexIndex,
 											  unsigned int MinIndex,
 											  unsigned int NumVertices,
 											  unsigned int StartIndex,
@@ -420,7 +427,7 @@ void ZDisplayDeviceDX9::DrawIndexedPrimitives( uint8 aPrimitive, unsigned int Ba
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-void ZDisplayDeviceDX9::DrawPrimitives( uint8 aPrimitive, unsigned int StartVertex,  unsigned int  vertexCount)
+void ZDisplayDeviceDX9::DrawPrimitives( uint8_t aPrimitive, unsigned int StartVertex,  unsigned int  vertexCount)
 {
 	switch(aPrimitive)
 	{
@@ -478,7 +485,7 @@ bool ZDisplayDeviceDX9::Create( INITPARAMS * pParam)
 
 	mNbMRT = 1;
 
-	uint32 createFlags;
+	uint32_t createFlags;
 
 
 	LOG("Creating DisplayDeviceDX9.\r\n");

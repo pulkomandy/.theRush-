@@ -22,7 +22,7 @@
 
 unsigned int GetVertexSizeFromFormat(uint32_t aFormat)
 {
-	uint mVertexSize = 0;
+	unsigned int mVertexSize = 0;
 	if (aFormat&VAF_XYZ) mVertexSize+=12;
 	if (aFormat&VAF_XYZRHW) mVertexSize+=16;
 	if (aFormat&VAF_NORMAL) mVertexSize+=12;

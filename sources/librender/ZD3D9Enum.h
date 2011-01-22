@@ -25,6 +25,8 @@
 // Includes ///////////////////////////////////////////////////////////////////////////////////////
 
 #include <d3dx9.h>
+#include "libbase/ZString.h"
+
 
 // Class //////////////////////////////////////////////////////////////////////////////////////////
 
@@ -32,14 +34,14 @@ class ZD3D9VideoMode
 {
 
 public:
-    tstring        description;
-    tulong        width;
-    tulong        height;
-    tushort        bpp;
+	tstring        description;
+    unsigned long        width;
+    unsigned long        height;
+    unsigned short        bpp;
     D3DFORMAT    format;
     D3DFORMAT    formatZStencil;
-    tulong        refreshRate;
-    tulong        idMode;
+    unsigned long        refreshRate;
+    unsigned long        idMode;
     bool          antiAlias;
     bool          antiAliasWindowed;
 
@@ -55,16 +57,16 @@ class ZD3D9Adapters
 
 public:
     // Adapter list
-    tstring                                description;
+	tstring                                description;
     D3DADAPTER_IDENTIFIER9            adapters;
     D3DCAPS9                             adaptersCaps;
 
     // Video Modes
-    tarray<ZD3D9VideoMode*>        videoModes;
+	tarray<ZD3D9VideoMode*>        videoModes;
 
     // Other Caps
     bool        textureCompression;
-    tushort    textureBpp;
+    unsigned short    textureBpp;
     bool        tnl;
     bool        hwVertexShader;
     bool        hwPixelShader;
@@ -84,8 +86,8 @@ class ZD3D9Enum
 
     public:
         // Adapters
-        tulong                            nbAdapter;
-        tarray<ZD3D9Adapters*>  adapters;
+        unsigned long                            nbAdapter;
+		tarray<ZD3D9Adapters*>  adapters;
 
         // Video Modes
         ZD3D9VideoMode                initialMode;
@@ -105,7 +107,7 @@ class ZD3D9Enum
 		void ClearAdapters();
 
     public:
-        bool FindMode(ZD3D9VideoMode ** mode, tushort adapterID, tulong width, tulong height, tushort mode32Bits);
+        bool FindMode(ZD3D9VideoMode ** mode, unsigned short adapterID, unsigned long width, unsigned long height, unsigned short mode32Bits);
 
 		typedef struct resolution_t
 		{
@@ -117,7 +119,7 @@ class ZD3D9Enum
 			int width, height;
 		} resolution_t;
 		std::vector<resolution_t> mResolutions;
-		static int ZD3D9Enum::sortResolutions(const void *a, const void *b);
+		static int sortResolutions(const void *a, const void *b);
 };
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////

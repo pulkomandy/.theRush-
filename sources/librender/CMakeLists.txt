@@ -49,7 +49,6 @@ set(HEADER_FILES
 
 set(SOURCE_FILES 
   CEGuiRenderer.cpp
-  #~ ddsDX9.cpp
   ddsOGL.cpp
   FFxData.cpp
   FFxImport.cpp
@@ -59,23 +58,29 @@ set(SOURCE_FILES
   FFxProgram.cpp
   FFxTechnique.cpp
   GLee.cpp
-  #~ ZD3D9Enum.cpp
-  #~ ZDisplayDeviceDX9.cpp
   ZDisplayDeviceNULL.cpp
   ZDisplayDeviceOGL.cpp
   ZFx.cpp
   ZIndexArray.cpp
-  #~ ZIndexArrayDX9.cpp
   ZIndexArrayOGL.cpp
   ZMaterial.cpp
   ZRenderQueue.cpp
-  #~ ZRenderTargetDX9.cpp
   ZRenderTargetOGL.cpp
   ZTexture.cpp
   ZVertexArray.cpp
-  #~ ZVertexArrayDX9.cpp
   ZVertexArrayOGL.cpp
 )
+
+if (WIN32)
+	LIST(APPEND SOURCE_FILES
+  #~ ddsDX9.cpp
+  #~ ZD3D9Enum.cpp
+		ZDisplayDeviceDX9.cpp
+  #~ ZIndexArrayDX9.cpp
+  #~ ZRenderTargetDX9.cpp
+  #~ ZVertexArrayDX9.cpp
+	)
+endif (WIN32)
 
 # Make sure the PLATFORM_HEADER_FILES variable is always defined
  set( PLATFORM_HEADER_FILES "" )

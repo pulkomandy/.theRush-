@@ -5,7 +5,7 @@
 #include <shlobj.h>
 #endif
 
-__inline const char * GetPictureDirectory()
+const char * GetPictureDirectory()
 {
 #ifdef LINUX
 	return "~/";
@@ -33,7 +33,7 @@ __inline const char * GetPictureDirectory()
 #endif
 }
 
-__inline const char * GetHomeDirectory()
+const char * GetHomeDirectory()
 {
 #ifdef LINUX
 	return "~/";
