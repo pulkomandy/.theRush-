@@ -20,17 +20,22 @@ IF (WIN32)
   Find_Package(Bullet REQUIRED)
   Find_Package(DirectX REQUIRED)
   Find_Package(FMOD REQUIRED)
+  set(RAKNET_INCLUDE_DIR ../3rdparty/RakNet-3.6201/Source)
 ELSE (WIN32)
   set(BULLET_ROOT /usr)
   set(BULLET_INCLUDE_DIRS ${BULLET_ROOT}/include/bullet)
   set(FMOD_INCLUDE_DIR /usr/include/fmodex)
+  #~ set(RAKNET_INCLUDE_DIR /opt/include/raknet)
+  set(RAKNET_INCLUDE_DIR ../3rdparty/RakNet-3.6201/Source)
 ENDIF (WIN32)
 
 include_directories(
 	${BULLET_INCLUDE_DIRS}
 	${DX9_INCLUDE_PATH}
 	${FMOD_INCLUDE_DIR}
+	${RAKNET_INCLUDE_DIR}
 	../3rdparty/tinyxml
+    ../3rdparty
 	.
 )
 link_directories(

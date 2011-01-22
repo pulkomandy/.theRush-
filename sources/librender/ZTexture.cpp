@@ -18,11 +18,11 @@
 //
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
 //#include "../libplatform/libplatform.h"
-#include "../libplatform/ZenFWManager.h"
-#include "../libplatform/ZenFWVRAMService.h"
-#include "../libplatform/ZenFWLoaderNode.h"
+#include "libplatform/ZenFWManager.h"
+#include "libplatform/ZenFWVRAMService.h"
+#include "libplatform/ZenFWLoaderNode.h"
+#include "libbase/ZTimer.h"
 
 
 #undef FAR

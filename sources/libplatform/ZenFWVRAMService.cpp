@@ -20,7 +20,7 @@
 
 #include "ZenFWVRAMService.h"
 
-#include "../librender/GLee.h"
+#include "librender/GLee.h"
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
 ZenFWVRAMService *VRAMService;

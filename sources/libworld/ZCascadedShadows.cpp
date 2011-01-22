@@ -12,12 +12,14 @@
 //
 #include "ZCascadedShadows.h"
 
-#include "IDisplayDevice.h"
+#include "librender/IDisplayDevice.h"
 #include "ZScene.h"
 #include "ZAtmosphere.h"
 
 #include <assert.h>
+#ifdef WIN32
 #include <d3d9.h>
+#endif
 #include <math.h>
 
 class ZFx;

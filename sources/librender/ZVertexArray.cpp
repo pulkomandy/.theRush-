@@ -18,10 +18,9 @@
 //
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "IStreamArrays.h"
 
-
-unsigned int GetVertexSizeFromFormat(uint32 aFormat)
+unsigned int GetVertexSizeFromFormat(uint32_t aFormat)
 {
 	uint mVertexSize = 0;
 	if (aFormat&VAF_XYZ) mVertexSize+=12;
@@ -56,7 +55,7 @@ public:
 			free(mRamedVBO);
     }
 
-    void Init(uint32 aFormat, int aQty, bool, uint32 aFlag)
+    void Init(uint32_t aFormat, int aQty, bool, uint32_t aFlag)
     {
 		// buffer
         mVertexCount = aQty;
@@ -71,9 +70,9 @@ public:
 		mRamedVBO = malloc(aQty*mVertexSize);
     }
 
-    uint32 GetFormat() const { return mVertexFormat; }
-    uint32 GetVertexSize() const { return mVertexSize; }
-    uint32 GetVertexCount() const { return mVertexCount; }
+    uint32_t GetFormat() const { return mVertexFormat; }
+    uint32_t GetVertexSize() const { return mVertexSize; }
+    uint32_t GetVertexCount() const { return mVertexCount; }
 
     void * Lock(IMESH_LOCK aFlag)
     {
@@ -100,9 +99,9 @@ public:
 	virtual tulong GetMemoryUsed() const { return (sizeof(ZVertexArray) + mVertexSize*mVertexCount); }
 
 protected:
-    uint32 mVertexSize;
-    uint32 mVertexFormat;
-    uint32 mVertexCount;
+    uint32_t mVertexSize;
+    uint32_t mVertexFormat;
+    uint32_t mVertexCount;
 	void *mRamedVBO;
 };
 

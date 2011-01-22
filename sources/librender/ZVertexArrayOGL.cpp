@@ -18,7 +18,6 @@
 //
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
 #include "GLee.h"
 #ifdef MAC_OS
 #import <OpenGL/OpenGL.h>
@@ -66,7 +65,7 @@ public:
 		}
     }
 
-    void Init(uint32 aFormat, int aQty, bool aKeepVBORam, uint32 aFlag)
+    void Init(uint32_t aFormat, int aQty, bool aKeepVBORam, uint32_t aFlag)
     {
 
 		bool bRealloc = ((mFormat!=aFormat)||(mVertexCount!=aQty));
@@ -163,9 +162,9 @@ public:
 		}
     }
 
-    uint32 GetFormat() const { return mFormat; }
-    uint32 GetVertexSize() const { return mVertexSize; }
-    uint32 GetVertexCount() const { return mVertexCount; }
+    uint32_t GetFormat() const { return mFormat; }
+    uint32_t GetVertexSize() const { return mVertexSize; }
+    uint32_t GetVertexCount() const { return mVertexCount; }
 
     void * Lock(IMESH_LOCK aFlag) 
     { 
@@ -341,10 +340,10 @@ public:
     virtual tulong GetMemoryUsed() const { return (sizeof(ZVertexArrayOGL) + mVertexSize*mVertexCount); }
 
 protected:
-    uint32 mVertexSize;
-    uint32 mFormat;
-    uint32 mVertexCount;
-	uint32 mFlag;
+    uint32_t mVertexSize;
+    uint32_t mFormat;
+    uint32_t mVertexCount;
+	uint32_t mFlag;
 	bool mbKeepVBORam;
 
 	unsigned long	mVertexBufferSize;

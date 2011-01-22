@@ -21,7 +21,7 @@
 #include "ZMesh.h"
 
 #include "MiniBall/Sphere.h"
-#include "../libbase/ZLogger.h"
+#include "libbase/ZLogger.h"
 
 IIndexArray *mPreviousIA = NULL;
 IVertexArray *mPreviousVA = NULL;

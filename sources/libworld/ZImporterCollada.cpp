@@ -20,14 +20,14 @@
 
 #include "ZImportExport.h"
 
-#include "../libbase/ZBaseMaths.h"
-#include "../libbase/ZLogger.h"
-#include "ZTexture.h"
+#include "libbase/ZBaseMaths.h"
+#include "libbase/ZLogger.h"
+#include "librender/ZTexture.h"
 #include "ZMesh.h"
 #include "ZMeshInstance.h"
 #include "ZCamera.h"
 #include "ZAnimation.h"
-#include "../libbase/ZGameResources.h"
+#include "libbase/ZGameResources.h"
 
 #include <string>
 #include "tinyxml.h"

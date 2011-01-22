@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "GLee.h"
 #ifdef MAC_OS
 #import <OpenGL/OpenGL.h>
