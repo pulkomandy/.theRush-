@@ -5,8 +5,6 @@ project(TheRush)
 
 # ???
 set(SOURCE_FILES 
-  CMakeFiles/CompilerIdC/CMakeCCompilerId.c
-  CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp
 )
 
 # Make sure the PLATFORM_HEADER_FILES variable is always defined
@@ -42,6 +40,7 @@ link_directories(
     /usr/lib
 )
 
+ add_subdirectory(tinyxml)
  add_subdirectory(libbase)
  add_subdirectory(libedit)
  add_subdirectory(libgame)
