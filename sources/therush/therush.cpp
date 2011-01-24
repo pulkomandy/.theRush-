@@ -1,6 +1,8 @@
 // therush.cpp : définit le point d'entrée pour l'application console.
 //
 
+#include <SDL/SDL.h>
+
 #include "libplatform/ZenFWManager.h"
 #include "libplatform/ZenFWLoaderNode.h"
 #include "libplatform/ZenFWDecoderNode.h"
@@ -185,7 +187,7 @@ void MainMenu()
 	mManager.Run();
 }
 
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
 	GLOG.SetLog((ILogger*)_New(ZLoggerPrintf));
 	GLOG.SetWarn((ILogger*)_New(ZLoggerPrintf));

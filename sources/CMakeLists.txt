@@ -47,7 +47,6 @@ link_directories(
  add_subdirectory(libplatform)
  add_subdirectory(librender)
  add_subdirectory(libworld)
- add_subdirectory(metameta)
  add_subdirectory(rushed)
  add_subdirectory(testunit)
  add_subdirectory(therush)

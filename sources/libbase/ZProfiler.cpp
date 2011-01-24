@@ -23,8 +23,11 @@
 
 #include <Mmsystem.h>
 #endif
+
 #include <algorithm>
 #include <map>
+#include <cassert>
+
 #include "ZLogger.h"
 #include "ZProfiler.h"
 
@@ -55,7 +58,7 @@ using namespace std;
 
 #if defined(WIN32)
 	// Create A Structure For The Timer Information
-	struct
+	struct t_timer
 	{
 		__int64			frequency;									// Timer Frequency
 		float			resolution;									// Timer Resolution
@@ -829,12 +832,16 @@ bool ProfilerActivate()
 		// If one is available the timer frequency will be updated
 		if( !QueryPerformanceFrequency((LARGE_INTEGER *) &timer.frequency) )
 		{
+			/*
 			// No performace counter available
 			timer.performance_timer	= false;					// Set performance timer to false
 			timer.mm_timer_start	= timeGetTime();			// Use timeGetTime() to get current time
 			timer.resolution		= 1.0f/1000.0f;				// Set our timer resolution to .001f
 			timer.frequency			= 1000;						// Set our timer frequency to 1000
 			timer.mm_timer_elapsed	= timer.mm_timer_start;		// Set the elapsed time to the current time
+			*/
+			// timeGetTime doesn't seem to link under mingw...
+			assert(false);
 		}
 		else
 		{
@@ -870,7 +877,8 @@ bool ProfilerActivate()
 		{
 			// Return the current time minus the start time multiplied
 			// by the resolution and 1000 (To Get MS)
-			return( (double) ( timeGetTime() - timer.mm_timer_start) * timer.resolution)*1000.0f;
+			//return( (double) ( timeGetTime() - timer.mm_timer_start) * timer.resolution)*1000.0f;
+			return -1; // Dead code, since we assert(false) above...
 		}
 	}
 /*
