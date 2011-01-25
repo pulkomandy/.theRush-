@@ -32,7 +32,7 @@
 #if CEGUI_VERSION_MINOR <= 6
 	#include "RendererModules/OpenGLGUIRenderer/openglrenderer.h"
 #else
-	#include "RendererModules/OpenGL/ceguiopenglrenderer.h"
+	#include "RendererModules/OpenGL/CEGUIOpenGLRenderer.h"
 #endif
 
 
@@ -122,8 +122,8 @@ void InitCEGui()
 
 
 	myParser =		new CEGUI::TinyXMLParser();
-	mySystem =		CEGUI::System::getSingletonPtr();//&CEGUI::System::create(*myRenderer, &gZenithResManager, myParser);
-
+	//~ mySystem =      new CEGUI::System(myRenderer, &gZenithResManager, myParser);//,"./CEGUIConfig.xsd", "cegui.log" ); 
+	mySystem =      &CEGUI::System::create(*myRenderer, &gZenithResManager, myParser); 
 	GBCEGUIInited = true;
 
 	

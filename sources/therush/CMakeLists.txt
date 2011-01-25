@@ -81,19 +81,19 @@ message("raknet : "${RAKNET_LIBRARY})
 target_link_libraries(
     therush
 
-    world # needs librender AFTER
-    game # needs raknet AFTER (and render ?)
-    render
-
     platform # needs CEGUI, FMOD
-    edit # needs base, openGL
+    game # needs raknet and world AFTER (and render ?)
+    render
+    world # needs librender AFTER
+
+    #~ edit # needs base, openGL
 	base # needs winmm
 
     #~ ${TINYXML_LIBRARY}
     tinyxml
     ${MINIBALL_LIBRARY}
-	#${RAKNET_LIBRARY}
-	raknet
+	${RAKNET_LIBRARY}
+	#~ raknet
 
     fmodex
 

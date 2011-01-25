@@ -83,7 +83,7 @@ ZProtoGUI::ZProtoGUI() : winMgr(WindowManager::getSingleton())
 	// scheme
 #if CEGUI_VERSION_MINOR <= 6
 	ImagesetManager::getSingleton().createImageset("./Prototype/Common/Menu/CEGUISkin/TaharezLook.imageset");
-	//SchemeManager::getSingleton().load("./Prototype/Common/Menu/CEGUISkin/TaharezLook.scheme");
+	SchemeManager::getSingleton().load("./Prototype/Common/Menu/CEGUISkin/TaharezLook.scheme");
 
 	// Fonts
 	mFontArial8 = FontManager::getSingleton().createFont("./Prototype/Common/Menu/Arial.font");

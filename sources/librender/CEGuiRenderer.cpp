@@ -21,7 +21,7 @@
 #if CEGUI_VERSION_MINOR <= 6
 	#include "RendererModules/OpenGLGUIRenderer/openglrenderer.h"
 #else
-	#include "RendererModules/OpenGL/ceguiopenglrenderer.h"
+	#include "RendererModules/OpenGL/CEGUIOpenGLRenderer.h"
 #endif
 
 

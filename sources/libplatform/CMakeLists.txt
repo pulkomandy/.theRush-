@@ -83,7 +83,7 @@ include_directories(
 	/usr/include/CEGUI
 	/usr/include/fmodex
 	../../3rdparty/RakNet-3.6201/Source
-	#~ ../../3rdparty/tinyxml
+	../tinyxml
 	..
 )
 add_library(
