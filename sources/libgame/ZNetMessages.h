@@ -179,7 +179,7 @@ typedef struct ZNMSG_UseBonus
 {\
 	if (!rakInterface) \
 	{\
-		WARN("Can't send message for "QUOTE(y));\
+		WARN("Can't send message for " QUOTE(y));\
 		return;\
 	}\
 	BitStream bitStream;\
@@ -193,7 +193,7 @@ virtual void SendNetMessageFast(const x&msg, bool bBroadcast = true)\
 {\
 	if (!rakInterface) \
 	{\
-		WARN("Can't send message for "QUOTE(y));\
+		WARN("Can't send message for " QUOTE(y));\
 		return;\
 	}\
 	BitStream bitStream;\
@@ -207,7 +207,7 @@ virtual void SendNetMessage(const SystemAddress& addr, const x&msg)\
 {\
 	if (!rakInterface) \
 	{\
-		WARN("Can't send message for "QUOTE(y));\
+		WARN("Can't send message for " QUOTE(y));\
 		return;\
 	}\
 	BitStream bitStream;\

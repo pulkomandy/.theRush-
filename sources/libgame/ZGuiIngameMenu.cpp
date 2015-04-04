@@ -120,7 +120,7 @@ void GuiIngameMenu::Build(ZProtoGUI *pGUI)
 	cbtrack->setReadOnly(true);
 	cbtrack->subscribeEvent ( Combobox::EventListSelectionAccepted, Event::Subscriber (&GuiIngameMenu::handleChangeTrack, this));
 
-	char * trackNames[]={"Stratos 1", "Stratos 2"};
+	const char * trackNames[]={"Stratos 1", "Stratos 2"};
 
 	for (int i=0;i<2;i++)
 	{

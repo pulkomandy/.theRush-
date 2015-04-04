@@ -527,7 +527,8 @@ void ZFx::connectTechnique(FFxTechnique* technique, bool bAddNewParams)
 					{
 						//LOG("connecting texture sampler %s: resindex=%d\n", cgGetParameterName(parameter), cgGetParameterResourceIndex(parameter));
 						int smpIdx = this->GetSamplerByName(cgGetParameterName(parameter));
-						pass->addSamplerParam(this, &FFxSamplerParam(parameter, cgGetParameterResourceIndex(parameter), smpIdx, NULL));
+						FFxSamplerParam tmp(parameter, cgGetParameterResourceIndex(parameter), smpIdx, NULL);
+						pass->addSamplerParam(this, &tmp);
 
 
 						// --
@@ -553,8 +554,9 @@ void ZFx::connectTechnique(FFxTechnique* technique, bool bAddNewParams)
 						connectParameter(cgGetParameterName(parameter), parameter, bAddNewParams);
 					else
 					{
-						//							LOG("connecting texture sampler %s: resindex=%d\n", cgGetParameterName(parameter), cgGetParameterResourceIndex(parameter));
-						pass->addSamplerParam(this, &FFxSamplerParam(parameter, cgGetParameterResourceIndex(parameter), 0, NULL));
+						// LOG("connecting texture sampler %s: resindex=%d\n", cgGetParameterName(parameter), cgGetParameterResourceIndex(parameter));
+						FFxSamplerParam tmp(parameter, cgGetParameterResourceIndex(parameter), 0, NULL);
+						pass->addSamplerParam(this, &tmp);
 					}
 				}
 			}
