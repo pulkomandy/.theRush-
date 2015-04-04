@@ -1,30 +1,28 @@
 DEBUG=no
 CC=g++
 RANLIB=ranlib
+
 ifeq ($(DEBUG),yes)
 	CFLAGS=-W -Wall  -g
 	LDFLAGS=-lm
 	AR = ar
 	ARFLAGS = rcs
 	LIBS = -ltp
-	LIB=miniballD.a
-
+	LIB=libminiballD.a
 else
 	CFLAGS=-W -Wall -O3
 	LDFLAGS= -O3 -lm
 	AR = ar
 	ARFLAGS = rcs
 	LIBS = -ltp
-	LIB=miniball.a
+	LIB=libminiball.a
 endif
-
 
 SRC= 	Point.cpp \
 	Quaternion.cpp \
 	Matrix.cpp \
 	Sphere.cpp \
 	Vector.cpp 
-	
 
 OBJ= $(SRC:.cpp=.o)
 
@@ -38,7 +36,6 @@ endif
 $(LIB): $(OBJ)
 	$(AR) r ../../libs/$(LIB) $(OBJ)
 	$(RANLIB) ../../libs/$(LIB)
-
 
 %.o: %.cpp
 	@$(CC) -o $@ -c $< $(CFLAGS)
