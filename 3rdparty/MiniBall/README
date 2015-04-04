@@ -1,0 +1,74 @@
+Smallest Enclosing Spheres
+==========================
+
+http://www.flipcode.com/archives/Smallest_Enclosing_Spheres.shtml
+
+Bounding spheres have a reputation of being a bad bounding volume because they are said to have a bad fit. They only seem interesting for the very rough first culling test or collision test because of their cheap intersection tests.
+
+They do not have a bad fit because of their geometric qualities, but rather because we use the wrong algorithms for constructing them. All methods used in 3D game engines are bad approximation of what could be the smallest sphere. Most algorithms that compute the smallest enclosing sphere use a refinement algorithm that is hard to implement and slow so we don't bother using them...
+
+In this COTD I will try to introduce you to an algorithm that computes the smallest enclosing sphere in an analytical way which is easy to implement and has very good performance.
+
+The algorithm was developed by Prof. Dr. Emo Welzl in 1991. You can download his paper here: <A HREF="http://citeseer.nj.nec.com/welzl91smallest.html">Smallest enclosing disks (balls and ellipsoids)</A>. The first implementation was done by Dr. Bernd Gärtner, and as far as I know it's hasn't been implemented by many other people. He has also written a paper about his work: <A HREF="http://citeseer.nj.nec.com/106727.html">Fast and Robust Smallest Enclosing Balls</A>, and you can download his code in the CGAL project here: <A HREF="http://www.cgal.org/">Computational Geometry Algorithms Library</A>. So why don't we use his implementation? Well, he has written a very general version of the algorithm, and in my humble opinion, it's a little too general to use it in a 3D game engine. It allows any dimension so it is over-complicated and in no way specialized for 3D.
+
+I can't give a thorough explanation of the algorithm, but I'll give you the basics because I think it's important you know a bit about an algorithm before you use it. I strongly suggest to read both papers, but be aware that they are relatively difficult.
+
+First of all, you need to understand that a sphere can be defined by four points on it's boundary. If we give less than four points, there's an infinite number of solutions, but only one of them is the smallest sphere and they can all be computed easily. Since this means a sphere can only be defined by at most four points, we only need to find those points of the object we want to enclose. This will be our starting point, so we first need functions that give the smallest sphere for 0 to 4 points.
+
+I'll only give one example to show how this works. Suppose we get two points and we are supposed to construct the smallest sphere through them. It should be clear that the midpoint of the line segment connecting the two points is the sphere's center, and half the length of the segment is it's radius. Spheres through three and four points are a bit harder to compute but the code at the end of this COTD gives your the necessary formula's. I've implemented all these functions as constructors of the Sphere class, with 0 to 4 points as arguments.
+
+Now we have these functions we need to find the points that will lie on the smallest sphere's boundary, construct the sphere trough them and we're done. However, this is not a trivial task, and you need to know one more thing before I show you Welzl's algorithm.
+
+We can construct the smallest enclosing sphere by adding one point after another, so eventually all points will be added and we have the smallest sphere enclosing our object. If we already have the smallest sphere for a certain set of points, and we add another point, two things can happen: it can either be inside our outside the current sphere. If it's inside, we can immediately go to the next point because we already have the smallest enclosing sphere. If it's not inside, we have to construct a new sphere. It can be proven that the current point will be one the new sphere's boundary, and this point will also be important for the next steps. All this suggests we can use a recursive algorithm...
+<cpp>
+Sphere Sphere::MiniBall(Point P[], int p, Point B[], int b)
+{
+	if(p == 0 || b == 4)
+	{
+		switch(b)
+		{
+		case 0:
+			return Sphere();
+		case 1:
+			return Sphere(B[0]);
+		case 2:
+			return Sphere(B[0], B[1]);
+		case 3:
+			return Sphere(B[0], B[1], B[2]);
+		case 4:
+			return Sphere(B[0], B[1], B[2], B[3]);
+		}
+	}
+		
+	Sphere MB = MiniBall(P, p - 1, B, b);
+
+	if(MB.d(P[p - 1]) > 0)   // Signed distance to sphere
+	{
+		for(int i = p - 2; i >= 0; i--)
+		{
+			Point T = P[i];
+			P[i] = P[i + 1];
+			P[i + 1] = T;
+		}
+
+		MB = MiniBall(P + 1, p - 1, B, b + 1);
+	}
+
+	return MB;
+}
+</cpp>
+This is the most basic form of Welzl's algorithm. It takes two arguments: a set of points P to be enclosed and a set of points B that must lie on the sphere's boundary. The sets don't have common points. If we want to construct the smallest enclosing sphere of an object, we pass all vertices in P, and pass an empty set for B because we don't know these points yet. In this implementation, you have to pass B = P in the first call to let the array B start at the correct address.
+
+To understand this recursive algorithm, we only have to understand one step. If you try to follow the recursive calls you'll definitely loose track and won't understand it. So let's start with the first if() statement. Here we check for the trivial situations. If P is empty or B has the maximum amount of points that can lie on the sphere's boundary, we have to compute the smallest enclosing sphere of B. This is done with the Sphere constructors I've talked about. After this we can return because we have finished the task of constructing the smallest sphere around P with B on it's boundary. It's length b has to be set to zero.
+
+If we don't have the trivial case, we construct the smallest sphere without the last point of P. Don't worry about how this recursive call works, just assume it will return the correct result. Now that we have this sphere we can check if the last point of P is inside of it or not. If it's inside we return because the task has been finished, if not, we know the last point of P will be a point of B. So we move the point to B and again we do a recursive call. There's a little trick here. Because we know the last point of P is an important point, we can move it to the front of the list so 'other' recursive calls will only have to add the last point of P, and Welzl proves this also speeds up the algorithm. Welzl first calls the function and then moves the point, but for this implementation it was easier to do it the other way around because I use one array for P and B.
+
+This implementation is not very efficient, but at least it compiles and works. We can make a lot of improvements that will make it faster and more reliable. First of all, we don't need to copy the points because we don't change anything, so we can use pointers. Secondly, moving the last point to the front is done here by swapping each element, which can be inefficient with huge point sets. Gärtner uses a linked list to move points in O(1) time. If we have large point sets, the amount of recursive calls can make the stack overflow quite easily, so we need to restructure the algorithm to reduce recursive calls. Gärtner does this by using a loop that adds the points from the first to the last instead of just adding the last and doing a new recursive call. A last optimization that also makes the algorithm more robust is to add the 'farthest' points first, so a lot of points will already be inside the sphere and it 'grows' very fast. However, for small point sets like used in 3D engines this is slower because it takes some time to find the farthest point. Check Gärtner's paper for details about his 'pivoting' method.
+
+So what do we win with all this? Well, if you're using bounding spheres for visibility culling against the viewing frustum, you need the best 'plane intersection chance'. What I mean by this is that if the bounding volume is intersected by a plane, there should be a big chance the enclosed object is intersected too. The worst case is when a thin rod has to be enclosed. Since we now have an algorithm that will compute the smallest sphere possible, we know it will go through the rod's endpoints. A little bit of math shows the intersection chance is 2 / Pi = 0.64! In my opinion this is extremely good for the worst case. A cube has an intersection chance of sqrt(3 / 4) = 0.87. Combine this with the cheap intersection test of a sphere with a plane, and you'll cull a lot of geometry almost for free.
+
+Finally, here's the implementation I'm currently using: <A HREF="ftp.flipcode.com/cotd/MiniBall.zip">MiniBall.zip</A> (100 kB). I have made some optimizations, but not all. For instance, the move-to-front is still done by swapping each pointer, this is because it's not a bottleneck of the algorithm. I also provide a DOS test program. It constructs 10,000 points and compares a classical algorithm with Welzl's algorithm. The approximation algorithm still constructs pretty small spheres, but that's only because I use random points in the unit cube. With the average 3D model the difference between the two is very noticeable.
+
+Best regards,
+
+Nicolas "Nick" Capens
