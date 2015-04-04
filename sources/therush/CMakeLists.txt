@@ -61,7 +61,7 @@ find_library(MINIBALL_LIBRARY miniball PATHS ${CMAKE_SOURCE_DIR}/../libs)
 #~ find_library(TINYXML_LIBRARY tinyxml PATHS ${CMAKE_SOURCE_DIR}/../libs )
 find_library(RAKNET_LIBRARY RakNet PATHS ${CMAKE_SOURCE_DIR}/../libs /local/lib/)
 if (NOT MINIBALL_LIBRARY)
-message(FATAL_ERROR "MiniBall not found !")
+	message(FATAL_ERROR "MiniBall not found in ${CMAKE_SOURCE_DIR}/../libs ! Please compile it first!")
 endif (NOT MINIBALL_LIBRARY)
 
 #~ if (NOT TINYXML_LIBRARY)
@@ -74,9 +74,9 @@ endif (NOT MINIBALL_LIBRARY)
 
 find_package(OpenGL)
 
-message("miniball : "${MINIBALL_LIBRARY})
-#~ message("tinyxml : "${TINYXML_LIBRARY})
-message("raknet : "${RAKNET_LIBRARY})
+message("miniball : ${MINIBALL_LIBRARY}")
+#~ message("tinyxml : ${TINYXML_LIBRARY}")
+message("raknet : ${RAKNET_LIBRARY}")
 
 target_link_libraries(
     therush
