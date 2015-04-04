@@ -2,6 +2,7 @@
 #define VECTOR_H
 
 #include "Tuple.h"
+#include "../../sources/libbase/ZCollisionsUtils.h"
 
 namespace MiniBall
 {

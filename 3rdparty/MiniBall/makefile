@@ -2,7 +2,7 @@ DEBUG=no
 CC=g++
 RANLIB=ranlib
 ifeq ($(DEBUG),yes)
-	CFLAGS=-W -Wall  -g -DLINUX
+	CFLAGS=-W -Wall  -g
 	LDFLAGS=-lm
 	AR = ar
 	ARFLAGS = rcs
@@ -10,7 +10,7 @@ ifeq ($(DEBUG),yes)
 	LIB=miniballD.a
 
 else
-	CFLAGS=-W -Wall -O3 -DLINUX
+	CFLAGS=-W -Wall -O3
 	LDFLAGS= -O3 -lm
 	AR = ar
 	ARFLAGS = rcs
