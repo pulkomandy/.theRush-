@@ -1,5 +1,4 @@
 cmake_minimum_required(VERSION 2.6) 
-	# Pour éviter un warning au lancement de CMake, on doit préciser la version minimale
 
 project(TheRush)
 
@@ -25,18 +24,18 @@ include_directories(
 	${DX9_INCLUDE_PATH}
 	${FMOD_INCLUDE_DIR}
 	${CEGUI_INCLUDE_DIR}
-	../3rdparty/RakNet/Source
+	../3rdparty/RakNet-3.902/Source
 	../3rdparty/tinyxml
     ../3rdparty
 	.
 )
 
- add_subdirectory(libbase)
- add_subdirectory(libedit)
- add_subdirectory(libgame)
- add_subdirectory(libplatform)
- add_subdirectory(librender)
- add_subdirectory(libworld)
- add_subdirectory(rushed)
- add_subdirectory(testunit)
- add_subdirectory(therush)
+add_subdirectory(libbase)
+add_subdirectory(libedit)
+add_subdirectory(libgame)
+add_subdirectory(libplatform)
+add_subdirectory(librender)
+add_subdirectory(libworld)
+add_subdirectory(rushed)
+add_subdirectory(testunit)
+add_subdirectory(therush)
