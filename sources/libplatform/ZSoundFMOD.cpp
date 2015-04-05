@@ -429,7 +429,7 @@ void	ZSoundInstance::play(const bool /*aFlags*/)
 	if (mSample->mb3D)
 	{
         mChannel->setMode((mbLoop?FMOD_LOOP_NORMAL:FMOD_LOOP_OFF)|FMOD_HARDWARE|FMOD_3D|
-			( (mAttnType == 0)?FMOD_3D_LINEARROLLOFF:FMOD_3D_LOGROLLOFF)  );
+			( (mAttnType == 0)?FMOD_3D_LINEARROLLOFF:FMOD_3D_LINEARSQUAREROLLOFF)  );
         mChannel->set3DMinMaxDistance(mInner, mOutter);
 	}
     else
