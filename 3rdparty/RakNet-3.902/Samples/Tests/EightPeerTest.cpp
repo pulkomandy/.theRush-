@@ -46,7 +46,8 @@ int EightPeerTest::RunTest(DataStructures::List<RakNet::RakString> params,bool i
 			lastNumberReceivedFromList[i][j]=0;
 		}
 
-		peerList[i]->Startup(peerNum*2, 30, &SocketDescriptor(60000+i,0), 1);
+		SocketDescriptor tmp(60000+i,0);
+		peerList[i]->Startup(peerNum*2, 30, &tmp, 1);
 		peerList[i]->SetMaximumIncomingConnections(peerNum);
 
 	}

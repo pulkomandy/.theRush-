@@ -131,7 +131,8 @@ int CompressionConvertTest::RunAndSave(bool isVerbose,bool noPauses,FILE *server
 
 	{
 
-		bool b= rakClient->Startup(1, 30, &SocketDescriptor(60001,0), 1);
+		SocketDescriptor tmp(60001,0);
+		bool b= rakClient->Startup(1, 30, &tmp, 1);
 
 		if (b)
 		{
@@ -552,7 +553,8 @@ int CompressionConvertTest::RunTest(DataStructures::List<RakNet::RakString> para
 
 	{
 
-		bool b= rakClient->Startup(1, 30, &SocketDescriptor(60001,0), 1);
+		SocketDescriptor tmp(60001,0);
+		bool b= rakClient->Startup(1, 30, &tmp, 1);
 
 		if (b)
 		{

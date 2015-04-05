@@ -30,10 +30,12 @@ int CrossConnectionConvertTest::RunTest(DataStructures::List<RakNet::RakString> 
 
 	
 
-	server->Startup(1,0,&SocketDescriptor(SERVER_PORT,0), 1);
+	SocketDescriptor tmp1(SERVER_PORT,0);
+	server->Startup(1,0,&tmp1, 1);
 	server->SetMaximumIncomingConnections(1);
 
-	client->Startup(1,0,&SocketDescriptor(0,0), 1);
+	SocketDescriptor tmp2(0,0);
+	client->Startup(1,0,&tmp2, 1);
 
 	client->Ping(serverIP,SERVER_PORT,false);
 

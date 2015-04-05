@@ -123,7 +123,8 @@ int ReliableOrderedConvertedTest::RunTest(DataStructures::List<RakNet::RakString
 	if (isVerbose)
 		printf("Connecting...\n");
 
-	sender->Startup(1, 30, &SocketDescriptor(localPort,0), 1);
+	SocketDescriptor tmp(localPort,0);
+	sender->Startup(1, 30, &tmp, 1);
 	sender->Connect(ip, remotePort, 0, 0);
 
 	receiver =RakNetworkFactory::GetRakPeerInterface();
@@ -139,7 +140,8 @@ int ReliableOrderedConvertedTest::RunTest(DataStructures::List<RakNet::RakString
 	if (isVerbose)
 		printf("Waiting for connections...\n");
 
-	receiver->Startup(32, 30, &SocketDescriptor(localPort,0), 1);
+	SocketDescriptor tmp2(localPort,0);
+	receiver->Startup(32, 30, &tmp2, 1);
 	receiver->SetMaximumIncomingConnections(32);
 
 	//	if (sender)

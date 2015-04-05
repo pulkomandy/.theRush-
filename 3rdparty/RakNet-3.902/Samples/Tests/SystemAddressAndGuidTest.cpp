@@ -73,7 +73,8 @@ int SystemAddressAndGuidTest::RunTest(DataStructures::List<RakNet::RakString> pa
 		return 1;
 	}
 
-	client->Startup(1,30,&SocketDescriptor(60001,0),1);
+	SocketDescriptor tmp(60001,0);
+	client->Startup(1,30,&tmp,1);
 
 	if (!client->IsActive())
 	{

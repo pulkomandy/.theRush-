@@ -40,7 +40,8 @@ int PingTestsTest::RunTest(DataStructures::List<RakNet::RakString> params,bool i
 
 	receiver=RakNetworkFactory::GetRakPeerInterface();
 	destroyList.Push(receiver,__FILE__,__LINE__);
-	receiver->Startup(2, 30, &SocketDescriptor(60000,0), 1);
+	SocketDescriptor tmp(60000,0);
+	receiver->Startup(2, 30, &tmp, 1);
 	receiver->SetMaximumIncomingConnections(2);
 	Packet * packet;
 
